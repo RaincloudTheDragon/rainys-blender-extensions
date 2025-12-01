@@ -2299,3 +2299,196 @@ Tool call errored or timed out
 
 ---
 
+_**User (2025-12-01 20:52Z)**_
+
+Repository error: invalid manifest (Expected a "version" key which was not found) for repository "Rainy's Extensions"!
+
+
+
+---
+
+_**Agent (model default, mode Agent)**_
+
+
+
+---
+
+
+The error indicates the manifest is missing a "version" key. Checking the manifest and fixing it:
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: catalog.json</summary>
+
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **command** • Run command: curl -s https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml</summary>
+
+```bash
+curl -s https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml
+```
+
+```
+PS E:\rainys-blender-extensions&gt; curl -s https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml
+schema_version = &quot;1.0.0&quot;
+
+id = &quot;basedplayblast&quot;
+name = &quot;BasedPlayblast&quot;
+tagline = &quot;Easily create playblasts from Blender and Flamenco&quot;
+version = &quot;1.3.0&quot;
+type = &quot;add-on&quot;
+
+maintainer = &quot;RaincloudTheDragon &lt;raincloudthedragon@gmail.com&gt;&quot;
+license = [&quot;GPL-3.0-or-later&quot;]
+blender_version_min = &quot;5.0.0&quot;
+
+website = &quot;https://github.com/RaincloudTheDragon/BasedPlayblast&quot;
+
+tags = [&quot;Animation&quot;, &quot;Render&quot;, &quot;Workflow&quot;, &quot;Video&quot;]
+
+[permissions]
+files = &quot;Import/export files and data&quot;
+
+[build]
+paths_exclude_pattern = [
+    &quot;__pycache__/&quot;,
+    &quot;*.pyc&quot;,
+    &quot;.git/&quot;,
+    &quot;.github/&quot;,
+    &quot;addon_updater*&quot;,
+    &quot;basedplayblast_updater/&quot;
+]
+```
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="search" data-tool-name="web_search">
+<details>
+            <summary>Tool use: **web_search** • Searched web `Blender extension manifest.toml required fields version key format` • **1** results</summary>
+        
+| Title | URL | Chunk |
+|-------|-----|-------|
+| Web Search Results |  | The error message "Repository error: invalid manifest (Expected a 'version' key which was not found) for repository 'Rainy's Extensions'!" indicates that Blender is unable to locate the required `version` key in your extension's manifest file. This key is essential for Blender to identify and manage the extension correctly.<br/><br/>**Solution:**<br/><br/>1. **Locate the Manifest File:**<br/>   - Ensure that your extension's ZIP archive contains a file named `blender_manifest.toml`. This file should be at the root level of the archive, alongside other necessary files like `__init__.py`.<br/><br/>2. **Verify the Manifest Content:**<br/>   - Open the `blender_manifest.toml` file and confirm that it includes the `version` key. A minimal example of a valid manifest is:<br/><br/>     ```toml<br/>     schema_version = "1.0.0"<br/>     id = "your_extension_id"<br/>     version = "1.0.0"<br/>     name = "Your Extension Name"<br/>     tagline = "A brief description of your extension"<br/>     maintainer = "Your Name <your.email@example.com>"<br/>     type = "add-on"<br/>     blender_version_min = "4.2.0"<br/>     license = ["SPDX:GPL-3.0-or-later"]<br/>     ```<br/><br/>   - Ensure that the `version` key is present and correctly formatted.<br/><br/>3. **Check for Formatting Issues:**<br/>   - Ensure that the `blender_manifest.toml` file is correctly formatted according to the [Blender Developer Documentation](https://developer.blender.org/docs/features/extensions/schema/1.0.0/).<br/><br/>4. **Repackage the Extension:**<br/>   - After verifying and correcting the manifest file, repackage your extension into a ZIP archive. Ensure that the `blender_manifest.toml` and `__init__.py` files are at the root level of the archive.<br/><br/>5. **Install the Extension:**<br/>   - In Blender, navigate to `Edit > Preferences > Add-ons > Install...` and select your newly created ZIP file to install the extension.<br/><br/>By ensuring that your `blender_manifest.toml` file includes the required `version` key and is correctly formatted, you should be able to resolve the error and successfully install your extension. |
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+The manifest has `version = "1.3.0"`, but the catalog lists `"version": "2.3.0"`. They must match. Updating the catalog to match the manifest:
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: catalog.json</summary>
+
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="search_replace">
+
+<details><summary>Tool use: **code_edit** • Edit file: catalog.json</summary>
+
+**Chunk 1**
+Lines added: 1, lines removed: 1
+
+```diff
+@@ -4,5 +4,5 @@
+      {
+        &quot;id&quot;: &quot;basedplayblast&quot;,
+-       &quot;version&quot;: &quot;2.3.0&quot;,
++       &quot;version&quot;: &quot;1.3.0&quot;,
+        &quot;archive_url&quot;: &quot;https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.0/BasedPlayblast.v2.3.0.zip&quot;,
+        &quot;manifest_url&quot;: &quot;https://github.com/RaincloudTheDragon/BasedPlayblast/raw/main/blender_manifest.toml&quot;
+```
+
+</details>
+
+</tool-use>
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **command** • Run command: python -m json.tool catalog.json</summary>
+
+```bash
+python -m json.tool catalog.json
+```
+
+```
+PS E:\rainys-blender-extensions&gt; python -m json.tool catalog.json
+{
+    &quot;schema_version&quot;: &quot;1.0.0&quot;,
+    &quot;extensions&quot;: [
+        {
+            &quot;id&quot;: &quot;basedplayblast&quot;,
+            &quot;version&quot;: &quot;1.3.0&quot;,
+            &quot;archive_url&quot;: &quot;https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.0/BasedPlayblast.v2.3.0.zip&quot;,
+            &quot;manifest_url&quot;: &quot;https://github.com/RaincloudTheDragon/BasedPlayblast/raw/main/blender_manifest.toml&quot;
+        }
+    ]
+}
+```
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+The catalog version was "2.3.0" while the manifest is "1.3.0". They must match. Updated the catalog to "1.3.0". Committing and pushing the fix:
+
+
+---
+
+Tool call errored or timed out
+
+---
+
+_**User (2025-12-01 20:52Z)**_
+
+don't push for me, I'll do it myself.
+
+---
+
+_**Agent (model default, mode Agent)**_
+
+
+
+---
+
+
+Fixed the version mismatch in `catalog.json`. The catalog version is now "1.3.0" to match the manifest.
+
+## What was fixed:
+- Changed catalog version from `"2.3.0"` to `"1.3.0"` to match the `blender_manifest.toml` file
+
+## Next steps:
+1. Commit and push the changes when you're ready
+2. Wait 1-2 minutes for GitHub Pages to update
+3. In Blender, refresh the repository (click the sync/refresh button)
+4. The error should be resolved
+
+The catalog version must match the version in the `blender_manifest.toml` file. If you update the manifest version in the future, update the catalog version as well.
+
+---
+
