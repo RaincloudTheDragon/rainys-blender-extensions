@@ -26,11 +26,8 @@ ADDONS = [
         "repo": "RaincloudTheDragon/BasedPlayblast",
         "manifest_branch": "main",
     },
-    {
-        "id": "rainys_bulk_scene_tools",  # Must match blender_manifest.toml
-        "repo": "RaincloudTheDragon/Rainys-Bulk-Scene-Tools",
-        "manifest_branch": "main",
-    },
+    # Note: Rainys-Bulk-Scene-Tools doesn't have blender_manifest.toml yet
+    # It only has bl_info.json (old format). Add it here once you create the manifest.
 ]
 
 
