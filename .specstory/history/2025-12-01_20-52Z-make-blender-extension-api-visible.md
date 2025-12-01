@@ -743,63 +743,472 @@ curl -s https://github.com/RaincloudTheDragon/Rainys-Bulk-Scene-Tools/raw/main/b
 ```
 
 ```
-PS E:\rainys-blender-extensions&gt; curl -s https://github.com/RaincloudTheDragon/Rainys-Bulk-Scene-Tools/raw/main/blender_manifest.toml
+BErGkNYsckuCUm2OiCbaf3ixAeYv23bso43TXu9i6ohdvWzlf2jms0EO6KB7XCdiq2V0N26eERSUhcJjJ9wMaBWFXbkOckChqxSY9MACJADcsxknfg/592KG5LSTxjj70pL/f7rz0Hb3/HvcdeSURBG7klbfIs1pRY8FUV4tWUfkhEknE3JzZtRvF9wzm07SVChNuyHqeO37EAacBA0KksBHdabEpEy0gE4aa7LKMHMqbKg0D63hHXbrVjahbBOgCc3af7e+5bRN91tUDIGLTqR7Q4ytjb0V/J74eYwli5t+80ZLhfh/obx9RTIf9WLv4PqgkW8du9zbe0fP39J6d2OI23dy2Zk5qC6cM0zGcdez01t8t68EehUS2t6W5ZIVgN7YK0U4npeEzYyfHaE1Uk2yBjBjYNO9jD8//F2AADp/9/kGB8WMAAAAASUVORK5CYII=&quot;&gt;                         
+
+      &lt;img alt=&quot;&quot; class=&quot;position-absolute&quot; height=&quot;75&quot; width=&quot;430&quot; style=&quot;top: 263px; left: 442px; z-index: 6;&quot;                                                
+      src=&quot;data:image/png;base64,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&quot;&gt;                                                         
+
+      &lt;img alt=&quot;&quot; class=&quot;position-absolute&quot; height=&quot;123&quot; width=&quot;304&quot; style=&quot;top: 73px; left: 467px; z-index: 5;&quot;                                                
+      src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATAAAAB7CAMAAADEzSzaAAAAA3NCSVQICAjb4U/gAAABgFBMVEX////jyZz02KW2pHvdxZu2pYLny5fv1qWFel7Vu4OlmnasnHuyn3uKfmLexZbVvpSEe2Lkx5Ts27LSuIXGs4vFsIrZxJbs0aLPvJO6p4Pp2rHlzZ3WvY3Puo7dy6DayaHOtoTdwZJuaFvJsn6llXPw1KC2o3fWxZ3ErYSomnuekm/HsoSekm+AdmKomnucjm3OtYvn17GcjnOllXO6p4PKsIjSuIt7c2O8rIWEfGmSh3ONg2V1cGGUinTt0Jydk3FzbGHPuo7kz6GJf2vn1q3q1aTfz6majnm2pHuyn3u2pYKyn3vPuo7s0aLOtYvSwJm8rIW3lXKllXq9q4ndxZvVvpTexZbPuo7SuIXErYR7c2N1cGGEe2Komnu2pYLPvJPGs4vWvY3OuJF8dWmNgmxybFuOhHG6p4OsnHvOuJGsnHuEe2LFrn3Gs4vHsoTFsIq6p4O2pYLKsIi2pYLZxJa2pYLayaHZxJbGs4usnHvbv4+vnHalkG6Jf2t/eWx8dWl0XqRGAAAAgHRSTlMA////////////////////////////////////////////Ebv//3f//////0Qid////yJE7v//Iu4iRP8iRP//Ecz/M////yJ3d4iqu8zd////d4iqu+7u7u4RESJEmarM3f8iMzNEVXeImZmqu7u7u7vMzN3d7u7u7v///xEREdqVUEYAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzQGstOgAAAUrUlEQVR4nO1dC0MTVxbeMDNOrGQmEUgIECCKiooFQeUhKj62iI+uimhti692pbi2dq2P2tb2r+99nce9MwNJVIJdDiTzzGTuN9/5znfvjPiPf2z7+Pe+dp/BpxX/Pv2fdp/CpxU7gDUZO4A1GTuANRk7gDUZT07/cnvo9cr6artP5BOJtdeX9vZdGhw6NPhyB7LN4931vX17+/okYkODhx7sOLJN4i+Jl4pLg4NDg0PnF9p9Rts7Fgy/+jRiIi8ftPuUtnesH9+rEZOTQYnY0Fq7z2k7x+LxvX0Csr3HJWp7Lw0NHRoafL0jY9mxLsXreB+8SYINDu2Uyux4LRX/eN/x4zovv5BJObijYpmx8IWKQxD/UvGm3ae1bePi08ePe3sfPybAulXcmm/3mW3XWJRqL0OL/t4vhNsXsaP6WfFOar4qkyr6vhhS5rXdp7WNQzvWPqn4ErEhJfor7T6rbRy3dbeoT7PskmCXiMvtPqttHIt3Z5TH1zEzMyg59le7z2o7xy9vtdxL1C69eiUB+z+0YdPz383N3bpy5cr98zoevXn08MWLhw9/ui9WXvlhbm563lTCp2+PHzd49Q2+fSU0//Wf7T35LYz5i3O37j+/G0d+f6VDRtjB48DZXRhRVB+4++LZlan/vtWeQiA2OHRCMOz/omO07+Ktpz//GkccJwOWnIQIXMhBU3G087UwX+VyLMOrHvrb4zU9d+vqr7FfQR6FOA0JrpBtrRBmJQlYKe7VEfd61d7z7W7Qx4yLt652x9EFCw787WAQhrANaHdWoyXiZOeuOFZoife/M2ACrIlyP4fK0qzQAszBTsVZSMldKht7dUr2lkuPlifb3bgPHfuePP017udcCm3NSgAU2pwzeta/q37y9z9u1no1XDIl47JK1UfLs+1u5AeLfWeu1nJJTiUByQi248mbN2/+cWS8psCSqHUKhmEdvbb2d+iDP7ka51JajyJFW0KiV8j3gfew4+bN04X8kZFir4JLMcyLJ4apgpYeLX3amE3/cLcfWstSzyWXpV8mKuKH5tTPqT/y+XxxZCSv89GkpGDdKHMdpfOff7KYzT3MIQqivTL6ReT6c34uJ19+VI5UlCO/XC7ruahsVkLoRbG2HAjA8gKwWFVImZJC9Cfyp/+4eaokgjAba3fTW4mlN/0CHwmMbLIvMRLRryGrXKiYCCmIUqF0aWpZr9O7VTqL+aICTOdjr7IVE8V8/vTRU8OnZAyI+O23en3gpzPtbn9z8c1yJLC5YPBI2CqeiEzVcE0Y0hqmYrWiYljR1Ejlw+JuSbvCyM0Bya1SVBcx8NvAwKlfr3w6qfnnAxuVkL071ssW/zQzwXePC5CSvdqIqZQUwiYgu+l0oXaV6j99324kGop3t1MkPcNNhIldWekMk+j1/y4B0/oV665Rt8IrXywMu4gJzO5OtRuNTWPxtp12YXrbQw5kAsTUaqpz2veUhvVqJ2YYJqM4kARMxN3tXTQnb3dYqmOlmpuShAq5e7dbae+hZvqrWvBlpawSYL/b3NqFRXPgh4V2w5IVbjK6TU7jXjqV0uYRN/HR/khrWPWGAWw8JSExTt1qNzKp8fU6B4L71DCRYkki4b58x1QgYXJB+Lme7nJt/PffR+tZWBme3d2GLmMtgz1pTU/tSbpkSoxksJTlH+/nyNBsyVodfbnNKubi9fTWZ9gEzsMUkBvpmBNuLmCpHCvF97eR+v+1niLpYeKdVQIqAwypkP264G7ke23ASjQtWeu3T16udTjhjEMkYHTUyAEomYwuQno33HIgya9SGudKPy+0GyoZ39zOUpctI91ZO/scqrE124Fkqy4TnIqXZk5dsnQkwnJkYUeY2mmi7S5CmXJWv9JuvNabYUImXpScIa1J8NHJVXbIswTJZqC9aKv2/+kUx7TIqn7ppTAMzS9hmVkzQ/iEULHG483F9uG1aLEjzSWkN3dz2xBativ1cxbdeN6B4Ce1TC9GbTP+a851phzMUqWNANpwU5iGG7v1e5ZgKSVdrFUNBKL324OXK18diZalAoayllYO4ICpRyES84xVrwMN6FeJoHveDrxuu21JX3A0jFdGO5+zInTdRkjAIeQVCYaViClwsU1tkH4u96HTPJsPDd8xSlsbgpYxxBhUuGojZqVh+OUWI7ZwvdlC1kikpGiDClnZMCPbj9jC9Q5KlA6SnSyrGtqk2SBrM3HM3k0i2IyvAMS2ErDrvAEWPDZWYWqXKdl6W8SdLXiERFbTlx5wiFRyZ0rJQZ8tfO5nJdU2WLMND2dZZc9dkbgMWR3O/mTelZKosXk5ebZVeD1IRSixziZEkhfpaLt11D50aukISfNT1KrE/YS9fWlr8FpHIbYqYoe72EAkiLXhAbK7TWGGTm3izUpbMnixukGr2pWXZwGeJvOy9M3Hx+vrClxecEJ4uZM4JnxTYtOG4xjpkTQpYRZem8ajjw/YS6t1WUmZDVuWlr1Pya1YQKXKlbMdN35o4X83OTm5qF+Lk4vi94Fsc0UzrFLpqByoHBChHsRRs+q9olao1WrxQn9FPsqjHncSczrUXL96Bkr9Vvpz6ske9StftdHRHvEjQ75P1B7XMmLipIjukypO1QbskMu12sApNVeDdXUTv93/PBHvo2x39GNKfs43z3TpiHxc9tWPnvi+fu7LLOtdc7552MlsMQc0G9VCBBvMjvow3YHneYH6kVMvCAI9xRVqRi8Faqv5AG40n8C9vIAtsb0DOKaa/vc9CIbt81ljJTBq2WeIqXb6gK0Fp8+OksshmrA/Ak1IqjU90HYLMY8BEcDqgBqtNuoVgKjBxuyl8fVclIMAVgTV1gFbVW2LWEuoPZxjRAzebp+v83MMKAMX4seZitET2KzwGIUYgzRAQcBJ4xAOYCJsGMSGuMA08V79rmXA1oEu2A5fE0yuiNgm4gjSiNCVOZcjUvo+7acTUrOW4apePYxc1CTOEVxDOzE+JvKP75FIVITe86pzLQO2AnQyVMEkguTEzNITBydb5wBgH5IR3hFwHzMeGBZQ4zBlHBCRVQRMgGARDCiGsArz0OPfIH+qrY9h3wGQGHlyvM0cH2sf1nYHSVUHUOsiJzMRUl8CZlOBpU1gsQbzLyDZI9AshNkmyErYkaZXW8XrXRIqyB4f1Rp2iajZFgcpB/FgzgJlNV0LsTDqMXVnOHgWmYxied2xLN39Fy5c+Oc/L3Q2EPxI+iIgA1+1CtiaaVwE4sPUzKIUJi3DgSkV0I3A9sFSRFg+uD9R4I9yDnGSEaEgwcTMKMM++mzz6OTIswoiX9VWBxfXc1bwksj5ZnPFKXdsQddbKrDioxEDk+irdxhFqCzNDizAwEUFVfZ9DQEG/oTlIyxUW/2HSytcWVywInjLgfNkdAIUrKQjAGGGXEYS3NwoShJLQKvIsTZ6XkRXsUGGsXrCDiRVv1Wvf4dzhzkI34fciohqJrkiqKjQfqyrmIc+w5TvAplpIB5lZQ5duOXu0VLIaUx+sZyF0sjIns7OPYeBYWgo0PSaL/m8Nbwm2+hateg341onkKW+ZlghL3/y+UKhoJ/ll289Pd3dAWNYwrWqL2ixc7RGOqRiw56fDSqlF2LF0DS9S8xim4yw143Gen6mPxN0G5H0gWEFCVChWDCPpecVegKvHg2YXX3Rm+mcbA2wdZswKZUfCJdjswllsvZitcBUYF0JCF3gm3/D8hBO5afeHyj2DfgGHwEr5PVvoaiIJkETgHUzwAJ+BTxjOPbsCRZaAmwlu9uSUgkBF2IVdKNA6ejjvsNLNk+w3fBYojAPwS0FcEK+RXhdkGH5okRJZ6aCrICAfbYnNYxHa+0R4shQwE0qn6sV5RVAQIzjCPHEY3XRZh4b2JCAUQ/aUIr8GIxRGNmRrazjeTCG6XTUUibJ1tPd0+2dOzI+vof6Suj/1cEUYC11jiZt7mxFbwg79jKqHrVAZwqPw2ZyGKkxEZfrcVm81ePx8XNHjiit16AVJbkAMK1hafTCY3lPWwFsTZ/7xx6UyMzuwE2UTmb3SauxNHTDIaJYM6xg4MoX1T/fUpBJhgUjR86d27NBdnveL60Atu5zVCR0AJ7VZM4lH6yERa+cb61ixZF9Xm/jV6cKHW2LaC7DaFKN63Ec1+U/6j0iCAYM00ABcErDRkR0BjAyZncc3qNz9DKjIVThIN8+zoB1p40J8gw6NaxfrmZ050j+c+d4RDFMOQmslHnDMFYls21L9VgLgPnAq5yl5BuZc+IeS9yIOGXLIB4cP8A1X2gYXn3o72Wbc7kigotlRL8A1lVqmHYVOiWh8w19Lxy8xi9spXO0SPbbmHs0A1xzyI+B4rMEBcOmIfFpN/soNFyBn5Apye1EABYVRvBxXNBDAGO4kAYwJV0mKw3TGGAeaVZyILKVMrm2NeaBV1ud7UC2qmserBzkK0xrJ+CCQNcoTy6sqB1/gbpGHh6akRgdSwtjiA9QpyJqlaVdDClX5p3sopLgI8c4oFY6A6ROQbTHUCGB0KSJn244ETKu+lUg3WcMs8ByR3dPNA/YSwWUsgNRAoacGeWzeEdo+h8CbDh5yBp39BVKG7ZzFL47AlthOpAF2aPUmFFf0gYbq6RRgObL5DfUCjaqh0yhhjntlaOCPmqWbRrAn1rJrYsCLwZ6n4hreoAMYz7fI0LojXAB2GgF2n2dnXkrJbFA8tEKvara9D9/WH2fm9Y5BiiyDzfZGZgxdBHFVops5AGQJ2VTT4BhEqIi2Vc5dMFsBRNAGmpDvWz6r6tcdrOwdTFKHIgN3WbfRo8Sl52Pr3o4JMaUe8CcETFMewo1WFHEviSlpAbHtsS6s9XZdOfowZbkHfHV50jKtygj7xjpiHt67YTBGzVMm1UYrFCAQUpalhj7XuBWWugc3SE8GFJIgchHs4D+ymxkyYuOAcoHpaXPduYZDx+NYp6CODLKRw0Dt7sU1OXfNeIDiIUC2HxjXhVgR8blaAVLSNIxGGbzmh1D/HoryZRjltfAF/nRRoMULjWUIgVV+Veg6qJHKbuS4wU15Jo3Bsx0xUnDiExYUvg3BtPNAbZKNsHp1WQ8a2OzkTjjs/JqPu4r0Ih8ZO4ZxcoxoQEko/s6aPxZYQjknSN1GHD6haIeyjdjrmpMH2zFZy701gUImu4cXUYgGC6MArSIKWYTxgKOSqCV3yxd2f6GfxHIFk7QUSQNumlnLVLesYwaVtAWjPrfajxM8m+P3XtXs5xhnU12jlYwnSKGFruFhGzzuVTZXUurSjDjQXhnyJ2clAEiZwDxsDWIYQ9lTJTr5Tiu18bH5fAOqL2imevDPrNT/DA/jMrwJjtHdzZvUQpZLCh84JXZEe9hyk10Q5M+bPUVclGaUgX8STAiGIA6qhjm2zdBwL0WdF9S2Ipz546oIerAKilYefVbc52jdzlLV3AkYQuLZgSApIp/ogqofaryTy6X6wOCYefOQfcRiSYLJe8aBUz3vUTRbK5ztIqXH0pji2M0CCISUm/a/GGxOMkwbs2hCFhjNOYBC+p8mxtHaMRkSvbgeBjdC2Z9VQSsqc7ROjSXewnOK1vDk2Q0295jpLaMzosKv2kejVkwF6s2lNX3QJXETIRBnoLVl2QpSCMiWIibK5MrCfXa6JYryRYg5TMq0udhH8tR4Ed4JVWAMfI4t1zZ6IKHKKrOkb5MhmFF6EkWjK0oJAYQvcwht+YesLhjTh1yiz+GZLiTs0I7AaZihoZcwQibRp7JKyO1PDKYAJCzAMlkxhAjlpJF8K/CixXZbbZO9nniL9o6saqZByzeNezHuUtgEm7hyKYGzQhxz7YtdfBcrh/3sMPtcYqp16g6ELvzbYiFOqaqJGmYxyMgLqucbAKwtVbdJiUlFgiGL7MW7Eh2CcZ6EvMhF3SZSbeJQidfVXUEdPr0LIrWsXyRj7hCkmNusuyXx2ri6XN49JDyCaVnS4Z25DRubmjH6JjKDEpJa2gnRcPotkCAagbaWH3SOGArQC5UGdvGEolo5kM/ZRdjnrHbbUzCGLlYoYsZw/J47xsHeqzOt3Vkqi6I4s9TU98fW2gMMGwZEcnpO3LKWcnILYb5HKamhqex++cxFUHkFZkMrAZcfkTU5BGoL6kFrADPo+Rt0bcPx+5EKbJWR7t27+7q6vpq//6Dl6fGvp/dxMm+m5ycWltbW19fP7+y8qbceC75SDzcaJdKFEffvSjEYl8wjCSMyj4jQmounZQf5k8gFtHvqyEeAswhmIxqtXpCxL3Ro8MiugReKsxULAvsLh9slHf7ZicnV9fWlpfXH1w7/7IcWdXzQz+IImZj3rmzPBnhlxjoF2Uy5+csW0EPohStu0ZVFSdmZmaOHj06fHS4a3h4NyCEWCFaFnLyTWIneXes8R7U/Pzk6urq5eXlB9eunZd/3h2KJ2YVKRdLN7YOIaO90abkYoSKOyaQLtJ/rALaCzDAlNYrhp0WMT4+PjLydmbm3r0bXvXGqKQQA6JLTbrMbFcSpi5rxZf79z87eFCQTbCtCcjsWJie/l4guLy8/PzatbsCwTJPMSaKDrPUcvLWUUyJxwyEw6jkrSP5vIDWMImPiBOCP4pAXTYCLn0ALURPwgY7vJAAXT44NjU2e2wzLWs59n03Pz03tbp0ZfnZj9fO1+JYkLCJznscEHcCpshpD1igAM2cuDc8UTtVlSAZ3eF4dNlM6epymQOxf//+KwcPLo2NjR2bbd9/zzI9P31x7sza0tLy8x9/rA30qjT2UeQgMY3dH8BETNp9BU+1+koo0D2pQEKgh5EYu52USglLzrs0QDLDxkQtPPZ12wDaLPZ9Nz175szc0tLSsx+ff1mrDcSghJJ+NV4bg2qgCCQVWifYbrfNkEpdu51UA11ia74yEiQAOja7BX+K4WPF/PT8k7kzt35Yuv/z84c9J17NnHh1T+NjANLMAf50ucg4DCIJAo0em/q2dY3e7jHboNykpZrIsPsHLwsJmjo228qzhJ9k7OOJlrBDFphKoy8fXBNF7Njst+0+8bbFV1k8EhL0k9Jo6Ru/3b4avdWxH/llJEhk2Oy3f1sJev8QJmhMaHS7T6OB+B+C/KOr0h4pdAAAAABJRU5ErkJggg==&quot;&gt;             
+
+      &lt;img alt=&quot;&quot; class=&quot;position-absolute&quot; height=&quot;50&quot; width=&quot;116&quot; style=&quot;top: 113px; left: 762px; z-index: 4;&quot;                                                
+      src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHQAAAAyCAMAAAC6RQ9kAAAAA3NCSVQICAjb4U/gAAABgFBMVEX////kyZm1pIDexpr73qqnmnallnGnmnn33aqjlXn12anszpi7p4PUvZPu1aXPuo6tm3zr0aLfxZbNt4xxbWOUim6yn3l7c2NsaF2+rIStm3yom4C2o3v22KSznW+rnIGejGuqlm3ZxJZxbWN0bFvUvZPv0JvnzZ2MfmPArYq7p4PXvo7Qu5LFsoq+rIRsaWDx057ErYKznXCsmnKFe2qom4CPgWSMhG3Qu5Kck3OllnGjlXl7c2NzcGeJf217c2OJf23FsoqUim6+rISck3PArYp/eWl/eGWfknrGsIzArYrGsIyck3PNt4zXvo67p4Pr0aLQu5K7p4Omk2zfxZbZxJbErYL12anu1aWwm2753KfmzaHny5aMg3N/eWmfknqajnmUiXSMhG2Mg3OrnIGjlXmUim6UiXSMhG2EeGN/eGW1pICajHOFe2rGsIy7p4OVhme+rIStm3ynmnmejGuUim6VhmfUvZPQu5LNt4zexprPuo7GsIy7p4Oyn3mmk2w+/MV0AAAAgHRSTlMA////////////////////RP///yJ3/yIR7v9E////RHe7/xEiu///RHfu/////xH/////IjNEVaqqzMwRESIzVXeIu8zdIiIzZmZ3d4iZqru7u7vM3d3u7u7///8RESIiIiIiMzMzMzMzM0RERFVVVWZmZmZmZnd3d4iIiIiIiOmar1cAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzQGstOgAAAFzUlEQVRYheWXh3saRxDFvSzHHQsczUEKCFVkiINKFEW25RZFcVwjJFvNTu+99+p/PfNmCwfcxYosf8n3ZcB3gjvv797sm9nl1KlHxNyjbngCMf7U/wU6929Al/5L6X3nq43f5ud/uf3ZpScARXp/GB/68q1fD4IHYXP5TC73em731psnDYXS9dMDX729nVZBmkIpVc4hXr188tCLA9CfAiIqftM/1WwTda90otC5IeilbahkoYAG9Ocyiz1J6JDSNw41Kg0wvRTOTVC3HgvzwcbG7ZJrfoNKLx8qTms6IBxT+cPyY1JvHqgmxrhlPpPSq54rm21WyFyXZDzGGVC/OSby8jYP1KRBdq9Y6Dnvgrn8cwACZRc+4rklU8FXIZv4xvGg20qLeEDUPS576kjnfAN9D5cUpxZYfeJsa6m7x2J+CSIkBCFV/ZaFWqVbSrtI6dwq7SjODc9q7liFc2Dmyzw6EtxP71IjDKkdNFUzRDT5tkDBUUobOLd3VND46urqjQZi6mYYlsvl18oIQbE3T1ERUkiEwEngjIOsdrvdgrQx+yzHt6c5xuil3wlbgBJGEGY0Gk84hP4k+idh+PxnPnWkGIuH2tG0AIvQWAsXRqFRiy+OxkyE2oGlyd+wPP1IfeE6wSeh9B/nmKB5sZjJZjNeDGuh6lPUk6BTFiVdIqWFWqR0avsZZ2g1m6FXDLRYoQuZzEQSVESsaU/mi7JyEepTwE0+VRBaaYFGzmYnYqCyhku11PUE9zrvGJ3WREKG6HFK2TVFVyadU1QrZwGVkENDx0AXAa0nKG1EjCP7J6GhKtrfbc8LSKnQ0BryW4+DVmm2s36yewct5GZXitB2HTR2dEDu8RGoWMTQMU4qigIm1fu7khGuTI179JGgQdgut8t4604VmPQyVEp2UiYOWskiUq8kuFdGKlVEfCpIaaAqvud7nufjQEdu9TCSTm8BRopxUlGIOl3K1BJLpl9+ItJ96HOZUlohlIei8/lsoNLMqcwgRieVoHlUUz1Jqe0xwprWaQ9p/maZCJUsNTBGkk9zekUd/vVjoLKKx/ET5nTAvJFlRDA0XdEwpBYH3hxFoIsYetRJRYnM05Vk90a7jssul0w6PWs1cnY9Lhq4l6GCe1J21EmktMKN49MEaH9FkW4N0U8CaMVmVx8HoHQXehLa3YhS1DDFF/Fz6tqsNGDhHMVQdq5v0F6gTMmY9FbYSSM9qYglAdAXE+bUrcvWSq4Xc3p1Xi03MEp5TnFXHe1hxL7kXrmAJLyUlN74zoD0kqxZrdTTZcolo1Jdo1Swk2JWNygt4HFeToQKl1jhVlL8UQ44vWwi0yK4H0bcK6qZOCeRUvQkkjr8M9Ok15VLZLXWSTbu1Rq1XOx3AzunuJF70oiTihisjiXoagK0vzFxD6C1a/faKuUU87LjoLg51kmYU3EWUmOdVLIrdv9g9i5Up0rXqe/Anu1ITinpyY42wiJG7QEa66TSYOeLFKwQ5XSkI+l5xZIe9N1Lt+f1GjYYVYxyHnMa66RGZF9m59WuqrTKaCMZmb5Lr1OKHouxR5XSZh3GjnXSFEtsi3a7uLCwsNi1WnkRV1hlTHK1YGxbVBTKq/WIk4qcrIvwWJyTplgdpqrKeYn2f1ZqSlRn1+efiYBeM0YSet835KQip60HaJyTuGQkVkkNjW7RsHOoGBsZrdit8Mbsmq5TGe+kIruil9STSvwf006pbUnOSEaibQ7YKFml2m55bB6GnFTkx95BocY5SdcpulvV2s71ClunFurbOe0KuW96r+mx2WEoHmcWNZOdmZ5e61xvRaFLq+/Sr8TzFH/82bt7t/cMx+87O/Qzcffw8HBPNyTdgP2+e/eNUikK3O5qE4iaifxziOrziJWVyZVJxPrMw+mvO5+0YjtjUlz56MOPX6B4//NSo/HdnTvf9zY3N3u9/fX19Xv37k9i6JXJ+zMcF6Y5fux01tY6a51WqzXWcrS/AGShj5noGrZMAAAAAElFTkSuQmCC&quot;&gt;                                                     
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;div class=&quot;container-lg mt-5 px-3&quot;&gt;
+  &lt;!-- &#39;&quot;&#96; --&gt;&lt;!-- &lt;/textarea&gt;&lt;/xmp&gt; --&gt;&lt;/option&gt;&lt;/form&gt;&lt;form role=&quot;search&quot; data-turbo=&quot;false&quot; action=&quot;/search&quot; accept-charset=&quot;UTF-8&quot; method=&quot;get&quot;&gt;            
+    &lt;label for=&quot;not-found-search&quot; class=&quot;d-block text-normal color-fg-muted mb-1 f4&quot;&gt;Find code, projects, and people on GitHub:&lt;/label&gt;                         
+    &lt;div class=&quot;d-flex flex-items-center&quot;&gt;
+      &lt;input type=&quot;text&quot; name=&quot;q&quot; id=&quot;not-found-search&quot; class=&quot;flex-auto input-lg form-control mr-2&quot;&gt;                                                           
+        &lt;button type=&quot;submit&quot; data-view-component=&quot;true&quot; class=&quot;btn&quot;&gt;    Search 
+&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+    &lt;div class=&quot;mt-5 color-fg-muted text-center&quot;&gt;
+      &lt;a href=&quot;https://support.github.com?tags=dotcom-404&quot; class=&quot;Link--secondary&quot;&gt;Contact Support&lt;/a&gt; &amp;mdash;                                                  
+      &lt;a href=&quot;https://githubstatus.com&quot; class=&quot;Link--secondary&quot;&gt;GitHub Status&lt;/a&gt; &amp;mdash;                                                                      
+      &lt;a href=&quot;https://twitter.com/githubstatus&quot; class=&quot;Link--secondary&quot;&gt;@githubstatus&lt;/a&gt;                                                                      
+    &lt;/div&gt;
+&lt;/div&gt;
+
+  &lt;/main&gt;
+
+  &lt;/div&gt;
+
+            &lt;footer role=&quot;contentinfo&quot; class=&quot;footer pt-6 position-relative&quot; data-analytics-visible=&quot;{&amp;quot;category&amp;quot;:&amp;quot;Footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;visible&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;text: Marketing footer&amp;quot;}&quot; &gt;   
+  &lt;h2 class=&quot;sr-only&quot;&gt;Site-wide Links&lt;/h2&gt;
+  &lt;div class=&quot;container-xl p-responsive&quot;&gt;
+    &lt;div class=&quot;d-flex flex-wrap py-5 mb-5&quot;&gt;
+      &lt;section class=&quot;col-12 col-lg-4 mb-5 pr-lg-4&quot;&gt;
+        &lt;a href=&quot;/&quot; data-analytics-event=&quot;{&amp;quot;category&amp;quot;:&amp;quot;Footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;go to home&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;text:home&amp;quot;}&quot; class=&quot;color-fg-default d-inline-block&quot; aria-label=&quot;Go to GitHub homepage&quot;&gt;                                                                              
+          &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 367.4 90&quot; class=&quot;footer-logo-mktg d-block&quot; height=&quot;30&quot;&gt;&lt;g fill=&quot;currentColor&quot;&gt;&lt;path d=&quot;m46.1 0c-25.5 0-46.1 20.6-46.1 46.1 0 20.4 13.2 37.7 31.5 43.8 2.3.4 3.2-1 3.2-2.2 0-1.1-.1-4.7-.1-8.6-11.6 2.1-14.6-2.8-15.5-5.4-.5-1.3-2.8-5.4-4.7-6.5-1.6-.9-3.9-3-.1-3.1 3.6-.1 6.2 3.3 7.1 4.7 4.2 7 10.8 5 13.4 3.8.4-3 1.6-5 2.9-6.2-10.3-1.2-21-5.1-21-22.8 0-5 1.8-9.2 4.7-12.4-.5-1.2-2.1-5.9.5-12.2 0 0 3.9-1.2 12.7 4.7 3.7-1 7.6-1.6 11.5-1.6s7.8.5 11.5 1.6c8.8-6 12.7-4.7 12.7-4.7 2.5 6.3.9 11.1.5 12.2 2.9 3.2 4.7 7.3 4.7 12.4 0 17.7-10.8 21.6-21.1 22.8 1.7 1.4 3.1 4.2 3.1 8.5 0 6.2-.1 11.1-.1 12.7 0 1.2.9 2.7 3.2 2.2 18.2-6.1 31.4-23.4 31.4-43.8.3-25.4-20.4-46-45.9-46z&quot;&gt;&lt;/path&gt;&lt;path d=&quot;m221.6 67.1h-.1zm0 0c-.5 0-1.8.3-3.2.3-4.4 0-5.9-2-5.9-4.6v-17.5h8.9c.5 0 .9-.4.9-1.1v-9.5c0-.5-.4-.9-.9-.9h-8.9v-11.7c0-.4-.3-.7-.8-.7h-12c-.5 0-.8.3-.8.7v12.1s-6.1 1.5-6.5 1.6-.7.5-.7.9v7.6c0 .6.4 1.1.9 1.1h6.2v18.3c0 13.6 9.5 15 16 15 3 0 6.5-.9 7.1-1.2.3-.1.5-.5.5-.9v-8.4c.1-.6-.3-1-.8-1.1zm132.2-12.2c0-10.1-4.1-11.4-8.4-11-3.3.2-6 1.9-6 1.9v19.6s2.7 1.9 6.8 2c5.8.2 7.6-1.9 7.6-12.5zm13.6-.9c0 19.1-6.2 24.6-17 24.6-9.1 0-14.1-4.6-14.1-4.6s-.2 2.6-.5 2.9c-.2.3-.4.4-.8.4h-8.3c-.6 0-1.1-.4-1.1-.9l.1-62c0-.5.4-.9.9-.9h11.9c.5 0 .9.4.9.9l-.1 20.9s4.6-3 11.3-3h.1c6.8-0 16.7 2.5 16.7 21.7zm-48.7-20.2h-11.7c-.6 0-.9.4-.9 1.1v30.3s-3.1 2.2-7.3 2.2-5.4-1.9-5.4-6.1v-26.5c0-.5-.4-.9-.9-.9h-11.9c-.5 0-.9.4-.9.9v28.5c0 12.3 6.9 15.3 16.3 15.3 7.8 0 14.1-4.3 14.1-4.3s.3 2.2.4 2.5.5.5.9.5h7.5c.6 0 .9-.4.9-.9l.1-41.7c-.1-.4-.6-.9-1.2-.9zm-132.2 0h-11.9c-.5 0-.9.5-.9 1.1v40.9c0 1.1.7 1.5 1.7 1.5h10.7c1.1 0 1.4-.5 1.4-1.5v-41.1c0-.5-.5-.9-1-.9zm-5.8-18.9c-4.3 0-7.7 3.4-7.7 7.7s3.4 7.7 7.7 7.7c4.2 0 7.6-3.4 7.6-7.7s-3.4-7.7-7.6-7.7zm92-1.4h-11.8c-.5 0-.9.4-.9.9v22.8h-18.5v-22.7c0-.5-.4-.9-.9-.9h-11.9c-.5 0-.9.4-.9.9v62c0 .5.5.9.9.9h11.9c.5 0 .9-.4.9-.9v-26.6h18.5l-.1 26.5c0 .5.4.9.9.9h11.9c.5 0 .9-.4.9-.9v-62c0-.4-.4-.9-.9-.9zm-105.3 27.5v32c0 .2-.1.6-.3.7 0 0-7 5-18.5 5-13.9 0-30.3-4.4-30.3-33 0-28.7 14.4-34.6 28.4-34.5 12.2 0 17.1 2.7 17.8 3.2.2.3.3.5.3.8l-2.3 9.9c0 .5-.5 1.1-1.1.9-2-.6-5-1.8-12.1-1.8-8.2 0-17 2.3-17 20.8s8.4 20.6 14.4 20.6c5.1 0 7-.6 7-.6v-12.8h-8.2c-.6 0-1.1-.4-1.1-.9v-10.3c0-.5.4-.9 1.1-.9h20.9c.6-.1 1 .4 1 .9z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;             
+        &lt;/a&gt;
+
+        &lt;h3 class=&quot;h5 mt-4 mb-0&quot; id=&quot;subscribe-to-newsletter&quot;&gt;Subscribe to our developer newsletter&lt;/h3&gt;                                                        
+        &lt;p class=&quot;f5 color-fg-muted mb-3&quot;&gt;Get tips, technical guides, and best practices. Twice a month.&lt;/p&gt;                                                    
+          &lt;a class=&quot;btn-mktg mb-4 btn-muted-mktg&quot; data-analytics-event=&quot;{&amp;quot;category&amp;quot;:&amp;quot;Subscribe&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;click to Subscribe&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;ref_cta:Subscribe;&amp;quot;}&quot; href=&quot;https://github.com/newsletter&quot;&gt;                                                                  
+  Subscribe
+
+
+&lt;/a&gt;
+
+      &lt;/section&gt;
+
+      &lt;nav class=&quot;col-6 col-sm-3 col-lg-2 mb-6 mb-md-2 pr-3 pr-lg-0 pl-lg-4&quot; aria-labelledby=&quot;footer-title-product&quot;&gt;                                            
+        &lt;h3 class=&quot;h5 mb-3 text-mono color-fg-muted text-normal&quot; id=&quot;footer-title-product&quot;&gt;                                                                     
+          Platform
+        &lt;/h3&gt;
+
+        &lt;ul class=&quot;list-style-none color-fg-muted f5&quot;&gt;
+          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
+            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;features&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;platform&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;features_link_platform_footer&amp;quot;}&quot; href=&quot;/features&quot;&gt;Features&lt;/a&gt;             
+          &lt;/li&gt;
+          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
+            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;enterprise&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;platform&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;enterprise_link_platform_footer&amp;quot;}&quot; href=&quot;/enterprise&quot;&gt;Enterprise&lt;/a&gt;     
+          &lt;/li&gt;
+          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
+            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;copilot&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;platform&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;copilot_link_platform_footer&amp;quot;}&quot; href=&quot;/features/copilot&quot;&gt;Copilot&lt;/a&gt;        
+          &lt;/li&gt;
+          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
+            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;ai&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;platform&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;ai_link_platform_footer&amp;quot;}&quot; href=&quot;/features/ai&quot;&gt;AI&lt;/a&gt;                            
+          &lt;/li&gt;
+          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
+            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;security&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;platform&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;security_link_platform_footer&amp;quot;}&quot; href=&quot;/security&quot;&gt;Security&lt;/a&gt;             
+          &lt;/li&gt;
+          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
+            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;pricing&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;platform&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;pricing_link_platform_footer&amp;quot;}&quot; href=&quot;/pricing&quot;&gt;Pricing&lt;/a&gt;                 
+          &lt;/li&gt;
+          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
+            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;team&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;platform&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;team_link_platform_footer&amp;quot;}&quot; href=&quot;/team&quot;&gt;Team&lt;/a&gt;                             
+          &lt;/li&gt;
+          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
+            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;resources&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;platform&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;resources_link_platform_footer&amp;quot;}&quot; href=&quot;https://resources.github.com&quot;&gt;Resources&lt;/a&gt;                                                                       
+          &lt;/li&gt;
+          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
+            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;roadmap&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;platform&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;roadmap_link_platform_footer&amp;quot;}&quot; href=&quot;https://github.com/github/roadmap&quot;&gt;Roadmap&lt;/a&gt;                                                                        
+          &lt;/li&gt;
+          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
+            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;compare&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;platform&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;compare_link_platform_footer&amp;quot;}&quot; href=&quot;https://resources.github.com/devops/tools/compare&quot;&gt;Compare GitHub&lt;/a&gt;                                                 
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/nav&gt;
+
+      &lt;nav class=&quot;col-6 col-sm-3 col-lg-2 mb-6 mb-md-2 pr-3 pr-md-0 pl-md-4&quot; aria-labelledby=&quot;footer-title-platform&quot;&gt;                                           
+        &lt;h3 class=&quot;h5 mb-3 text-mono color-fg-muted text-normal&quot; id=&quot;footer-title-platform&quot;&gt;                                                                    
+          Ecosystem
+        &lt;/h3&gt;
+
+        &lt;ul class=&quot;list-style-none f5&quot;&gt;
+          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
+            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;dev-api&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;ecosystem&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;dev-api_link_ecosystem_footer&amp;quot;}&quot; href=&quot;https://docs.github.com/get-started/exploring-integrations/about-building-integrations&quot;&gt;Developer API&lt;/a&gt;           
+          &lt;/li&gt;
+          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
+            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;partners&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;ecosystem&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;partners_link_ecosystem_footer&amp;quot;}&quot; href=&quot;https://partner.github.com&quot;&gt;Partners&lt;/a&gt;                                                                          
+          &lt;/li&gt;
+          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
+            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;edu&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;ecosystem&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;edu_link_ecosystem_footer&amp;quot;}&quot; href=&quot;https://github.com/edu&quot;&gt;Education&lt;/a&gt;       
+          &lt;/li&gt;
+          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
+            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;cli&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;ecosystem&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;cli_link_ecosystem_footer&amp;quot;}&quot; href=&quot;https://cli.github.com&quot;&gt;GitHub CLI&lt;/a&gt;      
+          &lt;/li&gt;
+          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
+            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;desktop&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;ecosystem&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;desktop_link_ecosystem_footer&amp;quot;}&quot; href=&quot;https://desktop.github.com&quot;&gt;GitHub Desktop&lt;/a&gt;                                                                      
+          &lt;/li&gt;
+          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
+            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;mobile&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;ecosystem&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;mobile_link_ecosystem_footer&amp;quot;}&quot; href=&quot;https://github.com/mobile&quot;&gt;GitHub Mobile&lt;/a&gt;                                                                          
+          &lt;/li&gt;
+          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
+            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;marketplace&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;ecosystem&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;marketplace_link_ecosystem_footer&amp;quot;}&quot; href=&quot;https://github.com/marketplace&quot;&gt;GitHub Marketplace&lt;/a&gt;                                                      
+          &lt;/li&gt;
+          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
+            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;mcp_registry&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;ecosystem&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;mcp_registry_link_ecosystem_footer&amp;quot;}&quot; href=&quot;https://github.com/mcp&quot;&gt;MCP Registry&lt;/a&gt;                                                                  
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/nav&gt;
+
+      &lt;nav class=&quot;col-6 col-sm-3 col-lg-2 mb-6 mb-md-2 pr-3 pr-md-0 pl-md-4&quot; aria-labelledby=&quot;footer-title-support&quot;&gt;                                            
+        &lt;h3 class=&quot;h5 mb-3 text-mono color-fg-muted text-normal&quot; id=&quot;footer-title-support&quot;&gt;                                                                     
+          Support
+        &lt;/h3&gt;
+
+        &lt;ul class=&quot;list-style-none f5&quot;&gt;
+          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
+            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;docs&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;support&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;docs_link_support_footer&amp;quot;}&quot; href=&quot;https://docs.github.com&quot;&gt;Docs&lt;/a&gt;             
+          &lt;/li&gt;
+
+          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
+            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;community&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;support&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;community_link_support_footer&amp;quot;}&quot; href=&quot;https://github.community&quot;&gt;Community Forum&lt;/a&gt;                                                                       
+          &lt;/li&gt;
+
+          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
+            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;services&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;support&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;services_link_support_footer&amp;quot;}&quot; href=&quot;https://services.github.com&quot;&gt;Professional Services&lt;/a&gt;                                                                
+          &lt;/li&gt;
+
+          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
+            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;premium_support&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;support&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;premium_support_link_support_footer&amp;quot;}&quot; href=&quot;/enterprise/premium-support&quot;&gt;Premium Support&lt;/a&gt;                                                        
+          &lt;/li&gt;
+
+          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
+            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;skills&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;support&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;skills_link_support_footer&amp;quot;}&quot; href=&quot;https://skills.github.com&quot;&gt;Skills&lt;/a&gt;     
+          &lt;/li&gt;
+
+          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
+            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;status&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;support&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;status_link_support_footer&amp;quot;}&quot; href=&quot;https://www.githubstatus.com&quot;&gt;Status&lt;/a&gt;  
+          &lt;/li&gt;
+
+          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
+            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;contact_github&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;support&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;contact_github_link_support_footer&amp;quot;}&quot; href=&quot;https://support.github.com?tags=dotcom-footer&quot;&gt;Contact GitHub&lt;/a&gt;                                         
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/nav&gt;
+
+      &lt;nav class=&quot;col-6 col-sm-3 col-lg-2 mb-6 mb-md-2 pr-3 pr-md-0 pl-md-4&quot; aria-labelledby=&quot;footer-title-company&quot;&gt;                                            
+        &lt;h3 class=&quot;h5 mb-3 text-mono color-fg-muted text-normal&quot; id=&quot;footer-title-company&quot;&gt;                                                                     
+          Company
+        &lt;/h3&gt;
+
+        &lt;ul class=&quot;list-style-none f5&quot;&gt;
+          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
+            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;about&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;company&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;about_link_company_footer&amp;quot;}&quot; href=&quot;https://github.com/about&quot;&gt;About&lt;/a&gt;         
+          &lt;/li&gt;
+          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
+            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;why_github&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;company&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;why_github_link_company_footer&amp;quot;}&quot; href=&quot;https://github.com/why-github&quot;&gt;Why GitHub&lt;/a&gt;                                                                     
+          &lt;/li&gt;
+          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
+            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;customer_stories&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;company&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;customer_stories_link_company_footer&amp;quot;}&quot; href=&quot;/customer-stories?type=enterprise&quot;&gt;Customer stories&lt;/a&gt;                                               
+          &lt;/li&gt;
+          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
+            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;blog&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;company&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;blog_link_company_footer&amp;quot;}&quot; href=&quot;https://github.blog&quot;&gt;Blog&lt;/a&gt;                 
+          &lt;/li&gt;
+          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
+            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;readme&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;company&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;readme_link_company_footer&amp;quot;}&quot; href=&quot;/readme&quot;&gt;The ReadME Project&lt;/a&gt;           
+          &lt;/li&gt;
+          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
+            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;careers&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;company&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;careers_link_company_footer&amp;quot;}&quot; href=&quot;https://github.careers&quot;&gt;Careers&lt;/a&gt;     
+          &lt;/li&gt;
+          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
+            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;newsroom&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;company&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;newsroom_link_company_footer&amp;quot;}&quot; href=&quot;/newsroom&quot;&gt;Newsroom&lt;/a&gt;               
+          &lt;/li&gt;
+          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
+            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;inclusion&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;company&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;inclusion_link_company_footer&amp;quot;}&quot; href=&quot;/about/diversity&quot;&gt;Inclusion&lt;/a&gt;     
+          &lt;/li&gt;
+          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
+            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;social_impact&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;company&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;social_impact_link_company_footer&amp;quot;}&quot; href=&quot;https://socialimpact.github.com&quot;&gt;Social Impact&lt;/a&gt;                                                          
+          &lt;/li&gt;
+          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
+            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;shop&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;company&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;shop_link_company_footer&amp;quot;}&quot; href=&quot;https://shop.github.com&quot;&gt;Shop&lt;/a&gt;             
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/nav&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;color-bg-subtle&quot;&gt;
+    &lt;div class=&quot;container-xl p-responsive f6 py-4 d-md-flex flex-justify-between flex-items-center gap-3&quot;&gt;                                                      
+      &lt;nav aria-label=&quot;Legal and Resource Links&quot;&gt;
+        &lt;ul class=&quot;list-style-none d-flex flex-wrap color-fg-muted gapx-3&quot;&gt;     
+          &lt;li&gt;
+            &amp;copy; &lt;time datetime=&quot;2025&quot;&gt;2025&lt;/time&gt; GitHub, Inc.
+          &lt;/li&gt;
+
+          &lt;li&gt;
+            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;terms&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;subfooter&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;terms_link_subfooter_footer&amp;quot;}&quot; href=&quot;https://docs.github.com/site-policy/github-terms/github-terms-of-service&quot;&gt;Terms&lt;/a&gt;                                     
+          &lt;/li&gt;
+
+          &lt;li&gt;
+            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;privacy&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;subfooter&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;privacy_link_subfooter_footer&amp;quot;}&quot; href=&quot;https://docs.github.com/site-policy/privacy-policies/github-privacy-statement&quot;&gt;Privacy&lt;/a&gt;                          
+            &lt;a href=&quot;https://github.com/github/site-policy/pull/582&quot; class=&quot;Link--secondary&quot;&gt;(Updated 02/2024)&lt;time datetime=&quot;2024-02&quot; class=&quot;sr-only&quot;&gt;02/2024&lt;/time&gt;&lt;/a&gt;                                                                       
+          &lt;/li&gt;
+
+          &lt;li&gt;
+            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;sitemap&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;subfooter&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;sitemap_link_subfooter_footer&amp;quot;}&quot; href=&quot;/sitemap&quot;&gt;Sitemap&lt;/a&gt;               
+          &lt;/li&gt;
+
+          &lt;li&gt;
+            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;what_is_git&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;subfooter&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;what_is_git_link_subfooter_footer&amp;quot;}&quot; href=&quot;/git-guides&quot;&gt;What is Git?&lt;/a&gt;                                                                               
+          &lt;/li&gt;
+
+            &lt;li &gt;
+  &lt;cookie-consent-link&gt;
+    &lt;button
+      type=&quot;button&quot;
+      class=&quot;Link--secondary underline-on-hover border-0 p-0 color-bg-transparent&quot;                                                                              
+      data-action=&quot;click:cookie-consent-link#showConsentManagement&quot;
+      data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;cookies&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;subfooter&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;cookies_link_subfooter_footer&amp;quot;}&quot;                                                                            
+    &gt;
+       Manage cookies
+    &lt;/button&gt;
+  &lt;/cookie-consent-link&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+  &lt;cookie-consent-link&gt;
+    &lt;button
+      type=&quot;button&quot;
+      class=&quot;Link--secondary underline-on-hover border-0 p-0 color-bg-transparent text-left&quot;                                                                    
+      data-action=&quot;click:cookie-consent-link#showConsentManagement&quot;
+      data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;dont_share_info&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;subfooter&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;dont_share_info_link_subfooter_footer&amp;quot;}&quot;                                                            
+    &gt;
+      Do not share my personal information
+    &lt;/button&gt;
+  &lt;/cookie-consent-link&gt;
+&lt;/li&gt;
+
+        &lt;/ul&gt;
+      &lt;/nav&gt;
+
+      &lt;nav aria-label=&quot;GitHub&amp;#39;s Social Media Links&quot; class=&quot;footer-social mt-3 mt-md-0 d-flex gapx-6 gapy-1 flex-wrap flex-items-center flex-lg-justify-end&quot;&gt;
+
+&lt;ul class=&quot;list-style-none d-flex flex-items-center lh-condensed-ultra gap-3&quot;&gt;  
+    &lt;li&gt;
+      &lt;a href=&quot;https://www.linkedin.com/company/github&quot; class=&quot;footer-social-icon d-block Link--outlineOffset&quot; data-analytics-event=&quot;{&amp;quot;category&amp;quot;:&amp;quot;Footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;go to Linkedin&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;text:linkedin&amp;quot;}&quot;&gt;                                                      
+        &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 19 18&quot; aria-hidden=&quot;true&quot; class=&quot;d-block&quot; width=&quot;19&quot; height=&quot;18&quot;&gt;&lt;path d=&quot;M3.94 2A2 2 0 1 1 2 0a2 2 0 0 1 1.94 2zM4 5.48H0V18h4zm6.32 0H6.34V18h3.94v-6.57c0-3.66 4.77-4 4.77 0V18H19v-7.93c0-6.17-7.06-5.94-8.72-2.91z&quot; fill=&quot;currentColor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;         
+        &lt;span class=&quot;sr-only&quot;&gt;GitHub on LinkedIn&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&quot;https://www.instagram.com/github&quot; class=&quot;footer-social-icon d-block Link--outlineOffset&quot; data-analytics-event=&quot;{&amp;quot;category&amp;quot;:&amp;quot;Footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;go to Instagram&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;text:instagram&amp;quot;}&quot;&gt;                                                           
+        &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; role=&quot;img&quot; viewBox=&quot;0 0 24 24&quot; aria-hidden=&quot;true&quot; class=&quot;d-block&quot; width=&quot;18&quot; height=&quot;18&quot;&gt;&lt;title&gt;Instagram&lt;/title&gt;&lt;path d=&quot;M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z&quot; fill=&quot;currentColor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;                    
+        &lt;span class=&quot;sr-only&quot;&gt;GitHub on Instagram&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&quot;https://www.youtube.com/github&quot; class=&quot;footer-social-icon d-block Link--outlineOffset&quot; data-analytics-event=&quot;{&amp;quot;category&amp;quot;:&amp;quot;Footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;go to YouTube&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;text:youtube&amp;quot;}&quot;&gt;                                                                 
+        &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 19.17 13.6&quot; aria-hidden=&quot;true&quot; class=&quot;d-block&quot; width=&quot;23&quot; height=&quot;16&quot;&gt;&lt;path d=&quot;M18.77 2.13A2.4 2.4 0 0 0 17.09.42C15.59 0 9.58 0 9.58 0a57.55 57.55 0 0 0-7.5.4A2.49 2.49 0 0 0 .39 2.13 26.27 26.27 0 0 0 0 6.8a26.15 26.15 0 0 0 .39 4.67 2.43 2.43 0 0 0 1.69 1.71c1.52.42 7.5.42 7.5.42a57.69 57.69 0 0 0 7.51-.4 2.4 2.4 0 0 0 1.68-1.71 25.63 25.63 0 0 0 .4-4.67 24 24 0 0 0-.4-4.69zM7.67 9.71V3.89l5 2.91z&quot; fill=&quot;currentColor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;                                                             
+        &lt;span class=&quot;sr-only&quot;&gt;GitHub on YouTube&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&quot;https://x.com/github&quot; class=&quot;footer-social-icon d-block Link--outlineOffset&quot; data-analytics-event=&quot;{&amp;quot;category&amp;quot;:&amp;quot;Footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;go to X&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;text:x&amp;quot;}&quot;&gt;       
+        &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 1200 1227&quot; fill=&quot;currentColor&quot; aria-hidden=&quot;true&quot; class=&quot;d-block&quot; width=&quot;16&quot; height=&quot;16&quot;&gt;&lt;path d=&quot;M714.163 519.284 1160.89 0h-105.86L667.137 450.887 357.328 0H0l468.492 681.821L0 1226.37h105.866l409.625-476.152 327.181 476.152H1200L714.137 519.284h.026ZM569.165 687.828l-47.468-67.894-377.686-540.24h162.604l304.797 435.991 47.468 67.894 396.2 566.721H892.476L569.165 687.854v-.026Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;                      
+        &lt;span class=&quot;sr-only&quot;&gt;GitHub on X&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&quot;https://www.tiktok.com/@github&quot; class=&quot;footer-social-icon d-block Link--outlineOffset&quot; data-analytics-event=&quot;{&amp;quot;category&amp;quot;:&amp;quot;Footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;go to tiktok&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;text:tiktok&amp;quot;}&quot;&gt;                                                                   
+        &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; role=&quot;img&quot; viewBox=&quot;0 0 24 24&quot; aria-hidden=&quot;true&quot; class=&quot;d-block&quot; width=&quot;18&quot; height=&quot;18&quot;&gt;&lt;title&gt;TikTok&lt;/title&gt;&lt;path d=&quot;M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z&quot; fill=&quot;currentColor&quot;&gt;&lt;/path&gt;&lt;/svg&gt; 
+        &lt;span class=&quot;sr-only&quot;&gt;GitHub on TikTok&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&quot;https://www.twitch.tv/github&quot; class=&quot;footer-social-icon d-block Link--outlineOffset&quot; data-analytics-event=&quot;{&amp;quot;category&amp;quot;:&amp;quot;Footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;go to Twitch&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;text:twitch&amp;quot;}&quot;&gt;                                                                     
+        &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; role=&quot;img&quot; viewBox=&quot;0 0 24 24&quot; aria-hidden=&quot;true&quot; class=&quot;d-block&quot; width=&quot;18&quot; height=&quot;18&quot;&gt;&lt;title&gt;Twitch&lt;/title&gt;&lt;path d=&quot;M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z&quot; fill=&quot;currentColor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;                
+        &lt;span class=&quot;sr-only&quot;&gt;GitHub on Twitch&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&quot;https://github.com/github&quot; class=&quot;footer-social-icon d-block Link--outlineOffset&quot; data-analytics-event=&quot;{&amp;quot;category&amp;quot;:&amp;quot;Footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;go to github&amp;#39;s org&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;text:github&amp;quot;}&quot;&gt;                                                              
+        &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; height=&quot;20&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot; aria-hidden=&quot;true&quot; class=&quot;d-block&quot;&gt;&lt;path fill=&quot;currentColor&quot; d=&quot;M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;                                                              
+        &lt;span class=&quot;sr-only&quot;&gt;GitHub’s organization on GitHub&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+  &lt;locale-selector&gt;
+    &lt;experimental-action-menu data-anchor-align=&quot;start&quot; data-anchor-side=&quot;outside-bottom&quot; data-view-component=&quot;true&quot; class=&quot;footer-social-icon&quot;&gt;                
+  &lt;button role=&quot;button&quot; aria-haspopup=&quot;true&quot; aria-controls=&quot;locale-selector-list&quot; aria-expanded=&quot;false&quot; id=&quot;locale-selector-text&quot; aria-label=&quot;English - Select language&quot; type=&quot;button&quot; data-view-component=&quot;true&quot; class=&quot;d-flex flex-items-center border-0 color-bg-transparent p-0 locale-trigger Button--secondary Button--medium Button&quot;&gt;  &lt;span class=&quot;Button-content&quot;&gt;                                     
+    &lt;span class=&quot;Button-label&quot;&gt;&lt;span class=&quot;locale-selector-trigger&quot;&gt;
+          &lt;svg height=&quot;16&quot; aria-hidden=&quot;true&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; data-view-component=&quot;true&quot; class=&quot;octicon octicon-globe mr-1 color-fg-muted locale-icon&quot;&gt;                                                            
+    &lt;path d=&quot;M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM5.78 8.75a9.64 9.64 0 0 0 1.363 4.177c.255.426.542.832.857 1.215.245-.296.551-.705.857-1.215A9.64 9.64 0 0 0 10.22 8.75Zm4.44-1.5a9.64 9.64 0 0 0-1.363-4.177c-.307-.51-.612-.919-.857-1.215a9.927 9.927 0 0 0-.857 1.215A9.64 9.64 0 0 0 5.78 7.25Zm-5.944 1.5H1.543a6.507 6.507 0 0 0 4.666 5.5c-.123-.181-.24-.365-.352-.552-.715-1.192-1.437-2.874-1.581-4.948Zm-2.733-1.5h2.733c.144-2.074.866-3.756 1.58-4.948.12-.197.237-.381.353-.552a6.507 6.507 0 0 0-4.666 5.5Zm10.181 1.5c-.144 2.074-.866 3.756-1.58 4.948-.12.197-.237.381-.353.552a6.507 6.507 0 0 0 4.666-5.5Zm2.733-1.5a6.507 6.507 0 0 0-4.666-5.5c.123.181.24.365.353.552.714 1.192 1.436 2.874 1.58 4.948Z&quot;&gt;&lt;/path&gt;        
+&lt;/svg&gt;
+          &lt;span class=&quot;color-fg-muted Link--secondary f6&quot;&gt;English&lt;/span&gt;        
+          &lt;svg height=&quot;16&quot; aria-hidden=&quot;true&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; data-view-component=&quot;true&quot; class=&quot;octicon octicon-chevron-down ml-1 color-fg-muted locale-icon&quot;&gt;                                                     
+    &lt;path d=&quot;M12.78 5.22a.749.749 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.749.749 0 0 1 1.06 0Z&quot;&gt;&lt;/path&gt;                                                                           
+&lt;/svg&gt;
+        &lt;/span&gt;&lt;/span&gt;
+  &lt;/span&gt;
+&lt;/button&gt;
+
+  &lt;div class=&quot;Overlay-backdrop--anchor&quot; data-menu-overlay&gt;
+    &lt;div class=&quot;Overlay Overlay-whenNarrow Overlay--height-auto Overlay--width-auto&quot; hidden&gt;                                                                    
+      &lt;div class=&quot;Overlay-body Overlay-body--paddingNone&quot;&gt;
+        &lt;ul class=&quot;ActionList&quot; id=&quot;locale-selector-list&quot; role=&quot;menu&quot; aria-labelledby=&quot;locale-selector-text&quot;&gt;                                                    
+                &lt;li role=&quot;none&quot; data-view-component=&quot;true&quot; class=&quot;ActionList-item&quot;&gt;                                                                             
+    &lt;a href=&quot;&quot; selected=&quot;selected&quot; style=&quot;white-space: normal;&quot; data-action=&quot;click:locale-selector#handleSelectLocale&quot; data-locale=&quot;en-us&quot; role=&quot;menuitem&quot; tabindex=&quot;-1&quot; data-view-component=&quot;true&quot; class=&quot;footer-social-locale ActionList-content&quot;&gt;                                                                            
+
+      &lt;span class=&quot;ActionList-item-label&quot;&gt;
+                  &lt;div style=&quot;width: 16px; display: inline-block; text-align: center; margin-right: 8px; flex-shrink: 0;&quot;&gt;                                      
+            &lt;svg height=&quot;16&quot; aria-hidden=&quot;true&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; data-view-component=&quot;true&quot; class=&quot;octicon octicon-check&quot;&gt;          
+    &lt;path d=&quot;M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z&quot;&gt;&lt;/path&gt;                                                        
+&lt;/svg&gt;
+          &lt;/div&gt;
+          &lt;span&gt;English&lt;/span&gt;
+
+      &lt;/span&gt;
+&lt;/a&gt;&lt;/li&gt;
+                &lt;li role=&quot;none&quot; data-view-component=&quot;true&quot; class=&quot;ActionList-item&quot;&gt;                                                                             
+    &lt;a href=&quot;&quot; style=&quot;white-space: normal;&quot; data-action=&quot;click:locale-selector#handleSelectLocale&quot; data-locale=&quot;pt-br&quot; role=&quot;menuitem&quot; tabindex=&quot;-1&quot; data-view-component=&quot;true&quot; class=&quot;footer-social-locale ActionList-content&quot;&gt;                
+
+      &lt;span class=&quot;ActionList-item-label&quot;&gt;
+                  &lt;div style=&quot;width: 16px; display: inline-block; text-align: center; margin-right: 8px; flex-shrink: 0;&quot;&gt;                                      
+
+          &lt;/div&gt;
+          &lt;span&gt;Português (Brasil)&lt;/span&gt;
+
+      &lt;/span&gt;
+&lt;/a&gt;&lt;/li&gt;
+                &lt;li role=&quot;none&quot; data-view-component=&quot;true&quot; class=&quot;ActionList-item&quot;&gt;                                                                             
+    &lt;a href=&quot;&quot; style=&quot;white-space: normal;&quot; data-action=&quot;click:locale-selector#handleSelectLocale&quot; data-locale=&quot;es-419&quot; role=&quot;menuitem&quot; tabindex=&quot;-1&quot; data-view-component=&quot;true&quot; class=&quot;footer-social-locale ActionList-content&quot;&gt;               
+
+      &lt;span class=&quot;ActionList-item-label&quot;&gt;
+                  &lt;div style=&quot;width: 16px; display: inline-block; text-align: center; margin-right: 8px; flex-shrink: 0;&quot;&gt;                                      
+
+          &lt;/div&gt;
+          &lt;span&gt;Español (América Latina)&lt;/span&gt;
+
+      &lt;/span&gt;
+&lt;/a&gt;&lt;/li&gt;
+                &lt;li role=&quot;none&quot; data-view-component=&quot;true&quot; class=&quot;ActionList-item&quot;&gt;                                                                             
+    &lt;a href=&quot;&quot; style=&quot;white-space: normal;&quot; data-action=&quot;click:locale-selector#handleSelectLocale&quot; data-locale=&quot;ja&quot; role=&quot;menuitem&quot; tabindex=&quot;-1&quot; data-view-component=&quot;true&quot; class=&quot;footer-social-locale ActionList-content&quot;&gt;                   
+
+      &lt;span class=&quot;ActionList-item-label&quot;&gt;
+                  &lt;div style=&quot;width: 16px; display: inline-block; text-align: center; margin-right: 8px; flex-shrink: 0;&quot;&gt;                                      
+
+          &lt;/div&gt;
+          &lt;span&gt;日本語&lt;/span&gt;
+
+      &lt;/span&gt;
+&lt;/a&gt;&lt;/li&gt;
+                &lt;li role=&quot;none&quot; data-view-component=&quot;true&quot; class=&quot;ActionList-item&quot;&gt;                                                                             
+    &lt;a href=&quot;&quot; style=&quot;white-space: normal;&quot; data-action=&quot;click:locale-selector#handleSelectLocale&quot; data-locale=&quot;ko-kr&quot; role=&quot;menuitem&quot; tabindex=&quot;-1&quot; data-view-component=&quot;true&quot; class=&quot;footer-social-locale ActionList-content&quot;&gt;                
+
+      &lt;span class=&quot;ActionList-item-label&quot;&gt;
+                  &lt;div style=&quot;width: 16px; display: inline-block; text-align: center; margin-right: 8px; flex-shrink: 0;&quot;&gt;                                      
+
+          &lt;/div&gt;
+          &lt;span&gt;한국어&lt;/span&gt;
+
+      &lt;/span&gt;
+&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/experimental-action-menu&gt;  &lt;/locale-selector&gt;
+
+      &lt;/nav&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;
+
+
+
+    &lt;ghcc-consent id=&quot;ghcc&quot; class=&quot;position-fixed bottom-0 left-0&quot; style=&quot;z-index: 999999&quot;                                                                      
+      data-locale=&quot;en&quot;
+      data-initial-cookie-consent-allowed=&quot;&quot;
+      data-cookie-consent-required=&quot;false&quot;
+    &gt;&lt;/ghcc-consent&gt;
 
 
 
 
+  &lt;div id=&quot;ajax-error-message&quot; class=&quot;ajax-error-message flash flash-error&quot; hidden&gt;                                                                             
+    &lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; data-view-component=&quot;true&quot; class=&quot;octicon octicon-alert&quot;&gt;                  
+    &lt;path d=&quot;M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z&quot;&gt;&lt;/path&gt;                                                                            
+&lt;/svg&gt;
+    &lt;button type=&quot;button&quot; class=&quot;flash-close js-ajax-error-dismiss&quot; aria-label=&quot;Dismiss error&quot;&gt;                                                                 
+      &lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; data-view-component=&quot;true&quot; class=&quot;octicon octicon-x&quot;&gt;                    
+    &lt;path d=&quot;M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z&quot;&gt;&lt;/path&gt;                             
+&lt;/svg&gt;
+    &lt;/button&gt;
+    You can’t perform that action at this time.
+  &lt;/div&gt;
+
+    &lt;template id=&quot;site-details-dialog&quot;&gt;
+  &lt;details class=&quot;details-reset details-overlay details-overlay-dark lh-default color-fg-default hx_rsm&quot; open&gt;                                                  
+    &lt;summary role=&quot;button&quot; aria-label=&quot;Close dialog&quot;&gt;&lt;/summary&gt;
+    &lt;details-dialog class=&quot;Box Box--overlay d-flex flex-column anim-fade-in fast hx_rsm-dialog hx_rsm-modal&quot;&gt;                                                   
+      &lt;button class=&quot;Box-btn-octicon m-0 btn-octicon position-absolute right-0 top-0&quot; type=&quot;button&quot; aria-label=&quot;Close dialog&quot; data-close-dialog&gt;                
+        &lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; data-view-component=&quot;true&quot; class=&quot;octicon octicon-x&quot;&gt;                  
+    &lt;path d=&quot;M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z&quot;&gt;&lt;/path&gt;                             
+&lt;/svg&gt;
+      &lt;/button&gt;
+      &lt;div class=&quot;octocat-spinner my-6 js-details-dialog-spinner&quot;&gt;&lt;/div&gt;        
+    &lt;/details-dialog&gt;
+  &lt;/details&gt;
+&lt;/template&gt;
+
+    &lt;div class=&quot;Popover js-hovercard-content position-absolute&quot; style=&quot;display: none; outline: none;&quot;&gt;                                                          
+  &lt;div class=&quot;Popover-message Popover-message--bottom-left Popover-message--large Box color-shadow-large&quot; style=&quot;width:360px;&quot;&gt;                                 
+  &lt;/div&gt;
+&lt;/div&gt;
+
+    &lt;template id=&quot;snippet-clipboard-copy-button&quot;&gt;
+  &lt;div class=&quot;zeroclipboard-container position-absolute right-0 top-0&quot;&gt;
+    &lt;clipboard-copy aria-label=&quot;Copy&quot; class=&quot;ClipboardButton btn js-clipboard-copy m-2 p-0&quot; data-copy-feedback=&quot;Copied!&quot; data-tooltip-direction=&quot;w&quot;&gt;            
+      &lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; data-view-component=&quot;true&quot; class=&quot;octicon octicon-copy js-clipboard-copy-icon m-2&quot;&gt;                                                                      
+    &lt;path d=&quot;M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z&quot;&gt;&lt;/path&gt;            
+&lt;/svg&gt;
+      &lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; data-view-component=&quot;true&quot; class=&quot;octicon octicon-check js-clipboard-check-icon color-fg-success d-none m-2&quot;&gt;                                            
+    &lt;path d=&quot;M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z&quot;&gt;&lt;/path&gt;                                                        
+&lt;/svg&gt;
+    &lt;/clipboard-copy&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;template id=&quot;snippet-clipboard-copy-button-unpositioned&quot;&gt;
+  &lt;div class=&quot;zeroclipboard-container&quot;&gt;
+    &lt;clipboard-copy aria-label=&quot;Copy&quot; class=&quot;ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center&quot; data-copy-feedback=&quot;Copied!&quot; data-tooltip-direction=&quot;w&quot;&gt;                                 
+      &lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; data-view-component=&quot;true&quot; class=&quot;octicon octicon-copy js-clipboard-copy-icon&quot;&gt;                                                                          
+    &lt;path d=&quot;M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z&quot;&gt;&lt;/path&gt;            
+&lt;/svg&gt;
+      &lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; data-view-component=&quot;true&quot; class=&quot;octicon octicon-check js-clipboard-check-icon color-fg-success d-none&quot;&gt;                                                
+    &lt;path d=&quot;M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z&quot;&gt;&lt;/path&gt;                                                        
+&lt;/svg&gt;
+    &lt;/clipboard-copy&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
 
 
 
 
-&lt;!DOCTYPE html&gt;
-&lt;html
-  lang=&quot;en&quot;
-
-  data-color-mode=&quot;auto&quot; data-light-theme=&quot;light&quot; data-dark-theme=&quot;dark&quot;        
-  data-a11y-animated-images=&quot;system&quot; data-a11y-link-underlines=&quot;true&quot;
-
-  &gt;
-
-
-
-
-  &lt;head&gt;
-    &lt;meta charset=&quot;utf-8&quot;&gt;
-  &lt;link rel=&quot;dns-prefetch&quot; href=&quot;https://github.githubassets.com&quot;&gt;
-  &lt;link rel=&quot;dns-prefetch&quot; href=&quot;https://avatars.githubusercontent.com&quot;&gt;        
-  &lt;link rel=&quot;dns-prefetch&quot; href=&quot;https://github-cloud.s3.amazonaws.com&quot;&gt;        
-  &lt;link rel=&quot;dns-prefetch&quot; href=&quot;https://user-images.githubusercontent.com/&quot;&gt;   
-  &lt;link rel=&quot;preconnect&quot; href=&quot;https://github.githubassets.com&quot; crossorigin&gt;    
-  &lt;link rel=&quot;preconnect&quot; href=&quot;https://avatars.githubusercontent.com&quot;&gt;
-
-      &lt;link crossorigin=&quot;anonymous&quot; rel=&quot;preload&quot; as=&quot;script&quot; href=&quot;https://github.githubassets.com/assets/global-banner-disable-54e442fb573b.js&quot; /&gt;
-
-  &lt;link rel=&quot;preload&quot; href=&quot;https://github.githubassets.com/assets/mona-sans-14595085164a.woff2&quot; as=&quot;font&quot; type=&quot;font/woff2&quot; crossorigin&gt;
-
-
-  &lt;link crossorigin=&quot;anonymous&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; href=&quot;https://github.githubassets.com/assets/light-8e973f836952.css&quot; /&gt;&lt;link crossorigin=&quot;anonymous&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; href=&quot;https://github.githubassets.com/assets/light_high_contrast-34b642d57214.css&quot; /&gt;&lt;link crossorigin=&quot;anonymous&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; href=&quot;https://github.githubassets.com/assets/dark-4bce7af39e21.css&quot; /&gt;&lt;link crossorigin=&quot;anonymous&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; href=&quot;https://github.githubassets.com/assets/dark_high_contrast-ad512d3e2f3b.css&quot; /&gt;&lt;link data-color-theme=&quot;light&quot; crossorigin=&quot;anonymous&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; data-href=&quot;https://github.githubassets.com/assets/light-8e973f836952.css&quot; /&gt;&lt;link data-color-theme=&quot;light_high_contrast&quot; crossorigin=&quot;anonymous&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; data-href=&quot;https://github.githubassets.com/assets/light_high_contrast-34b642d57214.css&quot; /&gt;&lt;link data-color-theme=&quot;light_colorblind&quot; crossorigin=&quot;anonymous&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; data-href=&quot;https://github.githubassets.com/assets/light_colorblind-54be93e666a7.css&quot; /&gt;&lt;link data-color-theme=&quot;light_colorblind_high_contrast&quot; crossorigin=&quot;anonymous&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; data-href=&quot;https://github.githubassets.com/assets/light_colorblind_high_contrast-8ae7edf5489c.css&quot; /&gt;&lt;link data-color-theme=&quot;light_tritanopia&quot; crossorigin=&quot;anonymous&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; data-href=&quot;https://github.githubassets.com/assets/light_tritanopia-84d50df427c0.css&quot; /&gt;&lt;link data-color-theme=&quot;light_tritanopia_high_contrast&quot; crossorigin=&quot;anonymous&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; data-href=&quot;https://github.githubassets.com/assets/light_tritanopia_high_contrast-a80873375146.css&quot; /&gt;&lt;link data-color-theme=&quot;dark&quot; crossorigin=&quot;anonymous&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; data-href=&quot;https://github.githubassets.com/assets/dark-4bce7af39e21.css&quot; /&gt;&lt;link data-color-theme=&quot;dark_high_contrast&quot; crossorigin=&quot;anonymous&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; data-href=&quot;https://github.githubassets.com/assets/dark_high_contrast-ad512d3e2f3b.css&quot; /&gt;&lt;link data-color-theme=&quot;dark_colorblind&quot; crossorigin=&quot;anonymous&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; data-href=&quot;https://github.githubassets.com/assets/dark_colorblind-d152d6cd6879.css&quot; /&gt;&lt;link data-color-theme=&quot;dark_colorblind_high_contrast&quot; crossorigin=&quot;anonymous&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; data-href=&quot;https://github.githubassets.com/assets/dark_colorblind_high_contrast-fa4060c1a9da.css&quot; /&gt;&lt;link data-color-theme=&quot;dark_tritanopia&quot; crossorigin=&quot;anonymous&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; data-href=&quot;https://github.githubassets.com/assets/dark_tritanopia-d7bad0fb00bb.css&quot; /&gt;&lt;link data-color-theme=&quot;dark_tritanopia_high_contrast&quot; crossorigin=&quot;anonymous&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; data-href=&quot;https://github.githubassets.com/assets/dark_tritanopia_high_contrast-4a0107c0f60c.css&quot; /&gt;&lt;link data-color-theme=&quot;dark_dimmed&quot; crossorigin=&quot;anonymous&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; data-href=&quot;https://github.githubassets.com/assets/dark_dimmed-045e6b6ac094.css&quot; /&gt;&lt;link data-color-theme=&quot;dark_dimmed_high_contrast&quot; crossorigin=&quot;anonymous&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; data-href=&quot;https://github.githubassets.com/assets/dark_dimmed_high_contrast-5de537db5e79.css&quot; /&gt;
-
-  &lt;style type=&quot;text/css&quot;&gt;
-    :root {
-      --tab-size-preference: 4;
-    }
-
-    pre, code {
-      tab-size: var(--tab-size-preference);
-    }
-  &lt;/style&gt;
-
-    &lt;link crossorigin=&quot;anonymous&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; href=&quot;https://github.githubassets.com/assets/primer-primitives-c37d781e2da5.css&quot; /&gt;
-    &lt;link crossorigin=&quot;anonymous&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; href=&quot;https://github.githubassets.com/assets/primer-efa08b71f947.css&quot; /&gt;
-    &lt;link crossorigin=&quot;anonymous&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; href=&quot;https://github.githubassets.com/assets/global-6dcb16809e76.css&quot; /&gt;
-    &lt;link crossorigin=&quot;anonymous&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; href=&quot;https://github.githubassets.com/assets/github-f86c648606b5.css&quot; /&gt;
-  &lt;link crossorigin=&quot;anonymous&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; href=&quot;https://github.githubassets.com/assets/repository-5d735668c600.css&quot; /&gt;
-
-
-
-  &lt;script type=&quot;application/json&quot; id=&quot;client-env&quot;&gt;{&quot;locale&quot;:&quot;en&quot;,&quot;featureFlags&quot;:[&quot;a11y_status_checks_ruleset&quot;,&quot;actions_custom_images_public_preview_visibility&quot;,&quot;actions_custom_images_storage_billing_ui_visibility&quot;,&quot;actions_enable_snapshot_keyword&quot;,&quot;actions_image_version_event&quot;,&quot;alternate_user_config_repo&quot;,&quot;api_insights_show_missing_data_banner&quot;,&quot;arianotify_comprehensive_migration&quot;,&quot;arianotify_partial_migration&quot;,&quot;client_version_header&quot;,&quot;codespaces_prebuild_region_target_update&quot;,&quot;contentful_lp_footnotes&quot;,&quot;copilot_agent_cli_public_preview&quot;,&quot;copilot_agent_task_list_v2&quot;,&quot;copilot_agent_tasks_btn_code_nav&quot;,&quot;copilot_agent_tasks_btn_code_view&quot;,&quot;copilot_agent_tasks_btn_code_view_lines&quot;,&quot;copilot_agent_tasks_btn_repo&quot;,&quot;copilot_api_agentic_issue_marshal_yaml&quot;,&quot;copilot_api_draft_issue_reference_with_project_id&quot;,&quot;copilot_api_draft_issues_with_dependencies&quot;,&quot;copilot_api_github_draft_update_issue_skill&quot;,&quot;copilot_chat_agents_empty_state&quot;,&quot;copilot_chat_attach_multiple_images&quot;,&quot;copilot_chat_file_redirect&quot;,&quot;copilot_chat_input_commands&quot;,&quot;copilot_chat_opening_thread_switch&quot;,&quot;copilot_chat_reduce_quota_checks&quot;,&quot;copilot_chat_search_bar_redirect&quot;,&quot;copilot_chat_selection_attachments&quot;,&quot;copilot_chat_vision_in_claude&quot;,&quot;copilot_chat_vision_preview_gate&quot;,&quot;copilot_coding_agent_task_response&quot;,&quot;copilot_custom_copilots&quot;,&quot;copilot_custom_copilots_feature_preview&quot;,&quot;copilot_duplicate_thread&quot;,&quot;copilot_extensions_hide_in_dotcom_chat&quot;,&quot;copilot_extensions_removal_on_marketplace&quot;,&quot;copilot_features_raycast_logo&quot;,&quot;copilot_file_block_ref_matching&quot;,&quot;copilot_ftp_hyperspace_upgrade_prompt&quot;,&quot;copilot_immersive_generate_thread_name_async&quot;,&quot;copilot_immersive_issues_readonly_viewer&quot;,&quot;copilot_immersive_issues_show_relationships&quot;,&quot;copilot_immersive_job_result_preview&quot;,&quot;copilot_immersive_structured_model_picker&quot;,&quot;copilot_immersive_task_hyperlinking&quot;,&quot;copilot_immersive_task_within_chat_thread&quot;,&quot;copilot_org_policy_page_focus_mode&quot;,&quot;copilot_security_alert_assignee_options&quot;,&quot;copilot_share_active_subthread&quot;,&quot;copilot_spaces_as_attachments&quot;,&quot;copilot_spaces_ga&quot;,&quot;copilot_spark_empty_state&quot;,&quot;copilot_spark_loading_webgl&quot;,&quot;copilot_spark_progressive_error_handling&quot;,&quot;copilot_spark_use_billing_headers&quot;,&quot;copilot_stable_conversation_view&quot;,&quot;copilot_swe_agent_progress_commands&quot;,&quot;copilot_swe_agent_use_subagents&quot;,&quot;copilot_workbench_agent_seed_tool&quot;,&quot;copilot_workbench_agent_user_edit_awareness&quot;,&quot;copilot_workbench_cache&quot;,&quot;copilot_workbench_preview_analytics&quot;,&quot;copilot_workbench_use_single_prompt&quot;,&quot;data_router_force_refetch_on_navigation&quot;,&quot;direct_to_salesforce&quot;,&quot;disable_dashboard_universe_2025_private_preview&quot;,&quot;disable_turbo_visit&quot;,&quot;dom_node_counts&quot;,&quot;dotcom_chat_client_side_skills&quot;,&quot;enterprise_ai_controls&quot;,&quot;failbot_report_error_react_apps_on_page&quot;,&quot;fetch_graphql_improved_error_serialization&quot;,&quot;ghost_pilot_confidence_truncation_25&quot;,&quot;ghost_pilot_confidence_truncation_40&quot;,&quot;global_search_multi_orgs&quot;,&quot;hyperspace_2025_logged_out_batch_1&quot;,&quot;hyperspace_nudges_universe25&quot;,&quot;hyperspace_nudges_universe25_post_event&quot;,&quot;initial_per_page_pagination_updates&quot;,&quot;issue_fields_report_usage&quot;,&quot;issues_expanded_file_types&quot;,&quot;issues_lazy_load_comment_box_suggestions&quot;,&quot;issues_react_bots_timeline_pagination&quot;,&quot;issues_react_prohibit_title_fallback&quot;,&quot;issues_report_sidebar_interactions&quot;,&quot;issues_sticky_sidebar&quot;,&quot;issues_title_flex_header_fix&quot;,&quot;item_picker_assignee_tsq_migration&quot;,&quot;item_picker_project_tsq_migration&quot;,&quot;kb_convert_to_space&quot;,&quot;kb_sunset&quot;,&quot;lifecycle_label_name_updates&quot;,&quot;link_contact_sales_swp_marketo&quot;,&quot;marketing_pages_search_explore_provider&quot;,&quot;mcp_registry_install&quot;,&quot;mcp_registry_oss_v0_1_api&quot;,&quot;memex_default_issue_create_repository&quot;,&quot;memex_grouped_by_edit_route&quot;,&quot;memex_mwl_filter_field_delimiter&quot;,&quot;mission_control_use_body_html&quot;,&quot;new_traffic_page_banner&quot;,&quot;open_agent_session_in_vscode_insiders&quot;,&quot;open_agent_session_in_vscode_stable&quot;,&quot;primer_react_segmented_control_tooltip&quot;,&quot;projects_assignee_max_limit&quot;,&quot;react_fetch_graphql_ignore_expected_errors&quot;,&quot;record_sso_banner_metrics&quot;,&quot;repos_insights_remove_new_url&quot;,&quot;ruleset_deletion_confirmation&quot;,&quot;sample_network_conn_type&quot;,&quot;scheduled_reminders_updated_limits&quot;,&quot;site_features_copilot_universe&quot;,&quot;site_homepage_collaborate_video&quot;,&quot;site_homepage_contentful&quot;,&quot;site_homepage_eyebrow_banner&quot;,&quot;site_homepage_universe_animations&quot;,&quot;site_msbuild_webgl_hero&quot;,&quot;spark_fix_rename&quot;,&quot;spark_force_push_after_checkout&quot;,&quot;spark_improve_image_upload&quot;,&quot;spark_kv_encocoded_keys&quot;,&quot;spark_show_data_access_on_publish&quot;,&quot;spark_sync_repository_after_iteration&quot;,&quot;viewscreen_sandbox&quot;,&quot;webp_support&quot;,&quot;wiki_a11y_compliant_sidebar&quot;,&quot;workbench_store_readonly&quot;],&quot;copilotApiOverrideUrl&quot;:&quot;https://api.githubcopilot.com&quot;}&lt;/script&gt;
-&lt;s
+    &lt;/div&gt;
+    &lt;div id=&quot;js-global-screen-reader-notice&quot; class=&quot;sr-only mt-n1&quot; aria-live=&quot;polite&quot; aria-atomic=&quot;true&quot; &gt;&lt;/div&gt;                                                
+    &lt;div id=&quot;js-global-screen-reader-notice-assertive&quot; class=&quot;sr-only mt-n1&quot; aria-live=&quot;assertive&quot; aria-atomic=&quot;true&quot;&gt;&lt;/div&gt;                                    
+  &lt;/body&gt;
+&lt;/html&gt;
 ```
 </details>
 </tool-use>
@@ -807,6 +1216,1086 @@ PS E:\rainys-blender-extensions&gt; curl -s https://github.com/RaincloudTheDrago
 ---
 
 
+
+---
+
+
+Updating the script to include your two extensions and running it to generate the catalog:
+
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="search_replace">
+
+<details><summary>Tool use: **code_edit** • Edit file: update_catalog.py</summary>
+
+**Chunk 1**
+Lines added: 8, lines removed: 9
+
+```diff
+@@ -23,14 +23,13 @@
+  ADDONS = [
+      {
+-         &quot;id&quot;: &quot;atomic_data_manager&quot;,
+-         &quot;repo&quot;: &quot;grantwilk/atomic-data-manager&quot;,
+-         &quot;manifest_branch&quot;: &quot;main&quot;,  # Branch where blender_manifest.toml is located
++         &quot;id&quot;: &quot;based_playblast&quot;,
++         &quot;repo&quot;: &quot;RaincloudTheDragon/BasedPlayblast&quot;,
++         &quot;manifest_branch&quot;: &quot;main&quot;,
+      },
+-     # Add more addons here:
+-     # {
+-     #     &quot;id&quot;: &quot;another_addon&quot;,
+-     #     &quot;repo&quot;: &quot;username/repo-name&quot;,
+-     #     &quot;manifest_branch&quot;: &quot;main&quot;,
+-     # },
++     {
++         &quot;id&quot;: &quot;rainys_bulk_scene_tools&quot;,
++         &quot;repo&quot;: &quot;RaincloudTheDragon/Rainys-Bulk-Scene-Tools&quot;,
++         &quot;manifest_branch&quot;: &quot;main&quot;,
++     },
+  ]
+  
+```
+
+</details>
+
+</tool-use>
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **command** • Run command: python update_catalog.py</summary>
+
+```bash
+python update_catalog.py
+```
+
+```
+Generating Blender extension catalog...
+--------------------------------------------------
+Processing based_playblast from RaincloudTheDragon/BasedPlayblast...
+  ✓ Added based_playblast v2.3.0
+Processing rainys_bulk_scene_tools from RaincloudTheDragon/Rainys-Bulk-Scene-Tools...                                                                           
+  ✓ Added rainys_bulk_scene_tools v0.10.0
+--------------------------------------------------
+✓ Catalog generated: catalog.json
+  Found 2 extensions
+```
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Verifying the catalog and checking the addon IDs match the manifest files:
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: catalog.json</summary>
+
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **command** • Run command: curl -s https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml | Select-String -Pattern "^id\s*="</summary>
+
+```bash
+curl -s https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml | Select-String -Pattern "^id\s*="
+```
+
+```
+ &quot;^id\s*=&quot;
+
+id = &quot;basedplayblast&quot;
+```
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **command** • Run command: curl -s https://raw.githubusercontent.com/RaincloudTheDragon/Rainys-Bulk-Scene-Tools/main/blender_manifest.toml | Select-String -Pattern "^id\s*="</summary>
+
+```bash
+curl -s https://raw.githubusercontent.com/RaincloudTheDragon/Rainys-Bulk-Scene-Tools/main/blender_manifest.toml | Select-String -Pattern "^id\s*="
+```
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Fixing the addon IDs to match the manifest files:
+
+
+---
+
+Tool call errored or timed out
+
+---
+
+_**User (2025-12-01 20:52Z)**_
+
+how do I deploy?
+
+---
+
+_**Agent (model default, mode Agent)**_
+
+
+
+---
+
+
+Fixing the addon ID first, then providing deployment steps:
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: catalog.json</summary>
+
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="search_replace">
+
+<details><summary>Tool use: **code_edit** • Edit file: update_catalog.py</summary>
+
+**Chunk 1**
+Lines added: 2, lines removed: 2
+
+```diff
+@@ -23,10 +23,10 @@
+  ADDONS = [
+      {
+-         &quot;id&quot;: &quot;based_playblast&quot;,
++         &quot;id&quot;: &quot;basedplayblast&quot;,  # Must match blender_manifest.toml
+          &quot;repo&quot;: &quot;RaincloudTheDragon/BasedPlayblast&quot;,
+          &quot;manifest_branch&quot;: &quot;main&quot;,
+      },
+      {
+-         &quot;id&quot;: &quot;rainys_bulk_scene_tools&quot;,
++         &quot;id&quot;: &quot;rainys_bulk_scene_tools&quot;,  # Must match blender_manifest.toml
+          &quot;repo&quot;: &quot;RaincloudTheDragon/Rainys-Bulk-Scene-Tools&quot;,
+          &quot;manifest_branch&quot;: &quot;main&quot;,
+```
+
+</details>
+
+</tool-use>
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **command** • Run command: python update_catalog.py</summary>
+
+```bash
+python update_catalog.py
+```
+
+```
+PS E:\rainys-blender-extensions&gt; python update_catalog.py
+Generating Blender extension catalog...
+--------------------------------------------------
+Processing basedplayblast from RaincloudTheDragon/BasedPlayblast...
+  ✓ Added basedplayblast v2.3.0
+Processing rainys_bulk_scene_tools from RaincloudTheDragon/Rainys-Bulk-Scene-Tools...                                                                           
+  ✓ Added rainys_bulk_scene_tools v0.10.0
+--------------------------------------------------
+✓ Catalog generated: catalog.json
+  Found 2 extensions
+```
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Catalog updated. Deploying to GitHub Pages:
+
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **command** • Run command: git status</summary>
+
+```bash
+git status
+```
+
+```
+On branch main
+Your branch is up to date with &#39;origin/main&#39;.
+
+Changes not staged for commit:
+  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
+  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)
+        modified:   .specstory/history/2025-12-01_20-52Z-make-blender-extension-api-visible.md                                                                  
+        modified:   catalog.json
+        modified:   update_catalog.py
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+```
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: catalog.json</summary>
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Committing and pushing the changes:
+
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **command** • Run command: git add catalog.json update_catalog.py</summary>
+
+```bash
+git add catalog.json update_catalog.py
+```
+
+```
+PS E:\rainys-blender-extensions&gt; git add catalog.json update_catalog.py
+```
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **command** • Run command: git commit -m "Add BasedPlayblast and Rainys-Bulk-Scene-Tools to extension catalog"</summary>
+
+```bash
+git commit -m "Add BasedPlayblast and Rainys-Bulk-Scene-Tools to extension catalog"
+```
+
+```
+lk-Scene-Tools to extension catalog&quot;                                            
+[main 6c9507f] Add BasedPlayblast and Rainys-Bulk-Scene-Tools to extension catalog                                                                              
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+```
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **command** • Run command: git push</summary>
+
+```bash
+git push
+```
+
+```
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 32 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 457 bytes | 457.00 KiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/RaincloudTheDragon/rainys-blender-extensions.git
+   f1bc04f..6c9507f  main -&gt; main
+```
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Changes pushed. Final step: enable GitHub Pages.
+
+## Deployment steps
+
+### 1. Enable GitHub Pages (if not already enabled)
+1. Go to: https://github.com/RaincloudTheDragon/rainys-blender-extensions/settings/pages
+2. Under "Source", select: "Deploy from a branch"
+3. Branch: `main`
+4. Folder: `/ (root)`
+5. Click Save
+
+### 2. Your catalog URL
+After GitHub Pages deploys (1–2 minutes), your catalog will be available at:
+```
+https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json
+```
+
+### 3. Test it
+Open the URL in your browser. You should see the JSON with your two extensions:
+- `basedplayblast` v2.3.0
+- `rainys_bulk_scene_tools` v0.10.0
+
+### 4. Add to Blender
+1. Open Blender → Edit → Preferences → Extensions
+2. Click "Add Catalog"
+3. Enter:
+   - Name: `Rainy's Extensions` (or your choice)
+   - URL: `https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json`
+4. Click "Add Catalog"
+
+Your extensions should appear in the Extensions list.
+
+## Future updates
+When you publish new releases:
+- Run `python update_catalog.py` to regenerate the catalog
+- Commit and push the updated `catalog.json`
+- The catalog will update automatically on GitHub Pages
+
+The catalog is ready to deploy. Enable GitHub Pages to make it live.
+
+---
+
+_**User (2025-12-01 20:52Z)**_
+
+remote URL doesn't begin with a known prefix: http:// https:// file://
+
+
+
+---
+
+_**Agent (model default, mode Agent)**_
+
+
+
+---
+
+
+This error usually means the URL in Blender is missing the `https://` prefix or has extra characters. Verifying the correct URL:
+
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **command** • Run command: curl -I https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json</summary>
+
+```bash
+curl -I https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json
+```
+
+```
+inys-blender-extensions/catalog.json                                            
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Length: 702
+Server: GitHub.com
+Content-Type: application/json; charset=utf-8
+Last-Modified: Mon, 01 Dec 2025 21:11:19 GMT
+Access-Control-Allow-Origin: *
+Strict-Transport-Security: max-age=31556952
+ETag: &quot;692e0477-2be&quot;
+expires: Mon, 01 Dec 2025 21:21:26 GMT
+Cache-Control: max-age=600
+x-proxy-cache: MISS
+X-GitHub-Request-Id: 8293:29D6CF:B4293D:C164CE:692E047E
+Accept-Ranges: bytes
+Age: 0
+Date: Mon, 01 Dec 2025 21:11:26 GMT
+Via: 1.1 varnish
+X-Served-By: cache-den-kden1300072-DEN
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1764623487.638322,VS0,VE60
+Vary: Accept-Encoding
+X-Fastly-Request-ID: 05284ec9785cc535e271c66885c3027130ac006a
+```
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+The URL is accessible. The error is likely due to how it's entered in Blender. Use this exact URL:
+
+## Correct URL to use in Blender:
+
+```
+https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json
+```
+
+## Common issues and fixes:
+
+1. Missing `https://` — ensure the URL starts with `https://`
+2. Extra spaces — copy the URL exactly, no leading/trailing spaces
+3. Wrong field — enter it in the URL field, not the Name field
+
+## Step-by-step in Blender:
+
+1. Open Blender → Edit → Preferences → Extensions
+2. Click "Add Catalog"
+3. In the dialog:
+   - Name: `Rainy's Extensions` (or any name you want)
+   - URL: Copy and paste this exactly:
+     ```
+     https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json
+     ```
+4. Click "Add Catalog"
+
+## Quick test:
+
+Open this URL in your browser first:
+```
+https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json
+```
+
+You should see the JSON. If it loads, use that exact URL in Blender.
+
+If it still fails, share the exact text you're entering in Blender's URL field.
+
+---
+
+_**User (2025-12-01 20:52Z)**_
+
+where do I even add catalog? I thought I was adding as repository.
+
+---
+
+_**Agent (model default, mode Agent)**_
+
+
+
+---
+
+
+In Blender, you add a catalog (not a repository). Here’s where to find it:
+
+## Where to add the catalog in Blender
+
+### Blender 4.0+ (Extensions system)
+
+1. Open Blender
+2. Go to Edit → Preferences (or press `Ctrl+,`)
+3. Click the Extensions tab (left sidebar)
+4. At the top, you should see:
+   - "Browse Extensions" (default catalog)
+   - A button/option to "Add Catalog" or manage catalogs
+5. Click "Add Catalog" or the "+" button (location varies by version)
+6. Enter:
+   - Name: `Rainy's Extensions`
+   - URL: `https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json`
+
+### If you don't see "Extensions" tab
+
+- You might be on an older Blender version (pre-4.0)
+- The Extensions system was introduced in Blender 4.0
+- Older versions use the Add-ons system (different workflow)
+
+### Alternative: Check your Blender version
+
+1. Help → About Blender
+2. Check the version number
+3. If it's 3.x or earlier, the Extensions system isn't available
+
+### Visual guide
+
+The Extensions tab should look something like:
+```
+Preferences
+├── Interface
+├── Keymap
+├── Add-ons
+├── Extensions  ← Click here!
+│   ├── Browse Extensions
+│   └── [Add Catalog button]
+└── ...
+```
+
+If you can’t find the Extensions tab, share your Blender version and I can provide version-specific steps.
+
+---
+
+_**User (2025-12-01 20:52Z)**_
+
+they're not catalogs, they're repositories.
+
+---
+
+_**Agent (model default, mode Agent)**_
+
+
+
+---
+
+
+In Blender, they're called Repositories. Here's how to add yours:
+
+## Steps to add your repository
+
+1. Open Blender → Edit → Preferences
+2. Go to the Add-ons tab
+3. Click the Repositories tab (next to Add-ons)
+4. Click the "+" button (to the right of the Repositories dropdown)
+5. Enter:
+   - Name: `Rainy's Extensions` (or any name)
+   - URL: `https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json`
+6. Click OK or Add
+
+Your repository should appear in the dropdown list, and your extensions should be available.
+
+## Quick reference
+
+- Location: Edit → Preferences → Add-ons → Repositories tab
+- Action: Click the "+" button
+- URL to enter: `https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json`
+
+The `catalog.json` file is what the repository points to, but in Blender's UI it's called a "Repository".
+
+---
+
+_**User (2025-12-01 20:52Z)**_
+
+It's still not working, we must have something set up incorrectly.
+
+---
+
+_**Agent (model default, mode Agent)**_
+
+
+
+---
+
+
+Checking the catalog setup. Verifying the catalog format and that the URLs are correct:
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: catalog.json</summary>
+
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **command** • Run command: curl -s https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json</summary>
+
+```bash
+curl -s https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json
+```
+
+```
+inys-blender-extensions/catalog.json                                            
+{
+  &quot;schema_version&quot;: &quot;1.0.0&quot;,
+  &quot;extensions&quot;: [
+    {
+      &quot;id&quot;: &quot;basedplayblast&quot;,
+      &quot;version&quot;: &quot;2.3.0&quot;,
+      &quot;archive_url&quot;: &quot;https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.0/BasedPlayblast.v2.3.0.zip&quot;,                                 
+      &quot;manifest_url&quot;: &quot;https://github.com/RaincloudTheDragon/BasedPlayblast/raw/main/blender_manifest.toml&quot;                                                     
+    },
+    {
+      &quot;id&quot;: &quot;rainys_bulk_scene_tools&quot;,
+      &quot;version&quot;: &quot;0.10.0&quot;,
+      &quot;archive_url&quot;: &quot;https://github.com/RaincloudTheDragon/Rainys-Bulk-Scene-Tools/releases/download/v0.10.0/Rainys-Bulk-Scene-Tools.v0.10.0.zip&quot;,             
+      &quot;manifest_url&quot;: &quot;https://github.com/RaincloudTheDragon/Rainys-Bulk-Scene-Tools/raw/main/blender_manifest.toml&quot;                                            
+    }
+  ]
+}
+```
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **command** • Run command: curl -s https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml</summary>
+
+```bash
+curl -s https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml
+```
+
+```
+schema_version = &quot;1.0.0&quot;
+
+id = &quot;basedplayblast&quot;
+name = &quot;BasedPlayblast&quot;
+tagline = &quot;Easily create playblasts from Blender and Flamenco&quot;
+version = &quot;1.3.0&quot;
+type = &quot;add-on&quot;
+
+maintainer = &quot;RaincloudTheDragon &lt;raincloudthedragon@gmail.com&gt;&quot;
+license = [&quot;GPL-3.0-or-later&quot;]
+blender_version_min = &quot;5.0.0&quot;
+
+website = &quot;https://github.com/RaincloudTheDragon/BasedPlayblast&quot;
+
+tags = [&quot;Animation&quot;, &quot;Render&quot;, &quot;Workflow&quot;, &quot;Video&quot;]
+
+[permissions]
+files = &quot;Import/export files and data&quot;
+
+[build]
+paths_exclude_pattern = [
+    &quot;__pycache__/&quot;,
+    &quot;*.pyc&quot;,
+    &quot;.git/&quot;,
+    &quot;.github/&quot;,
+    &quot;addon_updater*&quot;,
+    &quot;basedplayblast_updater/&quot;
+]
+```
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **command** • Run command: curl -I https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.0/BasedPlayblast.v2.3.0.zip</summary>
+
+```bash
+curl -I https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.0/BasedPlayblast.v2.3.0.zip
+```
+
+```
+asedPlayblast/releases/download/v2.3.0/BasedPlayblast.v2.3.0.zip                
+HTTP/1.1 302 Found
+Date: Mon, 01 Dec 2025 21:15:40 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 0
+Vary: X-PJAX, X-PJAX-Container, Turbo-Visit, Turbo-Frame, X-Requested-With,Accept-Encoding, Accept, X-Requested-With                                            
+Location: https://release-assets.githubusercontent.com/github-production-release-asset/946288966/7666bfd0-0089-4c93-aa8e-244d284c520e?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2025-12-01T22%3A11%3A20Z&amp;rscd=attachment%3B+filename%3DBasedPlayblast.v2.3.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2025-12-01T21%3A10%3A28Z&amp;ske=2025-12-01T22%3A11%3A20Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=kVFSLl2abD2XYxx2SIJ83F8EhwW45bXLq4YNK2DKOnU%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc2NDYyNDA0MCwibmJmIjoxNzY0NjIzNzQwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Z0IVeBcRZOBBPaOafjosvLO3OfY-_FWS-onuh7xtk7Q&amp;response-content-disposition=attachment%3B%20filename%3DBasedPlayblast.v2.3.0.zip&amp;response-content-type=application%2Foctet-stream                      
+Cache-Control: no-cache
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Frame-Options: deny
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Referrer-Policy: no-referrer-when-downgrade
+Content-Security-Policy: default-src &#39;none&#39;; base-uri &#39;self&#39;; child-src github.githubassets.com github.com/assets-cdn/worker/ github.com/assets/ gist.github.com/assets-cdn/worker/; connect-src &#39;self&#39; uploads.github.com www.githubstatus.com collector.github.com raw.githubusercontent.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com *.rel.tunnels.api.visualstudio.com wss://*.rel.tunnels.api.visualstudio.com github.githubassets.com objects-origin.githubusercontent.com copilot-proxy.githubusercontent.com proxy.individual.githubcopilot.com proxy.business.githubcopilot.com proxy.enterprise.githubcopilot.com *.actions.githubusercontent.com wss://*.actions.githubusercontent.com productionresultssa0.blob.core.windows.net/ productionresultssa1.blob.core.windows.net/ productionresultssa2.blob.core.windows.net/ productionresultssa3.blob.core.windows.net/ productionresultssa4.blob.core.windows.net/ productionresultssa5.blob.core.windows.net/ productionresultssa6.blob.core.windows.net/ productionresultssa7.blob.core.windows.net/ productionresultssa8.blob.core.windows.net/ productionresultssa9.blob.core.windows.net/ productionresultssa10.blob.core.windows.net/ productionresultssa11.blob.core.windows.net/ productionresultssa12.blob.core.windows.net/ productionresultssa13.blob.core.windows.net/ productionresultssa14.blob.core.windows.net/ productionresultssa15.blob.core.windows.net/ productionresultssa16.blob.core.windows.net/ productionresultssa17.blob.core.windows.net/ productionresultssa18.blob.core.windows.net/ productionresultssa19.blob.core.windows.net/ github-production-repository-image-32fea6.s3.amazonaws.com github-production-release-asset-2e65be.s3.amazonaws.com insights.github.com wss://alive.github.com wss://alive-staging.github.com api.githubcopilot.com api.individual.githubcopilot.com api.business.githubcopilot.com api.enterprise.githubcopilot.com; font-src github.githubassets.com; form-action &#39;self&#39; github.com gist.github.com copilot-workspace.githubnext.com objects-origin.githubusercontent.com; frame-ancestors &#39;none&#39;; frame-src viewscreen.githubusercontent.com notebooks.githubusercontent.com; img-src &#39;self&#39; data: blob: github.githubassets.com media.githubusercontent.com camo.githubusercontent.com identicons.github.com avatars.githubusercontent.com private-avatars.githubusercontent.com github-cloud.s3.amazonaws.com objects.githubusercontent.com release-assets.githubusercontent.com secured-user-images.githubusercontent.com/ user-images.githubusercontent.com/ private-user-images.githubusercontent.com opengraph.githubassets.com marketplace-screenshots.githubusercontent.com/ copilotprodattachments.blob.core.windows.net/github-production-copilot-attachments/ github-production-user-asset-6210df.s3.amazonaws.com customer-stories-feed.github.com spotlights-feed.github.com objects-origin.githubusercontent.com *.githubusercontent.com; manifest-src &#39;self&#39;; media-src github.com user-images.githubusercontent.com/ secured-user-images.githubusercontent.com/ private-user-images.githubusercontent.com github-production-user-asset-6210df.s3.amazonaws.com gist.github.com github.githubassets.com; script-src github.githubassets.com; style-src &#39;unsafe-inline&#39; github.githubassets.com; upgrade-insecure-requests; worker-src github.githubassets.com github.com/assets-cdn/worker/ github.com/assets/ gist.github.com/assets-cdn/worker/                                                                
+Server: github.com
+X-GitHub-Request-Id: FC45:27AFD5:3F4298B:5786EE5:692E057C
+```
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Noticing a version mismatch. Checking both manifests to verify the IDs and versions:
+
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **command** • Run command: curl -s https://raw.githubusercontent.com/RaincloudTheDragon/Rainys-Bulk-Scene-Tools/main/blender_manifest.toml</summary>
+
+```bash
+curl -s https://raw.githubusercontent.com/RaincloudTheDragon/Rainys-Bulk-Scene-Tools/main/blender_manifest.toml
+```
+
+```
+loudTheDragon/Rainys-Bulk-Scene-Tools/main/blender_manifest.toml                
+404: Not Found
+```
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **command** • Run command: curl -I https://github.com/RaincloudTheDragon/Rainys-Bulk-Scene-Tools/releases/download/v0.10.0/Rainys-Bulk-Scene-Tools.v0.10.0.zip</summary>
+
+```bash
+curl -I https://github.com/RaincloudTheDragon/Rainys-Bulk-Scene-Tools/releases/download/v0.10.0/Rainys-Bulk-Scene-Tools.v0.10.0.zip
+```
+
+```
+.zip                                                                            
+HTTP/1.1 302 Found
+Date: Mon, 01 Dec 2025 21:15:58 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 0
+Vary: X-PJAX, X-PJAX-Container, Turbo-Visit, Turbo-Frame, X-Requested-With,Accept-Encoding, Accept, X-Requested-With                                            
+Location: https://release-assets.githubusercontent.com/github-production-release-asset/943479927/0b976b95-dfc9-474d-a7c3-6aa3dc4c8840?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2025-12-01T22%3A10%3A41Z&amp;rscd=attachment%3B+filename%3DRainys-Bulk-Scene-Tools.v0.10.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2025-12-01T21%3A10%3A11Z&amp;ske=2025-12-01T22%3A10%3A41Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=TUrRKNTPwmNZCIMtoYqTzbQePelZ252n%2BnjKtcFSRo4%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc2NDYyNDA1OCwibmJmIjoxNzY0NjIzNzU4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.NRZbEkNVO8jmNhhtBJ0Nx_Ba8K-3x-HHLDoefjjIXk0&amp;response-content-disposition=attachment%3B%20filename%3DRainys-Bulk-Scene-Tools.v0.10.0.zip&amp;response-content-type=application%2Foctet-stream
+Cache-Control: no-cache
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Frame-Options: deny
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Referrer-Policy: no-referrer-when-downgrade
+Content-Security-Policy: default-src &#39;none&#39;; base-uri &#39;self&#39;; child-src github.githubassets.com github.com/assets-cdn/worker/ github.com/assets/ gist.github.com/assets-cdn/worker/; connect-src &#39;self&#39; uploads.github.com www.githubstatus.com collector.github.com raw.githubusercontent.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com *.rel.tunnels.api.visualstudio.com wss://*.rel.tunnels.api.visualstudio.com github.githubassets.com objects-origin.githubusercontent.com copilot-proxy.githubusercontent.com proxy.individual.githubcopilot.com proxy.business.githubcopilot.com proxy.enterprise.githubcopilot.com *.actions.githubusercontent.com wss://*.actions.githubusercontent.com productionresultssa0.blob.core.windows.net/ productionresultssa1.blob.core.windows.net/ productionresultssa2.blob.core.windows.net/ productionresultssa3.blob.core.windows.net/ productionresultssa4.blob.core.windows.net/ productionresultssa5.blob.core.windows.net/ productionresultssa6.blob.core.windows.net/ productionresultssa7.blob.core.windows.net/ productionresultssa8.blob.core.windows.net/ productionresultssa9.blob.core.windows.net/ productionresultssa10.blob.core.windows.net/ productionresultssa11.blob.core.windows.net/ productionresultssa12.blob.core.windows.net/ productionresultssa13.blob.core.windows.net/ productionresultssa14.blob.core.windows.net/ productionresultssa15.blob.core.windows.net/ productionresultssa16.blob.core.windows.net/ productionresultssa17.blob.core.windows.net/ productionresultssa18.blob.core.windows.net/ productionresultssa19.blob.core.windows.net/ github-production-repository-image-32fea6.s3.amazonaws.com github-production-release-asset-2e65be.s3.amazonaws.com insights.github.com wss://alive.github.com wss://alive-staging.github.com api.githubcopilot.com api.individual.githubcopilot.com api.business.githubcopilot.com api.enterprise.githubcopilot.com; font-src github.githubassets.com; form-action &#39;self&#39; github.com gist.github.com copilot-workspace.githubnext.com objects-origin.githubusercontent.com; frame-ancestors &#39;none&#39;; frame-src viewscreen.githubusercontent.com notebooks.githubusercontent.com; img-src &#39;self&#39; data: blob: github.githubassets.com media.githubusercontent.com camo.githubusercontent.com identicons.github.com avatars.githubusercontent.com private-avatars.githubusercontent.com github-cloud.s3.amazonaws.com objects.githubusercontent.com release-assets.githubusercontent.com secured-user-images.githubusercontent.com/ user-images.githubusercontent.com/ private-user-images.githubusercontent.com opengraph.githubassets.com marketplace-screenshots.githubusercontent.com/ copilotprodattachments.blob.core.windows.net/github-production-copilot-attachments/ github-production-user-asset-6210df.s3.amazonaws.com customer-stories-feed.github.com spotlights-feed.github.com objects-origin.githubusercontent.com *.githubusercontent.com; manifest-src &#39;self&#39;; media-src github.com user-images.githubusercontent.com/ secured-user-images.githubusercontent.com/ private-user-images.githubusercontent.com github-production-user-asset-6210df.s3.amazonaws.com gist.github.com github.githubassets.com; script-src github.githubassets.com; style-src &#39;unsafe-inline&#39; github.githubassets.com; upgrade-insecure-requests; worker-src github.githubassets.com github.com/assets-cdn/worker/ github.com/assets/ gist.github.com/assets-cdn/worker/                                                                
+Server: github.com
+X-GitHub-Request-Id: D318:8915:3D06846:54822C0:692E058E
+```
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="search" data-tool-name="web_search">
+<details>
+            <summary>Tool use: **web_search** • Searched web `Blender extension catalog.json format schema_version 1.0.0 required fields` • **1** results</summary>
+        
+| Title | URL | Chunk |
+|-------|-----|-------|
+| Web Search Results |  | I'm sorry to hear you're still experiencing issues with setting up your Blender extension repository. Let's systematically troubleshoot the problem to identify and resolve the misconfiguration.<br/><br/>**1. Verify GitHub Pages Deployment:**<br/><br/>Ensure that your repository's GitHub Pages is correctly set up:<br/><br/>- **GitHub Pages Configuration:**<br/>  - Navigate to your repository on GitHub.<br/>  - Go to the "Settings" tab.<br/>  - Scroll down to the "Pages" section.<br/>  - Confirm that the source is set to the correct branch (e.g., `main` or `gh-pages`).<br/>  - Ensure the directory is set to the root or the appropriate folder containing your `catalog.json`.<br/><br/>- **Access the Catalog URL:**<br/>  - After setting up GitHub Pages, your catalog should be accessible at:<br/>    ```<br/>    https://<your-username>.github.io/<repository-name>/catalog.json<br/>    ```<br/>  - Replace `<your-username>` and `<repository-name>` with your GitHub username and repository name, respectively.<br/>  - Open this URL in a web browser to confirm it's accessible and displays the correct JSON content.<br/><br/>**2. Add the Repository in Blender:**<br/><br/>Once your catalog is accessible, add it to Blender:<br/><br/>- **Adding a Remote Repository:**<br/>  - Open Blender.<br/>  - Go to `Edit > Preferences > Extensions`.<br/>  - In the "Repositories" section, click the "+" button to add a new remote repository.<br/>  - Enter a name for your repository.<br/>  - In the URL field, input the exact URL of your `catalog.json`:<br/>    ```<br/>    https://<your-username>.github.io/<repository-name>/catalog.json<br/>    ```<br/>  - Click "OK" to add the repository.<br/><br/>- **Refresh Remote Data:**<br/>  - In the Extensions preferences, click "Refresh Remote" to sync with the newly added repository.<br/><br/>**3. Common Issues and Solutions:**<br/><br/>- **SSL Certificate Issues:**<br/>  - If you encounter SSL certificate errors when accessing your catalog URL, ensure your system's certificates are up to date.<br/>  - Some users have resolved similar issues by manually installing the certificate from the catalog URL. For detailed steps, refer to this [Blender Artists Community post](https://blenderartists.org/t/remote-repository-unavailable-fix/1616031).<br/><br/>- **Blender Version Compatibility:**<br/>  - Ensure you're using a Blender version that supports the Extensions feature. Blender 4.1 and newer versions have enhanced support for extensions. Refer to the [Blender 4.5 LTS Manual](https://docs.blender.org/manual/en/latest/editors/preferences/extensions.html) for more details.<br/><br/>- **Network Access:**<br/>  - Confirm that Blender is allowed online access:<br/>    - Go to `Edit > Preferences > System`.<br/>    - Ensure "Allow Online Access" is enabled.<br/><br/>**4. Additional Resources:**<br/><br/>For a comprehensive guide on setting up Blender extensions, you might find the [Blender Studio Tools: Extensions Setup](https://studio.blender.org/tools/td-guide/extensions_setup) helpful.<br/><br/>If after following these steps the issue persists, please provide specific error messages or behaviors you're encountering. This information will assist in diagnosing the problem more accurately. |
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Found issues:
+1. Rainys-Bulk-Scene-Tools manifest is missing (404)
+2. BasedPlayblast manifest shows version "1.3.0" but the catalog has "2.3.0"
+
+Checking the actual repository structure:
+
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **command** • Run command: curl -s https://api.github.com/repos/RaincloudTheDragon/Rainys-Bulk-Scene-Tools/contents/ | ConvertFrom-Json | Select-Object name, type | Format-Table</summary>
+
+```bash
+curl -s https://api.github.com/repos/RaincloudTheDragon/Rainys-Bulk-Scene-Tools/contents/ | ConvertFrom-Json | Select-Object name, type | Format-Table
+```
+
+```
+name             type
+----             ----
+.github          dir
+.gitignore       file
+.specstory       dir
+__init__.py      file
+bl_info.json     file
+changelog.md     file
+ops              dir
+panels           dir
+readme.md        file
+requirements.txt file
+updater          dir
+```
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **command** • Run command: curl -s https://api.github.com/repos/RaincloudTheDragon/BasedPlayblast/releases/latest | ConvertFrom-Json | Select-Object tag_name, @{Name='assets';Expression={$_.assets | ForEach-Object {$_.name}}}</summary>
+
+```bash
+curl -s https://api.github.com/repos/RaincloudTheDragon/BasedPlayblast/releases/latest | ConvertFrom-Json | Select-Object tag_name, @{Name='assets';Expression={$_.assets | ForEach-Object {$_.name}}}
+```
+
+```
+tag_name assets
+-------- ------
+v2.3.0   BasedPlayblast.v2.3.0.zip
+```
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **command** • Run command: curl -s https://api.github.com/repos/RaincloudTheDragon/Rainys-Bulk-Scene-Tools/releases/latest | ConvertFrom-Json | Select-Object tag_name, @{Name='assets';Expression={$_.assets | ForEach-Object {$_.name}}}</summary>
+
+```bash
+curl -s https://api.github.com/repos/RaincloudTheDragon/Rainys-Bulk-Scene-Tools/releases/latest | ConvertFrom-Json | Select-Object tag_name, @{Name='assets';Expression={$_.assets | ForEach-Object {$_.name}}}
+```
+
+```
+tag_name assets
+-------- ------
+v0.10.0  Rainys-Bulk-Scene-Tools.v0.10.0.zip
+```
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Rainys-Bulk-Scene-Tools doesn't have a `blender_manifest.toml` file (only `bl_info.json`), so it can't be in the extension catalog. Only addons with `blender_manifest.toml` are supported.
+
+Updating the catalog to only include BasedPlayblast for now, and noting what's needed for Rainys-Bulk-Scene-Tools:
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: catalog.json</summary>
+
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="search" data-tool-name="codebase_search">
+<details>
+                <summary>Tool use: **codebase_search** • Searched codebase "What is the correct format for Blender extension catalog.json? What fields are required?" • **15** results</summary>
+            
+| File | Lines |
+|------|-------|
+| `README.md` | L59 |
+| `README.md` | L50-99 |
+| `SETUP_GUIDE.md` | L77 |
+| `catalog.json` | L16 |
+| `update_catalog.py` | L76-136 |
+| `update_catalog.py` | L50 |
+| `update_catalog.py` | L71-132 |
+| `SETUP_GUIDE.md` | L75-133 |
+| `.github/workflows/update-catalog.yml` | L49 |
+| `update_catalog.py` | L36-68 |
+| `SETUP_GUIDE.md` | L131-134 |
+| `update_catalog.py` | L48-73 |
+| `update_catalog.py` | L119-136 |
+| `update_catalog.py` | L53-116 |
+| `.cursorindexingignore` | L3 |
+
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **command** • Run command: curl -s https://extensions.blender.org/api/v1/extensions | ConvertFrom-Json | Select-Object -First 1 | ConvertTo-Json -Depth 5</summary>
+
+```bash
+curl -s https://extensions.blender.org/api/v1/extensions | ConvertFrom-Json | Select-Object -First 1 | ConvertTo-Json -Depth 5
+```
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Rainys-Bulk-Scene-Tools doesn't have a `blender_manifest.toml` (only `bl_info.json`), so it can't be in the extension catalog. The extension system requires `blender_manifest.toml`.
+
+Removing it from the catalog and checking what error you're seeing:
+
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="search_replace">
+
+<details><summary>Tool use: **code_edit** • Edit file: update_catalog.py</summary>
+
+**Chunk 1**
+Lines added: 2, lines removed: 5
+
+```diff
+@@ -27,9 +27,6 @@
+          &quot;manifest_branch&quot;: &quot;main&quot;,
+      },
+-     {
+-         &quot;id&quot;: &quot;rainys_bulk_scene_tools&quot;,  # Must match blender_manifest.toml
+-         &quot;repo&quot;: &quot;RaincloudTheDragon/Rainys-Bulk-Scene-Tools&quot;,
+-         &quot;manifest_branch&quot;: &quot;main&quot;,
+-     },
++     # Note: Rainys-Bulk-Scene-Tools doesn&#39;t have blender_manifest.toml yet
++     # It only has bl_info.json (old format). Add it here once you create the manifest.
+  ]
+  
+```
+
+</details>
+
+</tool-use>
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **command** • Run command: python update_catalog.py</summary>
+
+```bash
+python update_catalog.py
+```
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: catalog.json</summary>
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Re-running the script and checking the output:
+
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **command** • Run command: python update_catalog.py 2>&1</summary>
+
+```bash
+python update_catalog.py 2>&1
+```
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: catalog.json</summary>
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Removing Rainys-Bulk-Scene-Tools from the catalog since it lacks a `blender_manifest.toml`. Updating the catalog manually:
+
+
+---
+
+The string to replace was not found in the file.
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **command** • Run command: git add catalog.json update_catalog.py && git commit -m "Remove Rainys-Bulk-Scene-Tools (no manifest.toml) and fix catalog" && git push</summary>
+
+```bash
+git add catalog.json update_catalog.py && git commit -m "Remove Rainys-Bulk-Scene-Tools (no manifest.toml) and fix catalog" && git push
+```
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+The catalog already only includes BasedPlayblast. What exact error do you see in Blender?
+
+1. When adding the repository — what error message appears?
+2. After adding it — does it show in the list but with an error?
+3. When browsing extensions — do they not appear?
+
+Checking a few things that could cause issues:
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: catalog.json</summary>
+
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **command** • Run command: curl -s https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json | python -m json.tool</summary>
+
+```bash
+curl -s https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json | python -m json.tool
+```
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **command** • Run command: curl -s https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml | Select-String -Pattern "^id\s*=|^version\s*="</summary>
+
+```bash
+curl -s https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml | Select-String -Pattern "^id\s*=|^version\s*="
+```
+
+```
+id = &quot;basedplayblast&quot;
+version = &quot;1.3.0&quot;
+```
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Found two issues:
+1. Version mismatch: manifest shows "1.3.0" but the catalog has "2.3.0". They must match.
+2. Rainys-Bulk-Scene-Tools doesn't have a `blender_manifest.toml` file, so it can't be in the extension catalog.
+
+Fixing these:
+
+
+---
+
+The string to replace was not found in the file.
+
+---
+
+Tool call errored or timed out
 
 ---
 
