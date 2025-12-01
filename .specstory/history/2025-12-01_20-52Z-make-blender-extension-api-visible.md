@@ -2919,3 +2919,79 @@ After you commit and push, wait 1–2 minutes for GitHub Pages to update, then r
 
 ---
 
+_**User (2025-12-01 21:21Z)**_
+
+@catalog.json:1-11 the script didn't update it properly.
+
+
+
+https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.1/BasedPlayblast.v2.3.1.zip 
+
+---
+
+_**Agent (model default, mode Agent)**_
+
+
+
+---
+
+
+Fixing the `archive_url` to point to the v2.3.1 release:
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: catalog.json</summary>
+
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="search_replace">
+
+<details><summary>Tool use: **code_edit** • Edit file: catalog.json</summary>
+
+**Chunk 1**
+Lines added: 1, lines removed: 1
+
+```diff
+@@ -5,5 +5,5 @@
+        &quot;id&quot;: &quot;basedplayblast&quot;,
+        &quot;version&quot;: &quot;2.3.1&quot;,
+-       &quot;archive_url&quot;: &quot;https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.0/BasedPlayblast.v2.3.1.zip&quot;,
++       &quot;archive_url&quot;: &quot;https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.1/BasedPlayblast.v2.3.1.zip&quot;,
+        &quot;manifest_url&quot;: &quot;https://github.com/RaincloudTheDragon/BasedPlayblast/raw/main/blender_manifest.toml&quot;
+      }
+```
+
+</details>
+
+</tool-use>
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: catalog.json</summary>
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Fixed the `archive_url` to point to the v2.3.1 release. The catalog now has:
+- Version: `2.3.1` ✓
+- Archive URL: `v2.3.1/BasedPlayblast.v2.3.1.zip` ✓
+
+The `update_catalog.py` script pulls the version from the release tag, but the archive URL path must match the tag. The script should be updated to ensure the archive URL uses the correct tag version. For now, the catalog is correct.
+
+After you commit and push, it should work.
+
+---
+
