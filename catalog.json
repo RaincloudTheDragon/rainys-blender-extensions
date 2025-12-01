@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "extensions": [
     {
-      "id": "based_playblast",
+      "id": "basedplayblast",
       "version": "2.3.0",
       "archive_url": "https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.0/BasedPlayblast.v2.3.0.zip",
       "manifest_url": "https://github.com/RaincloudTheDragon/BasedPlayblast/raw/main/blender_manifest.toml"

@@ -22,12 +22,12 @@ from typing import List, Dict, Optional
 # Configuration: Add your addons here
 ADDONS = [
     {
-        "id": "based_playblast",
+        "id": "basedplayblast",  # Must match blender_manifest.toml
         "repo": "RaincloudTheDragon/BasedPlayblast",
         "manifest_branch": "main",
     },
     {
-        "id": "rainys_bulk_scene_tools",
+        "id": "rainys_bulk_scene_tools",  # Must match blender_manifest.toml
         "repo": "RaincloudTheDragon/Rainys-Bulk-Scene-Tools",
         "manifest_branch": "main",
     },
