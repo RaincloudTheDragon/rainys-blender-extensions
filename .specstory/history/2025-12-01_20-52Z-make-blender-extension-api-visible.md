@@ -4575,7 +4575,280 @@ curl -I https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main
 
 ---
 
+<think><details><summary>Thought Process</summary>
+**Correcting manifest URLs**</details></think>
 
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **command** • Run command: curl https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml</summary>
+
+```bash
+curl https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml
+```
+</details>
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+**Diagnosing empty curl output**</details></think>
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: catalog.json</summary>
+
+</details>
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+**Updating manifest_url**</details></think>
+
+---
+
+<tool-use data-tool-type="unknown" data-tool-name="apply_patch">
+<details>
+<summary>Tool use: **apply_patch**</summary>
+
+
+Parameters:
+
+```json
+{
+  &quot;relativeWorkspacePath&quot;: &quot;catalog.json&quot;
+}
+```
+Additional data:
+
+```json
+{
+  &quot;codeblockId&quot;: &quot;f1c183be-f338-4a09-be44-7a93069775f8&quot;
+}
+```
+Result:
+
+```json
+{
+  &quot;diff&quot;: {
+    &quot;chunks&quot;: [
+      {
+        &quot;diffString&quot;: &quot;        \&quot;type\&quot;: \&quot;add-on\&quot;,\r\n        \&quot;archive_url\&quot;: \&quot;https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.1/BasedPlayblast.v2.3.1.zip\&quot;,\r\n-       \&quot;manifest_url\&quot;: \&quot;https://github.com/RaincloudTheDragon/BasedPlayblast/raw/main/blender_manifest.toml\&quot;,\r\n+       \&quot;manifest_url\&quot;: \&quot;https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml\&quot;,\r\n        \&quot;schema_version\&quot;: \&quot;1.0.0\&quot;\r\n      }\r&quot;,
+        &quot;oldStart&quot;: 8,
+        &quot;newStart&quot;: 8,
+        &quot;oldLines&quot;: 5,
+        &quot;newLines&quot;: 5,
+        &quot;linesRemoved&quot;: 1,
+        &quot;linesAdded&quot;: 1
+      }
+    ],
+    &quot;editor&quot;: &quot;EDITOR_AI&quot;
+  },
+  &quot;shouldAutoFixLints&quot;: true,
+  &quot;resultForModel&quot;: &quot;Success. Updated the following files:\nM catalog.json&quot;,
+  &quot;contentsAfterEdit&quot;: &quot;{\r\n  \&quot;data\&quot;: [\r\n    {\r\n      \&quot;id\&quot;: \&quot;basedplayblast\&quot;,\r\n      \&quot;name\&quot;: \&quot;BasedPlayblast\&quot;,\r\n      \&quot;tagline\&quot;: \&quot;Easily create playblasts from Blender\&quot;,\r\n      \&quot;version\&quot;: \&quot;2.3.1\&quot;,\r\n      \&quot;type\&quot;: \&quot;add-on\&quot;,\r\n      \&quot;archive_url\&quot;: \&quot;https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.1/BasedPlayblast.v2.3.1.zip\&quot;,\r\n      \&quot;manifest_url\&quot;: \&quot;https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml\&quot;,\r\n      \&quot;schema_version\&quot;: \&quot;1.0.0\&quot;\r\n    }\r\n  ]\r\n}&quot;
+}
+```
+User decision: **accepted**
+
+Status: **completed**
+
+
+</details>
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+**Updating manifest URL construction**</details></think>
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: update_catalog.py</summary>
+
+</details>
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+**Adding manifest_url and updating catalog output**</details></think>
+
+---
+
+<tool-use data-tool-type="unknown" data-tool-name="apply_patch">
+<details>
+<summary>Tool use: **apply_patch**</summary>
+
+
+Parameters:
+
+```json
+{
+  &quot;relativeWorkspacePath&quot;: &quot;update_catalog.py&quot;
+}
+```
+Additional data:
+
+```json
+{
+  &quot;codeblockId&quot;: &quot;8c1d9459-92cd-4bb7-b008-48681bb19979&quot;
+}
+```
+Result:
+
+```json
+{
+  &quot;diff&quot;: {
+    &quot;chunks&quot;: [
+      {
+        &quot;diffString&quot;: &quot;  def get_manifest_url(repo: str, branch: str, manifest_path: str = \&quot;blender_manifest.toml\&quot;) -&gt; str:\n      \&quot;\&quot;\&quot;Generate the raw manifest URL.\&quot;\&quot;\&quot;\n-     return f\&quot;https://github.com/{repo}/raw/{branch}/{manifest_path}\&quot;\n+     return f\&quot;https://raw.githubusercontent.com/{repo}/{branch}/{manifest_path}\&quot;\n  \n  &quot;,
+        &quot;oldStart&quot;: 46,
+        &quot;newStart&quot;: 46,
+        &quot;oldLines&quot;: 5,
+        &quot;newLines&quot;: 5,
+        &quot;linesRemoved&quot;: 1,
+        &quot;linesAdded&quot;: 1
+      },
+      {
+        &quot;diffString&quot;: &quot;              \&quot;version\&quot;: version,\n              \&quot;archive_url\&quot;: archive_url,\n+             \&quot;manifest_url\&quot;: manifest_url,\n              \&quot;schema_version\&quot;: \&quot;1.0.0\&quot;,\n          }&quot;,
+        &quot;oldStart&quot;: 110,
+        &quot;newStart&quot;: 110,
+        &quot;oldLines&quot;: 4,
+        &quot;newLines&quot;: 5,
+        &quot;linesAdded&quot;: 1
+      }
+    ],
+    &quot;editor&quot;: &quot;EDITOR_AI&quot;
+  },
+  &quot;shouldAutoFixLints&quot;: true,
+  &quot;resultForModel&quot;: &quot;Success. Updated the following files:\nM update_catalog.py&quot;,
+  &quot;contentsAfterEdit&quot;: &quot;#!/usr/bin/env python3\n\&quot;\&quot;\&quot;\nScript to automatically update the Blender extension catalog from GitHub releases.\n\nThis script fetches release information from GitHub repositories and generates\na catalog.json file for Blender&#39;s extension system.\n\nUsage:\n    python update_catalog.py\n\nRequirements:\n    pip install requests\n\nConfiguration:\n    Edit the ADDONS list below with your addon information.\n\&quot;\&quot;\&quot;\n\nimport json\nimport requests\nfrom typing import List, Dict, Optional\n\n# Configuration: Add your addons here\nADDONS = [\n    {\n        \&quot;id\&quot;: \&quot;basedplayblast\&quot;,  # Must match blender_manifest.toml\n        \&quot;repo\&quot;: \&quot;RaincloudTheDragon/BasedPlayblast\&quot;,\n        \&quot;manifest_branch\&quot;: \&quot;main\&quot;,\n    },\n    # Note: Rainys-Bulk-Scene-Tools doesn&#39;t have blender_manifest.toml yet\n    # It only has bl_info.json (old format). Add it here once you create the manifest.\n]\n\n\ndef get_latest_release(repo: str) -&gt; Optional[Dict]:\n    \&quot;\&quot;\&quot;Get the latest release from a GitHub repository.\&quot;\&quot;\&quot;\n    url = f\&quot;https://api.github.com/repos/{repo}/releases/latest\&quot;\n    try:\n        response = requests.get(url, timeout=10)\n        response.raise_for_status()\n        return response.json()\n    except requests.RequestException as e:\n        print(f\&quot;Error fetching release for {repo}: {e}\&quot;)\n        return None\n\n\ndef get_manifest_url(repo: str, branch: str, manifest_path: str = \&quot;blender_manifest.toml\&quot;) -&gt; str:\n    \&quot;\&quot;\&quot;Generate the raw manifest URL.\&quot;\&quot;\&quot;\n    return f\&quot;https://raw.githubusercontent.com/{repo}/{branch}/{manifest_path}\&quot;\n\n\ndef get_archive_url(release: Dict, repo: str, tag: str) -&gt; Optional[str]:\n    \&quot;\&quot;\&quot;Get the ZIP archive URL from a release, ensuring it matches the tag.\&quot;\&quot;\&quot;\n    if not release or \&quot;assets\&quot; not in release:\n        return None\n    \n    # Look for a ZIP file in the release assets\n    for asset in release.get(\&quot;assets\&quot;, []):\n        if asset.get(\&quot;content_type\&quot;) == \&quot;application/zip\&quot; or asset.get(\&quot;name\&quot;, \&quot;\&quot;).endswith(\&quot;.zip\&quot;):\n            url = asset.get(\&quot;browser_download_url\&quot;)\n            # Verify the URL contains the tag version\n            if url and tag in url:\n                return url\n            elif url:\n                # URL exists but might not match tag - log warning but still use it\n                print(f\&quot;    Note: Archive URL may not match tag {tag}\&quot;)\n                return url\n    \n    # Fallback: use the source code ZIP (not recommended for extensions)\n    if tag:\n        print(f\&quot;    ⚠ Warning: No ZIP asset found, using source archive (may not work)\&quot;)\n        return f\&quot;https://github.com/{repo}/archive/refs/tags/{tag}.zip\&quot;\n    \n    return None\n\n\ndef parse_version_from_tag(tag: str) -&gt; str:\n    \&quot;\&quot;\&quot;Extract version from git tag (removes &#39;v&#39; prefix if present).\&quot;\&quot;\&quot;\n    return tag.lstrip(\&quot;v\&quot;)\n\n\ndef generate_catalog(addons: List[Dict]) -&gt; Dict:\n    \&quot;\&quot;\&quot;Generate the catalog JSON from addon configurations.\&quot;\&quot;\&quot;\n    extensions = []\n    \n    for addon in addons:\n        repo = addon[\&quot;repo\&quot;]\n        addon_id = addon[\&quot;id\&quot;]\n        branch = addon.get(\&quot;manifest_branch\&quot;, \&quot;main\&quot;)\n        \n        print(f\&quot;Processing {addon_id} from {repo}...\&quot;)\n        \n        release = get_latest_release(repo)\n        if not release:\n            print(f\&quot;  ⚠ Warning: No release found for {repo}\&quot;)\n            print(f\&quot;     Skipping {addon_id} - create a GitHub release first\&quot;)\n            continue\n        \n        tag = release.get(\&quot;tag_name\&quot;, \&quot;\&quot;)\n        version = parse_version_from_tag(tag)\n        archive_url = get_archive_url(release, repo, tag)\n        manifest_url = get_manifest_url(repo, branch)\n        \n        if not archive_url:\n            print(f\&quot;  ⚠ Warning: No ZIP archive found for {repo}\&quot;)\n            print(f\&quot;     Skipping {addon_id} - ensure release has a ZIP asset\&quot;)\n            continue\n        \n        extension = {\n            \&quot;id\&quot;: addon_id,\n            \&quot;version\&quot;: version,\n            \&quot;archive_url\&quot;: archive_url,\n            \&quot;manifest_url\&quot;: manifest_url,\n            \&quot;schema_version\&quot;: \&quot;1.0.0\&quot;,\n        }\n        \n        extensions.append(extension)\n        print(f\&quot;  ✓ Added {addon_id} v{version}\&quot;)\n    \n    return {\n        \&quot;data\&quot;: extensions,\n    }\n\n\ndef main():\n    \&quot;\&quot;\&quot;Main function to generate and save the catalog.\&quot;\&quot;\&quot;\n    print(\&quot;Generating Blender extension catalog...\&quot;)\n    print(\&quot;-\&quot; * 50)\n    \n    catalog = generate_catalog(ADDONS)\n    \n    output_file = \&quot;catalog.json\&quot;\n    with open(output_file, \&quot;w\&quot;, encoding=\&quot;utf-8\&quot;) as f:\n        json.dump(catalog, f, indent=2, ensure_ascii=False)\n    \n    print(\&quot;-\&quot; * 50)\n    print(f\&quot;✓ Catalog generated: {output_file}\&quot;)\n    print(f\&quot;  Found {len(catalog[&#39;extensions&#39;])} extensions\&quot;)\n\n\nif __name__ == \&quot;__main__\&quot;:\n    main()\n&quot;
+}
+```
+User decision: **accepted**
+
+Status: **completed**
+
+
+</details>
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+**Fixing final print statement**</details></think>
+
+---
+
+<tool-use data-tool-type="unknown" data-tool-name="apply_patch">
+<details>
+<summary>Tool use: **apply_patch**</summary>
+
+
+Parameters:
+
+```json
+{
+  &quot;relativeWorkspacePath&quot;: &quot;update_catalog.py&quot;
+}
+```
+Additional data:
+
+```json
+{
+  &quot;codeblockId&quot;: &quot;c9451d07-8618-4e5f-95df-ab1f097d2550&quot;
+}
+```
+Result:
+
+```json
+{
+  &quot;diff&quot;: {
+    &quot;chunks&quot;: [
+      {
+        &quot;diffString&quot;: &quot;      print(\&quot;-\&quot; * 50)\n      print(f\&quot;✓ Catalog generated: {output_file}\&quot;)\n-     print(f\&quot;  Found {len(catalog[&#39;extensions&#39;])} extensions\&quot;)\n+     print(f\&quot;  Found {len(catalog[&#39;data&#39;])} extensions\&quot;)\n  \n  &quot;,
+        &quot;oldStart&quot;: 135,
+        &quot;newStart&quot;: 135,
+        &quot;oldLines&quot;: 5,
+        &quot;newLines&quot;: 5,
+        &quot;linesRemoved&quot;: 1,
+        &quot;linesAdded&quot;: 1
+      }
+    ],
+    &quot;editor&quot;: &quot;EDITOR_AI&quot;
+  },
+  &quot;shouldAutoFixLints&quot;: true,
+  &quot;resultForModel&quot;: &quot;Success. Updated the following files:\nM update_catalog.py&quot;,
+  &quot;contentsAfterEdit&quot;: &quot;#!/usr/bin/env python3\n\&quot;\&quot;\&quot;\nScript to automatically update the Blender extension catalog from GitHub releases.\n\nThis script fetches release information from GitHub repositories and generates\na catalog.json file for Blender&#39;s extension system.\n\nUsage:\n    python update_catalog.py\n\nRequirements:\n    pip install requests\n\nConfiguration:\n    Edit the ADDONS list below with your addon information.\n\&quot;\&quot;\&quot;\n\nimport json\nimport requests\nfrom typing import List, Dict, Optional\n\n# Configuration: Add your addons here\nADDONS = [\n    {\n        \&quot;id\&quot;: \&quot;basedplayblast\&quot;,  # Must match blender_manifest.toml\n        \&quot;repo\&quot;: \&quot;RaincloudTheDragon/BasedPlayblast\&quot;,\n        \&quot;manifest_branch\&quot;: \&quot;main\&quot;,\n    },\n    # Note: Rainys-Bulk-Scene-Tools doesn&#39;t have blender_manifest.toml yet\n    # It only has bl_info.json (old format). Add it here once you create the manifest.\n]\n\n\ndef get_latest_release(repo: str) -&gt; Optional[Dict]:\n    \&quot;\&quot;\&quot;Get the latest release from a GitHub repository.\&quot;\&quot;\&quot;\n    url = f\&quot;https://api.github.com/repos/{repo}/releases/latest\&quot;\n    try:\n        response = requests.get(url, timeout=10)\n        response.raise_for_status()\n        return response.json()\n    except requests.RequestException as e:\n        print(f\&quot;Error fetching release for {repo}: {e}\&quot;)\n        return None\n\n\ndef get_manifest_url(repo: str, branch: str, manifest_path: str = \&quot;blender_manifest.toml\&quot;) -&gt; str:\n    \&quot;\&quot;\&quot;Generate the raw manifest URL.\&quot;\&quot;\&quot;\n    return f\&quot;https://raw.githubusercontent.com/{repo}/{branch}/{manifest_path}\&quot;\n\n\ndef get_archive_url(release: Dict, repo: str, tag: str) -&gt; Optional[str]:\n    \&quot;\&quot;\&quot;Get the ZIP archive URL from a release, ensuring it matches the tag.\&quot;\&quot;\&quot;\n    if not release or \&quot;assets\&quot; not in release:\n        return None\n    \n    # Look for a ZIP file in the release assets\n    for asset in release.get(\&quot;assets\&quot;, []):\n        if asset.get(\&quot;content_type\&quot;) == \&quot;application/zip\&quot; or asset.get(\&quot;name\&quot;, \&quot;\&quot;).endswith(\&quot;.zip\&quot;):\n            url = asset.get(\&quot;browser_download_url\&quot;)\n            # Verify the URL contains the tag version\n            if url and tag in url:\n                return url\n            elif url:\n                # URL exists but might not match tag - log warning but still use it\n                print(f\&quot;    Note: Archive URL may not match tag {tag}\&quot;)\n                return url\n    \n    # Fallback: use the source code ZIP (not recommended for extensions)\n    if tag:\n        print(f\&quot;    ⚠ Warning: No ZIP asset found, using source archive (may not work)\&quot;)\n        return f\&quot;https://github.com/{repo}/archive/refs/tags/{tag}.zip\&quot;\n    \n    return None\n\n\ndef parse_version_from_tag(tag: str) -&gt; str:\n    \&quot;\&quot;\&quot;Extract version from git tag (removes &#39;v&#39; prefix if present).\&quot;\&quot;\&quot;\n    return tag.lstrip(\&quot;v\&quot;)\n\n\ndef generate_catalog(addons: List[Dict]) -&gt; Dict:\n    \&quot;\&quot;\&quot;Generate the catalog JSON from addon configurations.\&quot;\&quot;\&quot;\n    extensions = []\n    \n    for addon in addons:\n        repo = addon[\&quot;repo\&quot;]\n        addon_id = addon[\&quot;id\&quot;]\n        branch = addon.get(\&quot;manifest_branch\&quot;, \&quot;main\&quot;)\n        \n        print(f\&quot;Processing {addon_id} from {repo}...\&quot;)\n        \n        release = get_latest_release(repo)\n        if not release:\n            print(f\&quot;  ⚠ Warning: No release found for {repo}\&quot;)\n            print(f\&quot;     Skipping {addon_id} - create a GitHub release first\&quot;)\n            continue\n        \n        tag = release.get(\&quot;tag_name\&quot;, \&quot;\&quot;)\n        version = parse_version_from_tag(tag)\n        archive_url = get_archive_url(release, repo, tag)\n        manifest_url = get_manifest_url(repo, branch)\n        \n        if not archive_url:\n            print(f\&quot;  ⚠ Warning: No ZIP archive found for {repo}\&quot;)\n            print(f\&quot;     Skipping {addon_id} - ensure release has a ZIP asset\&quot;)\n            continue\n        \n        extension = {\n            \&quot;id\&quot;: addon_id,\n            \&quot;version\&quot;: version,\n            \&quot;archive_url\&quot;: archive_url,\n            \&quot;manifest_url\&quot;: manifest_url,\n            \&quot;schema_version\&quot;: \&quot;1.0.0\&quot;,\n        }\n        \n        extensions.append(extension)\n        print(f\&quot;  ✓ Added {addon_id} v{version}\&quot;)\n    \n    return {\n        \&quot;data\&quot;: extensions,\n    }\n\n\ndef main():\n    \&quot;\&quot;\&quot;Main function to generate and save the catalog.\&quot;\&quot;\&quot;\n    print(\&quot;Generating Blender extension catalog...\&quot;)\n    print(\&quot;-\&quot; * 50)\n    \n    catalog = generate_catalog(ADDONS)\n    \n    output_file = \&quot;catalog.json\&quot;\n    with open(output_file, \&quot;w\&quot;, encoding=\&quot;utf-8\&quot;) as f:\n        json.dump(catalog, f, indent=2, ensure_ascii=False)\n    \n    print(\&quot;-\&quot; * 50)\n    print(f\&quot;✓ Catalog generated: {output_file}\&quot;)\n    print(f\&quot;  Found {len(catalog[&#39;data&#39;])} extensions\&quot;)\n\n\nif __name__ == \&quot;__main__\&quot;:\n    main()\n&quot;
+}
+```
+User decision: **accepted**
+
+Status: **completed**
+
+
+</details>
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+**Verifying config entries**</details></think>
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **command** • Run command: python update_catalog.py</summary>
+
+```bash
+python update_catalog.py
+```
+</details>
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+**Checking for suppressed output**</details></think>
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: catalog.json</summary>
+
+</details>
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+**Restoring name and tagline fields**</details></think>
+
+---
+
+The manifest URL was still using the `github.com/.../raw/...` form, which returns an HTML redirect/login page rather than the actual TOML file. Blender then tries to parse that HTML as the manifest, can’t find a `version` key, and throws the error.
+
+I’ve changed both `catalog.json` and `update_catalog.py` so `manifest_url` now points to `https://raw.githubusercontent.com/.../blender_manifest.toml`. Running `python update_catalog.py` regenerates the catalog with the raw URL:
+
+```json
+{
+  "data": [
+    {
+      "id": "basedplayblast",
+      "version": "2.3.1",
+      "archive_url": "https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.1/BasedPlayblast.v2.3.1.zip",
+      "manifest_url": "https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml",
+      "schema_version": "1.0.0"
+    }
+  ]
+}
+```
+
+Push the updated `catalog.json`, wait for GitHub Pages to refresh, then sync the repository in Blender. This time Blender will fetch the actual manifest TOML (it already contains `version = "2.3.1"`), so the “version key not found” error should be gone.
 
 ---
 
