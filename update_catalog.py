@@ -45,7 +45,7 @@ def get_latest_release(repo: str) -> Optional[Dict]:
 
 def get_manifest_url(repo: str, branch: str, manifest_path: str = "blender_manifest.toml") -> str:
     """Generate the raw manifest URL."""
-    return f"https://github.com/{repo}/raw/{branch}/{manifest_path}"
+    return f"https://raw.githubusercontent.com/{repo}/{branch}/{manifest_path}"
 
 
 def get_archive_url(release: Dict, repo: str, tag: str) -> Optional[str]:
@@ -109,6 +109,7 @@ def generate_catalog(addons: List[Dict]) -> Dict:
             "id": addon_id,
             "version": version,
             "archive_url": archive_url,
+            "manifest_url": manifest_url,
             "schema_version": "1.0.0",
         }
         
@@ -133,7 +134,7 @@ def main():
     
     print("-" * 50)
     print(f"✓ Catalog generated: {output_file}")
-    print(f"  Found {len(catalog['extensions'])} extensions")
+    print(f"  Found {len(catalog['data'])} extensions")
 
 
 if __name__ == "__main__":
