@@ -109,14 +109,14 @@ def generate_catalog(addons: List[Dict]) -> Dict:
             "id": addon_id,
             "version": version,
             "archive_url": archive_url,
+            "schema_version": "1.0.0",
         }
         
         extensions.append(extension)
         print(f"  ✓ Added {addon_id} v{version}")
     
     return {
-        "schema_version": "1.0.0",
-        "extensions": extensions,
+        "data": extensions,
     }
 
 
