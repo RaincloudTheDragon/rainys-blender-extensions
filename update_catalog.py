@@ -22,16 +22,15 @@ from typing import List, Dict, Optional
 # Configuration: Add your addons here
 ADDONS = [
     {
-        "id": "atomic_data_manager",
-        "repo": "grantwilk/atomic-data-manager",
-        "manifest_branch": "main",  # Branch where blender_manifest.toml is located
+        "id": "based_playblast",
+        "repo": "RaincloudTheDragon/BasedPlayblast",
+        "manifest_branch": "main",
     },
-    # Add more addons here:
-    # {
-    #     "id": "another_addon",
-    #     "repo": "username/repo-name",
-    #     "manifest_branch": "main",
-    # },
+    {
+        "id": "rainys_bulk_scene_tools",
+        "repo": "RaincloudTheDragon/Rainys-Bulk-Scene-Tools",
+        "manifest_branch": "main",
+    },
 ]
 
 
@@ -88,7 +87,8 @@ def generate_catalog(addons: List[Dict]) -> Dict:
         
         release = get_latest_release(repo)
         if not release:
-            print(f"  Warning: No release found for {repo}, skipping...")
+            print(f"  ⚠ Warning: No release found for {repo}")
+            print(f"     Skipping {addon_id} - create a GitHub release first")
             continue
         
         tag = release.get("tag_name", "")
@@ -97,7 +97,8 @@ def generate_catalog(addons: List[Dict]) -> Dict:
         manifest_url = get_manifest_url(repo, branch)
         
         if not archive_url:
-            print(f"  Warning: No ZIP archive found for {repo}, skipping...")
+            print(f"  ⚠ Warning: No ZIP archive found for {repo}")
+            print(f"     Skipping {addon_id} - ensure release has a ZIP asset")
             continue
         
         extension = {
