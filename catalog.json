@@ -2,10 +2,16 @@
   "schema_version": "1.0.0",
   "extensions": [
     {
-      "id": "atomic_data_manager",
-      "version": "2.0.0",
-      "archive_url": "https://github.com/grantwilk/atomic-data-manager/releases/download/v2.0.0/atomic_data_manager.zip",
-      "manifest_url": "https://github.com/grantwilk/atomic-data-manager/raw/main/blender_manifest.toml"
+      "id": "based_playblast",
+      "version": "2.3.0",
+      "archive_url": "https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.0/BasedPlayblast.v2.3.0.zip",
+      "manifest_url": "https://github.com/RaincloudTheDragon/BasedPlayblast/raw/main/blender_manifest.toml"
+    },
+    {
+      "id": "rainys_bulk_scene_tools",
+      "version": "0.10.0",
+      "archive_url": "https://github.com/RaincloudTheDragon/Rainys-Bulk-Scene-Tools/releases/download/v0.10.0/Rainys-Bulk-Scene-Tools.v0.10.0.zip",
+      "manifest_url": "https://github.com/RaincloudTheDragon/Rainys-Bulk-Scene-Tools/raw/main/blender_manifest.toml"
     }
   ]
 }
