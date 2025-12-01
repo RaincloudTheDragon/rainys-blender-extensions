@@ -109,7 +109,6 @@ def generate_catalog(addons: List[Dict]) -> Dict:
             "id": addon_id,
             "version": version,
             "archive_url": archive_url,
-            "manifest_url": manifest_url,
         }
         
         extensions.append(extension)

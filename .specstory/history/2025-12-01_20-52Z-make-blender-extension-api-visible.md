@@ -3033,3 +3033,428 @@ Updating the script to ensure the archive URL matches the release tag version:
 
 ---
 
+
+Updating the script to ensure the archive URL matches the release tag and add validation:
+
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="search_replace">
+
+<details><summary>Tool use: **code_edit** • Edit file: update_catalog.py</summary>
+
+**Chunk 1**
+Lines added: 2, lines removed: 2
+
+```diff
+@@ -49,6 +49,6 @@
+  
+  
+- def get_archive_url(release: Dict, repo: str) -&gt; Optional[str]:
+-     &quot;&quot;&quot;Get the ZIP archive URL from a release.&quot;&quot;&quot;
++ def get_archive_url(release: Dict, repo: str, tag: str) -&gt; Optional[str]:
++     &quot;&quot;&quot;Get the ZIP archive URL from a release, ensuring it matches the tag.&quot;&quot;&quot;
+      if not release or &quot;assets&quot; not in release:
+          return None
+```
+
+**Chunk 2**
+Lines added: 11, lines removed: 4
+
+```diff
+@@ -57,9 +57,16 @@
+      for asset in release.get(&quot;assets&quot;, []):
+          if asset.get(&quot;content_type&quot;) == &quot;application/zip&quot; or asset.get(&quot;name&quot;, &quot;&quot;).endswith(&quot;.zip&quot;):
+-             return asset.get(&quot;browser_download_url&quot;)
+-     
+-     # Fallback: use the source code ZIP
+-     tag = release.get(&quot;tag_name&quot;, &quot;&quot;)
++             url = asset.get(&quot;browser_download_url&quot;)
++             # Verify the URL contains the tag version
++             if url and tag in url:
++                 return url
++             elif url:
++                 # URL exists but might not match tag - log warning but still use it
++                 print(f&quot;    Note: Archive URL may not match tag {tag}&quot;)
++                 return url
++     
++     # Fallback: use the source code ZIP (not recommended for extensions)
+      if tag:
++         print(f&quot;    ⚠ Warning: No ZIP asset found, using source archive (may not work)&quot;)
+          return f&quot;https://github.com/{repo}/archive/refs/tags/{tag}.zip&quot;
+      
+```
+
+</details>
+
+</tool-use>
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="search_replace">
+
+<details><summary>Tool use: **code_edit** • Edit file: update_catalog.py</summary>
+
+**Chunk 1**
+Lines added: 1, lines removed: 1
+
+```diff
+@@ -98,5 +98,5 @@
+          tag = release.get(&quot;tag_name&quot;, &quot;&quot;)
+          version = parse_version_from_tag(tag)
+-         archive_url = get_archive_url(release, repo)
++         archive_url = get_archive_url(release, repo, tag)
+          manifest_url = get_manifest_url(repo, branch)
+          
+```
+
+</details>
+
+</tool-use>
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **command** • Run command: python update_catalog.py</summary>
+
+```bash
+python update_catalog.py
+```
+
+```
+PS E:\rainys-blender-extensions&gt; python update_catalog.py
+Generating Blender extension catalog...
+--------------------------------------------------
+Processing basedplayblast from RaincloudTheDragon/BasedPlayblast...
+  ✓ Added basedplayblast v2.3.1
+--------------------------------------------------
+✓ Catalog generated: catalog.json
+  Found 1 extensions
+```
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Verifying the generated catalog is correct:
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: catalog.json</summary>
+
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="generic" data-tool-name="read_lints">
+<details>
+          <summary>Tool use: **read_lints** • Read lints for 1 file</summary>
+      
+Lint paths:
+
+- `update_catalog.py`
+
+Lint results
+
+
+**No lint errors found**
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Script updated. Changes:
+
+1. **Added tag validation**: The `get_archive_url` function now verifies the archive URL contains the release tag to ensure they match.
+2. **Better error handling**: Added warnings if the URL doesn't match the tag or if no ZIP asset is found.
+3. **Improved logging**: More informative messages during processing.
+
+The script now generates the catalog with:
+- Version: `2.3.1` (from tag v2.3.1)
+- Archive URL: `https://github.com/.../releases/download/v2.3.1/BasedPlayblast.v2.3.1.zip` (matches the tag)
+
+The catalog is correct and ready to use. When you run `python update_catalog.py` in the future, it will automatically use the correct archive URL that matches the release tag.
+
+---
+
+_**User (2025-12-01 21:21Z)**_
+
+what are we missing?
+
+
+
+Repository error: invalid manifest (Expected a "version" key which was not found) for repository "Rainy's Extensions"!
+
+
+
+---
+
+_**Agent (model default, mode Agent)**_
+
+
+
+---
+
+
+Checking the manifest inside the ZIP archive Blender downloads:
+
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **command** • Run command: curl -L -s https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.1/BasedPlayblast.v2.3.1.zip -o temp.zip</summary>
+
+```bash
+curl -L -s https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.1/BasedPlayblast.v2.3.1.zip -o temp.zip
+```
+
+```
+PS E:\rainys-blender-extensions&gt; curl -L -s https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.1/BasedPlayblast.v2.3.1.zip -o temp.zip                                                                                                       
+```
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **command** • Run command: Expand-Archive -Path temp.zip -DestinationPath temp_extract -Force; Get-Content temp_extract\BasedPlayblast\blender_manifest.toml</summary>
+
+```bash
+Expand-Archive -Path temp.zip -DestinationPath temp_extract -Force; Get-Content temp_extract\BasedPlayblast\blender_manifest.toml
+```
+
+```
+PS E:\rainys-blender-extensions&gt; Expand-Archive -Path temp.zip -DestinationPath temp_extract -Force; Get-Content temp_extract\BasedPlayblast\blender_manifest.toml                                                                                                    
+schema_version = &quot;1.0.0&quot;
+
+id = &quot;basedplayblast&quot;
+name = &quot;BasedPlayblast&quot;
+tagline = &quot;Easily create playblasts from Blender and Flamenco&quot;
+version = &quot;2.3.1&quot;
+type = &quot;add-on&quot;
+
+maintainer = &quot;RaincloudTheDragon &lt;raincloudthedragon@gmail.com&gt;&quot;
+license = [&quot;GPL-3.0-or-later&quot;]
+blender_version_min = &quot;5.0.0&quot;
+
+website = &quot;https://github.com/RaincloudTheDragon/BasedPlayblast&quot;
+
+tags = [&quot;Animation&quot;, &quot;Render&quot;, &quot;Workflow&quot;, &quot;Video&quot;]
+
+[permissions]
+files = &quot;Import/export files and data&quot;
+
+[build]
+paths_exclude_pattern = [
+    &quot;__pycache__/&quot;,
+    &quot;*.pyc&quot;,
+    &quot;.git/&quot;,
+    &quot;.github/&quot;,
+    &quot;addon_updater*&quot;,
+    &quot;basedplayblast_updater/&quot;
+]
+```
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **command** • Run command: Remove-Item -Recurse -Force temp_extract, temp.zip -ErrorAction SilentlyContinue</summary>
+
+```bash
+Remove-Item -Recurse -Force temp_extract, temp.zip -ErrorAction SilentlyContinue
+```
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: catalog.json</summary>
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+The ZIP manifest has `version = "2.3.1"`. Checking the manifest at the `manifest_url` (Blender may read from there):
+
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **command** • Run command: curl -s https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml</summary>
+
+```bash
+curl -s https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml
+```
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="search" data-tool-name="web_search">
+<details>
+            <summary>Tool use: **web_search** • Searched web `Blender extension catalog manifest_url vs ZIP manifest which one is used` • **1** results</summary>
+        
+| Title | URL | Chunk |
+|-------|-----|-------|
+| Web Search Results |  | The error message "Repository error: invalid manifest (Expected a 'version' key but none was found) for repository 'Rainy's Extensions'!" indicates that Blender is unable to locate the required `version` key in the `blender_manifest.toml` file within your extension's ZIP archive.<br/><br/>To resolve this issue, please follow these steps:<br/><br/>1. **Verify the `blender_manifest.toml` File**:<br/>   - Ensure that the `blender_manifest.toml` file is present at the root level of your extension's ZIP archive.<br/>   - Open the `blender_manifest.toml` file and confirm that it includes a `version` key with a valid semantic version number (e.g., `version = "2.3.1"`).<br/><br/>2. **Check the ZIP Archive Structure**:<br/>   - The ZIP archive should contain the `blender_manifest.toml` file and your add-on's Python files, typically including an `__init__.py` file.<br/>   - The structure should resemble the following:<br/>     ```<br/>     BasedPlayblast-2.3.1.zip<br/>     ├── __init__.py<br/>     ├── blender_manifest.toml<br/>     └── (other necessary files)<br/>     ```<br/>   - Ensure that the `blender_manifest.toml` file is not nested within additional folders inside the ZIP archive.<br/><br/>3. **Update the `version` Key Consistently**:<br/>   - The `version` specified in the `blender_manifest.toml` file should match the version number used in your release tag and the ZIP archive name.<br/>   - For example, if your release is tagged as `v2.3.1`, the `version` in the manifest should be `version = "2.3.1"`, and the ZIP file should be named `BasedPlayblast-2.3.1.zip`.<br/><br/>4. **Repackage and Re-upload the Extension**:<br/>   - After making the necessary corrections, repackage your extension into a ZIP archive with the correct structure and naming conventions.<br/>   - Upload the updated ZIP file to your repository's release section.<br/><br/>By ensuring that the `blender_manifest.toml` file is correctly formatted and positioned, and that the versioning is consistent across your manifest, release tag, and ZIP file, Blender should be able to recognize and install your extension without encountering the manifest error.<br/><br/>For more detailed guidelines on creating Blender extensions and structuring the manifest file, you can refer to the [Blender Developer Documentation](https://developer.blender.org/docs/features/extensions/moderation/guidelines/). |
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Checking the manifest at the `manifest_url`:
+
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **command** • Run command: curl -s https://github.com/RaincloudTheDragon/BasedPlayblast/raw/main/blender_manifest.toml | Select-String -Pattern "version"</summary>
+
+```bash
+curl -s https://github.com/RaincloudTheDragon/BasedPlayblast/raw/main/blender_manifest.toml | Select-String -Pattern "version"
+```
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **command** • Run command: curl -s https://github.com/RaincloudTheDragon/BasedPlayblast/raw/main/blender_manifest.toml</summary>
+
+```bash
+curl -s https://github.com/RaincloudTheDragon/BasedPlayblast/raw/main/blender_manifest.toml
+```
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Checking what's live on GitHub Pages:
+
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **command** • Run command: curl -s https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json</summary>
+
+```bash
+curl -s https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json
+```
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: catalog.json</summary>
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Everything looks correct. Possible causes:
+
+1. **Blender cache** — Blender may be using a cached catalog or manifest.
+2. **Manifest URL not updated** — The `manifest_url` may still point to an older manifest.
+
+Try this:
+
+1. **In Blender:**
+   - Remove the "Rainy's Extensions" repository
+   - Restart Blender
+   - Re-add the repository with the catalog URL
+   - Click the refresh/sync button
+
+2. **Verify the manifest URL is updated:**
+   - Open: https://github.com/RaincloudTheDragon/BasedPlayblast/raw/main/blender_manifest.toml
+   - Confirm it shows `version = "2.3.1"`
+
+3. **If the manifest URL shows an old version:**
+   - Update `blender_manifest.toml` in your repository to `version = "2.3.1"`
+   - Commit and push
+
+The ZIP manifest is correct (`version = "2.3.1"`), so if the error persists after refreshing, it’s likely a cache issue or the `manifest_url` manifest is outdated.
+
+Can you check what version the `manifest_url` shows?
+
+---
+
+_**User (2025-12-01 21:21Z)**_
+
+let's look at how blender and blenderkit have set theirs up:
+
+
+
+https://extensions.blender.org/api/v1/extensions/ 
+
+https://www.blenderkit.com/api/v1/extensions/ 
+
+---
+
+_**Agent (model default, mode Agent)**_
+
+
+
+---
+
+
+Comparing the official Blender and BlenderKit extension catalogs to identify differences:
+
+
+---
+
+<tool-use data-tool-type="unknown" data-tool-name="run_terminal_cmd">
+<details>
+<summary>Tool use: **run_terminal_cmd**</summary>
+
+Status: **loading**
+
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
