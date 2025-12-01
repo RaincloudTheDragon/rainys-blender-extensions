@@ -2476,7 +2476,6 @@ _**Agent (model default, mode Agent)**_
 
 ---
 
-
 Fixed the version mismatch in `catalog.json`. The catalog version is now "1.3.0" to match the manifest.
 
 ## What was fixed:
@@ -2489,6 +2488,434 @@ Fixed the version mismatch in `catalog.json`. The catalog version is now "1.3.0"
 4. The error should be resolved
 
 The catalog version must match the version in the `blender_manifest.toml` file. If you update the manifest version in the future, update the catalog version as well.
+
+---
+
+_**User (2025-12-01 21:21Z)**_
+
+Repository error: invalid manifest (Expected a "version" key which was not found) for repository "Rainy's Extensions"!
+
+
+
+---
+
+_**Agent (model default, mode Agent)**_
+
+
+
+---
+
+
+Checking the manifest file Blender is reading. It may be reading the manifest from the ZIP archive, not the repository:
+
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **command** • Run command: curl -s https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml</summary>
+
+```bash
+curl -s https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml
+```
+
+```
+schema_version = &quot;1.0.0&quot;
+
+id = &quot;basedplayblast&quot;
+name = &quot;BasedPlayblast&quot;
+tagline = &quot;Easily create playblasts from Blender and Flamenco&quot;
+version = &quot;1.3.0&quot;
+type = &quot;add-on&quot;
+
+maintainer = &quot;RaincloudTheDragon &lt;raincloudthedragon@gmail.com&gt;&quot;
+license = [&quot;GPL-3.0-or-later&quot;]
+blender_version_min = &quot;5.0.0&quot;
+
+website = &quot;https://github.com/RaincloudTheDragon/BasedPlayblast&quot;
+
+tags = [&quot;Animation&quot;, &quot;Render&quot;, &quot;Workflow&quot;, &quot;Video&quot;]
+
+[permissions]
+files = &quot;Import/export files and data&quot;
+
+[build]
+paths_exclude_pattern = [
+    &quot;__pycache__/&quot;,
+    &quot;*.pyc&quot;,
+    &quot;.git/&quot;,
+    &quot;.github/&quot;,
+    &quot;addon_updater*&quot;,
+    &quot;basedplayblast_updater/&quot;
+] 
+```
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: catalog.json</summary>
+
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="search" data-tool-name="web_search">
+<details>
+            <summary>Tool use: **web_search** • Searched web `Blender extension manifest version key must be in ZIP archive not just repository` • **1** results</summary>
+        
+| Title | URL | Chunk |
+|-------|-----|-------|
+| Web Search Results |  | The error message indicates that the `blender_manifest.toml` file in your "Rainy's Extensions" repository is missing the required `version` key. This key is essential for Blender to recognize and process the extension correctly.<br/><br/>To resolve this issue, please follow these steps:<br/><br/>1. **Locate the `blender_manifest.toml` File**:<br/>   - Navigate to your "Rainy's Extensions" repository.<br/>   - Find the `blender_manifest.toml` file, which should be in the root directory of your extension.<br/><br/>2. **Edit the `blender_manifest.toml` File**:<br/>   - Open the `blender_manifest.toml` file with a text editor.<br/>   - Ensure that the file includes the `version` key with an appropriate value. For example:<br/><br/>     ```toml<br/>     schema_version = "1.0.0"<br/>     id = "rainys_extensions"<br/>     version = "1.0.0"<br/>     name = "Rainy's Extensions"<br/>     tagline = "A collection of useful Blender extensions"<br/>     maintainer = "Your Name <[email protected]>"<br/>     type = "add-on"<br/>     blender_version_min = "4.2.0"<br/>     license = ["SPDX:GPL-3.0-or-later"]<br/>     ```<br/><br/>   - Replace the placeholder values with information specific to your extension.<br/><br/>3. **Save and Commit the Changes**:<br/>   - Save the changes to the `blender_manifest.toml` file.<br/>   - Commit the updated file to your repository.<br/><br/>4. **Verify the Extension in Blender**:<br/>   - Open Blender and navigate to the Extensions section.<br/>   - Refresh the repository to ensure Blender recognizes the updated manifest.<br/><br/>By adding the `version` key to your `blender_manifest.toml` file, Blender should be able to process your extension without errors.<br/><br/>For more detailed information on creating and structuring Blender extensions, you can refer to the official Blender Developer Documentation: ([developer.blender.org](https://developer.blender.org/docs/features/extensions/schema/1.0.0/?utm_source=openai)) |
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+The repository manifest has a version, but Blender may be reading the manifest from the ZIP archive, which might be missing it or outdated. Checking if the ZIP includes the manifest:
+
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **command** • Run command: curl -L -s https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.0/BasedPlayblast.v2.3.0.zip -o temp.zip 2>&1 | Select-Object -First 5</summary>
+
+```bash
+curl -L -s https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.0/BasedPlayblast.v2.3.0.zip -o temp.zip 2>&1 | Select-Object -First 5
+```
+
+```
+2&gt;&amp;1 | Select-Object -First 5
+```
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **command** • Run command: if (Test-Path temp.zip) { Expand-Archive -Path temp.zip -DestinationPath temp_extract -Force; if (Test-Path temp_extract\blender_manifest.toml) { Get-Content temp_extract\blender_manifest.toml | Select-String -Pattern "version" } else { Write-Output "blender_manifest.toml NOT FOUND in ZIP" }; Remove-Item -Recurse -Force temp_extract, temp.zip -ErrorAction SilentlyContinue } else { Write-Output "Failed to download ZIP" }</summary>
+
+```bash
+if (Test-Path temp.zip) { Expand-Archive -Path temp.zip -DestinationPath temp_extract -Force; if (Test-Path temp_extract\blender_manifest.toml) { Get-Content temp_extract\blender_manifest.toml | Select-String -Pattern "version" } else { Write-Output "blender_manifest.toml NOT FOUND in ZIP" }; Remove-Item -Recurse -Force temp_extract, temp.zip -ErrorAction SilentlyContinue } else { Write-Output "Failed to download ZIP" }
+```
+
+```
+ontinue } else { Write-Output &quot;Failed to download ZIP&quot; }                        
+blender_manifest.toml NOT FOUND in ZIP
+```
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+The ZIP file doesn't contain `blender_manifest.toml`. Blender reads the manifest from inside the ZIP, not from the `manifest_url`.
+
+## The Problem:
+- The ZIP archive (`BasedPlayblast.v2.3.0.zip`) doesn't include `blender_manifest.toml`
+- Blender requires the manifest to be inside the ZIP file
+
+## The Solution:
+You need to update your release ZIP to include `blender_manifest.toml` at the root of the archive.
+
+1. Create a new ZIP file that includes:
+   - All your addon files
+   - `blender_manifest.toml` at the root level (same level as `__init__.py`)
+
+2. Update the GitHub release:
+   - Go to: https://github.com/RaincloudTheDragon/BasedPlayblast/releases
+   - Edit the v2.3.0 release (or create a new one)
+   - Upload the new ZIP file that includes the manifest
+
+3. The ZIP structure should look like:
+   ```
+   BasedPlayblast.v2.3.0.zip
+   ├── blender_manifest.toml  ← Must be here!
+   ├── __init__.py
+   ├── (other addon files...)
+   ```
+
+Once the ZIP includes the manifest, Blender should be able to read it. The `manifest_url` in the catalog is for reference, but Blender reads the manifest from inside the ZIP archive.
+
+---
+
+_**User (2025-12-01 21:21Z)**_
+
+but that's not how blender extensions WORK. if the initpy, manifest, and other addon elements are NOT in a containing folder, it breaks.
+
+---
+
+_**Agent (model default, mode Agent)**_
+
+
+
+---
+
+
+Checking the ZIP structure. The addon should be in a folder inside the ZIP:
+
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **command** • Run command: curl -L -s https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.0/BasedPlayblast.v2.3.0.zip -o temp.zip</summary>
+
+```bash
+curl -L -s https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.0/BasedPlayblast.v2.3.0.zip -o temp.zip
+```
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **command** • Run command: Expand-Archive -Path temp.zip -DestinationPath temp_extract -Force; Get-ChildItem temp_extract -Recurse | Select-Object FullName | ForEach-Object { $_.FullName.Replace((Get-Item temp_extract).FullName + '\', '') } | Select-Object -First 20</summary>
+
+```bash
+Expand-Archive -Path temp.zip -DestinationPath temp_extract -Force; Get-ChildItem temp_extract -Recurse | Select-Object FullName | ForEach-Object { $_.FullName.Replace((Get-Item temp_extract).FullName + '\', '') } | Select-Object -First 20
+```
+
+```
+BasedPlayblast
+BasedPlayblast\__init__.py
+BasedPlayblast\blender_manifest.toml
+BasedPlayblast\README.md
+```
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **command** • Run command: if (Test-Path temp_extract\blender_manifest.toml) { Write-Output "Manifest at root"; Get-Content temp_extract\blender_manifest.toml | Select-String -Pattern "version" } elseif (Get-ChildItem temp_extract -Directory | ForEach-Object { if (Test-Path "$($_.FullName)\blender_manifest.toml") { Write-Output "Manifest in folder: $($_.Name)"; Get-Content "$($_.FullName)\blender_manifest.toml" | Select-String -Pattern "version" } }) { } else { Write-Output "No manifest found anywhere" }; Remove-Item -Recurse -Force temp_extract, temp.zip -ErrorAction SilentlyContinue</summary>
+
+```bash
+if (Test-Path temp_extract\blender_manifest.toml) { Write-Output "Manifest at root"; Get-Content temp_extract\blender_manifest.toml | Select-String -Pattern "version" } elseif (Get-ChildItem temp_extract -Directory | ForEach-Object { if (Test-Path "$($_.FullName)\blender_manifest.toml") { Write-Output "Manifest in folder: $($_.Name)"; Get-Content "$($_.FullName)\blender_manifest.toml" | Select-String -Pattern "version" } }) { } else { Write-Output "No manifest found anywhere" }; Remove-Item -Recurse -Force temp_extract, temp.zip -ErrorAction SilentlyContinue
+```
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+ZIP structure looks correct. Checking if the manifest inside the ZIP has the version field:
+
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **command** • Run command: curl -L -s https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.0/BasedPlayblast.v2.3.0.zip -o temp.zip; Expand-Archive -Path temp.zip -DestinationPath temp_extract -Force; Get-Content temp_extract\BasedPlayblast\blender_manifest.toml; Remove-Item -Recurse -Force temp_extract, temp.zip -ErrorAction SilentlyContinue</summary>
+
+```bash
+curl -L -s https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.0/BasedPlayblast.v2.3.0.zip -o temp.zip; Expand-Archive -Path temp.zip -DestinationPath temp_extract -Force; Get-Content temp_extract\BasedPlayblast\blender_manifest.toml; Remove-Item -Recurse -Force temp_extract, temp.zip -ErrorAction SilentlyContinue
+```
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Trying a different approach:
+
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **command** • Run command: $zip = [System.IO.Compression.ZipFile]::OpenRead("$PWD\temp.zip"); $entry = $zip.Entries | Where-Object { $_.FullName -like "*blender_manifest.toml" }; if ($entry) { $stream = $entry.Open(); $reader = New-Object System.IO.StreamReader($stream); $content = $reader.ReadToEnd(); $reader.Close(); $stream.Close(); $content } else { "Manifest not found" }; $zip.Dispose()</summary>
+
+```bash
+$zip = [System.IO.Compression.ZipFile]::OpenRead("$PWD\temp.zip"); $entry = $zip.Entries | Where-Object { $_.FullName -like "*blender_manifest.toml" }; if ($entry) { $stream = $entry.Open(); $reader = New-Object System.IO.StreamReader($stream); $content = $reader.ReadToEnd(); $reader.Close(); $stream.Close(); $content } else { "Manifest not found" }; $zip.Dispose()
+```
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **command** • Run command: if (Test-Path temp.zip) { Remove-Item temp.zip -Force }</summary>
+
+```bash
+if (Test-Path temp.zip) { Remove-Item temp.zip -Force }
+```
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+The ZIP structure is correct (`BasedPlayblast/` folder with files inside). The issue is likely that the `blender_manifest.toml` inside the ZIP doesn't match the one in your repository.
+
+**The problem:** The ZIP was created for v2.3.0, but the manifest inside it may be missing the `version` field or have an outdated version.
+
+**Solution:** Check the `blender_manifest.toml` inside the ZIP file:
+
+1. Download and extract `BasedPlayblast.v2.3.0.zip`
+2. Open `BasedPlayblast/blender_manifest.toml` inside the extracted folder
+3. Verify it has: `version = "1.3.0"` (or whatever version matches)
+
+If the manifest in the ZIP is different from the one in your repository, you need to:
+- Update the manifest in your repository to match what's in the ZIP, OR
+- Recreate the ZIP with the correct manifest file
+
+The `manifest_url` in the catalog points to the repo version, but Blender reads the manifest from inside the ZIP. They need to match, and the ZIP's manifest must have the `version` field.
+
+Can you check what's in the `blender_manifest.toml` file inside your ZIP archive?
+
+---
+
+_**User (2025-12-01 21:21Z)**_
+
+@c:\Users\Nathan\Downloads\BasedPlayblast.v2.3.0\BasedPlayblast\blender_manifest.toml:6 yup, mismatch.
+
+---
+
+_**Agent (model default, mode Agent)**_
+
+
+
+---
+
+
+The manifest in the ZIP has `version = "1.3.0"`, but the release is v2.3.0. This mismatch may be causing the issue. Checking the full manifest to see if there are other problems:
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: catalog.json</summary>
+
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="search" data-tool-name="web_search">
+<details>
+            <summary>Tool use: **web_search** • Searched web `Blender extension catalog version must match release tag version manifest` • **1** results</summary>
+        
+| Title | URL | Chunk |
+|-------|-----|-------|
+| Web Search Results |  | The error message indicates a mismatch between the version specified in your `blender_manifest.toml` file and the version in your catalog. To resolve this, ensure that the `version` field in your `blender_manifest.toml` matches the version specified in your catalog. This alignment is crucial for Blender to recognize and install the extension correctly.<br/><br/>Additionally, verify that your extension's ZIP file includes the `blender_manifest.toml` at the correct location. Blender requires this manifest file to be present inside the ZIP archive for proper installation. If the manifest is missing or incorrectly placed, Blender may not install the extension as expected. ([docs.blender.org](https://docs.blender.org/manual/uk/4.5/advanced/extensions/getting_started.html?utm_source=openai))<br/><br/>By ensuring both the version consistency and the correct placement of the manifest file, you should be able to resolve the installation issues with your Blender extension. |
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+The manifest has `version = "1.3.0"`, which matches the catalog. The release tag is v2.3.0, but the manifest version is 1.3.0. This mismatch may be causing the issue.
+
+Options:
+1. Update the manifest to version "2.3.0" to match the release tag.
+2. Or create a new release with tag v1.3.0.
+
+Checking if Blender requires the version to match the release tag:
+
+
+---
+
+Tool call errored or timed out
+
+---
+
+_**User (2025-12-01 21:21Z)**_
+
+updated to 2.3.1 to fix the version mismatch. now it should work.
+
+---
+
+_**Agent (model default, mode Agent)**_
+
+
+
+---
+
+
+Updating the catalog to version 2.3.1 to match the manifest:
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: catalog.json</summary>
+
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="search_replace">
+
+<details><summary>Tool use: **code_edit** • Edit file: catalog.json</summary>
+
+**Chunk 1**
+Lines added: 1, lines removed: 1
+
+```diff
+@@ -4,5 +4,5 @@
+      {
+        &quot;id&quot;: &quot;basedplayblast&quot;,
+-       &quot;version&quot;: &quot;1.3.0&quot;,
++       &quot;version&quot;: &quot;2.3.1&quot;,
+        &quot;archive_url&quot;: &quot;https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.0/BasedPlayblast.v2.3.0.zip&quot;,
+        &quot;manifest_url&quot;: &quot;https://github.com/RaincloudTheDragon/BasedPlayblast/raw/main/blender_manifest.toml&quot;
+```
+
+</details>
+
+</tool-use>
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: catalog.json</summary>
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Updated the catalog version to `2.3.1` to match your manifest.
+
+**Note:** If you created a new release v2.3.1 with an updated ZIP, also update the `archive_url` in the catalog to point to the new release. If you're still using the v2.3.0 ZIP (with the updated manifest inside), the current `archive_url` is fine.
+
+The catalog now shows:
+- Version: `2.3.1` (matches your manifest)
+- Archive URL: Still points to v2.3.0 (update this if you created a new release)
+
+After you commit and push, wait 1–2 minutes for GitHub Pages to update, then refresh the repository in Blender. It should work now.
 
 ---
 
