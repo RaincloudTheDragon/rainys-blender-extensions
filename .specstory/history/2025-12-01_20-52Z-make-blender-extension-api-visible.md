@@ -4161,3 +4161,280 @@ _**Agent (model default, mode Agent)**_
 
 ---
 
+
+BlenderKit uses a `data` array, not `extensions`. Updating the catalog to match:
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: catalog.json</summary>
+
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="search_replace">
+
+<details><summary>Tool use: **code_edit** • Edit file: catalog.json</summary>
+
+**Chunk 1**
+Lines added: 3, lines removed: 3
+
+```diff
+@@ -1,9 +1,9 @@
+  {
+-   &quot;schema_version&quot;: &quot;1.0.0&quot;,
+-   &quot;extensions&quot;: [
++   &quot;data&quot;: [
+      {
+        &quot;id&quot;: &quot;basedplayblast&quot;,
+        &quot;version&quot;: &quot;2.3.1&quot;,
+-       &quot;archive_url&quot;: &quot;https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.1/BasedPlayblast.v2.3.1.zip&quot;
++       &quot;archive_url&quot;: &quot;https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.1/BasedPlayblast.v2.3.1.zip&quot;,
++       &quot;schema_version&quot;: &quot;1.0.0&quot;
+      }
+    ]
+```
+
+</details>
+
+</tool-use>
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: catalog.json</summary>
+
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="search_replace">
+
+<details><summary>Tool use: **code_edit** • Edit file: update_catalog.py</summary>
+
+**Chunk 1**
+Lines added: 1, lines removed: 2
+
+```diff
+@@ -116,6 +116,5 @@
+      
+      return {
+-         &quot;schema_version&quot;: &quot;1.0.0&quot;,
+-         &quot;extensions&quot;: extensions,
++         &quot;data&quot;: extensions,
+      }
+  
+```
+
+</details>
+
+</tool-use>
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="search_replace">
+
+<details><summary>Tool use: **code_edit** • Edit file: update_catalog.py</summary>
+
+**Chunk 1**
+Lines added: 1, lines removed: undefined
+
+```diff
+@@ -110,4 +110,5 @@
+              &quot;version&quot;: version,
+              &quot;archive_url&quot;: archive_url,
++             &quot;schema_version&quot;: &quot;1.0.0&quot;,
+          }
+          
+```
+
+</details>
+
+</tool-use>
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **command** • Run command: python -m json.tool catalog.json</summary>
+
+```bash
+python -m json.tool catalog.json
+```
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Updated the catalog to match the BlenderKit format:
+
+**Changes made:**
+1. Changed `extensions` → `data` (matches BlenderKit/Blender API format)
+2. Moved `schema_version` from root level to inside each extension object
+3. Updated the script to generate this format
+
+The catalog now matches the BlenderKit API structure:
+```json
+{
+  "data": [
+    {
+      "id": "basedplayblast",
+      "version": "2.3.1",
+      "archive_url": "...",
+      "schema_version": "1.0.0"
+    }
+  ]
+}
+```
+
+This should resolve the "remote data unavailable" error. After you commit and push, refresh the repository in Blender. The format now matches what Blender expects from extension catalogs.
+
+---
+
+_**User (2025-12-01 21:21Z)**_
+
+@catalog.json:1-4 is this header valid?
+
+---
+
+_**Agent (model default, mode Agent)**_
+
+
+
+---
+
+
+No. The catalog.json file should be pure JSON only. HTTP headers are sent by the server (GitHub Pages), not included in the file. Removing them:
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: catalog.json</summary>
+
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="search_replace">
+
+<details><summary>Tool use: **code_edit** • Edit file: catalog.json</summary>
+
+**Chunk 1**
+Lines added: undefined, lines removed: 5
+
+```diff
+@@ -1,7 +1,2 @@
+- HTTP 200 OK
+- Allow: GET
+- Content-Type: application/json
+- Vary: Accept
+- 
+  {
+    &quot;data&quot;: [
+```
+
+</details>
+
+</tool-use>
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: catalog.json</summary>
+
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **command** • Run command: python -m json.tool catalog.json</summary>
+
+```bash
+python -m json.tool catalog.json
+```
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+No, those headers are not valid in the JSON file. Removed them.
+
+**Important:** The `catalog.json` file should contain only JSON. HTTP headers (like `HTTP 200 OK`, `Content-Type`, etc.) are sent by the web server (GitHub Pages), not included in the file.
+
+The file should start directly with the JSON:
+```json
+{
+  "data": [
+    ...
+  ]
+}
+```
+
+The catalog is now correct. After you commit and push, GitHub Pages will serve it with the proper HTTP headers automatically. Blender will be able to read it.
+
+---
+
+_**User (2025-12-01 21:21Z)**_
+
+I'm asking because it's still broken and I'm trying to copy blenderkit or the blender extension service.
+
+Repository error: invalid manifest (Expected a "version" key which was not found) for repository "Rainy's Extensions"!
+
+
+
+---
+
+_**Agent (model gpt-5.1-codex, mode Agent)**_
+
+<think><details><summary>Thought Process</summary>
+**Diagnosing manifest placement issue**
+
+I'm figuring out that Blender expects the `blender_manifest.toml` file at the root of the zipped archive, not nested inside a folder. The error about missing version likely comes from Blender not finding the manifest file where it expects it. I need to restructure the zip to have the manifest directly at the root alongside the addon folder and then explain this to the user.</details></think>
+
+---
+
+The error still points to Blender not finding a `version` key inside `blender_manifest.toml`. Since we verified the manifest file itself contains `version = "2.3.1"`, the most likely cause is that Blender isn’t actually reading that file. For the official extension system, Blender expects the manifest to sit at the root of the ZIP archive, not inside the add-on folder. If the manifest is bundled inside `BasedPlayblast/blender_manifest.toml`, Blender’s loader won’t find it and assumes the manifest is missing fields—hence the “version key not found” error.
+
+**Fix:**  
+Rebuild the release ZIP so its top-level contents look like this:
+
+```
+BasedPlayblast.v2.3.1.zip
+├── blender_manifest.toml   ← must be here
+├── BasedPlayblast/         ← your add-on package with __init__.py etc.
+│   ├── __init__.py
+│   ├── other files...
+```
+
+Once the ZIP has `blender_manifest.toml` at the root, update the GitHub release asset (v2.3.1). Then Blender will read the manifest correctly, see the `version` key, and the repository error will disappear.
+
+---
+
+_**User (2025-12-01 21:21Z)**_
+
+Again, that's not how the extension platform WORKS. If the zip doesn't have [addon name folder]> addon files (toml, initpy, etc), it fails to install. Blender's and Blenderkit's addons do NOT have the toml in the root of the zip, and they still work.
+
+---
+
+_**Agent (model gpt-5.1-codex, mode Agent)**_
+
+
+
+---
+
