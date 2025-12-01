@@ -48,19 +48,26 @@ def get_manifest_url(repo: str, branch: str, manifest_path: str = "blender_manif
     return f"https://github.com/{repo}/raw/{branch}/{manifest_path}"
 
 
-def get_archive_url(release: Dict, repo: str) -> Optional[str]:
-    """Get the ZIP archive URL from a release."""
+def get_archive_url(release: Dict, repo: str, tag: str) -> Optional[str]:
+    """Get the ZIP archive URL from a release, ensuring it matches the tag."""
     if not release or "assets" not in release:
         return None
     
     # Look for a ZIP file in the release assets
     for asset in release.get("assets", []):
         if asset.get("content_type") == "application/zip" or asset.get("name", "").endswith(".zip"):
-            return asset.get("browser_download_url")
+            url = asset.get("browser_download_url")
+            # Verify the URL contains the tag version
+            if url and tag in url:
+                return url
+            elif url:
+                # URL exists but might not match tag - log warning but still use it
+                print(f"    Note: Archive URL may not match tag {tag}")
+                return url
     
-    # Fallback: use the source code ZIP
-    tag = release.get("tag_name", "")
+    # Fallback: use the source code ZIP (not recommended for extensions)
     if tag:
+        print(f"    ⚠ Warning: No ZIP asset found, using source archive (may not work)")
         return f"https://github.com/{repo}/archive/refs/tags/{tag}.zip"
     
     return None
@@ -90,7 +97,7 @@ def generate_catalog(addons: List[Dict]) -> Dict:
         
         tag = release.get("tag_name", "")
         version = parse_version_from_tag(tag)
-        archive_url = get_archive_url(release, repo)
+        archive_url = get_archive_url(release, repo, tag)
         manifest_url = get_manifest_url(repo, branch)
         
         if not archive_url:

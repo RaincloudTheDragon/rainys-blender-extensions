@@ -2995,3 +2995,41 @@ After you commit and push, it should work.
 
 ---
 
+_**User (2025-12-01 21:21Z)**_
+
+Update the script.
+
+---
+
+_**Agent (model default, mode Agent)**_
+
+
+
+---
+
+
+Updating the script to ensure the archive URL matches the release tag version:
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: update_catalog.py</summary>
+
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: catalog.json</summary>
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
