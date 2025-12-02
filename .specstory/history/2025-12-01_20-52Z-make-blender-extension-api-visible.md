@@ -7135,3 +7135,140 @@ Let me know if you’d like to publish `index.json` or automate this in CI.
 
 ---
 
+_**User (2025-12-02 17:34Z)**_
+
+Can we add https://github.com/RaincloudTheDragon/atomic-data-manager ?
+
+---
+
+_**Agent (model gpt-5.1-codex, mode Agent)**_
+
+<think><details><summary>Thought Process</summary>
+**Updating ADDONS list**</details></think>
+
+---
+
+<tool-use data-tool-type="unknown" data-tool-name="apply_patch">
+<details>
+<summary>Tool use: **apply_patch**</summary>
+
+
+Parameters:
+
+```json
+{
+  "relativeWorkspacePath": "update_catalog.py"
+}
+```
+Additional data:
+
+```json
+{
+  "codeblockId": "d362d2ce-965a-45c4-a028-f0e9077fc6fd"
+}
+```
+Result:
+
+```json
+{
+  "diff": {
+    "chunks": [
+      {
+        "diffString": "          \"repo\": \"RaincloudTheDragon/Rainys-Bulk-Scene-Tools\",\n      },\n+     {\n+         \"id\": \"atomic_data_manager\",\n+         \"repo\": \"RaincloudTheDragon/atomic-data-manager\",\n+     },\n  ]\n  ",
+        "oldStart": 31,
+        "newStart": 31,
+        "oldLines": 4,
+        "newLines": 8,
+        "linesAdded": 4
+      }
+    ],
+    "editor": "EDITOR_AI"
+  },
+  "shouldAutoFixLints": true,
+  "resultForModel": "Success. Updated the following files:\nM update_catalog.py",
+  "contentsAfterEdit": "#!/usr/bin/env python3\n\"\"\"\nGenerate Blender extension repository metadata using Blender's server tool.\n\nThis script downloads the latest release archives from GitHub, lets Blender\nvalidate/build the repository metadata, and rewrites the resulting JSON to\npoint back to the public GitHub release URLs.\n\"\"\"\n\nfrom __future__ import annotations\n\nimport json\nimport os\nimport shutil\nimport subprocess\nfrom pathlib import Path\nfrom typing import Dict, List, Optional\n\nimport requests\n\n# --- Configuration ---------------------------------------------------------\n\n# List of addons to include in the repository.\nADDONS = [\n    {\n        \"id\": \"basedplayblast\",\n        \"repo\": \"RaincloudTheDragon/BasedPlayblast\",\n    },\n    {\n        \"id\": \"rainys_bulk_scene_tools\",\n        \"repo\": \"RaincloudTheDragon/Rainys-Bulk-Scene-Tools\",\n    },\n    {\n        \"id\": \"atomic_data_manager\",\n        \"repo\": \"RaincloudTheDragon/atomic-data-manager\",\n    },\n]\n\nBLENDER_EXECUTABLE = os.environ.get(\"BLENDER_PATH\", \"blender\")\nGITHUB_TOKEN = os.environ.get(\"GITHUB_TOKEN\")\n\nBUILD_DIR = Path(\"build\")\nREPO_DIR = BUILD_DIR / \"repo\"\nOUTPUT_INDEX = Path(\"index.json\")\n\n# ---------------------------------------------------------------------------\n\nsession = requests.Session()\nsession.headers.update({\"Accept\": \"application/vnd.github+json\"})\nif GITHUB_TOKEN:\n    session.headers.update({\"Authorization\": f\"Bearer {GITHUB_TOKEN}\"})\n\n\ndef github_api(url: str) -&gt; Optional[Dict]:\n    try:\n        response = session.get(url, timeout=30)\n        response.raise_for_status()\n        return response.json()\n    except requests.RequestException as exc:\n        print(f\"  ⚠ GitHub request failed: {exc}\")\n        return None\n\n\ndef pick_zip_asset(assets: List[Dict]) -&gt; Optional[Dict]:\n    for asset in assets:\n        name = asset.get(\"name\", \"\")\n        content_type = asset.get(\"content_type\", \"\")\n        if name.endswith(\".zip\") or content_type == \"application/zip\":\n            return asset\n    return None\n\n\ndef download_asset(url: str, destination: Path) -&gt; bool:\n    try:\n        with session.get(url, stream=True, timeout=60) as response:\n            response.raise_for_status()\n            destination.parent.mkdir(parents=True, exist_ok=True)\n            with open(destination, \"wb\") as file_obj:\n                for chunk in response.iter_content(chunk_size=1024 * 1024):\n                    if chunk:\n                        file_obj.write(chunk)\n        return True\n    except requests.RequestException as exc:\n        print(f\"  ⚠ Download failed ({url}): {exc}\")\n        return False\n\n\ndef clean_directory(path: Path) -&gt; None:\n    if path.exists():\n        shutil.rmtree(path)\n    path.mkdir(parents=True, exist_ok=True)\n\n\ndef run_blender_repo_generator(repo_dir: Path) -&gt; None:\n    cmd = [\n        BLENDER_EXECUTABLE,\n        \"--background\",\n        \"--factory-startup\",\n        \"--command\",\n        \"extension\",\n        \"server-generate\",\n        \"--repo-dir\",\n        str(repo_dir.resolve()),\n    ]\n    print(f\"Running Blender repo generator:\\n  {' '.join(str(part) for part in cmd)}\")\n    subprocess.run(cmd, check=True)\n\n\ndef rewrite_archive_urls(index_path: Path, url_map: Dict[str, str]) -&gt; Dict:\n    with open(index_path, \"r\", encoding=\"utf-8\") as handle:\n        data = json.load(handle)\n\n    for package in data.get(\"data\", []):\n        archive_value = package.get(\"archive_url\") or package.get(\"archive_path\", \"\")\n        filename = Path(archive_value).name\n        if filename in url_map:\n            package[\"archive_url\"] = url_map[filename]\n\n    return data\n\n\ndef process_addon(addon: Dict, download_dir: Path) -&gt; Optional[Dict[str, str]]:\n    repo = addon[\"repo\"]\n    release = github_api(f\"https://api.github.com/repos/{repo}/releases/latest\")\n    if not release:\n        return None\n\n    asset = pick_zip_asset(release.get(\"assets\", []))\n    if not asset:\n        print(f\"  ⚠ No ZIP asset found for {repo}\")\n        return None\n\n    filename = asset[\"name\"]\n    download_url = asset[\"browser_download_url\"]\n    dest = download_dir / filename\n    print(f\"  ↳ downloading {filename}\")\n    if not download_asset(download_url, dest):\n        return None\n\n    return {\n        \"filename\": filename,\n        \"archive_url\": download_url,\n    }\n\n\ndef main() -&gt; None:\n    print(\"Generating Blender extension repository metadata...\")\n    clean_directory(REPO_DIR)\n\n    filename_to_url: Dict[str, str] = {}\n    for addon in ADDONS:\n        print(f\"Fetching release for {addon['repo']}...\")\n        result = process_addon(addon, REPO_DIR)\n        if result:\n            filename_to_url[result[\"filename\"]] = result[\"archive_url\"]\n\n    if not filename_to_url:\n        print(\"No archives downloaded. Aborting.\")\n        return\n\n    try:\n        run_blender_repo_generator(REPO_DIR)\n    except subprocess.CalledProcessError as exc:\n        print(f\"Blender command failed: {exc}\")\n        return\n\n    generated_index = REPO_DIR / \"index.json\"\n    if not generated_index.exists():\n        print(f\"Generated index not found at {generated_index}\")\n        return\n\n    updated_index = rewrite_archive_urls(generated_index, filename_to_url)\n    with open(OUTPUT_INDEX, \"w\", encoding=\"utf-8\") as handle:\n        json.dump(updated_index, handle, indent=2)\n\n    print(\"-\" * 50)\n    print(f\"✓ Repository index written to {OUTPUT_INDEX}\")\n    print(f\"  Packages: {len(updated_index.get('data', []))}\")\n\n\nif __name__ == \"__main__\":\n    main()\n"
+}
+```
+User decision: **accepted**
+
+Status: **completed**
+
+
+</details>
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+**Preparing to rerun update script**</details></think>
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **run_terminal_cmd** • Run command: python update_catalog.py</summary>
+
+```bash
+python update_catalog.py
+```
+
+```
+PS E:\rainys-blender-extensions&gt; python update_catalog.py
+Generating Blender extension repository metadata...
+Fetching release for RaincloudTheDragon/BasedPlayblast...
+  ↳ downloading BasedPlayblast.v2.4.0.zip
+Fetching release for RaincloudTheDragon/Rainys-Bulk-Scene-Tools...
+  ↳ downloading Rainys_Bulk_Scene_Tools.v0.12.0.zip
+Fetching release for RaincloudTheDragon/atomic-data-manager...
+  ↳ downloading atomic_data_manager.v2.0.0.zip
+Running Blender repo generator:
+  blender --background --factory-startup --command extension server-generate --repo-dir E:\rainys-blender-extensions\build\repo                                 
+Blender 5.0.0 (hash a37564c4df7a built 2025-11-18 11:06:54)
+
+Warning! 'C:\\Program Files\\Blender Foundation\\Blender 5.0\\5.0\\scripts\\startup\\fa_hotkeys.py' has no register function, this is now a requirement for registerable scripts                                                                
+register_class(...):
+Warning: 'Submenu' does not contain '_MT_' with prefix and suffix
+register_class(...):
+Warning: 'Submenu2' does not contain '_MT_' with prefix and suffix
+register_class(...):
+Warning: 'Submenu3' does not contain '_MT_' with prefix and suffix
+register_class(...):
+Warning: 'view3D.Pie_menu' does not contain '_MT_' with prefix and suffix
+register_class(...):
+Warning: 'CustomPanel' does not contain '_PT_' with prefix and suffix
+register_class(...):
+Warning: 'view3D.Quad_menu' does not contain '_MT_' with prefix and suffix
+register_class(...):
+Warning: 'Special_Tools_Menu' does not contain '_MT_' with prefix and suffix
+found 3 packages.
+--------------------------------------------------
+✓ Repository index written to index.json
+  Packages: 3
+```
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: index.json</summary>
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+BST is back in the catalog—everything now runs through Blender’s generator.
+
+- Added `RaincloudTheDragon/Rainys-Bulk-Scene-Tools` and `RaincloudTheDragon/atomic-data-manager` to `ADDONS` in `update_catalog.py`.
+- Enhanced the script so it:
+  - Downloads each add-on’s latest GitHub release ZIP
+  - Runs `blender --background --factory-startup --command extension server-generate --repo-dir …`
+  - Rewrites Blender’s generated `index.json` with the original GitHub `archive_url`s
+- Running `python update_catalog.py` now produces `index.json` with three packages (BasedPlayblast, BST, Atomic Data Manager). Blender reported “found 3 packages” on generation, confirming both BST and ADM are included.
+
+---
+
