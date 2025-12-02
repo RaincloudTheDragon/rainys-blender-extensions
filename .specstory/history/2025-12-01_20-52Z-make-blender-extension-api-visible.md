@@ -5676,3 +5676,356 @@ This way your metadata, hashes, and packaging match what the official Blender se
 
 ---
 
+_**User (2025-12-01 21:21Z)**_
+
+We don't need to use github pages, then. I got it working. @pwsh (55-129) how do we integrate this into the update_catalog.py? We need to make sure it points to the actual release zips on github. Perhaps we'd have to download the latest zips to a temporary folder in this repo, then run the blender command, then ensure that index.json points the archive_url to the url of the zip we downloaded?
+
+---
+
+_**Agent (model gpt-5.1-codex, mode Agent)**_
+
+<think><details><summary>Thought Process</summary>
+**Outlining integration plan for Blender command**
+
+I'll draft a clear approach to integrate the Blender extension server-generate into the repo, detailing steps like fetching release info via GitHub API, downloading assets, running the Blender command to generate metadata, rewriting URLs in index.json, and cleaning up. I'll also mention storing the Blender path in an environment variable and suggest adapting an existing update_catalog script for this workflow.</details></think>
+
+---
+
+Great! Now that `blender --command extension server-generate` works locally, here’s how to wrap it into `update_catalog.py` so the Blender tool builds the repository metadata while the final `archive_url` values still point back to your GitHub release ZIPs.
+
+---
+
+### 1. Fetch release info & download the ZIPs
+
+Use the GitHub REST API to get the latest release (or all releases) for each repo. For every asset you care about:
+
+1. Record the asset’s `browser_download_url`.
+2. Download it to a temp directory inside this repo (e.g. `build/zips/`), preserving the original filename.
+3. Keep a map `{local_path → original_url}` so we can restore URLs later.
+
+```python
+release_url = f"https://api.github.com/repos/{repo}/releases/latest"
+release = requests.get(release_url, headers={"Accept": "application/vnd.github+json"}).json()
+asset = pick_zip_asset(release["assets"])
+download(asset["browser_download_url"], temp_dir / asset["name"])
+asset_map[temp_dir / asset["name"]] = asset["browser_download_url"]
+```
+
+---
+
+### 2. Run Blender’s repo generator
+
+Blender 4.2+ ships the “extension server” command (see [Blender manual](https://www.blender.org/) for 4.2+). Run it from Python with `subprocess.run`:
+
+```python
+subprocess.run([
+    BLENDER_PATH,
+    "--command", "extension.server-generate",
+    f"--repo-dir={repo_dir}",      # e.g. build/repo
+    f"--archives-dir={temp_dir}",  # where we downloaded the ZIPs
+], check=True)
+```
+
+This command:
+
+- Unpacks each ZIP, verifies it contains `blender_manifest.toml`.
+- Builds new archives (if needed) and generates `index.json` / `catalog.json` under `repo_dir`.
+- Adds hashes, sizes, manifest references, etc. exactly like Blender expects.
+
+(You can set `BLENDER_PATH` via env var or config.)
+
+---
+
+### 3. Rewrite `archive_url` back to GitHub
+
+`extension.server-generate` assumes you’ll host the archives next to the repo, so the JSON it spits out points to local paths. After the command finishes:
+
+1. Load `repo_dir/index.json`.
+2. For each entry, look up the filename in `asset_map` and replace `archive_url` with the original `browser_download_url`.
+3. Save the updated JSON (and if Blender created `catalog.json`, do the same there).
+
+```python
+index = json.load(open(repo_dir / "index.json"))
+for package in index["packages"]:
+    archive_name = Path(package["archive_path"]).name
+    package["archive_url"] = asset_map[temp_dir / archive_name]
+json.dump(index, open("index.json", "w"), indent=2)
+```
+
+---
+
+### 4. Publish
+
+Commit/push the generated `index.json` (and any other files Blender output). Since the archives live on GitHub Releases, the JSON now references the correct remote URLs while still being 100 % Blender-compatible.
+
+---
+
+### Putting it into `update_catalog.py`
+
+1. Add configuration for:
+   - Blender executable path
+   - Temp download folder
+   - Output repo folder
+2. Implement the steps above:
+   - Fetch releases
+   - Download archives
+   - Run Blender command
+   - Rewrite URLs
+   - Clean up temp files (optional)
+3. Replace the manual JSON-writing logic with the Blender-generated one.
+
+This gives you a single command (`python update_catalog.py`) that:
+
+- Pulls the latest release ZIPs from GitHub,
+- Lets Blender validate/package them,
+- Emits the official `index.json`,
+- And rewrites `archive_url` so Blender clients download from GitHub.
+
+Let me know if you want a concrete code template—happy to help flesh out the script.
+
+---
+
+_**User (2025-12-01 21:21Z)**_
+
+let's get that into update_catalog.py. blender is on PATH so we're good there.
+
+---
+
+_**Agent (model gpt-5.1-codex, mode Plan)**_
+
+<think><details><summary>Thought Process</summary>
+**Formulating integration plan**</details></think>
+
+---
+
+<tool-use data-tool-type="unknown" data-tool-name="create_plan">
+<details>
+<summary>Tool use: **create_plan**</summary>
+
+
+Parameters:
+
+```json
+{
+  &quot;plan&quot;: &quot;1. Update configuration in [update_catalog.py](update_catalog.py)\n   - Add constants for temporary download directory and Blender repo output directory (e.g. &#96;build/zips&#96; and &#96;build/repo&#96;).\n   - Store Blender executable path (defaults to &#96;blender&#96; from PATH) and optional GitHub auth token env var for higher rate limits.\n\n2. Fetch releases and download archives\n   - For each repo in &#96;ADDONS&#96;, call GitHub &#96;releases/latest&#96; API.\n   - Pick the ZIP asset, record its &#96;browser_download_url&#96;, and download it into &#96;build/zips/&#96; with the original filename.\n   - Keep a mapping &#96;{archive_name: github_url}&#96; for later URL restoration.\n\n3. Run Blender’s &#96;extension.server-generate&#96;\n   - Ensure output directories exist and clean previous contents.\n   - Invoke &#96;subprocess.run([BLENDER_PATH, \&quot;--command\&quot;, \&quot;extension.server-generate\&quot;, f\&quot;--repo-dir={repo_dir}\&quot;, f\&quot;--archives-dir={zip_dir}\&quot;])&#96;.\n   - Confirm Blender produces &#96;index.json&#96; (and any other metadata files) in the repo output directory.\n\n4. Rewrite archive URLs to GitHub\n   - Load the generated &#96;[repo_dir]/index.json&#96; (and any other catalog files Blender created).\n   - For each package entry, replace &#96;archive_url&#96; (or similar field) with the recorded GitHub URL using the filename key.\n   - Save the updated JSON back to the repository root (e.g. write to &#96;index.json&#96; at project root).\n\n5. Cleanup and logging\n   - Optionally delete the temporary download directory after generation.\n   - Print summary output (number of packages processed, path to generated &#96;index.json&#96;).&quot;,
+  &quot;name&quot;: &quot;generate&quot;,
+  &quot;overview&quot;: &quot;Integrate Blender&#39;s extension server generator into update_catalog.py so it downloads release ZIPs, runs Blender to build repository metadata, and rewrites archive URLs to GitHub releases.&quot;
+}
+```
+Additional data:
+
+```json
+{
+  &quot;status&quot;: &quot;accepted&quot;,
+  &quot;reviewData&quot;: {
+    &quot;status&quot;: &quot;Requested&quot;,
+    &quot;selectedOption&quot;: &quot;none&quot;,
+    &quot;isShowingInput&quot;: false
+  }
+}
+```
+Result:
+
+```json
+{
+  &quot;accepted&quot;: {}
+}
+```
+Status: **completed**
+
+
+</details>
+</tool-use>
+
+---
+
+_**User (2025-12-01 21:21Z)**_
+
+Implement the plan as specified, it is attached for your reference. Do NOT edit the plan file itself.
+
+To-do's from the plan have already been created. Do not create them again. Mark them as in_progress as you work, starting with the first one. Don't stop until you have completed all the to-dos.
+
+---
+
+_**Agent (model gpt-5.1-codex, mode Agent)**_
+
+<think><details><summary>Thought Process</summary>
+**Evaluating TODO management approach**
+
+I'm trying to figure out how to handle marking tasks in progress with the todo tool, but I lack visibility into existing todo IDs or how to read the current list. Without commands to list or read todos, I’m unsure how to update them properly, so I’m leaning toward focusing on updating the configuration in update_catalog.py first and considering Blender subprocess calls later.</details></think>
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: update_catalog.py</summary>
+
+</details>
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+**Coordinating Blender integration with task tracking**</details></think>
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: index.json</summary>
+
+</details>
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+**Designing automated repository generation script**
+
+This is a thorough plan to replace a manual catalog process with a new script that downloads zipped releases into a repo directory, runs a Blender server-generate command to produce index JSON files, and then rewrites archive URLs in the generated index to point to the original GitHub release zips. I’m laying out directory management, download functions using authenticated requests, running Blender in background mode, error handling, and ensuring the mappings and outputs are consistent with expectations. This approach consolidates archives and metadata under one build directory and aligns closely with known working commands, aiming to keep the process clean and automated. It looks like a solid foundation to implement the new flow and remove legacy code.</details></think>
+
+---
+
+<tool-use data-tool-type="unknown" data-tool-name="apply_patch">
+<details>
+<summary>Tool use: **apply_patch**</summary>
+
+
+Parameters:
+
+```json
+{
+  &quot;relativeWorkspacePath&quot;: &quot;update_catalog.py&quot;
+}
+```
+Additional data:
+
+```json
+{
+  &quot;codeblockId&quot;: &quot;94bf871b-d7fc-4e51-925e-c551f03434b1&quot;
+}
+```
+Result:
+
+```json
+{
+  &quot;diff&quot;: {
+    &quot;chunks&quot;: [
+      {
+        &quot;diffString&quot;: &quot;  #!/usr/bin/env python3\n  \&quot;\&quot;\&quot;\n- Script to automatically update the Blender extension catalog from GitHub releases.\n+ Generate Blender extension repository metadata using Blender&#39;s server tool.\n  \n- This script fetches release information from GitHub repositories and generates\n- a catalog.json file for Blender&#39;s extension system.\n- \n- Usage:\n-     python update_catalog.py\n- \n- Requirements:\n-     pip install requests\n- \n- Configuration:\n-     Edit the ADDONS list below with your addon information.\n- \&quot;\&quot;\&quot;\n+ This script downloads the latest release archives from GitHub, lets Blender\n+ validate/build the repository metadata, and rewrites the resulting JSON to\n+ point back to the public GitHub release URLs.\n+ \&quot;\&quot;\&quot;\n+ \n+ from __future__ import annotations\n  \n  import json\n+ import os\n+ import shutil\n+ import subprocess\n+ from pathlib import Path\n+ from typing import Dict, List, Optional\n+ \n  import requests\n- from typing import List, Dict, Optional\n+ \n+ # --- Configuration ---------------------------------------------------------\n  \n- # Configuration: Add your addons here\n+ # List of addons to include in the repository.\n  ADDONS = [\n      {\n-         \&quot;id\&quot;: \&quot;basedplayblast\&quot;,  # Must match blender_manifest.toml\n+         \&quot;id\&quot;: \&quot;basedplayblast\&quot;,\n          \&quot;repo\&quot;: \&quot;RaincloudTheDragon/BasedPlayblast\&quot;,\n-         \&quot;manifest_branch\&quot;: \&quot;main\&quot;,\n-     },\n-     # Note: Rainys-Bulk-Scene-Tools doesn&#39;t have blender_manifest.toml yet\n-     # It only has bl_info.json (old format). Add it here once you create the manifest.\n- ]\n- \n- \n- def get_latest_release(repo: str) -&gt; Optional[Dict]:\n-     \&quot;\&quot;\&quot;Get the latest release from a GitHub repository.\&quot;\&quot;\&quot;\n-     url = f\&quot;https://api.github.com/repos/{repo}/releases/latest\&quot;\n+     },\n+ ]\n+ \n+ BLENDER_EXECUTABLE = os.environ.get(\&quot;BLENDER_PATH\&quot;, \&quot;blender\&quot;)\n+ GITHUB_TOKEN = os.environ.get(\&quot;GITHUB_TOKEN\&quot;)\n+ \n+ BUILD_DIR = Path(\&quot;build\&quot;)\n+ REPO_DIR = BUILD_DIR / \&quot;repo\&quot;\n+ OUTPUT_INDEX = Path(\&quot;index.json\&quot;)\n+ \n+ # ---------------------------------------------------------------------------\n+ \n+ session = requests.Session()\n+ session.headers.update({\&quot;Accept\&quot;: \&quot;application/vnd.github+json\&quot;})\n+ if GITHUB_TOKEN:\n+     session.headers.update({\&quot;Authorization\&quot;: f\&quot;Bearer {GITHUB_TOKEN}\&quot;})\n+ \n+ \n+ def github_api(url: str) -&gt; Optional[Dict]:\n      try:\n-         response = requests.get(url, timeout=10)\n+         response = session.get(url, timeout=30)\n          response.raise_for_status()\n          return response.json()\n-     except requests.RequestException as e:\n-         print(f\&quot;Error fetching release for {repo}: {e}\&quot;)\n+     except requests.RequestException as exc:\n+         print(f\&quot;  ⚠ GitHub request failed: {exc}\&quot;)\n          return None\n  \n  \n- def get_manifest_url(repo: str, branch: str, manifest_path: str = \&quot;blender_manifest.toml\&quot;) -&gt; str:\n-     \&quot;\&quot;\&quot;Generate the raw manifest URL.\&quot;\&quot;\&quot;\n-     return f\&quot;https://raw.githubusercontent.com/{repo}/{branch}/{manifest_path}\&quot;\n- \n- \n- def get_archive_url(release: Dict, repo: str, tag: str) -&gt; Optional[str]:\n-     \&quot;\&quot;\&quot;Get the ZIP archive URL from a release, ensuring it matches the tag.\&quot;\&quot;\&quot;\n-     if not release or \&quot;assets\&quot; not in release:\n-         return None\n-     \n-     # Look for a ZIP file in the release assets\n-     for asset in release.get(\&quot;assets\&quot;, []):\n-         if asset.get(\&quot;content_type\&quot;) == \&quot;application/zip\&quot; or asset.get(\&quot;name\&quot;, \&quot;\&quot;).endswith(\&quot;.zip\&quot;):\n-             url = asset.get(\&quot;browser_download_url\&quot;)\n-             # Verify the URL contains the tag version\n-             if url and tag in url:\n-                 return url\n-             elif url:\n-                 # URL exists but might not match tag - log warning but still use it\n-                 print(f\&quot;    Note: Archive URL may not match tag {tag}\&quot;)\n-                 return url\n-     \n-     # Fallback: use the source code ZIP (not recommended for extensions)\n-     if tag:\n-         print(f\&quot;    ⚠ Warning: No ZIP asset found, using source archive (may not work)\&quot;)\n-         return f\&quot;https://github.com/{repo}/archive/refs/tags/{tag}.zip\&quot;\n-     \n+ def pick_zip_asset(assets: List[Dict]) -&gt; Optional[Dict]:\n+     for asset in assets:\n+         name = asset.get(\&quot;name\&quot;, \&quot;\&quot;)\n+         content_type = asset.get(\&quot;content_type\&quot;, \&quot;\&quot;)\n+         if name.endswith(\&quot;.zip\&quot;) or content_type == \&quot;application/zip\&quot;:\n+             return asset\n      return None\n  \n  \n- def parse_version_from_tag(tag: str) -&gt; str:\n-     \&quot;\&quot;\&quot;Extract version from git tag (removes &#39;v&#39; prefix if present).\&quot;\&quot;\&quot;\n-     return tag.lstrip(\&quot;v\&quot;)\n- \n- \n- def generate_catalog(addons: List[Dict]) -&gt; Dict:\n-     \&quot;\&quot;\&quot;Generate the catalog JSON from addon configurations.\&quot;\&quot;\&quot;\n-     extensions = []\n-     \n-     for addon in addons:\n-         repo = addon[\&quot;repo\&quot;]\n-         addon_id = addon[\&quot;id\&quot;]\n-         branch = addon.get(\&quot;manifest_branch\&quot;, \&quot;main\&quot;)\n-         \n-         print(f\&quot;Processing {addon_id} from {repo}...\&quot;)\n-         \n-         release = get_latest_release(repo)\n-         if not release:\n-             print(f\&quot;  ⚠ Warning: No release found for {repo}\&quot;)\n-             print(f\&quot;     Skipping {addon_id} - create a GitHub release first\&quot;)\n-             continue\n-         \n-         tag = release.get(\&quot;tag_name\&quot;, \&quot;\&quot;)\n-         version = parse_version_from_tag(tag)\n-         archive_url = get_archive_url(release, repo, tag)\n-         manifest_url = get_manifest_url(repo, branch)\n-         \n-         if not archive_url:\n-             print(f\&quot;  ⚠ Warning: No ZIP archive found for {repo}\&quot;)\n-             print(f\&quot;     Skipping {addon_id} - ensure release has a ZIP asset\&quot;)\n-             continue\n-         \n-         extension = {\n-             \&quot;id\&quot;: addon_id,\n-             \&quot;version\&quot;: version,\n-             \&quot;archive_url\&quot;: archive_url,\n-             \&quot;manifest_url\&quot;: manifest_url,\n-             \&quot;schema_version\&quot;: \&quot;1.0.0\&quot;,\n-         }\n-         \n-         extensions.append(extension)\n-         print(f\&quot;  ✓ Added {addon_id} v{version}\&quot;)\n-     \n-     return {\n-         \&quot;data\&quot;: extensions,\n-     }\n- \n- \n- def main():\n-     \&quot;\&quot;\&quot;Main function to generate and save the catalog.\&quot;\&quot;\&quot;\n-     print(\&quot;Generating Blender extension catalog...\&quot;)\n-     print(\&quot;-\&quot; * 50)\n-     \n-     catalog = generate_catalog(ADDONS)\n-     \n-     output_file = \&quot;catalog.json\&quot;\n-     with open(output_file, \&quot;w\&quot;, encoding=\&quot;utf-8\&quot;) as f:\n-         json.dump(catalog, f, indent=2, ensure_ascii=False)\n-     \n+ def download_asset(url: str, destination: Path) -&gt; bool:\n+     try:\n+         with session.get(url, stream=True, timeout=60) as response:\n+             response.raise_for_status()\n+             destination.parent.mkdir(parents=True, exist_ok=True)\n+             with open(destination, \&quot;wb\&quot;) as file_obj:\n+                 for chunk in response.iter_content(chunk_size=1024 * 1024):\n+                     if chunk:\n+                         file_obj.write(chunk)\n+         return True\n+     except requests.RequestException as exc:\n+         print(f\&quot;  ⚠ Download failed ({url}): {exc}\&quot;)\n+         return False\n+ \n+ \n+ def clean_directory(path: Path) -&gt; None:\n+     if path.exists():\n+         shutil.rmtree(path)\n+     path.mkdir(parents=True, exist_ok=True)\n+ \n+ \n+ def run_blender_repo_generator(repo_dir: Path) -&gt; None:\n+     cmd = [\n+         BLENDER_EXECUTABLE,\n+         \&quot;--background\&quot;,\n+         \&quot;--command\&quot;,\n+         \&quot;extension.server-generate\&quot;,\n+         f\&quot;--repo-dir={repo_dir.resolve()}\&quot;,\n+     ]\n+     print(f\&quot;Running Blender repo generator:\\n  {&#39; &#39;.join(str(part) for part in cmd)}\&quot;)\n+     subprocess.run(cmd, check=True)\n+ \n+ \n+ def rewrite_archive_urls(index_path: Path, url_map: Dict[str, str]) -&gt; Dict:\n+     with open(index_path, \&quot;r\&quot;, encoding=\&quot;utf-8\&quot;) as handle:\n+         data = json.load(handle)\n+ \n+     for package in data.get(\&quot;data\&quot;, []):\n+         archive_value = package.get(\&quot;archive_url\&quot;) or package.get(\&quot;archive_path\&quot;, \&quot;\&quot;)\n+         filename = Path(archive_value).name\n+         if filename in url_map:\n+             package[\&quot;archive_url\&quot;] = url_map[filename]\n+ \n+     return data\n+ \n+ \n+ def process_addon(addon: Dict, download_dir: Path) -&gt; Optional[str]:\n+     repo = addon[\&quot;repo\&quot;]\n+     release = github_api(f\&quot;https://api.github.com/repos/{repo}/releases/latest\&quot;)\n+     if not release:\n+         return None\n+ \n+     asset = pick_zip_asset(release.get(\&quot;assets\&quot;, []))\n+     if not asset:\n+         print(f\&quot;  ⚠ No ZIP asset found for {repo}\&quot;)\n+         return None\n+ \n+     download_url = asset[\&quot;browser_download_url\&quot;]\n+     filename = asset[\&quot;name\&quot;]\n+     dest = download_dir / filename\n+     print(f\&quot;  ↳ downloading {filename}\&quot;)\n+     if not download_asset(download_url, dest):\n+         return None\n+ \n+     return filename\n+ \n+ \n+ def main() -&gt; None:\n+     print(\&quot;Generating Blender extension repository metadata...\&quot;)\n+     clean_directory(REPO_DIR)\n+ \n+     filename_to_url: Dict[str, str] = {}\n+     for addon in ADDONS:\n+         print(f\&quot;Fetching release for {addon[&#39;repo&#39;]}...\&quot;)\n+         filename = process_addon(addon, REPO_DIR)\n+         if filename:\n+             # Map filename to the GitHub release URL\n+             latest_release = github_api(f\&quot;https://api.github.com/repos/{addon[&#39;repo&#39;]}/releases/latest\&quot;)\n+             if latest_release:\n+                 asset = pick_zip_asset(latest_release.get(\&quot;assets\&quot;, []))\n+                 if asset:\n+                     filename_to_url[filename] = asset[\&quot;browser_download_url\&quot;]\n+ \n+     if not filename_to_url:\n+         print(\&quot;No archives downloaded. Aborting.\&quot;)\n+         return\n+ \n+     try:\n+         run_blender_repo_generator(REPO_DIR)\n+     except subprocess.CalledProcessError as exc:\n+         print(f\&quot;Blender command failed: {exc}\&quot;)\n+         return\n+ \n+     generated_index = REPO_DIR / \&quot;index.json\&quot;\n+     if not generated_index.exists():\n+         print(f\&quot;Generated index not found at {generated_index}\&quot;)\n+         return\n+ \n+     updated_index = rewrite_archive_urls(generated_index, filename_to_url)\n+     with open(OUTPUT_INDEX, \&quot;w\&quot;, encoding=\&quot;utf-8\&quot;) as handle:\n+         json.dump(updated_index, handle, indent=2)\n+ \n      print(\&quot;-\&quot; * 50)\n-     print(f\&quot;✓ Catalog generated: {output_file}\&quot;)\n-     print(f\&quot;  Found {len(catalog[&#39;data&#39;])} extensions\&quot;)\n+     print(f\&quot;✓ Repository index written to {OUTPUT_INDEX}\&quot;)\n+     print(f\&quot;  Packages: {len(updated_index.get(&#39;data&#39;, []))}\&quot;)\n  \n  &quot;,
+        &quot;oldStart&quot;: 1,
+        &quot;newStart&quot;: 1,
+        &quot;oldLines&quot;: 139,
+        &quot;newLines&quot;: 171,
+        &quot;linesRemoved&quot;: 117,
+        &quot;linesAdded&quot;: 149
+      }
+    ],
+    &quot;editor&quot;: &quot;EDITOR_AI&quot;
+  },
+  &quot;shouldAutoFixLints&quot;: true,
+  &quot;resultForModel&quot;: &quot;Success. Updated the following files:\nM update_catalog.py&quot;,
+  &quot;contentsAfterEdit&quot;: &quot;#!/usr/bin/env python3\n\&quot;\&quot;\&quot;\nGenerate Blender extension repository metadata using Blender&#39;s server tool.\n\nThis script downloads the latest release archives from GitHub, lets Blender\nvalidate/build the repository metadata, and rewrites the resulting JSON to\npoint back to the public GitHub release URLs.\n\&quot;\&quot;\&quot;\n\nfrom __future__ import annotations\n\nimport json\nimport os\nimport shutil\nimport subprocess\nfrom pathlib import Path\nfrom typing import Dict, List, Optional\n\nimport requests\n\n# --- Configuration ---------------------------------------------------------\n\n# List of addons to include in the repository.\nADDONS = [\n    {\n        \&quot;id\&quot;: \&quot;basedplayblast\&quot;,\n        \&quot;repo\&quot;: \&quot;RaincloudTheDragon/BasedPlayblast\&quot;,\n    },\n]\n\nBLENDER_EXECUTABLE = os.environ.get(\&quot;BLENDER_PATH\&quot;, \&quot;blender\&quot;)\nGITHUB_TOKEN = os.environ.get(\&quot;GITHUB_TOKEN\&quot;)\n\nBUILD_DIR = Path(\&quot;build\&quot;)\nREPO_DIR = BUILD_DIR / \&quot;repo\&quot;\nOUTPUT_INDEX = Path(\&quot;index.json\&quot;)\n\n# ---------------------------------------------------------------------------\n\nsession = requests.Session()\nsession.headers.update({\&quot;Accept\&quot;: \&quot;application/vnd.github+json\&quot;})\nif GITHUB_TOKEN:\n    session.headers.update({\&quot;Authorization\&quot;: f\&quot;Bearer {GITHUB_TOKEN}\&quot;})\n\n\ndef github_api(url: str) -&gt; Optional[Dict]:\n    try:\n        response = session.get(url, timeout=30)\n        response.raise_for_status()\n        return response.json()\n    except requests.RequestException as exc:\n        print(f\&quot;  ⚠ GitHub request failed: {exc}\&quot;)\n        return None\n\n\ndef pick_zip_asset(assets: List[Dict]) -&gt; Optional[Dict]:\n    for asset in assets:\n        name = asset.get(\&quot;name\&quot;, \&quot;\&quot;)\n        content_type = asset.get(\&quot;content_type\&quot;, \&quot;\&quot;)\n        if name.endswith(\&quot;.zip\&quot;) or content_type == \&quot;application/zip\&quot;:\n            return asset\n    return None\n\n\ndef download_asset(url: str, destination: Path) -&gt; bool:\n    try:\n        with session.get(url, stream=True, timeout=60) as response:\n            response.raise_for_status()\n            destination.parent.mkdir(parents=True, exist_ok=True)\n            with open(destination, \&quot;wb\&quot;) as file_obj:\n                for chunk in response.iter_content(chunk_size=1024 * 1024):\n                    if chunk:\n                        file_obj.write(chunk)\n        return True\n    except requests.RequestException as exc:\n        print(f\&quot;  ⚠ Download failed ({url}): {exc}\&quot;)\n        return False\n\n\ndef clean_directory(path: Path) -&gt; None:\n    if path.exists():\n        shutil.rmtree(path)\n    path.mkdir(parents=True, exist_ok=True)\n\n\ndef run_blender_repo_generator(repo_dir: Path) -&gt; None:\n    cmd = [\n        BLENDER_EXECUTABLE,\n        \&quot;--background\&quot;,\n        \&quot;--command\&quot;,\n        \&quot;extension.server-generate\&quot;,\n        f\&quot;--repo-dir={repo_dir.resolve()}\&quot;,\n    ]\n    print(f\&quot;Running Blender repo generator:\\n  {&#39; &#39;.join(str(part) for part in cmd)}\&quot;)\n    subprocess.run(cmd, check=True)\n\n\ndef rewrite_archive_urls(index_path: Path, url_map: Dict[str, str]) -&gt; Dict:\n    with open(index_path, \&quot;r\&quot;, encoding=\&quot;utf-8\&quot;) as handle:\n        data = json.load(handle)\n\n    for package in data.get(\&quot;data\&quot;, []):\n        archive_value = package.get(\&quot;archive_url\&quot;) or package.get(\&quot;archive_path\&quot;, \&quot;\&quot;)\n        filename = Path(archive_value).name\n        if filename in url_map:\n            package[\&quot;archive_url\&quot;] = url_map[filename]\n\n    return data\n\n\ndef process_addon(addon: Dict, download_dir: Path) -&gt; Optional[str]:\n    repo = addon[\&quot;repo\&quot;]\n    release = github_api(f\&quot;https://api.github.com/repos/{repo}/releases/latest\&quot;)\n    if not release:\n        return None\n\n    asset = pick_zip_asset(release.get(\&quot;assets\&quot;, []))\n    if not asset:\n        print(f\&quot;  ⚠ No ZIP asset found for {repo}\&quot;)\n        return None\n\n    download_url = asset[\&quot;browser_download_url\&quot;]\n    filename = asset[\&quot;name\&quot;]\n    dest = download_dir / filename\n    print(f\&quot;  ↳ downloading {filename}\&quot;)\n    if not download_asset(download_url, dest):\n        return None\n\n    return filename\n\n\ndef main() -&gt; None:\n    print(\&quot;Generating Blender extension repository metadata...\&quot;)\n    clean_directory(REPO_DIR)\n\n    filename_to_url: Dict[str, str] = {}\n    for addon in ADDONS:\n        print(f\&quot;Fetching release for {addon[&#39;repo&#39;]}...\&quot;)\n        filename = process_addon(addon, REPO_DIR)\n        if filename:\n            # Map filename to the GitHub release URL\n            latest_release = github_api(f\&quot;https://api.github.com/repos/{addon[&#39;repo&#39;]}/releases/latest\&quot;)\n            if latest_release:\n                asset = pick_zip_asset(latest_release.get(\&quot;assets\&quot;, []))\n                if asset:\n                    filename_to_url[filename] = asset[\&quot;browser_download_url\&quot;]\n\n    if not filename_to_url:\n        print(\&quot;No archives downloaded. Aborting.\&quot;)\n        return\n\n    try:\n        run_blender_repo_generator(REPO_DIR)\n    except subprocess.CalledProcessError as exc:\n        print(f\&quot;Blender command failed: {exc}\&quot;)\n        return\n\n    generated_index = REPO_DIR / \&quot;index.json\&quot;\n    if not generated_index.exists():\n        print(f\&quot;Generated index not found at {generated_index}\&quot;)\n        return\n\n    updated_index = rewrite_archive_urls(generated_index, filename_to_url)\n    with open(OUTPUT_INDEX, \&quot;w\&quot;, encoding=\&quot;utf-8\&quot;) as handle:\n        json.dump(updated_index, handle, indent=2)\n\n    print(\&quot;-\&quot; * 50)\n    print(f\&quot;✓ Repository index written to {OUTPUT_INDEX}\&quot;)\n    print(f\&quot;  Packages: {len(updated_index.get(&#39;data&#39;, []))}\&quot;)\n\n\nif __name__ == \&quot;__main__\&quot;:\n    main()\n&quot;
+}
+```
+User decision: **accepted**
+
+Status: **completed**
+
+
+</details>
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+**Optimizing release data fetching and process_addon return**
+
+I'm focusing on reducing redundant GitHub API calls by modifying `process_addon` to return both filename and download URL as a tuple, so I can reuse release data instead of fetching it twice per addon. I also want to check if the zipped files in `REPO_DIR` should be cleaned up after running `run_blender_repo_generator`, and I'm reviewing how the filename-to-URL map is built to avoid unnecessary extra API calls.</details></think>
+
+---
+
+<tool-use data-tool-type="unknown" data-tool-name="apply_patch">
+<details>
+<summary>Tool use: **apply_patch**</summary>
+
+
+Parameters:
+
+```json
+{
+  &quot;relativeWorkspacePath&quot;: &quot;update_catalog.py&quot;
+}
+```
+Additional data:
+
+```json
+{
+  &quot;codeblockId&quot;: &quot;2e10aadf-f828-4da6-b119-d98508fb0d1c&quot;
+}
+```
+Result:
+
+```json
+{
+  &quot;diff&quot;: {
+    &quot;chunks&quot;: [
+      {
+        &quot;diffString&quot;: &quot;  \n  \n- def process_addon(addon: Dict, download_dir: Path) -&gt; Optional[str]:\n+ def process_addon(addon: Dict, download_dir: Path) -&gt; Optional[Dict[str, str]]:\n      repo = addon[\&quot;repo\&quot;]\n      release = github_api(f\&quot;https://api.github.com/repos/{repo}/releases/latest\&quot;)&quot;,
+        &quot;oldStart&quot;: 109,
+        &quot;newStart&quot;: 109,
+        &quot;oldLines&quot;: 5,
+        &quot;newLines&quot;: 5,
+        &quot;linesRemoved&quot;: 1,
+        &quot;linesAdded&quot;: 1
+      },
+      {
+        &quot;diffString&quot;: &quot;          return None\n  \n+     filename = asset[\&quot;name\&quot;]\n      download_url = asset[\&quot;browser_download_url\&quot;]\n-     filename = asset[\&quot;name\&quot;]\n      dest = download_dir / filename\n      print(f\&quot;  ↳ downloading {filename}\&quot;)\n      if not download_asset(download_url, dest):\n          return None\n  \n-     return filename\n+     return {\n+         \&quot;filename\&quot;: filename,\n+         \&quot;archive_url\&quot;: download_url,\n+     }\n  \n  &quot;,
+        &quot;oldStart&quot;: 120,
+        &quot;newStart&quot;: 120,
+        &quot;oldLines&quot;: 12,
+        &quot;newLines&quot;: 15,
+        &quot;linesRemoved&quot;: 2,
+        &quot;linesAdded&quot;: 5
+      },
+      {
+        &quot;diffString&quot;: &quot;      for addon in ADDONS:\n          print(f\&quot;Fetching release for {addon[&#39;repo&#39;]}...\&quot;)\n-         filename = process_addon(addon, REPO_DIR)\n-         if filename:\n-             # Map filename to the GitHub release URL\n-             latest_release = github_api(f\&quot;https://api.github.com/repos/{addon[&#39;repo&#39;]}/releases/latest\&quot;)\n-             if latest_release:\n-                 asset = pick_zip_asset(latest_release.get(\&quot;assets\&quot;, []))\n-                 if asset:\n-                     filename_to_url[filename] = asset[\&quot;browser_download_url\&quot;]\n+         result = process_addon(addon, REPO_DIR)\n+         if result:\n+             filename_to_url[result[\&quot;filename\&quot;]] = result[\&quot;archive_url\&quot;]\n  \n      if not filename_to_url:&quot;,
+        &quot;oldStart&quot;: 137,
+        &quot;newStart&quot;: 140,
+        &quot;oldLines&quot;: 12,
+        &quot;newLines&quot;: 7,
+        &quot;linesRemoved&quot;: 8,
+        &quot;linesAdded&quot;: 3
+      }
+    ],
+    &quot;editor&quot;: &quot;EDITOR_AI&quot;
+  },
+  &quot;shouldAutoFixLints&quot;: true,
+  &quot;resultForModel&quot;: &quot;Success. Updated the following files:\nM update_catalog.py&quot;,
+  &quot;contentsAfterEdit&quot;: &quot;#!/usr/bin/env python3\n\&quot;\&quot;\&quot;\nGenerate Blender extension repository metadata using Blender&#39;s server tool.\n\nThis script downloads the latest release archives from GitHub, lets Blender\nvalidate/build the repository metadata, and rewrites the resulting JSON to\npoint back to the public GitHub release URLs.\n\&quot;\&quot;\&quot;\n\nfrom __future__ import annotations\n\nimport json\nimport os\nimport shutil\nimport subprocess\nfrom pathlib import Path\nfrom typing import Dict, List, Optional\n\nimport requests\n\n# --- Configuration ---------------------------------------------------------\n\n# List of addons to include in the repository.\nADDONS = [\n    {\n        \&quot;id\&quot;: \&quot;basedplayblast\&quot;,\n        \&quot;repo\&quot;: \&quot;RaincloudTheDragon/BasedPlayblast\&quot;,\n    },\n]\n\nBLENDER_EXECUTABLE = os.environ.get(\&quot;BLENDER_PATH\&quot;, \&quot;blender\&quot;)\nGITHUB_TOKEN = os.environ.get(\&quot;GITHUB_TOKEN\&quot;)\n\nBUILD_DIR = Path(\&quot;build\&quot;)\nREPO_DIR = BUILD_DIR / \&quot;repo\&quot;\nOUTPUT_INDEX = Path(\&quot;index.json\&quot;)\n\n# ---------------------------------------------------------------------------\n\nsession = requests.Session()\nsession.headers.update({\&quot;Accept\&quot;: \&quot;application/vnd.github+json\&quot;})\nif GITHUB_TOKEN:\n    session.headers.update({\&quot;Authorization\&quot;: f\&quot;Bearer {GITHUB_TOKEN}\&quot;})\n\n\ndef github_api(url: str) -&gt; Optional[Dict]:\n    try:\n        response = session.get(url, timeout=30)\n        response.raise_for_status()\n        return response.json()\n    except requests.RequestException as exc:\n        print(f\&quot;  ⚠ GitHub request failed: {exc}\&quot;)\n        return None\n\n\ndef pick_zip_asset(assets: List[Dict]) -&gt; Optional[Dict]:\n    for asset in assets:\n        name = asset.get(\&quot;name\&quot;, \&quot;\&quot;)\n        content_type = asset.get(\&quot;content_type\&quot;, \&quot;\&quot;)\n        if name.endswith(\&quot;.zip\&quot;) or content_type == \&quot;application/zip\&quot;:\n            return asset\n    return None\n\n\ndef download_asset(url: str, destination: Path) -&gt; bool:\n    try:\n        with session.get(url, stream=True, timeout=60) as response:\n            response.raise_for_status()\n            destination.parent.mkdir(parents=True, exist_ok=True)\n            with open(destination, \&quot;wb\&quot;) as file_obj:\n                for chunk in response.iter_content(chunk_size=1024 * 1024):\n                    if chunk:\n                        file_obj.write(chunk)\n        return True\n    except requests.RequestException as exc:\n        print(f\&quot;  ⚠ Download failed ({url}): {exc}\&quot;)\n        return False\n\n\ndef clean_directory(path: Path) -&gt; None:\n    if path.exists():\n        shutil.rmtree(path)\n    path.mkdir(parents=True, exist_ok=True)\n\n\ndef run_blender_repo_generator(repo_dir: Path) -&gt; None:\n    cmd = [\n        BLENDER_EXECUTABLE,\n        \&quot;--background\&quot;,\n        \&quot;--command\&quot;,\n        \&quot;extension.server-generate\&quot;,\n        f\&quot;--repo-dir={repo_dir.resolve()}\&quot;,\n    ]\n    print(f\&quot;Running Blender repo generator:\\n  {&#39; &#39;.join(str(part) for part in cmd)}\&quot;)\n    subprocess.run(cmd, check=True)\n\n\ndef rewrite_archive_urls(index_path: Path, url_map: Dict[str, str]) -&gt; Dict:\n    with open(index_path, \&quot;r\&quot;, encoding=\&quot;utf-8\&quot;) as handle:\n        data = json.load(handle)\n\n    for package in data.get(\&quot;data\&quot;, []):\n        archive_value = package.get(\&quot;archive_url\&quot;) or package.get(\&quot;archive_path\&quot;, \&quot;\&quot;)\n        filename = Path(archive_value).name\n        if filename in url_map:\n            package[\&quot;archive_url\&quot;] = url_map[filename]\n\n    return data\n\n\ndef process_addon(addon: Dict, download_dir: Path) -&gt; Optional[Dict[str, str]]:\n    repo = addon[\&quot;repo\&quot;]\n    release = github_api(f\&quot;https://api.github.com/repos/{repo}/releases/latest\&quot;)\n    if not release:\n        return None\n\n    asset = pick_zip_asset(release.get(\&quot;assets\&quot;, []))\n    if not asset:\n        print(f\&quot;  ⚠ No ZIP asset found for {repo}\&quot;)\n        return None\n\n    filename = asset[\&quot;name\&quot;]\n    download_url = asset[\&quot;browser_download_url\&quot;]\n    dest = download_dir / filename\n    print(f\&quot;  ↳ downloading {filename}\&quot;)\n    if not download_asset(download_url, dest):\n        return None\n\n    return {\n        \&quot;filename\&quot;: filename,\n        \&quot;archive_url\&quot;: download_url,\n    }\n\n\ndef main() -&gt; None:\n    print(\&quot;Generating Blender extension repository metadata...\&quot;)\n    clean_directory(REPO_DIR)\n\n    filename_to_url: Dict[str, str] = {}\n    for addon in ADDONS:\n        print(f\&quot;Fetching release for {addon[&#39;repo&#39;]}...\&quot;)\n        result = process_addon(addon, REPO_DIR)\n        if result:\n            filename_to_url[result[\&quot;filename\&quot;]] = result[\&quot;archive_url\&quot;]\n\n    if not filename_to_url:\n        print(\&quot;No archives downloaded. Aborting.\&quot;)\n        return\n\n    try:\n        run_blender_repo_generator(REPO_DIR)\n    except subprocess.CalledProcessError as exc:\n        print(f\&quot;Blender command failed: {exc}\&quot;)\n        return\n\n    generated_index = REPO_DIR / \&quot;index.json\&quot;\n    if not generated_index.exists():\n        print(f\&quot;Generated index not found at {generated_index}\&quot;)\n        return\n\n    updated_index = rewrite_archive_urls(generated_index, filename_to_url)\n    with open(OUTPUT_INDEX, \&quot;w\&quot;, encoding=\&quot;utf-8\&quot;) as handle:\n        json.dump(updated_index, handle, indent=2)\n\n    print(\&quot;-\&quot; * 50)\n    print(f\&quot;✓ Repository index written to {OUTPUT_INDEX}\&quot;)\n    print(f\&quot;  Packages: {len(updated_index.get(&#39;data&#39;, []))}\&quot;)\n\n\nif __name__ == \&quot;__main__\&quot;:\n    main()\n&quot;
+}
+```
+User decision: **accepted**
+
+Status: **completed**
+
+
+</details>
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+**Finalizing code preparation**</details></think>
+
+---
+
+Implemented the Blender-driven repo generation workflow in `update_catalog.py`:
+
+- Added config for Blender path, build directories, and GitHub access (optional token).
+- Download latest release ZIPs for each add-on, storing a map of filenames → GitHub URLs.
+- Run `blender --background --command extension.server-generate` on the downloaded archives.
+- Rewrite Blender’s generated `index.json` so `archive_url` entries point back to the original GitHub release URLs, and write the result to the project root.
+
+This replaces the manual catalog builder with Blender’s official repo generator, ensuring metadata matches the platform’s expectations.
+
+---
+
