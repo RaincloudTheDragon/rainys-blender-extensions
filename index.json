@@ -27,6 +27,31 @@
       "archive_url": "https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.1/BasedPlayblast.v2.3.1.zip",
       "archive_size": 38295,
       "archive_hash": "sha256:98f978a96fb8d15bae60987f305901ba0acd7a37ddb45627724326809e43622d"
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "rainclouds_bulk_scene_tools",
+      "name": "Raincloud's Bulk Scene Tools",
+      "tagline": "Bulk utilities for optimizing scene data",
+      "version": "0.11.0",
+      "type": "add-on",
+      "maintainer": "RaincloudTheDragon <raincloudthedragon@gmail.com>",
+      "license": [
+        "GPL-3.0-or-later"
+      ],
+      "blender_version_min": "4.5.0",
+      "website": "https://github.com/RaincloudTheDragon/Rainys-Bulk-Scene-Tools",
+      "permissions": {
+        "files": "Read and write external resources referenced by scenes"
+      },
+      "tags": [
+        "Scene",
+        "Workflow",
+        "Materials"
+      ],
+      "archive_url": "https://github.com/RaincloudTheDragon/Rainys-Bulk-Scene-Tools/releases/download/v0.11.0/Rainys_Bulk_Scene_Tools.v0.11.0.zip",
+      "archive_size": 72969,
+      "archive_hash": "sha256:827451b11808488e8682f4bdd4bfff8b6f1f0fe2aa5bbc53845fbf9a13e15757"
     }
   ]
 }
