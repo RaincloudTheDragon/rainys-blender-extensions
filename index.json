@@ -52,6 +52,27 @@
       "archive_url": "https://github.com/RaincloudTheDragon/Rainys-Bulk-Scene-Tools/releases/download/v0.12.0/Rainys_Bulk_Scene_Tools.v0.12.0.zip",
       "archive_size": 75117,
       "archive_hash": "sha256:0607fafbd9f74f792fdb96e5913f03d9e4cc13cff8b5e3225468174959ca5b18"
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "atomic_data_manager",
+      "name": "Atomic Data Manager",
+      "tagline": "Smart cleanup and inspection of Blender data-blocks",
+      "version": "2.0.0",
+      "type": "add-on",
+      "maintainer": "RaincloudTheDragon",
+      "license": [
+        "GPL-3.0-or-later"
+      ],
+      "blender_version_min": "4.2.0",
+      "tags": [
+        "utility",
+        "management",
+        "cleanup"
+      ],
+      "archive_url": "https://github.com/RaincloudTheDragon/atomic-data-manager/releases/download/v2.0.0/Atomic_Data_Manager.v2.0.0.zip",
+      "archive_size": 67447,
+      "archive_hash": "sha256:5adf9ff89d1d24eaa79012b2a6c86f962fc107abc09b16a065e8327fbe57fb10"
     }
   ]
 }
