@@ -7,7 +7,7 @@
       "id": "basedplayblast",
       "name": "BasedPlayblast",
       "tagline": "Easily create playblasts from Blender and Flamenco",
-      "version": "2.5.0",
+      "version": "2.6.0",
       "type": "add-on",
       "maintainer": "RaincloudTheDragon <raincloudthedragon@gmail.com>",
       "license": [
@@ -24,9 +24,9 @@
         "Workflow",
         "Video"
       ],
-      "archive_url": "https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.5.0/BasedPlayblast.v2.5.0.zip",
-      "archive_size": 43766,
-      "archive_hash": "sha256:3f2342c757436387c1ef3f3fd6a32bd83e924131ad7e3713e6d7a3be0f72f96d"
+      "archive_url": "https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.6.0/BasedPlayblast.v2.6.0.zip",
+      "archive_size": 47989,
+      "archive_hash": "sha256:ba8307675a0ca0d24496c7151e84349608fee709cc088dc82acaacec56d1dc7f"
     },
     {
       "schema_version": "1.0.0",
