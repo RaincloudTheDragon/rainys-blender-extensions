@@ -30,6 +30,10 @@ ADDONS = [
         "id": "rainys_bulk_scene_tools",
         "repo": "RaincloudTheDragon/Rainys-Bulk-Scene-Tools",
     },
+    {
+        "id": "atomic_data_manager",
+        "repo": "RaincloudTheDragon/atomic-data-manager",
+    },
 ]
 
 BLENDER_EXECUTABLE = os.environ.get("BLENDER_PATH", "blender")
