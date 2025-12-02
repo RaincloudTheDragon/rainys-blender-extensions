@@ -26,6 +26,10 @@ ADDONS = [
         "id": "basedplayblast",
         "repo": "RaincloudTheDragon/BasedPlayblast",
     },
+    {
+        "id": "rainys_bulk_scene_tools",
+        "repo": "RaincloudTheDragon/Rainys-Bulk-Scene-Tools",
+    },
 ]
 
 BLENDER_EXECUTABLE = os.environ.get("BLENDER_PATH", "blender")
@@ -87,9 +91,12 @@ def run_blender_repo_generator(repo_dir: Path) -> None:
     cmd = [
         BLENDER_EXECUTABLE,
         "--background",
+        "--factory-startup",
         "--command",
-        "extension.server-generate",
-        f"--repo-dir={repo_dir.resolve()}",
+        "extension",
+        "server-generate",
+        "--repo-dir",
+        str(repo_dir.resolve()),
     ]
     print(f"Running Blender repo generator:\n  {' '.join(str(part) for part in cmd)}")
     subprocess.run(cmd, check=True)

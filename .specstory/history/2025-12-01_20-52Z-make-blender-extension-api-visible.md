@@ -40,7 +40,7 @@ Checking the current setup to make the catalog visible.
 
 <tool-use data-tool-type="generic" data-tool-name="list_dir">
 <details>
-            <summary>Tool use: **list_directory** • Listed directory undefined • **0** results</summary>
+            <summary>Tool use: **list_dir** • Listed directory undefined • **0** results</summary>
         
 No results found
 </details>
@@ -78,7 +78,7 @@ Directory: **e:\rainys-blender-extensions** (0 file)
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: git remote -v</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: git remote -v</summary>
 
 ```bash
 git remote -v
@@ -104,7 +104,7 @@ Checking git status and ensuring everything is ready to publish:
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: git status</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: git status</summary>
 
 ```bash
 git status
@@ -112,7 +112,7 @@ git status
 
 ```
 On branch main
-Your branch is up to date with &#39;origin/main&#39;.
+Your branch is up to date with 'origin/main'.
 
 nothing to commit, working tree clean
 ```
@@ -165,7 +165,7 @@ Creating a quick reference guide:
 
 <tool-use data-tool-type="write" data-tool-name="write">
 
-<details><summary>Tool use: **code_edit** • Edit file: QUICK_START.md</summary>
+<details><summary>Tool use: **write** • Edit file: QUICK_START.md</summary>
 
 **Chunk 1**
 Lines added: 52, lines removed: 1
@@ -184,14 +184,14 @@ Lines added: 52, lines removed: 1
 + 
 + ### 1. Enable GitHub Pages
 + 1. Go to: https://github.com/RaincloudTheDragon/rainys-blender-extensions/settings/pages
-+ 2. Under &quot;Source&quot;, select: **&quot;Deploy from a branch&quot;**
++ 2. Under "Source", select: **"Deploy from a branch"**
 + 3. Branch: **&#96;main&#96;**
 + 4. Folder: **&#96;/ (root)&#96;**
 + 5. Click **Save**
 + 
 + ⏱️ Wait 1-2 minutes for GitHub Pages to deploy.
 + 
-+ ### 2. Verify It&#39;s Live
++ ### 2. Verify It's Live
 + Open this URL in your browser:
 + &#96;&#96;&#96;
 + https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json
@@ -202,15 +202,15 @@ Lines added: 52, lines removed: 1
 + ### 3. Add to Blender
 + 1. Open **Blender**
 + 2. Go to **Edit → Preferences → Extensions**
-+ 3. Click **&quot;Add Catalog&quot;**
++ 3. Click **"Add Catalog"**
 + 4. Enter:
-+    - **Name**: &#96;Rainy&#39;s Addons&#96; (or your choice)
++    - **Name**: &#96;Rainy's Addons&#96; (or your choice)
 +    - **URL**: &#96;https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json&#96;
-+ 5. Click **&quot;Add Catalog&quot;**
++ 5. Click **"Add Catalog"**
 + 
 + ### 4. Install/Update Extensions
 + - Your extensions should now appear in the Extensions list
-+ - Click **&quot;Install&quot;** or **&quot;Update&quot;** as needed
++ - Click **"Install"** or **"Update"** as needed
 + 
 + ## Troubleshooting
 + 
@@ -221,7 +221,7 @@ Lines added: 52, lines removed: 1
 + - Verify the JSON is valid (no syntax errors)
 + 
 + **Extensions not appearing?**
-+ - Make sure the &#96;id&#96; in &#96;catalog.json&#96; matches the &#96;id&#96; in your addon&#39;s &#96;blender_manifest.toml&#96;
++ - Make sure the &#96;id&#96; in &#96;catalog.json&#96; matches the &#96;id&#96; in your addon's &#96;blender_manifest.toml&#96;
 + - Check that the &#96;archive_url&#96; is a direct download link
 + - Verify the &#96;manifest_url&#96; uses &#96;/raw/&#96; not &#96;/blob/&#96;
 + 
@@ -288,7 +288,7 @@ Blender can't access the catalog at the remote URL. Checking the catalog configu
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: curl -I https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: curl -I https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json</summary>
 
 ```bash
 curl -I https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json
@@ -303,7 +303,7 @@ Content-Type: application/json; charset=utf-8
 Last-Modified: Mon, 01 Dec 2025 20:56:12 GMT
 Access-Control-Allow-Origin: *
 Strict-Transport-Security: max-age=31556952
-ETag: &quot;692e00ec-162&quot;
+ETag: "692e00ec-162"
 expires: Mon, 01 Dec 2025 21:09:20 GMT
 Cache-Control: max-age=600
 x-proxy-cache: MISS
@@ -335,7 +335,7 @@ The error "Repository: 'Rainy's Extensions' remote data unavailable, sync with t
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: curl -s https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json | python -m json.tool</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: curl -s https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json | python -m json.tool</summary>
 
 ```bash
 curl -s https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json | python -m json.tool
@@ -344,13 +344,13 @@ curl -s https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.j
 ```
 inys-blender-extensions/catalog.json | python -m json.tool                      
 {
-    &quot;schema_version&quot;: &quot;1.0.0&quot;,
-    &quot;extensions&quot;: [
+    "schema_version": "1.0.0",
+    "extensions": [
         {
-            &quot;id&quot;: &quot;atomic_data_manager&quot;,
-            &quot;version&quot;: &quot;2.0.0&quot;,
-            &quot;archive_url&quot;: &quot;https://github.com/grantwilk/atomic-data-manager/releases/download/v2.0.0/atomic_data_manager.zip&quot;,                                 
-            &quot;manifest_url&quot;: &quot;https://github.com/grantwilk/atomic-data-manager/raw/main/blender_manifest.toml&quot;                                                   
+            "id": "atomic_data_manager",
+            "version": "2.0.0",
+            "archive_url": "https://github.com/grantwilk/atomic-data-manager/releases/download/v2.0.0/atomic_data_manager.zip",                                 
+            "manifest_url": "https://github.com/grantwilk/atomic-data-manager/raw/main/blender_manifest.toml"                                                   
         }
     ]
 }
@@ -501,7 +501,7 @@ Updating the script to handle missing releases and preparing the catalog accordi
 
 <tool-use data-tool-type="write" data-tool-name="search_replace">
 
-<details><summary>Tool use: **code_edit** • Edit file: update_catalog.py</summary>
+<details><summary>Tool use: **search_replace** • Edit file: update_catalog.py</summary>
 
 **Chunk 1**
 Lines added: 2, lines removed: 1
@@ -510,9 +510,9 @@ Lines added: 2, lines removed: 1
 @@ -89,5 +89,6 @@
           release = get_latest_release(repo)
           if not release:
--             print(f&quot;  Warning: No release found for {repo}, skipping...&quot;)
-+             print(f&quot;  ⚠ Warning: No release found for {repo}&quot;)
-+             print(f&quot;     Skipping {addon_id} - create a GitHub release first&quot;)
+-             print(f"  Warning: No release found for {repo}, skipping...")
++             print(f"  ⚠ Warning: No release found for {repo}")
++             print(f"     Skipping {addon_id} - create a GitHub release first")
               continue
           
 ```
@@ -524,9 +524,9 @@ Lines added: 2, lines removed: 1
 @@ -98,5 +99,6 @@
           
           if not archive_url:
--             print(f&quot;  Warning: No ZIP archive found for {repo}, skipping...&quot;)
-+             print(f&quot;  ⚠ Warning: No ZIP archive found for {repo}&quot;)
-+             print(f&quot;     Skipping {addon_id} - ensure release has a ZIP asset&quot;)
+-             print(f"  Warning: No ZIP archive found for {repo}, skipping...")
++             print(f"  ⚠ Warning: No ZIP archive found for {repo}")
++             print(f"     Skipping {addon_id} - ensure release has a ZIP asset")
               continue
           
 ```
@@ -551,28 +551,28 @@ For now, removing the entry from the catalog since there's no release yet. Once 
 
 <tool-use data-tool-type="write" data-tool-name="search_replace">
 
-<details><summary>Tool use: **code_edit** • Edit file: catalog.json</summary>
+<details><summary>Tool use: **search_replace** • Edit file: catalog.json</summary>
 
 **Chunk 1**
 Lines added: 8, lines removed: 6
 
 ```diff
 @@ -2,10 +2,12 @@
-    &quot;schema_version&quot;: &quot;1.0.0&quot;,
-    &quot;extensions&quot;: [
+    "schema_version": "1.0.0",
+    "extensions": [
 -     {
--       &quot;id&quot;: &quot;atomic_data_manager&quot;,
--       &quot;version&quot;: &quot;2.0.0&quot;,
--       &quot;archive_url&quot;: &quot;https://github.com/grantwilk/atomic-data-manager/releases/download/v2.0.0/atomic_data_manager.zip&quot;,
--       &quot;manifest_url&quot;: &quot;https://github.com/grantwilk/atomic-data-manager/raw/main/blender_manifest.toml&quot;
+-       "id": "atomic_data_manager",
+-       "version": "2.0.0",
+-       "archive_url": "https://github.com/grantwilk/atomic-data-manager/releases/download/v2.0.0/atomic_data_manager.zip",
+-       "manifest_url": "https://github.com/grantwilk/atomic-data-manager/raw/main/blender_manifest.toml"
 -     }
 +     // Add your extensions here once they have GitHub releases
 +     // Example:
 +     // {
-+     //   &quot;id&quot;: &quot;atomic_data_manager&quot;,
-+     //   &quot;version&quot;: &quot;1.0.0&quot;,
-+     //   &quot;archive_url&quot;: &quot;https://github.com/your-username/your-repo/releases/download/v1.0.0/addon.zip&quot;,
-+     //   &quot;manifest_url&quot;: &quot;https://github.com/your-username/your-repo/raw/main/blender_manifest.toml&quot;
++     //   "id": "atomic_data_manager",
++     //   "version": "1.0.0",
++     //   "archive_url": "https://github.com/your-username/your-repo/releases/download/v1.0.0/addon.zip",
++     //   "manifest_url": "https://github.com/your-username/your-repo/raw/main/blender_manifest.toml"
 +     // }
     ]
   }
@@ -596,7 +596,7 @@ Fixing the JSON (comments aren't allowed):
 
 <tool-use data-tool-type="write" data-tool-name="search_replace">
 
-<details><summary>Tool use: **code_edit** • Edit file: catalog.json</summary>
+<details><summary>Tool use: **search_replace** • Edit file: catalog.json</summary>
 
 **Chunk 1**
 Lines added: 1, lines removed: 10
@@ -604,18 +604,18 @@ Lines added: 1, lines removed: 10
 ```diff
 @@ -1,14 +1,5 @@
   {
-    &quot;schema_version&quot;: &quot;1.0.0&quot;,
--   &quot;extensions&quot;: [
+    "schema_version": "1.0.0",
+-   "extensions": [
 -     // Add your extensions here once they have GitHub releases
 -     // Example:
 -     // {
--     //   &quot;id&quot;: &quot;atomic_data_manager&quot;,
--     //   &quot;version&quot;: &quot;1.0.0&quot;,
--     //   &quot;archive_url&quot;: &quot;https://github.com/your-username/your-repo/releases/download/v1.0.0/addon.zip&quot;,
--     //   &quot;manifest_url&quot;: &quot;https://github.com/your-username/your-repo/raw/main/blender_manifest.toml&quot;
+-     //   "id": "atomic_data_manager",
+-     //   "version": "1.0.0",
+-     //   "archive_url": "https://github.com/your-username/your-repo/releases/download/v1.0.0/addon.zip",
+-     //   "manifest_url": "https://github.com/your-username/your-repo/raw/main/blender_manifest.toml"
 -     // }
 -   ]
-+   &quot;extensions&quot;: []
++   "extensions": []
   }
   
 ```
@@ -676,19 +676,19 @@ Adding your two extensions to the catalog. Updating the script to include them, 
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: curl -s https://api.github.com/repos/RaincloudTheDragon/BasedPlayblast/releases/latest | python -c "import sys, json; r=json.load(sys.stdin); print(f\"Tag: {r.get('tag_name')}, Assets: {[a['name'] for a in r.get('assets', [])]}\")"</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: curl -s https://api.github.com/repos/RaincloudTheDragon/BasedPlayblast/releases/latest | python -c "import sys, json; r=json.load(sys.stdin); print(f\"Tag: {r.get('tag_name')}, Assets: {[a['name'] for a in r.get('assets', [])]}\")"</summary>
 
 ```bash
 curl -s https://api.github.com/repos/RaincloudTheDragon/BasedPlayblast/releases/latest | python -c "import sys, json; r=json.load(sys.stdin); print(f\"Tag: {r.get('tag_name')}, Assets: {[a['name'] for a in r.get('assets', [])]}\")"
 ```
 
 ```
-.get(&#39;assets&#39;, [])]}\&quot;)&quot;                                                        
+.get('assets', [])]}\")"                                                        
 ParserError: 
 Line |
-   1 |  … stdin); print(f\&quot;Tag: {r.get(&#39;tag_name&#39;)}, Assets: {[a[&#39;name&#39;] for a  …                                                                               
+   1 |  … stdin); print(f\"Tag: {r.get('tag_name')}, Assets: {[a['name'] for a  …                                                                               
      |                                                           ~~~~~~
-     | Unexpected token &#39;&#39;name&#39;&#39; in expression or statement.
+     | Unexpected token ''name'' in expression or statement.
 ```
 </details>
 </tool-use>
@@ -696,7 +696,7 @@ Line |
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: curl -s https://api.github.com/repos/RaincloudTheDragon/Rainys-Bulk-Scene-Tools/releases/latest | python -c "import sys, json; r=json.load(sys.stdin); print(f\"Tag: {r.get('tag_name')}, Assets: {[a['name'] for a in r.get('assets', [])]}\")"</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: curl -s https://api.github.com/repos/RaincloudTheDragon/Rainys-Bulk-Scene-Tools/releases/latest | python -c "import sys, json; r=json.load(sys.stdin); print(f\"Tag: {r.get('tag_name')}, Assets: {[a['name'] for a in r.get('assets', [])]}\")"</summary>
 
 ```bash
 curl -s https://api.github.com/repos/RaincloudTheDragon/Rainys-Bulk-Scene-Tools/releases/latest | python -c "import sys, json; r=json.load(sys.stdin); print(f\"Tag: {r.get('tag_name')}, Assets: {[a['name'] for a in r.get('assets', [])]}\")"
@@ -705,9 +705,9 @@ curl -s https://api.github.com/repos/RaincloudTheDragon/Rainys-Bulk-Scene-Tools/
 ```
 ParserError: 
 Line |
-   1 |  … stdin); print(f\&quot;Tag: {r.get(&#39;tag_name&#39;)}, Assets: {[a[&#39;name&#39;] for a  …                                                                               
+   1 |  … stdin); print(f\"Tag: {r.get('tag_name')}, Assets: {[a['name'] for a  …                                                                               
      |                                                           ~~~~~~
-     | Unexpected token &#39;&#39;name&#39;&#39; in expression or statement.
+     | Unexpected token ''name'' in expression or statement.
 ```
 </details>
 </tool-use>
@@ -725,7 +725,7 @@ Checking the manifest files to get the addon IDs, then updating the catalog:
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: curl -s https://github.com/RaincloudTheDragon/BasedPlayblast/raw/main/blender_manifest.toml</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: curl -s https://github.com/RaincloudTheDragon/BasedPlayblast/raw/main/blender_manifest.toml</summary>
 
 ```bash
 curl -s https://github.com/RaincloudTheDragon/BasedPlayblast/raw/main/blender_manifest.toml
@@ -736,39 +736,39 @@ curl -s https://github.com/RaincloudTheDragon/BasedPlayblast/raw/main/blender_ma
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: curl -s https://github.com/RaincloudTheDragon/Rainys-Bulk-Scene-Tools/raw/main/blender_manifest.toml</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: curl -s https://github.com/RaincloudTheDragon/Rainys-Bulk-Scene-Tools/raw/main/blender_manifest.toml</summary>
 
 ```bash
 curl -s https://github.com/RaincloudTheDragon/Rainys-Bulk-Scene-Tools/raw/main/blender_manifest.toml
 ```
 
 ```
-BErGkNYsckuCUm2OiCbaf3ixAeYv23bso43TXu9i6ohdvWzlf2jms0EO6KB7XCdiq2V0N26eERSUhcJjJ9wMaBWFXbkOckChqxSY9MACJADcsxknfg/592KG5LSTxjj70pL/f7rz0Hb3/HvcdeSURBG7klbfIs1pRY8FUV4tWUfkhEknE3JzZtRvF9wzm07SVChNuyHqeO37EAacBA0KksBHdabEpEy0gE4aa7LKMHMqbKg0D63hHXbrVjahbBOgCc3af7e+5bRN91tUDIGLTqR7Q4ytjb0V/J74eYwli5t+80ZLhfh/obx9RTIf9WLv4PqgkW8du9zbe0fP39J6d2OI23dy2Zk5qC6cM0zGcdez01t8t68EehUS2t6W5ZIVgN7YK0U4npeEzYyfHaE1Uk2yBjBjYNO9jD8//F2AADp/9/kGB8WMAAAAASUVORK5CYII=&quot;&gt;                         
+BErGkNYsckuCUm2OiCbaf3ixAeYv23bso43TXu9i6ohdvWzlf2jms0EO6KB7XCdiq2V0N26eERSUhcJjJ9wMaBWFXbkOckChqxSY9MACJADcsxknfg/592KG5LSTxjj70pL/f7rz0Hb3/HvcdeSURBG7klbfIs1pRY8FUV4tWUfkhEknE3JzZtRvF9wzm07SVChNuyHqeO37EAacBA0KksBHdabEpEy0gE4aa7LKMHMqbKg0D63hHXbrVjahbBOgCc3af7e+5bRN91tUDIGLTqR7Q4ytjb0V/J74eYwli5t+80ZLhfh/obx9RTIf9WLv4PqgkW8du9zbe0fP39J6d2OI23dy2Zk5qC6cM0zGcdez01t8t68EehUS2t6W5ZIVgN7YK0U4npeEzYyfHaE1Uk2yBjBjYNO9jD8//F2AADp/9/kGB8WMAAAAASUVORK5CYII="&gt;                         
 
-      &lt;img alt=&quot;&quot; class=&quot;position-absolute&quot; height=&quot;75&quot; width=&quot;430&quot; style=&quot;top: 263px; left: 442px; z-index: 6;&quot;                                                
-      src=&quot;data:image/png;base64,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&quot;&gt;                                                         
+      &lt;img alt="" class="position-absolute" height="75" width="430" style="top: 263px; left: 442px; z-index: 6;"                                                
+      src="data:image/png;base64,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"&gt;                                                         
 
-      &lt;img alt=&quot;&quot; class=&quot;position-absolute&quot; height=&quot;123&quot; width=&quot;304&quot; style=&quot;top: 73px; left: 467px; z-index: 5;&quot;                                                
-      src=&quot;data:image/png;base64,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&quot;&gt;             
+      &lt;img alt="" class="position-absolute" height="123" width="304" style="top: 73px; left: 467px; z-index: 5;"                                                
+      src="data:image/png;base64,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"&gt;             
 
-      &lt;img alt=&quot;&quot; class=&quot;position-absolute&quot; height=&quot;50&quot; width=&quot;116&quot; style=&quot;top: 113px; left: 762px; z-index: 4;&quot;                                                
-      src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHQAAAAyCAMAAAC6RQ9kAAAAA3NCSVQICAjb4U/gAAABgFBMVEX////kyZm1pIDexpr73qqnmnallnGnmnn33aqjlXn12anszpi7p4PUvZPu1aXPuo6tm3zr0aLfxZbNt4xxbWOUim6yn3l7c2NsaF2+rIStm3yom4C2o3v22KSznW+rnIGejGuqlm3ZxJZxbWN0bFvUvZPv0JvnzZ2MfmPArYq7p4PXvo7Qu5LFsoq+rIRsaWDx057ErYKznXCsmnKFe2qom4CPgWSMhG3Qu5Kck3OllnGjlXl7c2NzcGeJf217c2OJf23FsoqUim6+rISck3PArYp/eWl/eGWfknrGsIzArYrGsIyck3PNt4zXvo67p4Pr0aLQu5K7p4Omk2zfxZbZxJbErYL12anu1aWwm2753KfmzaHny5aMg3N/eWmfknqajnmUiXSMhG2Mg3OrnIGjlXmUim6UiXSMhG2EeGN/eGW1pICajHOFe2rGsIy7p4OVhme+rIStm3ynmnmejGuUim6VhmfUvZPQu5LNt4zexprPuo7GsIy7p4Oyn3mmk2w+/MV0AAAAgHRSTlMA////////////////////RP///yJ3/yIR7v9E////RHe7/xEiu///RHfu/////xH/////IjNEVaqqzMwRESIzVXeIu8zdIiIzZmZ3d4iZqru7u7vM3d3u7u7///8RESIiIiIiMzMzMzMzM0RERFVVVWZmZmZmZnd3d4iIiIiIiOmar1cAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzQGstOgAAAFzUlEQVRYheWXh3saRxDFvSzHHQsczUEKCFVkiINKFEW25RZFcVwjJFvNTu+99+p/PfNmCwfcxYosf8n3ZcB3gjvv797sm9nl1KlHxNyjbngCMf7U/wU6929Al/5L6X3nq43f5ud/uf3ZpScARXp/GB/68q1fD4IHYXP5TC73em731psnDYXS9dMDX729nVZBmkIpVc4hXr188tCLA9CfAiIqftM/1WwTda90otC5IeilbahkoYAG9Ocyiz1J6JDSNw41Kg0wvRTOTVC3HgvzwcbG7ZJrfoNKLx8qTms6IBxT+cPyY1JvHqgmxrhlPpPSq54rm21WyFyXZDzGGVC/OSby8jYP1KRBdq9Y6Dnvgrn8cwACZRc+4rklU8FXIZv4xvGg20qLeEDUPS576kjnfAN9D5cUpxZYfeJsa6m7x2J+CSIkBCFV/ZaFWqVbSrtI6dwq7SjODc9q7liFc2Dmyzw6EtxP71IjDKkdNFUzRDT5tkDBUUobOLd3VND46urqjQZi6mYYlsvl18oIQbE3T1ERUkiEwEngjIOsdrvdgrQx+yzHt6c5xuil3wlbgBJGEGY0Gk84hP4k+idh+PxnPnWkGIuH2tG0AIvQWAsXRqFRiy+OxkyE2oGlyd+wPP1IfeE6wSeh9B/nmKB5sZjJZjNeDGuh6lPUk6BTFiVdIqWFWqR0avsZZ2g1m6FXDLRYoQuZzEQSVESsaU/mi7JyEepTwE0+VRBaaYFGzmYnYqCyhku11PUE9zrvGJ3WREKG6HFK2TVFVyadU1QrZwGVkENDx0AXAa0nKG1EjCP7J6GhKtrfbc8LSKnQ0BryW4+DVmm2s36yewct5GZXitB2HTR2dEDu8RGoWMTQMU4qigIm1fu7khGuTI179JGgQdgut8t4604VmPQyVEp2UiYOWskiUq8kuFdGKlVEfCpIaaAqvud7nufjQEdu9TCSTm8BRopxUlGIOl3K1BJLpl9+ItJ96HOZUlohlIei8/lsoNLMqcwgRieVoHlUUz1Jqe0xwprWaQ9p/maZCJUsNTBGkk9zekUd/vVjoLKKx/ET5nTAvJFlRDA0XdEwpBYH3hxFoIsYetRJRYnM05Vk90a7jssul0w6PWs1cnY9Lhq4l6GCe1J21EmktMKN49MEaH9FkW4N0U8CaMVmVx8HoHQXehLa3YhS1DDFF/Fz6tqsNGDhHMVQdq5v0F6gTMmY9FbYSSM9qYglAdAXE+bUrcvWSq4Xc3p1Xi03MEp5TnFXHe1hxL7kXrmAJLyUlN74zoD0kqxZrdTTZcolo1Jdo1Swk2JWNygt4HFeToQKl1jhVlL8UQ44vWwi0yK4H0bcK6qZOCeRUvQkkjr8M9Ok15VLZLXWSTbu1Rq1XOx3AzunuJF70oiTihisjiXoagK0vzFxD6C1a/faKuUU87LjoLg51kmYU3EWUmOdVLIrdv9g9i5Up0rXqe/Anu1ITinpyY42wiJG7QEa66TSYOeLFKwQ5XSkI+l5xZIe9N1Lt+f1GjYYVYxyHnMa66RGZF9m59WuqrTKaCMZmb5Lr1OKHouxR5XSZh3GjnXSFEtsi3a7uLCwsNi1WnkRV1hlTHK1YGxbVBTKq/WIk4qcrIvwWJyTplgdpqrKeYn2f1ZqSlRn1+efiYBeM0YSet835KQip60HaJyTuGQkVkkNjW7RsHOoGBsZrdit8Mbsmq5TGe+kIruil9STSvwf006pbUnOSEaibQ7YKFml2m55bB6GnFTkx95BocY5SdcpulvV2s71ClunFurbOe0KuW96r+mx2WEoHmcWNZOdmZ5e61xvRaFLq+/Sr8TzFH/82bt7t/cMx+87O/Qzcffw8HBPNyTdgP2+e/eNUikK3O5qE4iaifxziOrziJWVyZVJxPrMw+mvO5+0YjtjUlz56MOPX6B4//NSo/HdnTvf9zY3N3u9/fX19Xv37k9i6JXJ+zMcF6Y5fux01tY6a51WqzXWcrS/AGShj5noGrZMAAAAAElFTkSuQmCC&quot;&gt;                                                     
+      &lt;img alt="" class="position-absolute" height="50" width="116" style="top: 113px; left: 762px; z-index: 4;"                                                
+      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHQAAAAyCAMAAAC6RQ9kAAAAA3NCSVQICAjb4U/gAAABgFBMVEX////kyZm1pIDexpr73qqnmnallnGnmnn33aqjlXn12anszpi7p4PUvZPu1aXPuo6tm3zr0aLfxZbNt4xxbWOUim6yn3l7c2NsaF2+rIStm3yom4C2o3v22KSznW+rnIGejGuqlm3ZxJZxbWN0bFvUvZPv0JvnzZ2MfmPArYq7p4PXvo7Qu5LFsoq+rIRsaWDx057ErYKznXCsmnKFe2qom4CPgWSMhG3Qu5Kck3OllnGjlXl7c2NzcGeJf217c2OJf23FsoqUim6+rISck3PArYp/eWl/eGWfknrGsIzArYrGsIyck3PNt4zXvo67p4Pr0aLQu5K7p4Omk2zfxZbZxJbErYL12anu1aWwm2753KfmzaHny5aMg3N/eWmfknqajnmUiXSMhG2Mg3OrnIGjlXmUim6UiXSMhG2EeGN/eGW1pICajHOFe2rGsIy7p4OVhme+rIStm3ynmnmejGuUim6VhmfUvZPQu5LNt4zexprPuo7GsIy7p4Oyn3mmk2w+/MV0AAAAgHRSTlMA////////////////////RP///yJ3/yIR7v9E////RHe7/xEiu///RHfu/////xH/////IjNEVaqqzMwRESIzVXeIu8zdIiIzZmZ3d4iZqru7u7vM3d3u7u7///8RESIiIiIiMzMzMzMzM0RERFVVVWZmZmZmZnd3d4iIiIiIiOmar1cAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzQGstOgAAAFzUlEQVRYheWXh3saRxDFvSzHHQsczUEKCFVkiINKFEW25RZFcVwjJFvNTu+99+p/PfNmCwfcxYosf8n3ZcB3gjvv797sm9nl1KlHxNyjbngCMf7U/wU6929Al/5L6X3nq43f5ud/uf3ZpScARXp/GB/68q1fD4IHYXP5TC73em731psnDYXS9dMDX729nVZBmkIpVc4hXr188tCLA9CfAiIqftM/1WwTda90otC5IeilbahkoYAG9Ocyiz1J6JDSNw41Kg0wvRTOTVC3HgvzwcbG7ZJrfoNKLx8qTms6IBxT+cPyY1JvHqgmxrhlPpPSq54rm21WyFyXZDzGGVC/OSby8jYP1KRBdq9Y6Dnvgrn8cwACZRc+4rklU8FXIZv4xvGg20qLeEDUPS576kjnfAN9D5cUpxZYfeJsa6m7x2J+CSIkBCFV/ZaFWqVbSrtI6dwq7SjODc9q7liFc2Dmyzw6EtxP71IjDKkdNFUzRDT5tkDBUUobOLd3VND46urqjQZi6mYYlsvl18oIQbE3T1ERUkiEwEngjIOsdrvdgrQx+yzHt6c5xuil3wlbgBJGEGY0Gk84hP4k+idh+PxnPnWkGIuH2tG0AIvQWAsXRqFRiy+OxkyE2oGlyd+wPP1IfeE6wSeh9B/nmKB5sZjJZjNeDGuh6lPUk6BTFiVdIqWFWqR0avsZZ2g1m6FXDLRYoQuZzEQSVESsaU/mi7JyEepTwE0+VRBaaYFGzmYnYqCyhku11PUE9zrvGJ3WREKG6HFK2TVFVyadU1QrZwGVkENDx0AXAa0nKG1EjCP7J6GhKtrfbc8LSKnQ0BryW4+DVmm2s36yewct5GZXitB2HTR2dEDu8RGoWMTQMU4qigIm1fu7khGuTI179JGgQdgut8t4604VmPQyVEp2UiYOWskiUq8kuFdGKlVEfCpIaaAqvud7nufjQEdu9TCSTm8BRopxUlGIOl3K1BJLpl9+ItJ96HOZUlohlIei8/lsoNLMqcwgRieVoHlUUz1Jqe0xwprWaQ9p/maZCJUsNTBGkk9zekUd/vVjoLKKx/ET5nTAvJFlRDA0XdEwpBYH3hxFoIsYetRJRYnM05Vk90a7jssul0w6PWs1cnY9Lhq4l6GCe1J21EmktMKN49MEaH9FkW4N0U8CaMVmVx8HoHQXehLa3YhS1DDFF/Fz6tqsNGDhHMVQdq5v0F6gTMmY9FbYSSM9qYglAdAXE+bUrcvWSq4Xc3p1Xi03MEp5TnFXHe1hxL7kXrmAJLyUlN74zoD0kqxZrdTTZcolo1Jdo1Swk2JWNygt4HFeToQKl1jhVlL8UQ44vWwi0yK4H0bcK6qZOCeRUvQkkjr8M9Ok15VLZLXWSTbu1Rq1XOx3AzunuJF70oiTihisjiXoagK0vzFxD6C1a/faKuUU87LjoLg51kmYU3EWUmOdVLIrdv9g9i5Up0rXqe/Anu1ITinpyY42wiJG7QEa66TSYOeLFKwQ5XSkI+l5xZIe9N1Lt+f1GjYYVYxyHnMa66RGZF9m59WuqrTKaCMZmb5Lr1OKHouxR5XSZh3GjnXSFEtsi3a7uLCwsNi1WnkRV1hlTHK1YGxbVBTKq/WIk4qcrIvwWJyTplgdpqrKeYn2f1ZqSlRn1+efiYBeM0YSet835KQip60HaJyTuGQkVkkNjW7RsHOoGBsZrdit8Mbsmq5TGe+kIruil9STSvwf006pbUnOSEaibQ7YKFml2m55bB6GnFTkx95BocY5SdcpulvV2s71ClunFurbOe0KuW96r+mx2WEoHmcWNZOdmZ5e61xvRaFLq+/Sr8TzFH/82bt7t/cMx+87O/Qzcffw8HBPNyTdgP2+e/eNUikK3O5qE4iaifxziOrziJWVyZVJxPrMw+mvO5+0YjtjUlz56MOPX6B4//NSo/HdnTvf9zY3N3u9/fX19Xv37k9i6JXJ+zMcF6Y5fux01tY6a51WqzXWcrS/AGShj5noGrZMAAAAAElFTkSuQmCC"&gt;                                                     
     &lt;/div&gt;
   &lt;/div&gt;
 
-&lt;div class=&quot;container-lg mt-5 px-3&quot;&gt;
-  &lt;!-- &#39;&quot;&#96; --&gt;&lt;!-- &lt;/textarea&gt;&lt;/xmp&gt; --&gt;&lt;/option&gt;&lt;/form&gt;&lt;form role=&quot;search&quot; data-turbo=&quot;false&quot; action=&quot;/search&quot; accept-charset=&quot;UTF-8&quot; method=&quot;get&quot;&gt;            
-    &lt;label for=&quot;not-found-search&quot; class=&quot;d-block text-normal color-fg-muted mb-1 f4&quot;&gt;Find code, projects, and people on GitHub:&lt;/label&gt;                         
-    &lt;div class=&quot;d-flex flex-items-center&quot;&gt;
-      &lt;input type=&quot;text&quot; name=&quot;q&quot; id=&quot;not-found-search&quot; class=&quot;flex-auto input-lg form-control mr-2&quot;&gt;                                                           
-        &lt;button type=&quot;submit&quot; data-view-component=&quot;true&quot; class=&quot;btn&quot;&gt;    Search 
+&lt;div class="container-lg mt-5 px-3"&gt;
+  &lt;!-- '"&#96; --&gt;&lt;!-- &lt;/textarea&gt;&lt;/xmp&gt; --&gt;&lt;/option&gt;&lt;/form&gt;&lt;form role="search" data-turbo="false" action="/search" accept-charset="UTF-8" method="get"&gt;            
+    &lt;label for="not-found-search" class="d-block text-normal color-fg-muted mb-1 f4"&gt;Find code, projects, and people on GitHub:&lt;/label&gt;                         
+    &lt;div class="d-flex flex-items-center"&gt;
+      &lt;input type="text" name="q" id="not-found-search" class="flex-auto input-lg form-control mr-2"&gt;                                                           
+        &lt;button type="submit" data-view-component="true" class="btn"&gt;    Search 
 &lt;/button&gt;
     &lt;/div&gt;
 &lt;/form&gt;
-    &lt;div class=&quot;mt-5 color-fg-muted text-center&quot;&gt;
-      &lt;a href=&quot;https://support.github.com?tags=dotcom-404&quot; class=&quot;Link--secondary&quot;&gt;Contact Support&lt;/a&gt; &amp;mdash;                                                  
-      &lt;a href=&quot;https://githubstatus.com&quot; class=&quot;Link--secondary&quot;&gt;GitHub Status&lt;/a&gt; &amp;mdash;                                                                      
-      &lt;a href=&quot;https://twitter.com/githubstatus&quot; class=&quot;Link--secondary&quot;&gt;@githubstatus&lt;/a&gt;                                                                      
+    &lt;div class="mt-5 color-fg-muted text-center"&gt;
+      &lt;a href="https://support.github.com?tags=dotcom-404" class="Link--secondary"&gt;Contact Support&lt;/a&gt; &amp;mdash;                                                  
+      &lt;a href="https://githubstatus.com" class="Link--secondary"&gt;GitHub Status&lt;/a&gt; &amp;mdash;                                                                      
+      &lt;a href="https://twitter.com/githubstatus" class="Link--secondary"&gt;@githubstatus&lt;/a&gt;                                                                      
     &lt;/div&gt;
 &lt;/div&gt;
 
@@ -776,18 +776,18 @@ BErGkNYsckuCUm2OiCbaf3ixAeYv23bso43TXu9i6ohdvWzlf2jms0EO6KB7XCdiq2V0N26eERSUhcJj
 
   &lt;/div&gt;
 
-            &lt;footer role=&quot;contentinfo&quot; class=&quot;footer pt-6 position-relative&quot; data-analytics-visible=&quot;{&amp;quot;category&amp;quot;:&amp;quot;Footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;visible&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;text: Marketing footer&amp;quot;}&quot; &gt;   
-  &lt;h2 class=&quot;sr-only&quot;&gt;Site-wide Links&lt;/h2&gt;
-  &lt;div class=&quot;container-xl p-responsive&quot;&gt;
-    &lt;div class=&quot;d-flex flex-wrap py-5 mb-5&quot;&gt;
-      &lt;section class=&quot;col-12 col-lg-4 mb-5 pr-lg-4&quot;&gt;
-        &lt;a href=&quot;/&quot; data-analytics-event=&quot;{&amp;quot;category&amp;quot;:&amp;quot;Footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;go to home&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;text:home&amp;quot;}&quot; class=&quot;color-fg-default d-inline-block&quot; aria-label=&quot;Go to GitHub homepage&quot;&gt;                                                                              
-          &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 367.4 90&quot; class=&quot;footer-logo-mktg d-block&quot; height=&quot;30&quot;&gt;&lt;g fill=&quot;currentColor&quot;&gt;&lt;path d=&quot;m46.1 0c-25.5 0-46.1 20.6-46.1 46.1 0 20.4 13.2 37.7 31.5 43.8 2.3.4 3.2-1 3.2-2.2 0-1.1-.1-4.7-.1-8.6-11.6 2.1-14.6-2.8-15.5-5.4-.5-1.3-2.8-5.4-4.7-6.5-1.6-.9-3.9-3-.1-3.1 3.6-.1 6.2 3.3 7.1 4.7 4.2 7 10.8 5 13.4 3.8.4-3 1.6-5 2.9-6.2-10.3-1.2-21-5.1-21-22.8 0-5 1.8-9.2 4.7-12.4-.5-1.2-2.1-5.9.5-12.2 0 0 3.9-1.2 12.7 4.7 3.7-1 7.6-1.6 11.5-1.6s7.8.5 11.5 1.6c8.8-6 12.7-4.7 12.7-4.7 2.5 6.3.9 11.1.5 12.2 2.9 3.2 4.7 7.3 4.7 12.4 0 17.7-10.8 21.6-21.1 22.8 1.7 1.4 3.1 4.2 3.1 8.5 0 6.2-.1 11.1-.1 12.7 0 1.2.9 2.7 3.2 2.2 18.2-6.1 31.4-23.4 31.4-43.8.3-25.4-20.4-46-45.9-46z&quot;&gt;&lt;/path&gt;&lt;path d=&quot;m221.6 67.1h-.1zm0 0c-.5 0-1.8.3-3.2.3-4.4 0-5.9-2-5.9-4.6v-17.5h8.9c.5 0 .9-.4.9-1.1v-9.5c0-.5-.4-.9-.9-.9h-8.9v-11.7c0-.4-.3-.7-.8-.7h-12c-.5 0-.8.3-.8.7v12.1s-6.1 1.5-6.5 1.6-.7.5-.7.9v7.6c0 .6.4 1.1.9 1.1h6.2v18.3c0 13.6 9.5 15 16 15 3 0 6.5-.9 7.1-1.2.3-.1.5-.5.5-.9v-8.4c.1-.6-.3-1-.8-1.1zm132.2-12.2c0-10.1-4.1-11.4-8.4-11-3.3.2-6 1.9-6 1.9v19.6s2.7 1.9 6.8 2c5.8.2 7.6-1.9 7.6-12.5zm13.6-.9c0 19.1-6.2 24.6-17 24.6-9.1 0-14.1-4.6-14.1-4.6s-.2 2.6-.5 2.9c-.2.3-.4.4-.8.4h-8.3c-.6 0-1.1-.4-1.1-.9l.1-62c0-.5.4-.9.9-.9h11.9c.5 0 .9.4.9.9l-.1 20.9s4.6-3 11.3-3h.1c6.8-0 16.7 2.5 16.7 21.7zm-48.7-20.2h-11.7c-.6 0-.9.4-.9 1.1v30.3s-3.1 2.2-7.3 2.2-5.4-1.9-5.4-6.1v-26.5c0-.5-.4-.9-.9-.9h-11.9c-.5 0-.9.4-.9.9v28.5c0 12.3 6.9 15.3 16.3 15.3 7.8 0 14.1-4.3 14.1-4.3s.3 2.2.4 2.5.5.5.9.5h7.5c.6 0 .9-.4.9-.9l.1-41.7c-.1-.4-.6-.9-1.2-.9zm-132.2 0h-11.9c-.5 0-.9.5-.9 1.1v40.9c0 1.1.7 1.5 1.7 1.5h10.7c1.1 0 1.4-.5 1.4-1.5v-41.1c0-.5-.5-.9-1-.9zm-5.8-18.9c-4.3 0-7.7 3.4-7.7 7.7s3.4 7.7 7.7 7.7c4.2 0 7.6-3.4 7.6-7.7s-3.4-7.7-7.6-7.7zm92-1.4h-11.8c-.5 0-.9.4-.9.9v22.8h-18.5v-22.7c0-.5-.4-.9-.9-.9h-11.9c-.5 0-.9.4-.9.9v62c0 .5.5.9.9.9h11.9c.5 0 .9-.4.9-.9v-26.6h18.5l-.1 26.5c0 .5.4.9.9.9h11.9c.5 0 .9-.4.9-.9v-62c0-.4-.4-.9-.9-.9zm-105.3 27.5v32c0 .2-.1.6-.3.7 0 0-7 5-18.5 5-13.9 0-30.3-4.4-30.3-33 0-28.7 14.4-34.6 28.4-34.5 12.2 0 17.1 2.7 17.8 3.2.2.3.3.5.3.8l-2.3 9.9c0 .5-.5 1.1-1.1.9-2-.6-5-1.8-12.1-1.8-8.2 0-17 2.3-17 20.8s8.4 20.6 14.4 20.6c5.1 0 7-.6 7-.6v-12.8h-8.2c-.6 0-1.1-.4-1.1-.9v-10.3c0-.5.4-.9 1.1-.9h20.9c.6-.1 1 .4 1 .9z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;             
+            &lt;footer role="contentinfo" class="footer pt-6 position-relative" data-analytics-visible="{&amp;quot;category&amp;quot;:&amp;quot;Footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;visible&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;text: Marketing footer&amp;quot;}" &gt;   
+  &lt;h2 class="sr-only"&gt;Site-wide Links&lt;/h2&gt;
+  &lt;div class="container-xl p-responsive"&gt;
+    &lt;div class="d-flex flex-wrap py-5 mb-5"&gt;
+      &lt;section class="col-12 col-lg-4 mb-5 pr-lg-4"&gt;
+        &lt;a href="/" data-analytics-event="{&amp;quot;category&amp;quot;:&amp;quot;Footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;go to home&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;text:home&amp;quot;}" class="color-fg-default d-inline-block" aria-label="Go to GitHub homepage"&gt;                                                                              
+          &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 367.4 90" class="footer-logo-mktg d-block" height="30"&gt;&lt;g fill="currentColor"&gt;&lt;path d="m46.1 0c-25.5 0-46.1 20.6-46.1 46.1 0 20.4 13.2 37.7 31.5 43.8 2.3.4 3.2-1 3.2-2.2 0-1.1-.1-4.7-.1-8.6-11.6 2.1-14.6-2.8-15.5-5.4-.5-1.3-2.8-5.4-4.7-6.5-1.6-.9-3.9-3-.1-3.1 3.6-.1 6.2 3.3 7.1 4.7 4.2 7 10.8 5 13.4 3.8.4-3 1.6-5 2.9-6.2-10.3-1.2-21-5.1-21-22.8 0-5 1.8-9.2 4.7-12.4-.5-1.2-2.1-5.9.5-12.2 0 0 3.9-1.2 12.7 4.7 3.7-1 7.6-1.6 11.5-1.6s7.8.5 11.5 1.6c8.8-6 12.7-4.7 12.7-4.7 2.5 6.3.9 11.1.5 12.2 2.9 3.2 4.7 7.3 4.7 12.4 0 17.7-10.8 21.6-21.1 22.8 1.7 1.4 3.1 4.2 3.1 8.5 0 6.2-.1 11.1-.1 12.7 0 1.2.9 2.7 3.2 2.2 18.2-6.1 31.4-23.4 31.4-43.8.3-25.4-20.4-46-45.9-46z"&gt;&lt;/path&gt;&lt;path d="m221.6 67.1h-.1zm0 0c-.5 0-1.8.3-3.2.3-4.4 0-5.9-2-5.9-4.6v-17.5h8.9c.5 0 .9-.4.9-1.1v-9.5c0-.5-.4-.9-.9-.9h-8.9v-11.7c0-.4-.3-.7-.8-.7h-12c-.5 0-.8.3-.8.7v12.1s-6.1 1.5-6.5 1.6-.7.5-.7.9v7.6c0 .6.4 1.1.9 1.1h6.2v18.3c0 13.6 9.5 15 16 15 3 0 6.5-.9 7.1-1.2.3-.1.5-.5.5-.9v-8.4c.1-.6-.3-1-.8-1.1zm132.2-12.2c0-10.1-4.1-11.4-8.4-11-3.3.2-6 1.9-6 1.9v19.6s2.7 1.9 6.8 2c5.8.2 7.6-1.9 7.6-12.5zm13.6-.9c0 19.1-6.2 24.6-17 24.6-9.1 0-14.1-4.6-14.1-4.6s-.2 2.6-.5 2.9c-.2.3-.4.4-.8.4h-8.3c-.6 0-1.1-.4-1.1-.9l.1-62c0-.5.4-.9.9-.9h11.9c.5 0 .9.4.9.9l-.1 20.9s4.6-3 11.3-3h.1c6.8-0 16.7 2.5 16.7 21.7zm-48.7-20.2h-11.7c-.6 0-.9.4-.9 1.1v30.3s-3.1 2.2-7.3 2.2-5.4-1.9-5.4-6.1v-26.5c0-.5-.4-.9-.9-.9h-11.9c-.5 0-.9.4-.9.9v28.5c0 12.3 6.9 15.3 16.3 15.3 7.8 0 14.1-4.3 14.1-4.3s.3 2.2.4 2.5.5.5.9.5h7.5c.6 0 .9-.4.9-.9l.1-41.7c-.1-.4-.6-.9-1.2-.9zm-132.2 0h-11.9c-.5 0-.9.5-.9 1.1v40.9c0 1.1.7 1.5 1.7 1.5h10.7c1.1 0 1.4-.5 1.4-1.5v-41.1c0-.5-.5-.9-1-.9zm-5.8-18.9c-4.3 0-7.7 3.4-7.7 7.7s3.4 7.7 7.7 7.7c4.2 0 7.6-3.4 7.6-7.7s-3.4-7.7-7.6-7.7zm92-1.4h-11.8c-.5 0-.9.4-.9.9v22.8h-18.5v-22.7c0-.5-.4-.9-.9-.9h-11.9c-.5 0-.9.4-.9.9v62c0 .5.5.9.9.9h11.9c.5 0 .9-.4.9-.9v-26.6h18.5l-.1 26.5c0 .5.4.9.9.9h11.9c.5 0 .9-.4.9-.9v-62c0-.4-.4-.9-.9-.9zm-105.3 27.5v32c0 .2-.1.6-.3.7 0 0-7 5-18.5 5-13.9 0-30.3-4.4-30.3-33 0-28.7 14.4-34.6 28.4-34.5 12.2 0 17.1 2.7 17.8 3.2.2.3.3.5.3.8l-2.3 9.9c0 .5-.5 1.1-1.1.9-2-.6-5-1.8-12.1-1.8-8.2 0-17 2.3-17 20.8s8.4 20.6 14.4 20.6c5.1 0 7-.6 7-.6v-12.8h-8.2c-.6 0-1.1-.4-1.1-.9v-10.3c0-.5.4-.9 1.1-.9h20.9c.6-.1 1 .4 1 .9z"&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;             
         &lt;/a&gt;
 
-        &lt;h3 class=&quot;h5 mt-4 mb-0&quot; id=&quot;subscribe-to-newsletter&quot;&gt;Subscribe to our developer newsletter&lt;/h3&gt;                                                        
-        &lt;p class=&quot;f5 color-fg-muted mb-3&quot;&gt;Get tips, technical guides, and best practices. Twice a month.&lt;/p&gt;                                                    
-          &lt;a class=&quot;btn-mktg mb-4 btn-muted-mktg&quot; data-analytics-event=&quot;{&amp;quot;category&amp;quot;:&amp;quot;Subscribe&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;click to Subscribe&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;ref_cta:Subscribe;&amp;quot;}&quot; href=&quot;https://github.com/newsletter&quot;&gt;                                                                  
+        &lt;h3 class="h5 mt-4 mb-0" id="subscribe-to-newsletter"&gt;Subscribe to our developer newsletter&lt;/h3&gt;                                                        
+        &lt;p class="f5 color-fg-muted mb-3"&gt;Get tips, technical guides, and best practices. Twice a month.&lt;/p&gt;                                                    
+          &lt;a class="btn-mktg mb-4 btn-muted-mktg" data-analytics-event="{&amp;quot;category&amp;quot;:&amp;quot;Subscribe&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;click to Subscribe&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;ref_cta:Subscribe;&amp;quot;}" href="https://github.com/newsletter"&gt;                                                                  
   Subscribe
 
 
@@ -795,187 +795,187 @@ BErGkNYsckuCUm2OiCbaf3ixAeYv23bso43TXu9i6ohdvWzlf2jms0EO6KB7XCdiq2V0N26eERSUhcJj
 
       &lt;/section&gt;
 
-      &lt;nav class=&quot;col-6 col-sm-3 col-lg-2 mb-6 mb-md-2 pr-3 pr-lg-0 pl-lg-4&quot; aria-labelledby=&quot;footer-title-product&quot;&gt;                                            
-        &lt;h3 class=&quot;h5 mb-3 text-mono color-fg-muted text-normal&quot; id=&quot;footer-title-product&quot;&gt;                                                                     
+      &lt;nav class="col-6 col-sm-3 col-lg-2 mb-6 mb-md-2 pr-3 pr-lg-0 pl-lg-4" aria-labelledby="footer-title-product"&gt;                                            
+        &lt;h3 class="h5 mb-3 text-mono color-fg-muted text-normal" id="footer-title-product"&gt;                                                                     
           Platform
         &lt;/h3&gt;
 
-        &lt;ul class=&quot;list-style-none color-fg-muted f5&quot;&gt;
-          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
-            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;features&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;platform&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;features_link_platform_footer&amp;quot;}&quot; href=&quot;/features&quot;&gt;Features&lt;/a&gt;             
+        &lt;ul class="list-style-none color-fg-muted f5"&gt;
+          &lt;li class="lh-condensed mb-3"&gt;
+            &lt;a class="Link--secondary" data-analytics-event="{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;features&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;platform&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;features_link_platform_footer&amp;quot;}" href="/features"&gt;Features&lt;/a&gt;             
           &lt;/li&gt;
-          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
-            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;enterprise&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;platform&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;enterprise_link_platform_footer&amp;quot;}&quot; href=&quot;/enterprise&quot;&gt;Enterprise&lt;/a&gt;     
+          &lt;li class="lh-condensed mb-3"&gt;
+            &lt;a class="Link--secondary" data-analytics-event="{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;enterprise&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;platform&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;enterprise_link_platform_footer&amp;quot;}" href="/enterprise"&gt;Enterprise&lt;/a&gt;     
           &lt;/li&gt;
-          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
-            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;copilot&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;platform&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;copilot_link_platform_footer&amp;quot;}&quot; href=&quot;/features/copilot&quot;&gt;Copilot&lt;/a&gt;        
+          &lt;li class="lh-condensed mb-3"&gt;
+            &lt;a class="Link--secondary" data-analytics-event="{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;copilot&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;platform&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;copilot_link_platform_footer&amp;quot;}" href="/features/copilot"&gt;Copilot&lt;/a&gt;        
           &lt;/li&gt;
-          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
-            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;ai&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;platform&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;ai_link_platform_footer&amp;quot;}&quot; href=&quot;/features/ai&quot;&gt;AI&lt;/a&gt;                            
+          &lt;li class="lh-condensed mb-3"&gt;
+            &lt;a class="Link--secondary" data-analytics-event="{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;ai&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;platform&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;ai_link_platform_footer&amp;quot;}" href="/features/ai"&gt;AI&lt;/a&gt;                            
           &lt;/li&gt;
-          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
-            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;security&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;platform&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;security_link_platform_footer&amp;quot;}&quot; href=&quot;/security&quot;&gt;Security&lt;/a&gt;             
+          &lt;li class="lh-condensed mb-3"&gt;
+            &lt;a class="Link--secondary" data-analytics-event="{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;security&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;platform&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;security_link_platform_footer&amp;quot;}" href="/security"&gt;Security&lt;/a&gt;             
           &lt;/li&gt;
-          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
-            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;pricing&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;platform&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;pricing_link_platform_footer&amp;quot;}&quot; href=&quot;/pricing&quot;&gt;Pricing&lt;/a&gt;                 
+          &lt;li class="lh-condensed mb-3"&gt;
+            &lt;a class="Link--secondary" data-analytics-event="{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;pricing&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;platform&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;pricing_link_platform_footer&amp;quot;}" href="/pricing"&gt;Pricing&lt;/a&gt;                 
           &lt;/li&gt;
-          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
-            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;team&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;platform&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;team_link_platform_footer&amp;quot;}&quot; href=&quot;/team&quot;&gt;Team&lt;/a&gt;                             
+          &lt;li class="lh-condensed mb-3"&gt;
+            &lt;a class="Link--secondary" data-analytics-event="{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;team&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;platform&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;team_link_platform_footer&amp;quot;}" href="/team"&gt;Team&lt;/a&gt;                             
           &lt;/li&gt;
-          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
-            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;resources&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;platform&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;resources_link_platform_footer&amp;quot;}&quot; href=&quot;https://resources.github.com&quot;&gt;Resources&lt;/a&gt;                                                                       
+          &lt;li class="lh-condensed mb-3"&gt;
+            &lt;a class="Link--secondary" data-analytics-event="{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;resources&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;platform&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;resources_link_platform_footer&amp;quot;}" href="https://resources.github.com"&gt;Resources&lt;/a&gt;                                                                       
           &lt;/li&gt;
-          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
-            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;roadmap&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;platform&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;roadmap_link_platform_footer&amp;quot;}&quot; href=&quot;https://github.com/github/roadmap&quot;&gt;Roadmap&lt;/a&gt;                                                                        
+          &lt;li class="lh-condensed mb-3"&gt;
+            &lt;a class="Link--secondary" data-analytics-event="{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;roadmap&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;platform&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;roadmap_link_platform_footer&amp;quot;}" href="https://github.com/github/roadmap"&gt;Roadmap&lt;/a&gt;                                                                        
           &lt;/li&gt;
-          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
-            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;compare&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;platform&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;compare_link_platform_footer&amp;quot;}&quot; href=&quot;https://resources.github.com/devops/tools/compare&quot;&gt;Compare GitHub&lt;/a&gt;                                                 
+          &lt;li class="lh-condensed mb-3"&gt;
+            &lt;a class="Link--secondary" data-analytics-event="{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;compare&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;platform&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;compare_link_platform_footer&amp;quot;}" href="https://resources.github.com/devops/tools/compare"&gt;Compare GitHub&lt;/a&gt;                                                 
           &lt;/li&gt;
         &lt;/ul&gt;
       &lt;/nav&gt;
 
-      &lt;nav class=&quot;col-6 col-sm-3 col-lg-2 mb-6 mb-md-2 pr-3 pr-md-0 pl-md-4&quot; aria-labelledby=&quot;footer-title-platform&quot;&gt;                                           
-        &lt;h3 class=&quot;h5 mb-3 text-mono color-fg-muted text-normal&quot; id=&quot;footer-title-platform&quot;&gt;                                                                    
+      &lt;nav class="col-6 col-sm-3 col-lg-2 mb-6 mb-md-2 pr-3 pr-md-0 pl-md-4" aria-labelledby="footer-title-platform"&gt;                                           
+        &lt;h3 class="h5 mb-3 text-mono color-fg-muted text-normal" id="footer-title-platform"&gt;                                                                    
           Ecosystem
         &lt;/h3&gt;
 
-        &lt;ul class=&quot;list-style-none f5&quot;&gt;
-          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
-            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;dev-api&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;ecosystem&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;dev-api_link_ecosystem_footer&amp;quot;}&quot; href=&quot;https://docs.github.com/get-started/exploring-integrations/about-building-integrations&quot;&gt;Developer API&lt;/a&gt;           
+        &lt;ul class="list-style-none f5"&gt;
+          &lt;li class="lh-condensed mb-3"&gt;
+            &lt;a class="Link--secondary" data-analytics-event="{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;dev-api&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;ecosystem&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;dev-api_link_ecosystem_footer&amp;quot;}" href="https://docs.github.com/get-started/exploring-integrations/about-building-integrations"&gt;Developer API&lt;/a&gt;           
           &lt;/li&gt;
-          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
-            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;partners&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;ecosystem&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;partners_link_ecosystem_footer&amp;quot;}&quot; href=&quot;https://partner.github.com&quot;&gt;Partners&lt;/a&gt;                                                                          
+          &lt;li class="lh-condensed mb-3"&gt;
+            &lt;a class="Link--secondary" data-analytics-event="{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;partners&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;ecosystem&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;partners_link_ecosystem_footer&amp;quot;}" href="https://partner.github.com"&gt;Partners&lt;/a&gt;                                                                          
           &lt;/li&gt;
-          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
-            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;edu&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;ecosystem&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;edu_link_ecosystem_footer&amp;quot;}&quot; href=&quot;https://github.com/edu&quot;&gt;Education&lt;/a&gt;       
+          &lt;li class="lh-condensed mb-3"&gt;
+            &lt;a class="Link--secondary" data-analytics-event="{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;edu&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;ecosystem&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;edu_link_ecosystem_footer&amp;quot;}" href="https://github.com/edu"&gt;Education&lt;/a&gt;       
           &lt;/li&gt;
-          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
-            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;cli&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;ecosystem&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;cli_link_ecosystem_footer&amp;quot;}&quot; href=&quot;https://cli.github.com&quot;&gt;GitHub CLI&lt;/a&gt;      
+          &lt;li class="lh-condensed mb-3"&gt;
+            &lt;a class="Link--secondary" data-analytics-event="{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;cli&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;ecosystem&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;cli_link_ecosystem_footer&amp;quot;}" href="https://cli.github.com"&gt;GitHub CLI&lt;/a&gt;      
           &lt;/li&gt;
-          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
-            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;desktop&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;ecosystem&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;desktop_link_ecosystem_footer&amp;quot;}&quot; href=&quot;https://desktop.github.com&quot;&gt;GitHub Desktop&lt;/a&gt;                                                                      
+          &lt;li class="lh-condensed mb-3"&gt;
+            &lt;a class="Link--secondary" data-analytics-event="{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;desktop&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;ecosystem&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;desktop_link_ecosystem_footer&amp;quot;}" href="https://desktop.github.com"&gt;GitHub Desktop&lt;/a&gt;                                                                      
           &lt;/li&gt;
-          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
-            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;mobile&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;ecosystem&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;mobile_link_ecosystem_footer&amp;quot;}&quot; href=&quot;https://github.com/mobile&quot;&gt;GitHub Mobile&lt;/a&gt;                                                                          
+          &lt;li class="lh-condensed mb-3"&gt;
+            &lt;a class="Link--secondary" data-analytics-event="{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;mobile&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;ecosystem&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;mobile_link_ecosystem_footer&amp;quot;}" href="https://github.com/mobile"&gt;GitHub Mobile&lt;/a&gt;                                                                          
           &lt;/li&gt;
-          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
-            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;marketplace&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;ecosystem&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;marketplace_link_ecosystem_footer&amp;quot;}&quot; href=&quot;https://github.com/marketplace&quot;&gt;GitHub Marketplace&lt;/a&gt;                                                      
+          &lt;li class="lh-condensed mb-3"&gt;
+            &lt;a class="Link--secondary" data-analytics-event="{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;marketplace&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;ecosystem&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;marketplace_link_ecosystem_footer&amp;quot;}" href="https://github.com/marketplace"&gt;GitHub Marketplace&lt;/a&gt;                                                      
           &lt;/li&gt;
-          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
-            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;mcp_registry&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;ecosystem&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;mcp_registry_link_ecosystem_footer&amp;quot;}&quot; href=&quot;https://github.com/mcp&quot;&gt;MCP Registry&lt;/a&gt;                                                                  
+          &lt;li class="lh-condensed mb-3"&gt;
+            &lt;a class="Link--secondary" data-analytics-event="{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;mcp_registry&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;ecosystem&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;mcp_registry_link_ecosystem_footer&amp;quot;}" href="https://github.com/mcp"&gt;MCP Registry&lt;/a&gt;                                                                  
           &lt;/li&gt;
         &lt;/ul&gt;
       &lt;/nav&gt;
 
-      &lt;nav class=&quot;col-6 col-sm-3 col-lg-2 mb-6 mb-md-2 pr-3 pr-md-0 pl-md-4&quot; aria-labelledby=&quot;footer-title-support&quot;&gt;                                            
-        &lt;h3 class=&quot;h5 mb-3 text-mono color-fg-muted text-normal&quot; id=&quot;footer-title-support&quot;&gt;                                                                     
+      &lt;nav class="col-6 col-sm-3 col-lg-2 mb-6 mb-md-2 pr-3 pr-md-0 pl-md-4" aria-labelledby="footer-title-support"&gt;                                            
+        &lt;h3 class="h5 mb-3 text-mono color-fg-muted text-normal" id="footer-title-support"&gt;                                                                     
           Support
         &lt;/h3&gt;
 
-        &lt;ul class=&quot;list-style-none f5&quot;&gt;
-          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
-            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;docs&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;support&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;docs_link_support_footer&amp;quot;}&quot; href=&quot;https://docs.github.com&quot;&gt;Docs&lt;/a&gt;             
+        &lt;ul class="list-style-none f5"&gt;
+          &lt;li class="lh-condensed mb-3"&gt;
+            &lt;a class="Link--secondary" data-analytics-event="{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;docs&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;support&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;docs_link_support_footer&amp;quot;}" href="https://docs.github.com"&gt;Docs&lt;/a&gt;             
           &lt;/li&gt;
 
-          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
-            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;community&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;support&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;community_link_support_footer&amp;quot;}&quot; href=&quot;https://github.community&quot;&gt;Community Forum&lt;/a&gt;                                                                       
+          &lt;li class="lh-condensed mb-3"&gt;
+            &lt;a class="Link--secondary" data-analytics-event="{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;community&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;support&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;community_link_support_footer&amp;quot;}" href="https://github.community"&gt;Community Forum&lt;/a&gt;                                                                       
           &lt;/li&gt;
 
-          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
-            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;services&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;support&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;services_link_support_footer&amp;quot;}&quot; href=&quot;https://services.github.com&quot;&gt;Professional Services&lt;/a&gt;                                                                
+          &lt;li class="lh-condensed mb-3"&gt;
+            &lt;a class="Link--secondary" data-analytics-event="{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;services&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;support&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;services_link_support_footer&amp;quot;}" href="https://services.github.com"&gt;Professional Services&lt;/a&gt;                                                                
           &lt;/li&gt;
 
-          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
-            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;premium_support&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;support&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;premium_support_link_support_footer&amp;quot;}&quot; href=&quot;/enterprise/premium-support&quot;&gt;Premium Support&lt;/a&gt;                                                        
+          &lt;li class="lh-condensed mb-3"&gt;
+            &lt;a class="Link--secondary" data-analytics-event="{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;premium_support&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;support&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;premium_support_link_support_footer&amp;quot;}" href="/enterprise/premium-support"&gt;Premium Support&lt;/a&gt;                                                        
           &lt;/li&gt;
 
-          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
-            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;skills&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;support&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;skills_link_support_footer&amp;quot;}&quot; href=&quot;https://skills.github.com&quot;&gt;Skills&lt;/a&gt;     
+          &lt;li class="lh-condensed mb-3"&gt;
+            &lt;a class="Link--secondary" data-analytics-event="{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;skills&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;support&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;skills_link_support_footer&amp;quot;}" href="https://skills.github.com"&gt;Skills&lt;/a&gt;     
           &lt;/li&gt;
 
-          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
-            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;status&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;support&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;status_link_support_footer&amp;quot;}&quot; href=&quot;https://www.githubstatus.com&quot;&gt;Status&lt;/a&gt;  
+          &lt;li class="lh-condensed mb-3"&gt;
+            &lt;a class="Link--secondary" data-analytics-event="{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;status&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;support&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;status_link_support_footer&amp;quot;}" href="https://www.githubstatus.com"&gt;Status&lt;/a&gt;  
           &lt;/li&gt;
 
-          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
-            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;contact_github&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;support&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;contact_github_link_support_footer&amp;quot;}&quot; href=&quot;https://support.github.com?tags=dotcom-footer&quot;&gt;Contact GitHub&lt;/a&gt;                                         
+          &lt;li class="lh-condensed mb-3"&gt;
+            &lt;a class="Link--secondary" data-analytics-event="{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;contact_github&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;support&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;contact_github_link_support_footer&amp;quot;}" href="https://support.github.com?tags=dotcom-footer"&gt;Contact GitHub&lt;/a&gt;                                         
           &lt;/li&gt;
         &lt;/ul&gt;
       &lt;/nav&gt;
 
-      &lt;nav class=&quot;col-6 col-sm-3 col-lg-2 mb-6 mb-md-2 pr-3 pr-md-0 pl-md-4&quot; aria-labelledby=&quot;footer-title-company&quot;&gt;                                            
-        &lt;h3 class=&quot;h5 mb-3 text-mono color-fg-muted text-normal&quot; id=&quot;footer-title-company&quot;&gt;                                                                     
+      &lt;nav class="col-6 col-sm-3 col-lg-2 mb-6 mb-md-2 pr-3 pr-md-0 pl-md-4" aria-labelledby="footer-title-company"&gt;                                            
+        &lt;h3 class="h5 mb-3 text-mono color-fg-muted text-normal" id="footer-title-company"&gt;                                                                     
           Company
         &lt;/h3&gt;
 
-        &lt;ul class=&quot;list-style-none f5&quot;&gt;
-          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
-            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;about&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;company&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;about_link_company_footer&amp;quot;}&quot; href=&quot;https://github.com/about&quot;&gt;About&lt;/a&gt;         
+        &lt;ul class="list-style-none f5"&gt;
+          &lt;li class="lh-condensed mb-3"&gt;
+            &lt;a class="Link--secondary" data-analytics-event="{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;about&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;company&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;about_link_company_footer&amp;quot;}" href="https://github.com/about"&gt;About&lt;/a&gt;         
           &lt;/li&gt;
-          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
-            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;why_github&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;company&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;why_github_link_company_footer&amp;quot;}&quot; href=&quot;https://github.com/why-github&quot;&gt;Why GitHub&lt;/a&gt;                                                                     
+          &lt;li class="lh-condensed mb-3"&gt;
+            &lt;a class="Link--secondary" data-analytics-event="{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;why_github&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;company&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;why_github_link_company_footer&amp;quot;}" href="https://github.com/why-github"&gt;Why GitHub&lt;/a&gt;                                                                     
           &lt;/li&gt;
-          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
-            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;customer_stories&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;company&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;customer_stories_link_company_footer&amp;quot;}&quot; href=&quot;/customer-stories?type=enterprise&quot;&gt;Customer stories&lt;/a&gt;                                               
+          &lt;li class="lh-condensed mb-3"&gt;
+            &lt;a class="Link--secondary" data-analytics-event="{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;customer_stories&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;company&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;customer_stories_link_company_footer&amp;quot;}" href="/customer-stories?type=enterprise"&gt;Customer stories&lt;/a&gt;                                               
           &lt;/li&gt;
-          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
-            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;blog&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;company&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;blog_link_company_footer&amp;quot;}&quot; href=&quot;https://github.blog&quot;&gt;Blog&lt;/a&gt;                 
+          &lt;li class="lh-condensed mb-3"&gt;
+            &lt;a class="Link--secondary" data-analytics-event="{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;blog&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;company&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;blog_link_company_footer&amp;quot;}" href="https://github.blog"&gt;Blog&lt;/a&gt;                 
           &lt;/li&gt;
-          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
-            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;readme&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;company&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;readme_link_company_footer&amp;quot;}&quot; href=&quot;/readme&quot;&gt;The ReadME Project&lt;/a&gt;           
+          &lt;li class="lh-condensed mb-3"&gt;
+            &lt;a class="Link--secondary" data-analytics-event="{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;readme&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;company&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;readme_link_company_footer&amp;quot;}" href="/readme"&gt;The ReadME Project&lt;/a&gt;           
           &lt;/li&gt;
-          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
-            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;careers&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;company&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;careers_link_company_footer&amp;quot;}&quot; href=&quot;https://github.careers&quot;&gt;Careers&lt;/a&gt;     
+          &lt;li class="lh-condensed mb-3"&gt;
+            &lt;a class="Link--secondary" data-analytics-event="{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;careers&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;company&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;careers_link_company_footer&amp;quot;}" href="https://github.careers"&gt;Careers&lt;/a&gt;     
           &lt;/li&gt;
-          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
-            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;newsroom&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;company&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;newsroom_link_company_footer&amp;quot;}&quot; href=&quot;/newsroom&quot;&gt;Newsroom&lt;/a&gt;               
+          &lt;li class="lh-condensed mb-3"&gt;
+            &lt;a class="Link--secondary" data-analytics-event="{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;newsroom&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;company&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;newsroom_link_company_footer&amp;quot;}" href="/newsroom"&gt;Newsroom&lt;/a&gt;               
           &lt;/li&gt;
-          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
-            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;inclusion&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;company&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;inclusion_link_company_footer&amp;quot;}&quot; href=&quot;/about/diversity&quot;&gt;Inclusion&lt;/a&gt;     
+          &lt;li class="lh-condensed mb-3"&gt;
+            &lt;a class="Link--secondary" data-analytics-event="{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;inclusion&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;company&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;inclusion_link_company_footer&amp;quot;}" href="/about/diversity"&gt;Inclusion&lt;/a&gt;     
           &lt;/li&gt;
-          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
-            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;social_impact&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;company&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;social_impact_link_company_footer&amp;quot;}&quot; href=&quot;https://socialimpact.github.com&quot;&gt;Social Impact&lt;/a&gt;                                                          
+          &lt;li class="lh-condensed mb-3"&gt;
+            &lt;a class="Link--secondary" data-analytics-event="{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;social_impact&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;company&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;social_impact_link_company_footer&amp;quot;}" href="https://socialimpact.github.com"&gt;Social Impact&lt;/a&gt;                                                          
           &lt;/li&gt;
-          &lt;li class=&quot;lh-condensed mb-3&quot;&gt;
-            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;shop&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;company&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;shop_link_company_footer&amp;quot;}&quot; href=&quot;https://shop.github.com&quot;&gt;Shop&lt;/a&gt;             
+          &lt;li class="lh-condensed mb-3"&gt;
+            &lt;a class="Link--secondary" data-analytics-event="{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;shop&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;company&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;shop_link_company_footer&amp;quot;}" href="https://shop.github.com"&gt;Shop&lt;/a&gt;             
           &lt;/li&gt;
         &lt;/ul&gt;
       &lt;/nav&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 
-  &lt;div class=&quot;color-bg-subtle&quot;&gt;
-    &lt;div class=&quot;container-xl p-responsive f6 py-4 d-md-flex flex-justify-between flex-items-center gap-3&quot;&gt;                                                      
-      &lt;nav aria-label=&quot;Legal and Resource Links&quot;&gt;
-        &lt;ul class=&quot;list-style-none d-flex flex-wrap color-fg-muted gapx-3&quot;&gt;     
+  &lt;div class="color-bg-subtle"&gt;
+    &lt;div class="container-xl p-responsive f6 py-4 d-md-flex flex-justify-between flex-items-center gap-3"&gt;                                                      
+      &lt;nav aria-label="Legal and Resource Links"&gt;
+        &lt;ul class="list-style-none d-flex flex-wrap color-fg-muted gapx-3"&gt;     
           &lt;li&gt;
-            &amp;copy; &lt;time datetime=&quot;2025&quot;&gt;2025&lt;/time&gt; GitHub, Inc.
+            &amp;copy; &lt;time datetime="2025"&gt;2025&lt;/time&gt; GitHub, Inc.
           &lt;/li&gt;
 
           &lt;li&gt;
-            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;terms&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;subfooter&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;terms_link_subfooter_footer&amp;quot;}&quot; href=&quot;https://docs.github.com/site-policy/github-terms/github-terms-of-service&quot;&gt;Terms&lt;/a&gt;                                     
+            &lt;a class="Link--secondary" data-analytics-event="{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;terms&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;subfooter&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;terms_link_subfooter_footer&amp;quot;}" href="https://docs.github.com/site-policy/github-terms/github-terms-of-service"&gt;Terms&lt;/a&gt;                                     
           &lt;/li&gt;
 
           &lt;li&gt;
-            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;privacy&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;subfooter&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;privacy_link_subfooter_footer&amp;quot;}&quot; href=&quot;https://docs.github.com/site-policy/privacy-policies/github-privacy-statement&quot;&gt;Privacy&lt;/a&gt;                          
-            &lt;a href=&quot;https://github.com/github/site-policy/pull/582&quot; class=&quot;Link--secondary&quot;&gt;(Updated 02/2024)&lt;time datetime=&quot;2024-02&quot; class=&quot;sr-only&quot;&gt;02/2024&lt;/time&gt;&lt;/a&gt;                                                                       
+            &lt;a class="Link--secondary" data-analytics-event="{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;privacy&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;subfooter&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;privacy_link_subfooter_footer&amp;quot;}" href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement"&gt;Privacy&lt;/a&gt;                          
+            &lt;a href="https://github.com/github/site-policy/pull/582" class="Link--secondary"&gt;(Updated 02/2024)&lt;time datetime="2024-02" class="sr-only"&gt;02/2024&lt;/time&gt;&lt;/a&gt;                                                                       
           &lt;/li&gt;
 
           &lt;li&gt;
-            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;sitemap&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;subfooter&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;sitemap_link_subfooter_footer&amp;quot;}&quot; href=&quot;/sitemap&quot;&gt;Sitemap&lt;/a&gt;               
+            &lt;a class="Link--secondary" data-analytics-event="{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;sitemap&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;subfooter&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;sitemap_link_subfooter_footer&amp;quot;}" href="/sitemap"&gt;Sitemap&lt;/a&gt;               
           &lt;/li&gt;
 
           &lt;li&gt;
-            &lt;a class=&quot;Link--secondary&quot; data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;what_is_git&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;subfooter&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;what_is_git_link_subfooter_footer&amp;quot;}&quot; href=&quot;/git-guides&quot;&gt;What is Git?&lt;/a&gt;                                                                               
+            &lt;a class="Link--secondary" data-analytics-event="{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;what_is_git&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;subfooter&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;what_is_git_link_subfooter_footer&amp;quot;}" href="/git-guides"&gt;What is Git?&lt;/a&gt;                                                                               
           &lt;/li&gt;
 
             &lt;li &gt;
   &lt;cookie-consent-link&gt;
     &lt;button
-      type=&quot;button&quot;
-      class=&quot;Link--secondary underline-on-hover border-0 p-0 color-bg-transparent&quot;                                                                              
-      data-action=&quot;click:cookie-consent-link#showConsentManagement&quot;
-      data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;cookies&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;subfooter&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;cookies_link_subfooter_footer&amp;quot;}&quot;                                                                            
+      type="button"
+      class="Link--secondary underline-on-hover border-0 p-0 color-bg-transparent"                                                                              
+      data-action="click:cookie-consent-link#showConsentManagement"
+      data-analytics-event="{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;cookies&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;subfooter&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;cookies_link_subfooter_footer&amp;quot;}"                                                                            
     &gt;
        Manage cookies
     &lt;/button&gt;
@@ -985,10 +985,10 @@ BErGkNYsckuCUm2OiCbaf3ixAeYv23bso43TXu9i6ohdvWzlf2jms0EO6KB7XCdiq2V0N26eERSUhcJj
 &lt;li&gt;
   &lt;cookie-consent-link&gt;
     &lt;button
-      type=&quot;button&quot;
-      class=&quot;Link--secondary underline-on-hover border-0 p-0 color-bg-transparent text-left&quot;                                                                    
-      data-action=&quot;click:cookie-consent-link#showConsentManagement&quot;
-      data-analytics-event=&quot;{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;dont_share_info&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;subfooter&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;dont_share_info_link_subfooter_footer&amp;quot;}&quot;                                                            
+      type="button"
+      class="Link--secondary underline-on-hover border-0 p-0 color-bg-transparent text-left"                                                                    
+      data-action="click:cookie-consent-link#showConsentManagement"
+      data-analytics-event="{&amp;quot;location&amp;quot;:&amp;quot;footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;dont_share_info&amp;quot;,&amp;quot;context&amp;quot;:&amp;quot;subfooter&amp;quot;,&amp;quot;tag&amp;quot;:&amp;quot;link&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;dont_share_info_link_subfooter_footer&amp;quot;}"                                                            
     &gt;
       Do not share my personal information
     &lt;/button&gt;
@@ -998,49 +998,49 @@ BErGkNYsckuCUm2OiCbaf3ixAeYv23bso43TXu9i6ohdvWzlf2jms0EO6KB7XCdiq2V0N26eERSUhcJj
         &lt;/ul&gt;
       &lt;/nav&gt;
 
-      &lt;nav aria-label=&quot;GitHub&amp;#39;s Social Media Links&quot; class=&quot;footer-social mt-3 mt-md-0 d-flex gapx-6 gapy-1 flex-wrap flex-items-center flex-lg-justify-end&quot;&gt;
+      &lt;nav aria-label="GitHub&amp;#39;s Social Media Links" class="footer-social mt-3 mt-md-0 d-flex gapx-6 gapy-1 flex-wrap flex-items-center flex-lg-justify-end"&gt;
 
-&lt;ul class=&quot;list-style-none d-flex flex-items-center lh-condensed-ultra gap-3&quot;&gt;  
+&lt;ul class="list-style-none d-flex flex-items-center lh-condensed-ultra gap-3"&gt;  
     &lt;li&gt;
-      &lt;a href=&quot;https://www.linkedin.com/company/github&quot; class=&quot;footer-social-icon d-block Link--outlineOffset&quot; data-analytics-event=&quot;{&amp;quot;category&amp;quot;:&amp;quot;Footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;go to Linkedin&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;text:linkedin&amp;quot;}&quot;&gt;                                                      
-        &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 19 18&quot; aria-hidden=&quot;true&quot; class=&quot;d-block&quot; width=&quot;19&quot; height=&quot;18&quot;&gt;&lt;path d=&quot;M3.94 2A2 2 0 1 1 2 0a2 2 0 0 1 1.94 2zM4 5.48H0V18h4zm6.32 0H6.34V18h3.94v-6.57c0-3.66 4.77-4 4.77 0V18H19v-7.93c0-6.17-7.06-5.94-8.72-2.91z&quot; fill=&quot;currentColor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;         
-        &lt;span class=&quot;sr-only&quot;&gt;GitHub on LinkedIn&lt;/span&gt;
+      &lt;a href="https://www.linkedin.com/company/github" class="footer-social-icon d-block Link--outlineOffset" data-analytics-event="{&amp;quot;category&amp;quot;:&amp;quot;Footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;go to Linkedin&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;text:linkedin&amp;quot;}"&gt;                                                      
+        &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 18" aria-hidden="true" class="d-block" width="19" height="18"&gt;&lt;path d="M3.94 2A2 2 0 1 1 2 0a2 2 0 0 1 1.94 2zM4 5.48H0V18h4zm6.32 0H6.34V18h3.94v-6.57c0-3.66 4.77-4 4.77 0V18H19v-7.93c0-6.17-7.06-5.94-8.72-2.91z" fill="currentColor"&gt;&lt;/path&gt;&lt;/svg&gt;         
+        &lt;span class="sr-only"&gt;GitHub on LinkedIn&lt;/span&gt;
       &lt;/a&gt;
     &lt;/li&gt;
     &lt;li&gt;
-      &lt;a href=&quot;https://www.instagram.com/github&quot; class=&quot;footer-social-icon d-block Link--outlineOffset&quot; data-analytics-event=&quot;{&amp;quot;category&amp;quot;:&amp;quot;Footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;go to Instagram&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;text:instagram&amp;quot;}&quot;&gt;                                                           
-        &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; role=&quot;img&quot; viewBox=&quot;0 0 24 24&quot; aria-hidden=&quot;true&quot; class=&quot;d-block&quot; width=&quot;18&quot; height=&quot;18&quot;&gt;&lt;title&gt;Instagram&lt;/title&gt;&lt;path d=&quot;M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z&quot; fill=&quot;currentColor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;                    
-        &lt;span class=&quot;sr-only&quot;&gt;GitHub on Instagram&lt;/span&gt;
+      &lt;a href="https://www.instagram.com/github" class="footer-social-icon d-block Link--outlineOffset" data-analytics-event="{&amp;quot;category&amp;quot;:&amp;quot;Footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;go to Instagram&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;text:instagram&amp;quot;}"&gt;                                                           
+        &lt;svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" aria-hidden="true" class="d-block" width="18" height="18"&gt;&lt;title&gt;Instagram&lt;/title&gt;&lt;path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" fill="currentColor"&gt;&lt;/path&gt;&lt;/svg&gt;                    
+        &lt;span class="sr-only"&gt;GitHub on Instagram&lt;/span&gt;
       &lt;/a&gt;
     &lt;/li&gt;
     &lt;li&gt;
-      &lt;a href=&quot;https://www.youtube.com/github&quot; class=&quot;footer-social-icon d-block Link--outlineOffset&quot; data-analytics-event=&quot;{&amp;quot;category&amp;quot;:&amp;quot;Footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;go to YouTube&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;text:youtube&amp;quot;}&quot;&gt;                                                                 
-        &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 19.17 13.6&quot; aria-hidden=&quot;true&quot; class=&quot;d-block&quot; width=&quot;23&quot; height=&quot;16&quot;&gt;&lt;path d=&quot;M18.77 2.13A2.4 2.4 0 0 0 17.09.42C15.59 0 9.58 0 9.58 0a57.55 57.55 0 0 0-7.5.4A2.49 2.49 0 0 0 .39 2.13 26.27 26.27 0 0 0 0 6.8a26.15 26.15 0 0 0 .39 4.67 2.43 2.43 0 0 0 1.69 1.71c1.52.42 7.5.42 7.5.42a57.69 57.69 0 0 0 7.51-.4 2.4 2.4 0 0 0 1.68-1.71 25.63 25.63 0 0 0 .4-4.67 24 24 0 0 0-.4-4.69zM7.67 9.71V3.89l5 2.91z&quot; fill=&quot;currentColor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;                                                             
-        &lt;span class=&quot;sr-only&quot;&gt;GitHub on YouTube&lt;/span&gt;
+      &lt;a href="https://www.youtube.com/github" class="footer-social-icon d-block Link--outlineOffset" data-analytics-event="{&amp;quot;category&amp;quot;:&amp;quot;Footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;go to YouTube&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;text:youtube&amp;quot;}"&gt;                                                                 
+        &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.17 13.6" aria-hidden="true" class="d-block" width="23" height="16"&gt;&lt;path d="M18.77 2.13A2.4 2.4 0 0 0 17.09.42C15.59 0 9.58 0 9.58 0a57.55 57.55 0 0 0-7.5.4A2.49 2.49 0 0 0 .39 2.13 26.27 26.27 0 0 0 0 6.8a26.15 26.15 0 0 0 .39 4.67 2.43 2.43 0 0 0 1.69 1.71c1.52.42 7.5.42 7.5.42a57.69 57.69 0 0 0 7.51-.4 2.4 2.4 0 0 0 1.68-1.71 25.63 25.63 0 0 0 .4-4.67 24 24 0 0 0-.4-4.69zM7.67 9.71V3.89l5 2.91z" fill="currentColor"&gt;&lt;/path&gt;&lt;/svg&gt;                                                             
+        &lt;span class="sr-only"&gt;GitHub on YouTube&lt;/span&gt;
       &lt;/a&gt;
     &lt;/li&gt;
     &lt;li&gt;
-      &lt;a href=&quot;https://x.com/github&quot; class=&quot;footer-social-icon d-block Link--outlineOffset&quot; data-analytics-event=&quot;{&amp;quot;category&amp;quot;:&amp;quot;Footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;go to X&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;text:x&amp;quot;}&quot;&gt;       
-        &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 1200 1227&quot; fill=&quot;currentColor&quot; aria-hidden=&quot;true&quot; class=&quot;d-block&quot; width=&quot;16&quot; height=&quot;16&quot;&gt;&lt;path d=&quot;M714.163 519.284 1160.89 0h-105.86L667.137 450.887 357.328 0H0l468.492 681.821L0 1226.37h105.866l409.625-476.152 327.181 476.152H1200L714.137 519.284h.026ZM569.165 687.828l-47.468-67.894-377.686-540.24h162.604l304.797 435.991 47.468 67.894 396.2 566.721H892.476L569.165 687.854v-.026Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;                      
-        &lt;span class=&quot;sr-only&quot;&gt;GitHub on X&lt;/span&gt;
+      &lt;a href="https://x.com/github" class="footer-social-icon d-block Link--outlineOffset" data-analytics-event="{&amp;quot;category&amp;quot;:&amp;quot;Footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;go to X&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;text:x&amp;quot;}"&gt;       
+        &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1227" fill="currentColor" aria-hidden="true" class="d-block" width="16" height="16"&gt;&lt;path d="M714.163 519.284 1160.89 0h-105.86L667.137 450.887 357.328 0H0l468.492 681.821L0 1226.37h105.866l409.625-476.152 327.181 476.152H1200L714.137 519.284h.026ZM569.165 687.828l-47.468-67.894-377.686-540.24h162.604l304.797 435.991 47.468 67.894 396.2 566.721H892.476L569.165 687.854v-.026Z"&gt;&lt;/path&gt;&lt;/svg&gt;                      
+        &lt;span class="sr-only"&gt;GitHub on X&lt;/span&gt;
       &lt;/a&gt;
     &lt;/li&gt;
     &lt;li&gt;
-      &lt;a href=&quot;https://www.tiktok.com/@github&quot; class=&quot;footer-social-icon d-block Link--outlineOffset&quot; data-analytics-event=&quot;{&amp;quot;category&amp;quot;:&amp;quot;Footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;go to tiktok&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;text:tiktok&amp;quot;}&quot;&gt;                                                                   
-        &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; role=&quot;img&quot; viewBox=&quot;0 0 24 24&quot; aria-hidden=&quot;true&quot; class=&quot;d-block&quot; width=&quot;18&quot; height=&quot;18&quot;&gt;&lt;title&gt;TikTok&lt;/title&gt;&lt;path d=&quot;M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z&quot; fill=&quot;currentColor&quot;&gt;&lt;/path&gt;&lt;/svg&gt; 
-        &lt;span class=&quot;sr-only&quot;&gt;GitHub on TikTok&lt;/span&gt;
+      &lt;a href="https://www.tiktok.com/@github" class="footer-social-icon d-block Link--outlineOffset" data-analytics-event="{&amp;quot;category&amp;quot;:&amp;quot;Footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;go to tiktok&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;text:tiktok&amp;quot;}"&gt;                                                                   
+        &lt;svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" aria-hidden="true" class="d-block" width="18" height="18"&gt;&lt;title&gt;TikTok&lt;/title&gt;&lt;path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" fill="currentColor"&gt;&lt;/path&gt;&lt;/svg&gt; 
+        &lt;span class="sr-only"&gt;GitHub on TikTok&lt;/span&gt;
       &lt;/a&gt;
     &lt;/li&gt;
     &lt;li&gt;
-      &lt;a href=&quot;https://www.twitch.tv/github&quot; class=&quot;footer-social-icon d-block Link--outlineOffset&quot; data-analytics-event=&quot;{&amp;quot;category&amp;quot;:&amp;quot;Footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;go to Twitch&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;text:twitch&amp;quot;}&quot;&gt;                                                                     
-        &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; role=&quot;img&quot; viewBox=&quot;0 0 24 24&quot; aria-hidden=&quot;true&quot; class=&quot;d-block&quot; width=&quot;18&quot; height=&quot;18&quot;&gt;&lt;title&gt;Twitch&lt;/title&gt;&lt;path d=&quot;M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z&quot; fill=&quot;currentColor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;                
-        &lt;span class=&quot;sr-only&quot;&gt;GitHub on Twitch&lt;/span&gt;
+      &lt;a href="https://www.twitch.tv/github" class="footer-social-icon d-block Link--outlineOffset" data-analytics-event="{&amp;quot;category&amp;quot;:&amp;quot;Footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;go to Twitch&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;text:twitch&amp;quot;}"&gt;                                                                     
+        &lt;svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" aria-hidden="true" class="d-block" width="18" height="18"&gt;&lt;title&gt;Twitch&lt;/title&gt;&lt;path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z" fill="currentColor"&gt;&lt;/path&gt;&lt;/svg&gt;                
+        &lt;span class="sr-only"&gt;GitHub on Twitch&lt;/span&gt;
       &lt;/a&gt;
     &lt;/li&gt;
     &lt;li&gt;
-      &lt;a href=&quot;https://github.com/github&quot; class=&quot;footer-social-icon d-block Link--outlineOffset&quot; data-analytics-event=&quot;{&amp;quot;category&amp;quot;:&amp;quot;Footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;go to github&amp;#39;s org&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;text:github&amp;quot;}&quot;&gt;                                                              
-        &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; height=&quot;20&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot; aria-hidden=&quot;true&quot; class=&quot;d-block&quot;&gt;&lt;path fill=&quot;currentColor&quot; d=&quot;M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;                                                              
-        &lt;span class=&quot;sr-only&quot;&gt;GitHub’s organization on GitHub&lt;/span&gt;
+      &lt;a href="https://github.com/github" class="footer-social-icon d-block Link--outlineOffset" data-analytics-event="{&amp;quot;category&amp;quot;:&amp;quot;Footer&amp;quot;,&amp;quot;action&amp;quot;:&amp;quot;go to github&amp;#39;s org&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;text:github&amp;quot;}"&gt;                                                              
+        &lt;svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 16 16" width="20" aria-hidden="true" class="d-block"&gt;&lt;path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"&gt;&lt;/path&gt;&lt;/svg&gt;                                                              
+        &lt;span class="sr-only"&gt;GitHub’s organization on GitHub&lt;/span&gt;
       &lt;/a&gt;
     &lt;/li&gt;
 &lt;/ul&gt;
@@ -1048,75 +1048,75 @@ BErGkNYsckuCUm2OiCbaf3ixAeYv23bso43TXu9i6ohdvWzlf2jms0EO6KB7XCdiq2V0N26eERSUhcJj
 
 
   &lt;locale-selector&gt;
-    &lt;experimental-action-menu data-anchor-align=&quot;start&quot; data-anchor-side=&quot;outside-bottom&quot; data-view-component=&quot;true&quot; class=&quot;footer-social-icon&quot;&gt;                
-  &lt;button role=&quot;button&quot; aria-haspopup=&quot;true&quot; aria-controls=&quot;locale-selector-list&quot; aria-expanded=&quot;false&quot; id=&quot;locale-selector-text&quot; aria-label=&quot;English - Select language&quot; type=&quot;button&quot; data-view-component=&quot;true&quot; class=&quot;d-flex flex-items-center border-0 color-bg-transparent p-0 locale-trigger Button--secondary Button--medium Button&quot;&gt;  &lt;span class=&quot;Button-content&quot;&gt;                                     
-    &lt;span class=&quot;Button-label&quot;&gt;&lt;span class=&quot;locale-selector-trigger&quot;&gt;
-          &lt;svg height=&quot;16&quot; aria-hidden=&quot;true&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; data-view-component=&quot;true&quot; class=&quot;octicon octicon-globe mr-1 color-fg-muted locale-icon&quot;&gt;                                                            
-    &lt;path d=&quot;M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM5.78 8.75a9.64 9.64 0 0 0 1.363 4.177c.255.426.542.832.857 1.215.245-.296.551-.705.857-1.215A9.64 9.64 0 0 0 10.22 8.75Zm4.44-1.5a9.64 9.64 0 0 0-1.363-4.177c-.307-.51-.612-.919-.857-1.215a9.927 9.927 0 0 0-.857 1.215A9.64 9.64 0 0 0 5.78 7.25Zm-5.944 1.5H1.543a6.507 6.507 0 0 0 4.666 5.5c-.123-.181-.24-.365-.352-.552-.715-1.192-1.437-2.874-1.581-4.948Zm-2.733-1.5h2.733c.144-2.074.866-3.756 1.58-4.948.12-.197.237-.381.353-.552a6.507 6.507 0 0 0-4.666 5.5Zm10.181 1.5c-.144 2.074-.866 3.756-1.58 4.948-.12.197-.237.381-.353.552a6.507 6.507 0 0 0 4.666-5.5Zm2.733-1.5a6.507 6.507 0 0 0-4.666-5.5c.123.181.24.365.353.552.714 1.192 1.436 2.874 1.58 4.948Z&quot;&gt;&lt;/path&gt;        
+    &lt;experimental-action-menu data-anchor-align="start" data-anchor-side="outside-bottom" data-view-component="true" class="footer-social-icon"&gt;                
+  &lt;button role="button" aria-haspopup="true" aria-controls="locale-selector-list" aria-expanded="false" id="locale-selector-text" aria-label="English - Select language" type="button" data-view-component="true" class="d-flex flex-items-center border-0 color-bg-transparent p-0 locale-trigger Button--secondary Button--medium Button"&gt;  &lt;span class="Button-content"&gt;                                     
+    &lt;span class="Button-label"&gt;&lt;span class="locale-selector-trigger"&gt;
+          &lt;svg height="16" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-globe mr-1 color-fg-muted locale-icon"&gt;                                                            
+    &lt;path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM5.78 8.75a9.64 9.64 0 0 0 1.363 4.177c.255.426.542.832.857 1.215.245-.296.551-.705.857-1.215A9.64 9.64 0 0 0 10.22 8.75Zm4.44-1.5a9.64 9.64 0 0 0-1.363-4.177c-.307-.51-.612-.919-.857-1.215a9.927 9.927 0 0 0-.857 1.215A9.64 9.64 0 0 0 5.78 7.25Zm-5.944 1.5H1.543a6.507 6.507 0 0 0 4.666 5.5c-.123-.181-.24-.365-.352-.552-.715-1.192-1.437-2.874-1.581-4.948Zm-2.733-1.5h2.733c.144-2.074.866-3.756 1.58-4.948.12-.197.237-.381.353-.552a6.507 6.507 0 0 0-4.666 5.5Zm10.181 1.5c-.144 2.074-.866 3.756-1.58 4.948-.12.197-.237.381-.353.552a6.507 6.507 0 0 0 4.666-5.5Zm2.733-1.5a6.507 6.507 0 0 0-4.666-5.5c.123.181.24.365.353.552.714 1.192 1.436 2.874 1.58 4.948Z"&gt;&lt;/path&gt;        
 &lt;/svg&gt;
-          &lt;span class=&quot;color-fg-muted Link--secondary f6&quot;&gt;English&lt;/span&gt;        
-          &lt;svg height=&quot;16&quot; aria-hidden=&quot;true&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; data-view-component=&quot;true&quot; class=&quot;octicon octicon-chevron-down ml-1 color-fg-muted locale-icon&quot;&gt;                                                     
-    &lt;path d=&quot;M12.78 5.22a.749.749 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.749.749 0 0 1 1.06 0Z&quot;&gt;&lt;/path&gt;                                                                           
+          &lt;span class="color-fg-muted Link--secondary f6"&gt;English&lt;/span&gt;        
+          &lt;svg height="16" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-chevron-down ml-1 color-fg-muted locale-icon"&gt;                                                     
+    &lt;path d="M12.78 5.22a.749.749 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.749.749 0 0 1 1.06 0Z"&gt;&lt;/path&gt;                                                                           
 &lt;/svg&gt;
         &lt;/span&gt;&lt;/span&gt;
   &lt;/span&gt;
 &lt;/button&gt;
 
-  &lt;div class=&quot;Overlay-backdrop--anchor&quot; data-menu-overlay&gt;
-    &lt;div class=&quot;Overlay Overlay-whenNarrow Overlay--height-auto Overlay--width-auto&quot; hidden&gt;                                                                    
-      &lt;div class=&quot;Overlay-body Overlay-body--paddingNone&quot;&gt;
-        &lt;ul class=&quot;ActionList&quot; id=&quot;locale-selector-list&quot; role=&quot;menu&quot; aria-labelledby=&quot;locale-selector-text&quot;&gt;                                                    
-                &lt;li role=&quot;none&quot; data-view-component=&quot;true&quot; class=&quot;ActionList-item&quot;&gt;                                                                             
-    &lt;a href=&quot;&quot; selected=&quot;selected&quot; style=&quot;white-space: normal;&quot; data-action=&quot;click:locale-selector#handleSelectLocale&quot; data-locale=&quot;en-us&quot; role=&quot;menuitem&quot; tabindex=&quot;-1&quot; data-view-component=&quot;true&quot; class=&quot;footer-social-locale ActionList-content&quot;&gt;                                                                            
+  &lt;div class="Overlay-backdrop--anchor" data-menu-overlay&gt;
+    &lt;div class="Overlay Overlay-whenNarrow Overlay--height-auto Overlay--width-auto" hidden&gt;                                                                    
+      &lt;div class="Overlay-body Overlay-body--paddingNone"&gt;
+        &lt;ul class="ActionList" id="locale-selector-list" role="menu" aria-labelledby="locale-selector-text"&gt;                                                    
+                &lt;li role="none" data-view-component="true" class="ActionList-item"&gt;                                                                             
+    &lt;a href="" selected="selected" style="white-space: normal;" data-action="click:locale-selector#handleSelectLocale" data-locale="en-us" role="menuitem" tabindex="-1" data-view-component="true" class="footer-social-locale ActionList-content"&gt;                                                                            
 
-      &lt;span class=&quot;ActionList-item-label&quot;&gt;
-                  &lt;div style=&quot;width: 16px; display: inline-block; text-align: center; margin-right: 8px; flex-shrink: 0;&quot;&gt;                                      
-            &lt;svg height=&quot;16&quot; aria-hidden=&quot;true&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; data-view-component=&quot;true&quot; class=&quot;octicon octicon-check&quot;&gt;          
-    &lt;path d=&quot;M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z&quot;&gt;&lt;/path&gt;                                                        
+      &lt;span class="ActionList-item-label"&gt;
+                  &lt;div style="width: 16px; display: inline-block; text-align: center; margin-right: 8px; flex-shrink: 0;"&gt;                                      
+            &lt;svg height="16" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check"&gt;          
+    &lt;path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"&gt;&lt;/path&gt;                                                        
 &lt;/svg&gt;
           &lt;/div&gt;
           &lt;span&gt;English&lt;/span&gt;
 
       &lt;/span&gt;
 &lt;/a&gt;&lt;/li&gt;
-                &lt;li role=&quot;none&quot; data-view-component=&quot;true&quot; class=&quot;ActionList-item&quot;&gt;                                                                             
-    &lt;a href=&quot;&quot; style=&quot;white-space: normal;&quot; data-action=&quot;click:locale-selector#handleSelectLocale&quot; data-locale=&quot;pt-br&quot; role=&quot;menuitem&quot; tabindex=&quot;-1&quot; data-view-component=&quot;true&quot; class=&quot;footer-social-locale ActionList-content&quot;&gt;                
+                &lt;li role="none" data-view-component="true" class="ActionList-item"&gt;                                                                             
+    &lt;a href="" style="white-space: normal;" data-action="click:locale-selector#handleSelectLocale" data-locale="pt-br" role="menuitem" tabindex="-1" data-view-component="true" class="footer-social-locale ActionList-content"&gt;                
 
-      &lt;span class=&quot;ActionList-item-label&quot;&gt;
-                  &lt;div style=&quot;width: 16px; display: inline-block; text-align: center; margin-right: 8px; flex-shrink: 0;&quot;&gt;                                      
+      &lt;span class="ActionList-item-label"&gt;
+                  &lt;div style="width: 16px; display: inline-block; text-align: center; margin-right: 8px; flex-shrink: 0;"&gt;                                      
 
           &lt;/div&gt;
           &lt;span&gt;Português (Brasil)&lt;/span&gt;
 
       &lt;/span&gt;
 &lt;/a&gt;&lt;/li&gt;
-                &lt;li role=&quot;none&quot; data-view-component=&quot;true&quot; class=&quot;ActionList-item&quot;&gt;                                                                             
-    &lt;a href=&quot;&quot; style=&quot;white-space: normal;&quot; data-action=&quot;click:locale-selector#handleSelectLocale&quot; data-locale=&quot;es-419&quot; role=&quot;menuitem&quot; tabindex=&quot;-1&quot; data-view-component=&quot;true&quot; class=&quot;footer-social-locale ActionList-content&quot;&gt;               
+                &lt;li role="none" data-view-component="true" class="ActionList-item"&gt;                                                                             
+    &lt;a href="" style="white-space: normal;" data-action="click:locale-selector#handleSelectLocale" data-locale="es-419" role="menuitem" tabindex="-1" data-view-component="true" class="footer-social-locale ActionList-content"&gt;               
 
-      &lt;span class=&quot;ActionList-item-label&quot;&gt;
-                  &lt;div style=&quot;width: 16px; display: inline-block; text-align: center; margin-right: 8px; flex-shrink: 0;&quot;&gt;                                      
+      &lt;span class="ActionList-item-label"&gt;
+                  &lt;div style="width: 16px; display: inline-block; text-align: center; margin-right: 8px; flex-shrink: 0;"&gt;                                      
 
           &lt;/div&gt;
           &lt;span&gt;Español (América Latina)&lt;/span&gt;
 
       &lt;/span&gt;
 &lt;/a&gt;&lt;/li&gt;
-                &lt;li role=&quot;none&quot; data-view-component=&quot;true&quot; class=&quot;ActionList-item&quot;&gt;                                                                             
-    &lt;a href=&quot;&quot; style=&quot;white-space: normal;&quot; data-action=&quot;click:locale-selector#handleSelectLocale&quot; data-locale=&quot;ja&quot; role=&quot;menuitem&quot; tabindex=&quot;-1&quot; data-view-component=&quot;true&quot; class=&quot;footer-social-locale ActionList-content&quot;&gt;                   
+                &lt;li role="none" data-view-component="true" class="ActionList-item"&gt;                                                                             
+    &lt;a href="" style="white-space: normal;" data-action="click:locale-selector#handleSelectLocale" data-locale="ja" role="menuitem" tabindex="-1" data-view-component="true" class="footer-social-locale ActionList-content"&gt;                   
 
-      &lt;span class=&quot;ActionList-item-label&quot;&gt;
-                  &lt;div style=&quot;width: 16px; display: inline-block; text-align: center; margin-right: 8px; flex-shrink: 0;&quot;&gt;                                      
+      &lt;span class="ActionList-item-label"&gt;
+                  &lt;div style="width: 16px; display: inline-block; text-align: center; margin-right: 8px; flex-shrink: 0;"&gt;                                      
 
           &lt;/div&gt;
           &lt;span&gt;日本語&lt;/span&gt;
 
       &lt;/span&gt;
 &lt;/a&gt;&lt;/li&gt;
-                &lt;li role=&quot;none&quot; data-view-component=&quot;true&quot; class=&quot;ActionList-item&quot;&gt;                                                                             
-    &lt;a href=&quot;&quot; style=&quot;white-space: normal;&quot; data-action=&quot;click:locale-selector#handleSelectLocale&quot; data-locale=&quot;ko-kr&quot; role=&quot;menuitem&quot; tabindex=&quot;-1&quot; data-view-component=&quot;true&quot; class=&quot;footer-social-locale ActionList-content&quot;&gt;                
+                &lt;li role="none" data-view-component="true" class="ActionList-item"&gt;                                                                             
+    &lt;a href="" style="white-space: normal;" data-action="click:locale-selector#handleSelectLocale" data-locale="ko-kr" role="menuitem" tabindex="-1" data-view-component="true" class="footer-social-locale ActionList-content"&gt;                
 
-      &lt;span class=&quot;ActionList-item-label&quot;&gt;
-                  &lt;div style=&quot;width: 16px; display: inline-block; text-align: center; margin-right: 8px; flex-shrink: 0;&quot;&gt;                                      
+      &lt;span class="ActionList-item-label"&gt;
+                  &lt;div style="width: 16px; display: inline-block; text-align: center; margin-right: 8px; flex-shrink: 0;"&gt;                                      
 
           &lt;/div&gt;
           &lt;span&gt;한국어&lt;/span&gt;
@@ -1136,66 +1136,66 @@ BErGkNYsckuCUm2OiCbaf3ixAeYv23bso43TXu9i6ohdvWzlf2jms0EO6KB7XCdiq2V0N26eERSUhcJj
 
 
 
-    &lt;ghcc-consent id=&quot;ghcc&quot; class=&quot;position-fixed bottom-0 left-0&quot; style=&quot;z-index: 999999&quot;                                                                      
-      data-locale=&quot;en&quot;
-      data-initial-cookie-consent-allowed=&quot;&quot;
-      data-cookie-consent-required=&quot;false&quot;
+    &lt;ghcc-consent id="ghcc" class="position-fixed bottom-0 left-0" style="z-index: 999999"                                                                      
+      data-locale="en"
+      data-initial-cookie-consent-allowed=""
+      data-cookie-consent-required="false"
     &gt;&lt;/ghcc-consent&gt;
 
 
 
 
-  &lt;div id=&quot;ajax-error-message&quot; class=&quot;ajax-error-message flash flash-error&quot; hidden&gt;                                                                             
-    &lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; data-view-component=&quot;true&quot; class=&quot;octicon octicon-alert&quot;&gt;                  
-    &lt;path d=&quot;M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z&quot;&gt;&lt;/path&gt;                                                                            
+  &lt;div id="ajax-error-message" class="ajax-error-message flash flash-error" hidden&gt;                                                                             
+    &lt;svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert"&gt;                  
+    &lt;path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"&gt;&lt;/path&gt;                                                                            
 &lt;/svg&gt;
-    &lt;button type=&quot;button&quot; class=&quot;flash-close js-ajax-error-dismiss&quot; aria-label=&quot;Dismiss error&quot;&gt;                                                                 
-      &lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; data-view-component=&quot;true&quot; class=&quot;octicon octicon-x&quot;&gt;                    
-    &lt;path d=&quot;M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z&quot;&gt;&lt;/path&gt;                             
+    &lt;button type="button" class="flash-close js-ajax-error-dismiss" aria-label="Dismiss error"&gt;                                                                 
+      &lt;svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-x"&gt;                    
+    &lt;path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"&gt;&lt;/path&gt;                             
 &lt;/svg&gt;
     &lt;/button&gt;
     You can’t perform that action at this time.
   &lt;/div&gt;
 
-    &lt;template id=&quot;site-details-dialog&quot;&gt;
-  &lt;details class=&quot;details-reset details-overlay details-overlay-dark lh-default color-fg-default hx_rsm&quot; open&gt;                                                  
-    &lt;summary role=&quot;button&quot; aria-label=&quot;Close dialog&quot;&gt;&lt;/summary&gt;
-    &lt;details-dialog class=&quot;Box Box--overlay d-flex flex-column anim-fade-in fast hx_rsm-dialog hx_rsm-modal&quot;&gt;                                                   
-      &lt;button class=&quot;Box-btn-octicon m-0 btn-octicon position-absolute right-0 top-0&quot; type=&quot;button&quot; aria-label=&quot;Close dialog&quot; data-close-dialog&gt;                
-        &lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; data-view-component=&quot;true&quot; class=&quot;octicon octicon-x&quot;&gt;                  
-    &lt;path d=&quot;M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z&quot;&gt;&lt;/path&gt;                             
+    &lt;template id="site-details-dialog"&gt;
+  &lt;details class="details-reset details-overlay details-overlay-dark lh-default color-fg-default hx_rsm" open&gt;                                                  
+    &lt;summary role="button" aria-label="Close dialog"&gt;&lt;/summary&gt;
+    &lt;details-dialog class="Box Box--overlay d-flex flex-column anim-fade-in fast hx_rsm-dialog hx_rsm-modal"&gt;                                                   
+      &lt;button class="Box-btn-octicon m-0 btn-octicon position-absolute right-0 top-0" type="button" aria-label="Close dialog" data-close-dialog&gt;                
+        &lt;svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-x"&gt;                  
+    &lt;path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"&gt;&lt;/path&gt;                             
 &lt;/svg&gt;
       &lt;/button&gt;
-      &lt;div class=&quot;octocat-spinner my-6 js-details-dialog-spinner&quot;&gt;&lt;/div&gt;        
+      &lt;div class="octocat-spinner my-6 js-details-dialog-spinner"&gt;&lt;/div&gt;        
     &lt;/details-dialog&gt;
   &lt;/details&gt;
 &lt;/template&gt;
 
-    &lt;div class=&quot;Popover js-hovercard-content position-absolute&quot; style=&quot;display: none; outline: none;&quot;&gt;                                                          
-  &lt;div class=&quot;Popover-message Popover-message--bottom-left Popover-message--large Box color-shadow-large&quot; style=&quot;width:360px;&quot;&gt;                                 
+    &lt;div class="Popover js-hovercard-content position-absolute" style="display: none; outline: none;"&gt;                                                          
+  &lt;div class="Popover-message Popover-message--bottom-left Popover-message--large Box color-shadow-large" style="width:360px;"&gt;                                 
   &lt;/div&gt;
 &lt;/div&gt;
 
-    &lt;template id=&quot;snippet-clipboard-copy-button&quot;&gt;
-  &lt;div class=&quot;zeroclipboard-container position-absolute right-0 top-0&quot;&gt;
-    &lt;clipboard-copy aria-label=&quot;Copy&quot; class=&quot;ClipboardButton btn js-clipboard-copy m-2 p-0&quot; data-copy-feedback=&quot;Copied!&quot; data-tooltip-direction=&quot;w&quot;&gt;            
-      &lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; data-view-component=&quot;true&quot; class=&quot;octicon octicon-copy js-clipboard-copy-icon m-2&quot;&gt;                                                                      
-    &lt;path d=&quot;M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z&quot;&gt;&lt;/path&gt;            
+    &lt;template id="snippet-clipboard-copy-button"&gt;
+  &lt;div class="zeroclipboard-container position-absolute right-0 top-0"&gt;
+    &lt;clipboard-copy aria-label="Copy" class="ClipboardButton btn js-clipboard-copy m-2 p-0" data-copy-feedback="Copied!" data-tooltip-direction="w"&gt;            
+      &lt;svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon m-2"&gt;                                                                      
+    &lt;path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"&gt;&lt;/path&gt;&lt;path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"&gt;&lt;/path&gt;            
 &lt;/svg&gt;
-      &lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; data-view-component=&quot;true&quot; class=&quot;octicon octicon-check js-clipboard-check-icon color-fg-success d-none m-2&quot;&gt;                                            
-    &lt;path d=&quot;M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z&quot;&gt;&lt;/path&gt;                                                        
+      &lt;svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none m-2"&gt;                                            
+    &lt;path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"&gt;&lt;/path&gt;                                                        
 &lt;/svg&gt;
     &lt;/clipboard-copy&gt;
   &lt;/div&gt;
 &lt;/template&gt;
-&lt;template id=&quot;snippet-clipboard-copy-button-unpositioned&quot;&gt;
-  &lt;div class=&quot;zeroclipboard-container&quot;&gt;
-    &lt;clipboard-copy aria-label=&quot;Copy&quot; class=&quot;ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center&quot; data-copy-feedback=&quot;Copied!&quot; data-tooltip-direction=&quot;w&quot;&gt;                                 
-      &lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; data-view-component=&quot;true&quot; class=&quot;octicon octicon-copy js-clipboard-copy-icon&quot;&gt;                                                                          
-    &lt;path d=&quot;M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z&quot;&gt;&lt;/path&gt;            
+&lt;template id="snippet-clipboard-copy-button-unpositioned"&gt;
+  &lt;div class="zeroclipboard-container"&gt;
+    &lt;clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w"&gt;                                 
+      &lt;svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon"&gt;                                                                          
+    &lt;path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"&gt;&lt;/path&gt;&lt;path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"&gt;&lt;/path&gt;            
 &lt;/svg&gt;
-      &lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; data-view-component=&quot;true&quot; class=&quot;octicon octicon-check js-clipboard-check-icon color-fg-success d-none&quot;&gt;                                                
-    &lt;path d=&quot;M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z&quot;&gt;&lt;/path&gt;                                                        
+      &lt;svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none"&gt;                                                
+    &lt;path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"&gt;&lt;/path&gt;                                                        
 &lt;/svg&gt;
     &lt;/clipboard-copy&gt;
   &lt;/div&gt;
@@ -1205,8 +1205,8 @@ BErGkNYsckuCUm2OiCbaf3ixAeYv23bso43TXu9i6ohdvWzlf2jms0EO6KB7XCdiq2V0N26eERSUhcJj
 
 
     &lt;/div&gt;
-    &lt;div id=&quot;js-global-screen-reader-notice&quot; class=&quot;sr-only mt-n1&quot; aria-live=&quot;polite&quot; aria-atomic=&quot;true&quot; &gt;&lt;/div&gt;                                                
-    &lt;div id=&quot;js-global-screen-reader-notice-assertive&quot; class=&quot;sr-only mt-n1&quot; aria-live=&quot;assertive&quot; aria-atomic=&quot;true&quot;&gt;&lt;/div&gt;                                    
+    &lt;div id="js-global-screen-reader-notice" class="sr-only mt-n1" aria-live="polite" aria-atomic="true" &gt;&lt;/div&gt;                                                
+    &lt;div id="js-global-screen-reader-notice-assertive" class="sr-only mt-n1" aria-live="assertive" aria-atomic="true"&gt;&lt;/div&gt;                                    
   &lt;/body&gt;
 &lt;/html&gt;
 ```
@@ -1227,7 +1227,7 @@ Updating the script to include your two extensions and running it to generate th
 
 <tool-use data-tool-type="write" data-tool-name="search_replace">
 
-<details><summary>Tool use: **code_edit** • Edit file: update_catalog.py</summary>
+<details><summary>Tool use: **search_replace** • Edit file: update_catalog.py</summary>
 
 **Chunk 1**
 Lines added: 8, lines removed: 9
@@ -1236,23 +1236,23 @@ Lines added: 8, lines removed: 9
 @@ -23,14 +23,13 @@
   ADDONS = [
       {
--         &quot;id&quot;: &quot;atomic_data_manager&quot;,
--         &quot;repo&quot;: &quot;grantwilk/atomic-data-manager&quot;,
--         &quot;manifest_branch&quot;: &quot;main&quot;,  # Branch where blender_manifest.toml is located
-+         &quot;id&quot;: &quot;based_playblast&quot;,
-+         &quot;repo&quot;: &quot;RaincloudTheDragon/BasedPlayblast&quot;,
-+         &quot;manifest_branch&quot;: &quot;main&quot;,
+-         "id": "atomic_data_manager",
+-         "repo": "grantwilk/atomic-data-manager",
+-         "manifest_branch": "main",  # Branch where blender_manifest.toml is located
++         "id": "based_playblast",
++         "repo": "RaincloudTheDragon/BasedPlayblast",
++         "manifest_branch": "main",
       },
 -     # Add more addons here:
 -     # {
--     #     &quot;id&quot;: &quot;another_addon&quot;,
--     #     &quot;repo&quot;: &quot;username/repo-name&quot;,
--     #     &quot;manifest_branch&quot;: &quot;main&quot;,
+-     #     "id": "another_addon",
+-     #     "repo": "username/repo-name",
+-     #     "manifest_branch": "main",
 -     # },
 +     {
-+         &quot;id&quot;: &quot;rainys_bulk_scene_tools&quot;,
-+         &quot;repo&quot;: &quot;RaincloudTheDragon/Rainys-Bulk-Scene-Tools&quot;,
-+         &quot;manifest_branch&quot;: &quot;main&quot;,
++         "id": "rainys_bulk_scene_tools",
++         "repo": "RaincloudTheDragon/Rainys-Bulk-Scene-Tools",
++         "manifest_branch": "main",
 +     },
   ]
   
@@ -1265,7 +1265,7 @@ Lines added: 8, lines removed: 9
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: python update_catalog.py</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: python update_catalog.py</summary>
 
 ```bash
 python update_catalog.py
@@ -1306,16 +1306,16 @@ Verifying the catalog and checking the addon IDs match the manifest files:
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: curl -s https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml | Select-String -Pattern "^id\s*="</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: curl -s https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml | Select-String -Pattern "^id\s*="</summary>
 
 ```bash
 curl -s https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml | Select-String -Pattern "^id\s*="
 ```
 
 ```
- &quot;^id\s*=&quot;
+ "^id\s*="
 
-id = &quot;basedplayblast&quot;
+id = "basedplayblast"
 ```
 </details>
 </tool-use>
@@ -1323,7 +1323,7 @@ id = &quot;basedplayblast&quot;
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: curl -s https://raw.githubusercontent.com/RaincloudTheDragon/Rainys-Bulk-Scene-Tools/main/blender_manifest.toml | Select-String -Pattern "^id\s*="</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: curl -s https://raw.githubusercontent.com/RaincloudTheDragon/Rainys-Bulk-Scene-Tools/main/blender_manifest.toml | Select-String -Pattern "^id\s*="</summary>
 
 ```bash
 curl -s https://raw.githubusercontent.com/RaincloudTheDragon/Rainys-Bulk-Scene-Tools/main/blender_manifest.toml | Select-String -Pattern "^id\s*="
@@ -1375,7 +1375,7 @@ Fixing the addon ID first, then providing deployment steps:
 
 <tool-use data-tool-type="write" data-tool-name="search_replace">
 
-<details><summary>Tool use: **code_edit** • Edit file: update_catalog.py</summary>
+<details><summary>Tool use: **search_replace** • Edit file: update_catalog.py</summary>
 
 **Chunk 1**
 Lines added: 2, lines removed: 2
@@ -1384,16 +1384,16 @@ Lines added: 2, lines removed: 2
 @@ -23,10 +23,10 @@
   ADDONS = [
       {
--         &quot;id&quot;: &quot;based_playblast&quot;,
-+         &quot;id&quot;: &quot;basedplayblast&quot;,  # Must match blender_manifest.toml
-          &quot;repo&quot;: &quot;RaincloudTheDragon/BasedPlayblast&quot;,
-          &quot;manifest_branch&quot;: &quot;main&quot;,
+-         "id": "based_playblast",
++         "id": "basedplayblast",  # Must match blender_manifest.toml
+          "repo": "RaincloudTheDragon/BasedPlayblast",
+          "manifest_branch": "main",
       },
       {
--         &quot;id&quot;: &quot;rainys_bulk_scene_tools&quot;,
-+         &quot;id&quot;: &quot;rainys_bulk_scene_tools&quot;,  # Must match blender_manifest.toml
-          &quot;repo&quot;: &quot;RaincloudTheDragon/Rainys-Bulk-Scene-Tools&quot;,
-          &quot;manifest_branch&quot;: &quot;main&quot;,
+-         "id": "rainys_bulk_scene_tools",
++         "id": "rainys_bulk_scene_tools",  # Must match blender_manifest.toml
+          "repo": "RaincloudTheDragon/Rainys-Bulk-Scene-Tools",
+          "manifest_branch": "main",
 ```
 
 </details>
@@ -1403,7 +1403,7 @@ Lines added: 2, lines removed: 2
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: python update_catalog.py</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: python update_catalog.py</summary>
 
 ```bash
 python update_catalog.py
@@ -1437,7 +1437,7 @@ Catalog updated. Deploying to GitHub Pages:
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: git status</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: git status</summary>
 
 ```bash
 git status
@@ -1445,16 +1445,16 @@ git status
 
 ```
 On branch main
-Your branch is up to date with &#39;origin/main&#39;.
+Your branch is up to date with 'origin/main'.
 
 Changes not staged for commit:
-  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
-  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)
+  (use "git add &lt;file&gt;..." to update what will be committed)
+  (use "git restore &lt;file&gt;..." to discard changes in working directory)
         modified:   .specstory/history/2025-12-01_20-52Z-make-blender-extension-api-visible.md                                                                  
         modified:   catalog.json
         modified:   update_catalog.py
 
-no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+no changes added to commit (use "git add" and/or "git commit -a")
 ```
 </details>
 </tool-use>
@@ -1480,7 +1480,7 @@ Committing and pushing the changes:
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: git add catalog.json update_catalog.py</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: git add catalog.json update_catalog.py</summary>
 
 ```bash
 git add catalog.json update_catalog.py
@@ -1495,14 +1495,14 @@ PS E:\rainys-blender-extensions&gt; git add catalog.json update_catalog.py
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: git commit -m "Add BasedPlayblast and Rainys-Bulk-Scene-Tools to extension catalog"</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: git commit -m "Add BasedPlayblast and Rainys-Bulk-Scene-Tools to extension catalog"</summary>
 
 ```bash
 git commit -m "Add BasedPlayblast and Rainys-Bulk-Scene-Tools to extension catalog"
 ```
 
 ```
-lk-Scene-Tools to extension catalog&quot;                                            
+lk-Scene-Tools to extension catalog"                                            
 [main 6c9507f] Add BasedPlayblast and Rainys-Bulk-Scene-Tools to extension catalog                                                                              
  2 files changed, 3 insertions(+), 3 deletions(-)
 ```
@@ -1512,7 +1512,7 @@ lk-Scene-Tools to extension catalog&quot;
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: git push</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: git push</summary>
 
 ```bash
 git push
@@ -1602,7 +1602,7 @@ This error usually means the URL in Blender is missing the `https://` prefix or 
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: curl -I https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: curl -I https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json</summary>
 
 ```bash
 curl -I https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json
@@ -1618,7 +1618,7 @@ Content-Type: application/json; charset=utf-8
 Last-Modified: Mon, 01 Dec 2025 21:11:19 GMT
 Access-Control-Allow-Origin: *
 Strict-Transport-Security: max-age=31556952
-ETag: &quot;692e0477-2be&quot;
+ETag: "692e0477-2be"
 expires: Mon, 01 Dec 2025 21:21:26 GMT
 Cache-Control: max-age=600
 x-proxy-cache: MISS
@@ -1808,7 +1808,7 @@ Checking the catalog setup. Verifying the catalog format and that the URLs are c
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: curl -s https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: curl -s https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json</summary>
 
 ```bash
 curl -s https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json
@@ -1817,19 +1817,19 @@ curl -s https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.j
 ```
 inys-blender-extensions/catalog.json                                            
 {
-  &quot;schema_version&quot;: &quot;1.0.0&quot;,
-  &quot;extensions&quot;: [
+  "schema_version": "1.0.0",
+  "extensions": [
     {
-      &quot;id&quot;: &quot;basedplayblast&quot;,
-      &quot;version&quot;: &quot;2.3.0&quot;,
-      &quot;archive_url&quot;: &quot;https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.0/BasedPlayblast.v2.3.0.zip&quot;,                                 
-      &quot;manifest_url&quot;: &quot;https://github.com/RaincloudTheDragon/BasedPlayblast/raw/main/blender_manifest.toml&quot;                                                     
+      "id": "basedplayblast",
+      "version": "2.3.0",
+      "archive_url": "https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.0/BasedPlayblast.v2.3.0.zip",                                 
+      "manifest_url": "https://github.com/RaincloudTheDragon/BasedPlayblast/raw/main/blender_manifest.toml"                                                     
     },
     {
-      &quot;id&quot;: &quot;rainys_bulk_scene_tools&quot;,
-      &quot;version&quot;: &quot;0.10.0&quot;,
-      &quot;archive_url&quot;: &quot;https://github.com/RaincloudTheDragon/Rainys-Bulk-Scene-Tools/releases/download/v0.10.0/Rainys-Bulk-Scene-Tools.v0.10.0.zip&quot;,             
-      &quot;manifest_url&quot;: &quot;https://github.com/RaincloudTheDragon/Rainys-Bulk-Scene-Tools/raw/main/blender_manifest.toml&quot;                                            
+      "id": "rainys_bulk_scene_tools",
+      "version": "0.10.0",
+      "archive_url": "https://github.com/RaincloudTheDragon/Rainys-Bulk-Scene-Tools/releases/download/v0.10.0/Rainys-Bulk-Scene-Tools.v0.10.0.zip",             
+      "manifest_url": "https://github.com/RaincloudTheDragon/Rainys-Bulk-Scene-Tools/raw/main/blender_manifest.toml"                                            
     }
   ]
 }
@@ -1840,40 +1840,40 @@ inys-blender-extensions/catalog.json
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: curl -s https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: curl -s https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml</summary>
 
 ```bash
 curl -s https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml
 ```
 
 ```
-schema_version = &quot;1.0.0&quot;
+schema_version = "1.0.0"
 
-id = &quot;basedplayblast&quot;
-name = &quot;BasedPlayblast&quot;
-tagline = &quot;Easily create playblasts from Blender and Flamenco&quot;
-version = &quot;1.3.0&quot;
-type = &quot;add-on&quot;
+id = "basedplayblast"
+name = "BasedPlayblast"
+tagline = "Easily create playblasts from Blender and Flamenco"
+version = "1.3.0"
+type = "add-on"
 
-maintainer = &quot;RaincloudTheDragon &lt;raincloudthedragon@gmail.com&gt;&quot;
-license = [&quot;GPL-3.0-or-later&quot;]
-blender_version_min = &quot;5.0.0&quot;
+maintainer = "RaincloudTheDragon &lt;raincloudthedragon@gmail.com&gt;"
+license = ["GPL-3.0-or-later"]
+blender_version_min = "5.0.0"
 
-website = &quot;https://github.com/RaincloudTheDragon/BasedPlayblast&quot;
+website = "https://github.com/RaincloudTheDragon/BasedPlayblast"
 
-tags = [&quot;Animation&quot;, &quot;Render&quot;, &quot;Workflow&quot;, &quot;Video&quot;]
+tags = ["Animation", "Render", "Workflow", "Video"]
 
 [permissions]
-files = &quot;Import/export files and data&quot;
+files = "Import/export files and data"
 
 [build]
 paths_exclude_pattern = [
-    &quot;__pycache__/&quot;,
-    &quot;*.pyc&quot;,
-    &quot;.git/&quot;,
-    &quot;.github/&quot;,
-    &quot;addon_updater*&quot;,
-    &quot;basedplayblast_updater/&quot;
+    "__pycache__/",
+    "*.pyc",
+    ".git/",
+    ".github/",
+    "addon_updater*",
+    "basedplayblast_updater/"
 ]
 ```
 </details>
@@ -1882,7 +1882,7 @@ paths_exclude_pattern = [
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: curl -I https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.0/BasedPlayblast.v2.3.0.zip</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: curl -I https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.0/BasedPlayblast.v2.3.0.zip</summary>
 
 ```bash
 curl -I https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.0/BasedPlayblast.v2.3.0.zip
@@ -1902,7 +1902,7 @@ X-Frame-Options: deny
 X-Content-Type-Options: nosniff
 X-XSS-Protection: 0
 Referrer-Policy: no-referrer-when-downgrade
-Content-Security-Policy: default-src &#39;none&#39;; base-uri &#39;self&#39;; child-src github.githubassets.com github.com/assets-cdn/worker/ github.com/assets/ gist.github.com/assets-cdn/worker/; connect-src &#39;self&#39; uploads.github.com www.githubstatus.com collector.github.com raw.githubusercontent.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com *.rel.tunnels.api.visualstudio.com wss://*.rel.tunnels.api.visualstudio.com github.githubassets.com objects-origin.githubusercontent.com copilot-proxy.githubusercontent.com proxy.individual.githubcopilot.com proxy.business.githubcopilot.com proxy.enterprise.githubcopilot.com *.actions.githubusercontent.com wss://*.actions.githubusercontent.com productionresultssa0.blob.core.windows.net/ productionresultssa1.blob.core.windows.net/ productionresultssa2.blob.core.windows.net/ productionresultssa3.blob.core.windows.net/ productionresultssa4.blob.core.windows.net/ productionresultssa5.blob.core.windows.net/ productionresultssa6.blob.core.windows.net/ productionresultssa7.blob.core.windows.net/ productionresultssa8.blob.core.windows.net/ productionresultssa9.blob.core.windows.net/ productionresultssa10.blob.core.windows.net/ productionresultssa11.blob.core.windows.net/ productionresultssa12.blob.core.windows.net/ productionresultssa13.blob.core.windows.net/ productionresultssa14.blob.core.windows.net/ productionresultssa15.blob.core.windows.net/ productionresultssa16.blob.core.windows.net/ productionresultssa17.blob.core.windows.net/ productionresultssa18.blob.core.windows.net/ productionresultssa19.blob.core.windows.net/ github-production-repository-image-32fea6.s3.amazonaws.com github-production-release-asset-2e65be.s3.amazonaws.com insights.github.com wss://alive.github.com wss://alive-staging.github.com api.githubcopilot.com api.individual.githubcopilot.com api.business.githubcopilot.com api.enterprise.githubcopilot.com; font-src github.githubassets.com; form-action &#39;self&#39; github.com gist.github.com copilot-workspace.githubnext.com objects-origin.githubusercontent.com; frame-ancestors &#39;none&#39;; frame-src viewscreen.githubusercontent.com notebooks.githubusercontent.com; img-src &#39;self&#39; data: blob: github.githubassets.com media.githubusercontent.com camo.githubusercontent.com identicons.github.com avatars.githubusercontent.com private-avatars.githubusercontent.com github-cloud.s3.amazonaws.com objects.githubusercontent.com release-assets.githubusercontent.com secured-user-images.githubusercontent.com/ user-images.githubusercontent.com/ private-user-images.githubusercontent.com opengraph.githubassets.com marketplace-screenshots.githubusercontent.com/ copilotprodattachments.blob.core.windows.net/github-production-copilot-attachments/ github-production-user-asset-6210df.s3.amazonaws.com customer-stories-feed.github.com spotlights-feed.github.com objects-origin.githubusercontent.com *.githubusercontent.com; manifest-src &#39;self&#39;; media-src github.com user-images.githubusercontent.com/ secured-user-images.githubusercontent.com/ private-user-images.githubusercontent.com github-production-user-asset-6210df.s3.amazonaws.com gist.github.com github.githubassets.com; script-src github.githubassets.com; style-src &#39;unsafe-inline&#39; github.githubassets.com; upgrade-insecure-requests; worker-src github.githubassets.com github.com/assets-cdn/worker/ github.com/assets/ gist.github.com/assets-cdn/worker/                                                                
+Content-Security-Policy: default-src 'none'; base-uri 'self'; child-src github.githubassets.com github.com/assets-cdn/worker/ github.com/assets/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com www.githubstatus.com collector.github.com raw.githubusercontent.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com *.rel.tunnels.api.visualstudio.com wss://*.rel.tunnels.api.visualstudio.com github.githubassets.com objects-origin.githubusercontent.com copilot-proxy.githubusercontent.com proxy.individual.githubcopilot.com proxy.business.githubcopilot.com proxy.enterprise.githubcopilot.com *.actions.githubusercontent.com wss://*.actions.githubusercontent.com productionresultssa0.blob.core.windows.net/ productionresultssa1.blob.core.windows.net/ productionresultssa2.blob.core.windows.net/ productionresultssa3.blob.core.windows.net/ productionresultssa4.blob.core.windows.net/ productionresultssa5.blob.core.windows.net/ productionresultssa6.blob.core.windows.net/ productionresultssa7.blob.core.windows.net/ productionresultssa8.blob.core.windows.net/ productionresultssa9.blob.core.windows.net/ productionresultssa10.blob.core.windows.net/ productionresultssa11.blob.core.windows.net/ productionresultssa12.blob.core.windows.net/ productionresultssa13.blob.core.windows.net/ productionresultssa14.blob.core.windows.net/ productionresultssa15.blob.core.windows.net/ productionresultssa16.blob.core.windows.net/ productionresultssa17.blob.core.windows.net/ productionresultssa18.blob.core.windows.net/ productionresultssa19.blob.core.windows.net/ github-production-repository-image-32fea6.s3.amazonaws.com github-production-release-asset-2e65be.s3.amazonaws.com insights.github.com wss://alive.github.com wss://alive-staging.github.com api.githubcopilot.com api.individual.githubcopilot.com api.business.githubcopilot.com api.enterprise.githubcopilot.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com copilot-workspace.githubnext.com objects-origin.githubusercontent.com; frame-ancestors 'none'; frame-src viewscreen.githubusercontent.com notebooks.githubusercontent.com; img-src 'self' data: blob: github.githubassets.com media.githubusercontent.com camo.githubusercontent.com identicons.github.com avatars.githubusercontent.com private-avatars.githubusercontent.com github-cloud.s3.amazonaws.com objects.githubusercontent.com release-assets.githubusercontent.com secured-user-images.githubusercontent.com/ user-images.githubusercontent.com/ private-user-images.githubusercontent.com opengraph.githubassets.com marketplace-screenshots.githubusercontent.com/ copilotprodattachments.blob.core.windows.net/github-production-copilot-attachments/ github-production-user-asset-6210df.s3.amazonaws.com customer-stories-feed.github.com spotlights-feed.github.com objects-origin.githubusercontent.com *.githubusercontent.com; manifest-src 'self'; media-src github.com user-images.githubusercontent.com/ secured-user-images.githubusercontent.com/ private-user-images.githubusercontent.com github-production-user-asset-6210df.s3.amazonaws.com gist.github.com github.githubassets.com; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; upgrade-insecure-requests; worker-src github.githubassets.com github.com/assets-cdn/worker/ github.com/assets/ gist.github.com/assets-cdn/worker/                                                                
 Server: github.com
 X-GitHub-Request-Id: FC45:27AFD5:3F4298B:5786EE5:692E057C
 ```
@@ -1922,7 +1922,7 @@ Noticing a version mismatch. Checking both manifests to verify the IDs and versi
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: curl -s https://raw.githubusercontent.com/RaincloudTheDragon/Rainys-Bulk-Scene-Tools/main/blender_manifest.toml</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: curl -s https://raw.githubusercontent.com/RaincloudTheDragon/Rainys-Bulk-Scene-Tools/main/blender_manifest.toml</summary>
 
 ```bash
 curl -s https://raw.githubusercontent.com/RaincloudTheDragon/Rainys-Bulk-Scene-Tools/main/blender_manifest.toml
@@ -1938,7 +1938,7 @@ loudTheDragon/Rainys-Bulk-Scene-Tools/main/blender_manifest.toml
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: curl -I https://github.com/RaincloudTheDragon/Rainys-Bulk-Scene-Tools/releases/download/v0.10.0/Rainys-Bulk-Scene-Tools.v0.10.0.zip</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: curl -I https://github.com/RaincloudTheDragon/Rainys-Bulk-Scene-Tools/releases/download/v0.10.0/Rainys-Bulk-Scene-Tools.v0.10.0.zip</summary>
 
 ```bash
 curl -I https://github.com/RaincloudTheDragon/Rainys-Bulk-Scene-Tools/releases/download/v0.10.0/Rainys-Bulk-Scene-Tools.v0.10.0.zip
@@ -1958,7 +1958,7 @@ X-Frame-Options: deny
 X-Content-Type-Options: nosniff
 X-XSS-Protection: 0
 Referrer-Policy: no-referrer-when-downgrade
-Content-Security-Policy: default-src &#39;none&#39;; base-uri &#39;self&#39;; child-src github.githubassets.com github.com/assets-cdn/worker/ github.com/assets/ gist.github.com/assets-cdn/worker/; connect-src &#39;self&#39; uploads.github.com www.githubstatus.com collector.github.com raw.githubusercontent.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com *.rel.tunnels.api.visualstudio.com wss://*.rel.tunnels.api.visualstudio.com github.githubassets.com objects-origin.githubusercontent.com copilot-proxy.githubusercontent.com proxy.individual.githubcopilot.com proxy.business.githubcopilot.com proxy.enterprise.githubcopilot.com *.actions.githubusercontent.com wss://*.actions.githubusercontent.com productionresultssa0.blob.core.windows.net/ productionresultssa1.blob.core.windows.net/ productionresultssa2.blob.core.windows.net/ productionresultssa3.blob.core.windows.net/ productionresultssa4.blob.core.windows.net/ productionresultssa5.blob.core.windows.net/ productionresultssa6.blob.core.windows.net/ productionresultssa7.blob.core.windows.net/ productionresultssa8.blob.core.windows.net/ productionresultssa9.blob.core.windows.net/ productionresultssa10.blob.core.windows.net/ productionresultssa11.blob.core.windows.net/ productionresultssa12.blob.core.windows.net/ productionresultssa13.blob.core.windows.net/ productionresultssa14.blob.core.windows.net/ productionresultssa15.blob.core.windows.net/ productionresultssa16.blob.core.windows.net/ productionresultssa17.blob.core.windows.net/ productionresultssa18.blob.core.windows.net/ productionresultssa19.blob.core.windows.net/ github-production-repository-image-32fea6.s3.amazonaws.com github-production-release-asset-2e65be.s3.amazonaws.com insights.github.com wss://alive.github.com wss://alive-staging.github.com api.githubcopilot.com api.individual.githubcopilot.com api.business.githubcopilot.com api.enterprise.githubcopilot.com; font-src github.githubassets.com; form-action &#39;self&#39; github.com gist.github.com copilot-workspace.githubnext.com objects-origin.githubusercontent.com; frame-ancestors &#39;none&#39;; frame-src viewscreen.githubusercontent.com notebooks.githubusercontent.com; img-src &#39;self&#39; data: blob: github.githubassets.com media.githubusercontent.com camo.githubusercontent.com identicons.github.com avatars.githubusercontent.com private-avatars.githubusercontent.com github-cloud.s3.amazonaws.com objects.githubusercontent.com release-assets.githubusercontent.com secured-user-images.githubusercontent.com/ user-images.githubusercontent.com/ private-user-images.githubusercontent.com opengraph.githubassets.com marketplace-screenshots.githubusercontent.com/ copilotprodattachments.blob.core.windows.net/github-production-copilot-attachments/ github-production-user-asset-6210df.s3.amazonaws.com customer-stories-feed.github.com spotlights-feed.github.com objects-origin.githubusercontent.com *.githubusercontent.com; manifest-src &#39;self&#39;; media-src github.com user-images.githubusercontent.com/ secured-user-images.githubusercontent.com/ private-user-images.githubusercontent.com github-production-user-asset-6210df.s3.amazonaws.com gist.github.com github.githubassets.com; script-src github.githubassets.com; style-src &#39;unsafe-inline&#39; github.githubassets.com; upgrade-insecure-requests; worker-src github.githubassets.com github.com/assets-cdn/worker/ github.com/assets/ gist.github.com/assets-cdn/worker/                                                                
+Content-Security-Policy: default-src 'none'; base-uri 'self'; child-src github.githubassets.com github.com/assets-cdn/worker/ github.com/assets/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com www.githubstatus.com collector.github.com raw.githubusercontent.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com *.rel.tunnels.api.visualstudio.com wss://*.rel.tunnels.api.visualstudio.com github.githubassets.com objects-origin.githubusercontent.com copilot-proxy.githubusercontent.com proxy.individual.githubcopilot.com proxy.business.githubcopilot.com proxy.enterprise.githubcopilot.com *.actions.githubusercontent.com wss://*.actions.githubusercontent.com productionresultssa0.blob.core.windows.net/ productionresultssa1.blob.core.windows.net/ productionresultssa2.blob.core.windows.net/ productionresultssa3.blob.core.windows.net/ productionresultssa4.blob.core.windows.net/ productionresultssa5.blob.core.windows.net/ productionresultssa6.blob.core.windows.net/ productionresultssa7.blob.core.windows.net/ productionresultssa8.blob.core.windows.net/ productionresultssa9.blob.core.windows.net/ productionresultssa10.blob.core.windows.net/ productionresultssa11.blob.core.windows.net/ productionresultssa12.blob.core.windows.net/ productionresultssa13.blob.core.windows.net/ productionresultssa14.blob.core.windows.net/ productionresultssa15.blob.core.windows.net/ productionresultssa16.blob.core.windows.net/ productionresultssa17.blob.core.windows.net/ productionresultssa18.blob.core.windows.net/ productionresultssa19.blob.core.windows.net/ github-production-repository-image-32fea6.s3.amazonaws.com github-production-release-asset-2e65be.s3.amazonaws.com insights.github.com wss://alive.github.com wss://alive-staging.github.com api.githubcopilot.com api.individual.githubcopilot.com api.business.githubcopilot.com api.enterprise.githubcopilot.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com copilot-workspace.githubnext.com objects-origin.githubusercontent.com; frame-ancestors 'none'; frame-src viewscreen.githubusercontent.com notebooks.githubusercontent.com; img-src 'self' data: blob: github.githubassets.com media.githubusercontent.com camo.githubusercontent.com identicons.github.com avatars.githubusercontent.com private-avatars.githubusercontent.com github-cloud.s3.amazonaws.com objects.githubusercontent.com release-assets.githubusercontent.com secured-user-images.githubusercontent.com/ user-images.githubusercontent.com/ private-user-images.githubusercontent.com opengraph.githubassets.com marketplace-screenshots.githubusercontent.com/ copilotprodattachments.blob.core.windows.net/github-production-copilot-attachments/ github-production-user-asset-6210df.s3.amazonaws.com customer-stories-feed.github.com spotlights-feed.github.com objects-origin.githubusercontent.com *.githubusercontent.com; manifest-src 'self'; media-src github.com user-images.githubusercontent.com/ secured-user-images.githubusercontent.com/ private-user-images.githubusercontent.com github-production-user-asset-6210df.s3.amazonaws.com gist.github.com github.githubassets.com; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; upgrade-insecure-requests; worker-src github.githubassets.com github.com/assets-cdn/worker/ github.com/assets/ gist.github.com/assets-cdn/worker/                                                                
 Server: github.com
 X-GitHub-Request-Id: D318:8915:3D06846:54822C0:692E058E
 ```
@@ -1995,7 +1995,7 @@ Checking the actual repository structure:
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: curl -s https://api.github.com/repos/RaincloudTheDragon/Rainys-Bulk-Scene-Tools/contents/ | ConvertFrom-Json | Select-Object name, type | Format-Table</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: curl -s https://api.github.com/repos/RaincloudTheDragon/Rainys-Bulk-Scene-Tools/contents/ | ConvertFrom-Json | Select-Object name, type | Format-Table</summary>
 
 ```bash
 curl -s https://api.github.com/repos/RaincloudTheDragon/Rainys-Bulk-Scene-Tools/contents/ | ConvertFrom-Json | Select-Object name, type | Format-Table
@@ -2022,7 +2022,7 @@ updater          dir
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: curl -s https://api.github.com/repos/RaincloudTheDragon/BasedPlayblast/releases/latest | ConvertFrom-Json | Select-Object tag_name, @{Name='assets';Expression={$_.assets | ForEach-Object {$_.name}}}</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: curl -s https://api.github.com/repos/RaincloudTheDragon/BasedPlayblast/releases/latest | ConvertFrom-Json | Select-Object tag_name, @{Name='assets';Expression={$_.assets | ForEach-Object {$_.name}}}</summary>
 
 ```bash
 curl -s https://api.github.com/repos/RaincloudTheDragon/BasedPlayblast/releases/latest | ConvertFrom-Json | Select-Object tag_name, @{Name='assets';Expression={$_.assets | ForEach-Object {$_.name}}}
@@ -2039,7 +2039,7 @@ v2.3.0   BasedPlayblast.v2.3.0.zip
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: curl -s https://api.github.com/repos/RaincloudTheDragon/Rainys-Bulk-Scene-Tools/releases/latest | ConvertFrom-Json | Select-Object tag_name, @{Name='assets';Expression={$_.assets | ForEach-Object {$_.name}}}</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: curl -s https://api.github.com/repos/RaincloudTheDragon/Rainys-Bulk-Scene-Tools/releases/latest | ConvertFrom-Json | Select-Object tag_name, @{Name='assets';Expression={$_.assets | ForEach-Object {$_.name}}}</summary>
 
 ```bash
 curl -s https://api.github.com/repos/RaincloudTheDragon/Rainys-Bulk-Scene-Tools/releases/latest | ConvertFrom-Json | Select-Object tag_name, @{Name='assets';Expression={$_.assets | ForEach-Object {$_.name}}}
@@ -2103,7 +2103,7 @@ Updating the catalog to only include BasedPlayblast for now, and noting what's n
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: curl -s https://extensions.blender.org/api/v1/extensions | ConvertFrom-Json | Select-Object -First 1 | ConvertTo-Json -Depth 5</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: curl -s https://extensions.blender.org/api/v1/extensions | ConvertFrom-Json | Select-Object -First 1 | ConvertTo-Json -Depth 5</summary>
 
 ```bash
 curl -s https://extensions.blender.org/api/v1/extensions | ConvertFrom-Json | Select-Object -First 1 | ConvertTo-Json -Depth 5
@@ -2127,21 +2127,21 @@ Removing it from the catalog and checking what error you're seeing:
 
 <tool-use data-tool-type="write" data-tool-name="search_replace">
 
-<details><summary>Tool use: **code_edit** • Edit file: update_catalog.py</summary>
+<details><summary>Tool use: **search_replace** • Edit file: update_catalog.py</summary>
 
 **Chunk 1**
 Lines added: 2, lines removed: 5
 
 ```diff
 @@ -27,9 +27,6 @@
-          &quot;manifest_branch&quot;: &quot;main&quot;,
+          "manifest_branch": "main",
       },
 -     {
--         &quot;id&quot;: &quot;rainys_bulk_scene_tools&quot;,  # Must match blender_manifest.toml
--         &quot;repo&quot;: &quot;RaincloudTheDragon/Rainys-Bulk-Scene-Tools&quot;,
--         &quot;manifest_branch&quot;: &quot;main&quot;,
+-         "id": "rainys_bulk_scene_tools",  # Must match blender_manifest.toml
+-         "repo": "RaincloudTheDragon/Rainys-Bulk-Scene-Tools",
+-         "manifest_branch": "main",
 -     },
-+     # Note: Rainys-Bulk-Scene-Tools doesn&#39;t have blender_manifest.toml yet
++     # Note: Rainys-Bulk-Scene-Tools doesn't have blender_manifest.toml yet
 +     # It only has bl_info.json (old format). Add it here once you create the manifest.
   ]
   
@@ -2154,7 +2154,7 @@ Lines added: 2, lines removed: 5
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: python update_catalog.py</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: python update_catalog.py</summary>
 
 ```bash
 python update_catalog.py
@@ -2183,7 +2183,7 @@ Re-running the script and checking the output:
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: python update_catalog.py 2>&1</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: python update_catalog.py 2>&1</summary>
 
 ```bash
 python update_catalog.py 2>&1
@@ -2216,7 +2216,7 @@ The string to replace was not found in the file.
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: git add catalog.json update_catalog.py && git commit -m "Remove Rainys-Bulk-Scene-Tools (no manifest.toml) and fix catalog" && git push</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: git add catalog.json update_catalog.py && git commit -m "Remove Rainys-Bulk-Scene-Tools (no manifest.toml) and fix catalog" && git push</summary>
 
 ```bash
 git add catalog.json update_catalog.py && git commit -m "Remove Rainys-Bulk-Scene-Tools (no manifest.toml) and fix catalog" && git push
@@ -2251,7 +2251,7 @@ Checking a few things that could cause issues:
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: curl -s https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json | python -m json.tool</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: curl -s https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json | python -m json.tool</summary>
 
 ```bash
 curl -s https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json | python -m json.tool
@@ -2262,15 +2262,15 @@ curl -s https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.j
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: curl -s https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml | Select-String -Pattern "^id\s*=|^version\s*="</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: curl -s https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml | Select-String -Pattern "^id\s*=|^version\s*="</summary>
 
 ```bash
 curl -s https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml | Select-String -Pattern "^id\s*=|^version\s*="
 ```
 
 ```
-id = &quot;basedplayblast&quot;
-version = &quot;1.3.0&quot;
+id = "basedplayblast"
+version = "1.3.0"
 ```
 </details>
 </tool-use>
@@ -2328,7 +2328,7 @@ The error indicates the manifest is missing a "version" key. Checking the manife
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: curl -s https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: curl -s https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml</summary>
 
 ```bash
 curl -s https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml
@@ -2336,33 +2336,33 @@ curl -s https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main
 
 ```
 PS E:\rainys-blender-extensions&gt; curl -s https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml
-schema_version = &quot;1.0.0&quot;
+schema_version = "1.0.0"
 
-id = &quot;basedplayblast&quot;
-name = &quot;BasedPlayblast&quot;
-tagline = &quot;Easily create playblasts from Blender and Flamenco&quot;
-version = &quot;1.3.0&quot;
-type = &quot;add-on&quot;
+id = "basedplayblast"
+name = "BasedPlayblast"
+tagline = "Easily create playblasts from Blender and Flamenco"
+version = "1.3.0"
+type = "add-on"
 
-maintainer = &quot;RaincloudTheDragon &lt;raincloudthedragon@gmail.com&gt;&quot;
-license = [&quot;GPL-3.0-or-later&quot;]
-blender_version_min = &quot;5.0.0&quot;
+maintainer = "RaincloudTheDragon &lt;raincloudthedragon@gmail.com&gt;"
+license = ["GPL-3.0-or-later"]
+blender_version_min = "5.0.0"
 
-website = &quot;https://github.com/RaincloudTheDragon/BasedPlayblast&quot;
+website = "https://github.com/RaincloudTheDragon/BasedPlayblast"
 
-tags = [&quot;Animation&quot;, &quot;Render&quot;, &quot;Workflow&quot;, &quot;Video&quot;]
+tags = ["Animation", "Render", "Workflow", "Video"]
 
 [permissions]
-files = &quot;Import/export files and data&quot;
+files = "Import/export files and data"
 
 [build]
 paths_exclude_pattern = [
-    &quot;__pycache__/&quot;,
-    &quot;*.pyc&quot;,
-    &quot;.git/&quot;,
-    &quot;.github/&quot;,
-    &quot;addon_updater*&quot;,
-    &quot;basedplayblast_updater/&quot;
+    "__pycache__/",
+    "*.pyc",
+    ".git/",
+    ".github/",
+    "addon_updater*",
+    "basedplayblast_updater/"
 ]
 ```
 </details>
@@ -2403,7 +2403,7 @@ The manifest has `version = "1.3.0"`, but the catalog lists `"version": "2.3.0"`
 
 <tool-use data-tool-type="write" data-tool-name="search_replace">
 
-<details><summary>Tool use: **code_edit** • Edit file: catalog.json</summary>
+<details><summary>Tool use: **search_replace** • Edit file: catalog.json</summary>
 
 **Chunk 1**
 Lines added: 1, lines removed: 1
@@ -2411,11 +2411,11 @@ Lines added: 1, lines removed: 1
 ```diff
 @@ -4,5 +4,5 @@
       {
-        &quot;id&quot;: &quot;basedplayblast&quot;,
--       &quot;version&quot;: &quot;2.3.0&quot;,
-+       &quot;version&quot;: &quot;1.3.0&quot;,
-        &quot;archive_url&quot;: &quot;https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.0/BasedPlayblast.v2.3.0.zip&quot;,
-        &quot;manifest_url&quot;: &quot;https://github.com/RaincloudTheDragon/BasedPlayblast/raw/main/blender_manifest.toml&quot;
+        "id": "basedplayblast",
+-       "version": "2.3.0",
++       "version": "1.3.0",
+        "archive_url": "https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.0/BasedPlayblast.v2.3.0.zip",
+        "manifest_url": "https://github.com/RaincloudTheDragon/BasedPlayblast/raw/main/blender_manifest.toml"
 ```
 
 </details>
@@ -2425,7 +2425,7 @@ Lines added: 1, lines removed: 1
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: python -m json.tool catalog.json</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: python -m json.tool catalog.json</summary>
 
 ```bash
 python -m json.tool catalog.json
@@ -2434,13 +2434,13 @@ python -m json.tool catalog.json
 ```
 PS E:\rainys-blender-extensions&gt; python -m json.tool catalog.json
 {
-    &quot;schema_version&quot;: &quot;1.0.0&quot;,
-    &quot;extensions&quot;: [
+    "schema_version": "1.0.0",
+    "extensions": [
         {
-            &quot;id&quot;: &quot;basedplayblast&quot;,
-            &quot;version&quot;: &quot;1.3.0&quot;,
-            &quot;archive_url&quot;: &quot;https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.0/BasedPlayblast.v2.3.0.zip&quot;,
-            &quot;manifest_url&quot;: &quot;https://github.com/RaincloudTheDragon/BasedPlayblast/raw/main/blender_manifest.toml&quot;
+            "id": "basedplayblast",
+            "version": "1.3.0",
+            "archive_url": "https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.0/BasedPlayblast.v2.3.0.zip",
+            "manifest_url": "https://github.com/RaincloudTheDragon/BasedPlayblast/raw/main/blender_manifest.toml"
         }
     ]
 }
@@ -2512,40 +2512,40 @@ Checking the manifest file Blender is reading. It may be reading the manifest fr
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: curl -s https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: curl -s https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml</summary>
 
 ```bash
 curl -s https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml
 ```
 
 ```
-schema_version = &quot;1.0.0&quot;
+schema_version = "1.0.0"
 
-id = &quot;basedplayblast&quot;
-name = &quot;BasedPlayblast&quot;
-tagline = &quot;Easily create playblasts from Blender and Flamenco&quot;
-version = &quot;1.3.0&quot;
-type = &quot;add-on&quot;
+id = "basedplayblast"
+name = "BasedPlayblast"
+tagline = "Easily create playblasts from Blender and Flamenco"
+version = "1.3.0"
+type = "add-on"
 
-maintainer = &quot;RaincloudTheDragon &lt;raincloudthedragon@gmail.com&gt;&quot;
-license = [&quot;GPL-3.0-or-later&quot;]
-blender_version_min = &quot;5.0.0&quot;
+maintainer = "RaincloudTheDragon &lt;raincloudthedragon@gmail.com&gt;"
+license = ["GPL-3.0-or-later"]
+blender_version_min = "5.0.0"
 
-website = &quot;https://github.com/RaincloudTheDragon/BasedPlayblast&quot;
+website = "https://github.com/RaincloudTheDragon/BasedPlayblast"
 
-tags = [&quot;Animation&quot;, &quot;Render&quot;, &quot;Workflow&quot;, &quot;Video&quot;]
+tags = ["Animation", "Render", "Workflow", "Video"]
 
 [permissions]
-files = &quot;Import/export files and data&quot;
+files = "Import/export files and data"
 
 [build]
 paths_exclude_pattern = [
-    &quot;__pycache__/&quot;,
-    &quot;*.pyc&quot;,
-    &quot;.git/&quot;,
-    &quot;.github/&quot;,
-    &quot;addon_updater*&quot;,
-    &quot;basedplayblast_updater/&quot;
+    "__pycache__/",
+    "*.pyc",
+    ".git/",
+    ".github/",
+    "addon_updater*",
+    "basedplayblast_updater/"
 ] 
 ```
 </details>
@@ -2585,7 +2585,7 @@ The repository manifest has a version, but Blender may be reading the manifest f
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: curl -L -s https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.0/BasedPlayblast.v2.3.0.zip -o temp.zip 2>&1 | Select-Object -First 5</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: curl -L -s https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.0/BasedPlayblast.v2.3.0.zip -o temp.zip 2>&1 | Select-Object -First 5</summary>
 
 ```bash
 curl -L -s https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.0/BasedPlayblast.v2.3.0.zip -o temp.zip 2>&1 | Select-Object -First 5
@@ -2600,14 +2600,14 @@ curl -L -s https://github.com/RaincloudTheDragon/BasedPlayblast/releases/downloa
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: if (Test-Path temp.zip) { Expand-Archive -Path temp.zip -DestinationPath temp_extract -Force; if (Test-Path temp_extract\blender_manifest.toml) { Get-Content temp_extract\blender_manifest.toml | Select-String -Pattern "version" } else { Write-Output "blender_manifest.toml NOT FOUND in ZIP" }; Remove-Item -Recurse -Force temp_extract, temp.zip -ErrorAction SilentlyContinue } else { Write-Output "Failed to download ZIP" }</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: if (Test-Path temp.zip) { Expand-Archive -Path temp.zip -DestinationPath temp_extract -Force; if (Test-Path temp_extract\blender_manifest.toml) { Get-Content temp_extract\blender_manifest.toml | Select-String -Pattern "version" } else { Write-Output "blender_manifest.toml NOT FOUND in ZIP" }; Remove-Item -Recurse -Force temp_extract, temp.zip -ErrorAction SilentlyContinue } else { Write-Output "Failed to download ZIP" }</summary>
 
 ```bash
 if (Test-Path temp.zip) { Expand-Archive -Path temp.zip -DestinationPath temp_extract -Force; if (Test-Path temp_extract\blender_manifest.toml) { Get-Content temp_extract\blender_manifest.toml | Select-String -Pattern "version" } else { Write-Output "blender_manifest.toml NOT FOUND in ZIP" }; Remove-Item -Recurse -Force temp_extract, temp.zip -ErrorAction SilentlyContinue } else { Write-Output "Failed to download ZIP" }
 ```
 
 ```
-ontinue } else { Write-Output &quot;Failed to download ZIP&quot; }                        
+ontinue } else { Write-Output "Failed to download ZIP" }                        
 blender_manifest.toml NOT FOUND in ZIP
 ```
 </details>
@@ -2669,7 +2669,7 @@ Checking the ZIP structure. The addon should be in a folder inside the ZIP:
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: curl -L -s https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.0/BasedPlayblast.v2.3.0.zip -o temp.zip</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: curl -L -s https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.0/BasedPlayblast.v2.3.0.zip -o temp.zip</summary>
 
 ```bash
 curl -L -s https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.0/BasedPlayblast.v2.3.0.zip -o temp.zip
@@ -2680,7 +2680,7 @@ curl -L -s https://github.com/RaincloudTheDragon/BasedPlayblast/releases/downloa
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: Expand-Archive -Path temp.zip -DestinationPath temp_extract -Force; Get-ChildItem temp_extract -Recurse | Select-Object FullName | ForEach-Object { $_.FullName.Replace((Get-Item temp_extract).FullName + '\', '') } | Select-Object -First 20</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: Expand-Archive -Path temp.zip -DestinationPath temp_extract -Force; Get-ChildItem temp_extract -Recurse | Select-Object FullName | ForEach-Object { $_.FullName.Replace((Get-Item temp_extract).FullName + '\', '') } | Select-Object -First 20</summary>
 
 ```bash
 Expand-Archive -Path temp.zip -DestinationPath temp_extract -Force; Get-ChildItem temp_extract -Recurse | Select-Object FullName | ForEach-Object { $_.FullName.Replace((Get-Item temp_extract).FullName + '\', '') } | Select-Object -First 20
@@ -2698,7 +2698,7 @@ BasedPlayblast\README.md
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: if (Test-Path temp_extract\blender_manifest.toml) { Write-Output "Manifest at root"; Get-Content temp_extract\blender_manifest.toml | Select-String -Pattern "version" } elseif (Get-ChildItem temp_extract -Directory | ForEach-Object { if (Test-Path "$($_.FullName)\blender_manifest.toml") { Write-Output "Manifest in folder: $($_.Name)"; Get-Content "$($_.FullName)\blender_manifest.toml" | Select-String -Pattern "version" } }) { } else { Write-Output "No manifest found anywhere" }; Remove-Item -Recurse -Force temp_extract, temp.zip -ErrorAction SilentlyContinue</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: if (Test-Path temp_extract\blender_manifest.toml) { Write-Output "Manifest at root"; Get-Content temp_extract\blender_manifest.toml | Select-String -Pattern "version" } elseif (Get-ChildItem temp_extract -Directory | ForEach-Object { if (Test-Path "$($_.FullName)\blender_manifest.toml") { Write-Output "Manifest in folder: $($_.Name)"; Get-Content "$($_.FullName)\blender_manifest.toml" | Select-String -Pattern "version" } }) { } else { Write-Output "No manifest found anywhere" }; Remove-Item -Recurse -Force temp_extract, temp.zip -ErrorAction SilentlyContinue</summary>
 
 ```bash
 if (Test-Path temp_extract\blender_manifest.toml) { Write-Output "Manifest at root"; Get-Content temp_extract\blender_manifest.toml | Select-String -Pattern "version" } elseif (Get-ChildItem temp_extract -Directory | ForEach-Object { if (Test-Path "$($_.FullName)\blender_manifest.toml") { Write-Output "Manifest in folder: $($_.Name)"; Get-Content "$($_.FullName)\blender_manifest.toml" | Select-String -Pattern "version" } }) { } else { Write-Output "No manifest found anywhere" }; Remove-Item -Recurse -Force temp_extract, temp.zip -ErrorAction SilentlyContinue
@@ -2719,7 +2719,7 @@ ZIP structure looks correct. Checking if the manifest inside the ZIP has the ver
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: curl -L -s https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.0/BasedPlayblast.v2.3.0.zip -o temp.zip; Expand-Archive -Path temp.zip -DestinationPath temp_extract -Force; Get-Content temp_extract\BasedPlayblast\blender_manifest.toml; Remove-Item -Recurse -Force temp_extract, temp.zip -ErrorAction SilentlyContinue</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: curl -L -s https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.0/BasedPlayblast.v2.3.0.zip -o temp.zip; Expand-Archive -Path temp.zip -DestinationPath temp_extract -Force; Get-Content temp_extract\BasedPlayblast\blender_manifest.toml; Remove-Item -Recurse -Force temp_extract, temp.zip -ErrorAction SilentlyContinue</summary>
 
 ```bash
 curl -L -s https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.0/BasedPlayblast.v2.3.0.zip -o temp.zip; Expand-Archive -Path temp.zip -DestinationPath temp_extract -Force; Get-Content temp_extract\BasedPlayblast\blender_manifest.toml; Remove-Item -Recurse -Force temp_extract, temp.zip -ErrorAction SilentlyContinue
@@ -2740,7 +2740,7 @@ Trying a different approach:
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: $zip = [System.IO.Compression.ZipFile]::OpenRead("$PWD\temp.zip"); $entry = $zip.Entries | Where-Object { $_.FullName -like "*blender_manifest.toml" }; if ($entry) { $stream = $entry.Open(); $reader = New-Object System.IO.StreamReader($stream); $content = $reader.ReadToEnd(); $reader.Close(); $stream.Close(); $content } else { "Manifest not found" }; $zip.Dispose()</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: $zip = [System.IO.Compression.ZipFile]::OpenRead("$PWD\temp.zip"); $entry = $zip.Entries | Where-Object { $_.FullName -like "*blender_manifest.toml" }; if ($entry) { $stream = $entry.Open(); $reader = New-Object System.IO.StreamReader($stream); $content = $reader.ReadToEnd(); $reader.Close(); $stream.Close(); $content } else { "Manifest not found" }; $zip.Dispose()</summary>
 
 ```bash
 $zip = [System.IO.Compression.ZipFile]::OpenRead("$PWD\temp.zip"); $entry = $zip.Entries | Where-Object { $_.FullName -like "*blender_manifest.toml" }; if ($entry) { $stream = $entry.Open(); $reader = New-Object System.IO.StreamReader($stream); $content = $reader.ReadToEnd(); $reader.Close(); $stream.Close(); $content } else { "Manifest not found" }; $zip.Dispose()
@@ -2751,7 +2751,7 @@ $zip = [System.IO.Compression.ZipFile]::OpenRead("$PWD\temp.zip"); $entry = $zip
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: if (Test-Path temp.zip) { Remove-Item temp.zip -Force }</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: if (Test-Path temp.zip) { Remove-Item temp.zip -Force }</summary>
 
 ```bash
 if (Test-Path temp.zip) { Remove-Item temp.zip -Force }
@@ -2873,7 +2873,7 @@ Updating the catalog to version 2.3.1 to match the manifest:
 
 <tool-use data-tool-type="write" data-tool-name="search_replace">
 
-<details><summary>Tool use: **code_edit** • Edit file: catalog.json</summary>
+<details><summary>Tool use: **search_replace** • Edit file: catalog.json</summary>
 
 **Chunk 1**
 Lines added: 1, lines removed: 1
@@ -2881,11 +2881,11 @@ Lines added: 1, lines removed: 1
 ```diff
 @@ -4,5 +4,5 @@
       {
-        &quot;id&quot;: &quot;basedplayblast&quot;,
--       &quot;version&quot;: &quot;1.3.0&quot;,
-+       &quot;version&quot;: &quot;2.3.1&quot;,
-        &quot;archive_url&quot;: &quot;https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.0/BasedPlayblast.v2.3.0.zip&quot;,
-        &quot;manifest_url&quot;: &quot;https://github.com/RaincloudTheDragon/BasedPlayblast/raw/main/blender_manifest.toml&quot;
+        "id": "basedplayblast",
+-       "version": "1.3.0",
++       "version": "2.3.1",
+        "archive_url": "https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.0/BasedPlayblast.v2.3.0.zip",
+        "manifest_url": "https://github.com/RaincloudTheDragon/BasedPlayblast/raw/main/blender_manifest.toml"
 ```
 
 </details>
@@ -2951,18 +2951,18 @@ Fixing the `archive_url` to point to the v2.3.1 release:
 
 <tool-use data-tool-type="write" data-tool-name="search_replace">
 
-<details><summary>Tool use: **code_edit** • Edit file: catalog.json</summary>
+<details><summary>Tool use: **search_replace** • Edit file: catalog.json</summary>
 
 **Chunk 1**
 Lines added: 1, lines removed: 1
 
 ```diff
 @@ -5,5 +5,5 @@
-        &quot;id&quot;: &quot;basedplayblast&quot;,
-        &quot;version&quot;: &quot;2.3.1&quot;,
--       &quot;archive_url&quot;: &quot;https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.0/BasedPlayblast.v2.3.1.zip&quot;,
-+       &quot;archive_url&quot;: &quot;https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.1/BasedPlayblast.v2.3.1.zip&quot;,
-        &quot;manifest_url&quot;: &quot;https://github.com/RaincloudTheDragon/BasedPlayblast/raw/main/blender_manifest.toml&quot;
+        "id": "basedplayblast",
+        "version": "2.3.1",
+-       "archive_url": "https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.0/BasedPlayblast.v2.3.1.zip",
++       "archive_url": "https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.1/BasedPlayblast.v2.3.1.zip",
+        "manifest_url": "https://github.com/RaincloudTheDragon/BasedPlayblast/raw/main/blender_manifest.toml"
       }
 ```
 
@@ -3041,7 +3041,7 @@ Updating the script to ensure the archive URL matches the release tag and add va
 
 <tool-use data-tool-type="write" data-tool-name="search_replace">
 
-<details><summary>Tool use: **code_edit** • Edit file: update_catalog.py</summary>
+<details><summary>Tool use: **search_replace** • Edit file: update_catalog.py</summary>
 
 **Chunk 1**
 Lines added: 2, lines removed: 2
@@ -3051,10 +3051,10 @@ Lines added: 2, lines removed: 2
   
   
 - def get_archive_url(release: Dict, repo: str) -&gt; Optional[str]:
--     &quot;&quot;&quot;Get the ZIP archive URL from a release.&quot;&quot;&quot;
+-     """Get the ZIP archive URL from a release."""
 + def get_archive_url(release: Dict, repo: str, tag: str) -&gt; Optional[str]:
-+     &quot;&quot;&quot;Get the ZIP archive URL from a release, ensuring it matches the tag.&quot;&quot;&quot;
-      if not release or &quot;assets&quot; not in release:
++     """Get the ZIP archive URL from a release, ensuring it matches the tag."""
+      if not release or "assets" not in release:
           return None
 ```
 
@@ -3063,25 +3063,25 @@ Lines added: 11, lines removed: 4
 
 ```diff
 @@ -57,9 +57,16 @@
-      for asset in release.get(&quot;assets&quot;, []):
-          if asset.get(&quot;content_type&quot;) == &quot;application/zip&quot; or asset.get(&quot;name&quot;, &quot;&quot;).endswith(&quot;.zip&quot;):
--             return asset.get(&quot;browser_download_url&quot;)
+      for asset in release.get("assets", []):
+          if asset.get("content_type") == "application/zip" or asset.get("name", "").endswith(".zip"):
+-             return asset.get("browser_download_url")
 -     
 -     # Fallback: use the source code ZIP
--     tag = release.get(&quot;tag_name&quot;, &quot;&quot;)
-+             url = asset.get(&quot;browser_download_url&quot;)
+-     tag = release.get("tag_name", "")
++             url = asset.get("browser_download_url")
 +             # Verify the URL contains the tag version
 +             if url and tag in url:
 +                 return url
 +             elif url:
 +                 # URL exists but might not match tag - log warning but still use it
-+                 print(f&quot;    Note: Archive URL may not match tag {tag}&quot;)
++                 print(f"    Note: Archive URL may not match tag {tag}")
 +                 return url
 +     
 +     # Fallback: use the source code ZIP (not recommended for extensions)
       if tag:
-+         print(f&quot;    ⚠ Warning: No ZIP asset found, using source archive (may not work)&quot;)
-          return f&quot;https://github.com/{repo}/archive/refs/tags/{tag}.zip&quot;
++         print(f"    ⚠ Warning: No ZIP asset found, using source archive (may not work)")
+          return f"https://github.com/{repo}/archive/refs/tags/{tag}.zip"
       
 ```
 
@@ -3093,14 +3093,14 @@ Lines added: 11, lines removed: 4
 
 <tool-use data-tool-type="write" data-tool-name="search_replace">
 
-<details><summary>Tool use: **code_edit** • Edit file: update_catalog.py</summary>
+<details><summary>Tool use: **search_replace** • Edit file: update_catalog.py</summary>
 
 **Chunk 1**
 Lines added: 1, lines removed: 1
 
 ```diff
 @@ -98,5 +98,5 @@
-          tag = release.get(&quot;tag_name&quot;, &quot;&quot;)
+          tag = release.get("tag_name", "")
           version = parse_version_from_tag(tag)
 -         archive_url = get_archive_url(release, repo)
 +         archive_url = get_archive_url(release, repo, tag)
@@ -3115,7 +3115,7 @@ Lines added: 1, lines removed: 1
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: python update_catalog.py</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: python update_catalog.py</summary>
 
 ```bash
 python update_catalog.py
@@ -3215,7 +3215,7 @@ Checking the manifest inside the ZIP archive Blender downloads:
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: curl -L -s https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.1/BasedPlayblast.v2.3.1.zip -o temp.zip</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: curl -L -s https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.1/BasedPlayblast.v2.3.1.zip -o temp.zip</summary>
 
 ```bash
 curl -L -s https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.1/BasedPlayblast.v2.3.1.zip -o temp.zip
@@ -3230,7 +3230,7 @@ PS E:\rainys-blender-extensions&gt; curl -L -s https://github.com/RaincloudTheDr
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: Expand-Archive -Path temp.zip -DestinationPath temp_extract -Force; Get-Content temp_extract\BasedPlayblast\blender_manifest.toml</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: Expand-Archive -Path temp.zip -DestinationPath temp_extract -Force; Get-Content temp_extract\BasedPlayblast\blender_manifest.toml</summary>
 
 ```bash
 Expand-Archive -Path temp.zip -DestinationPath temp_extract -Force; Get-Content temp_extract\BasedPlayblast\blender_manifest.toml
@@ -3238,33 +3238,33 @@ Expand-Archive -Path temp.zip -DestinationPath temp_extract -Force; Get-Content 
 
 ```
 PS E:\rainys-blender-extensions&gt; Expand-Archive -Path temp.zip -DestinationPath temp_extract -Force; Get-Content temp_extract\BasedPlayblast\blender_manifest.toml                                                                                                    
-schema_version = &quot;1.0.0&quot;
+schema_version = "1.0.0"
 
-id = &quot;basedplayblast&quot;
-name = &quot;BasedPlayblast&quot;
-tagline = &quot;Easily create playblasts from Blender and Flamenco&quot;
-version = &quot;2.3.1&quot;
-type = &quot;add-on&quot;
+id = "basedplayblast"
+name = "BasedPlayblast"
+tagline = "Easily create playblasts from Blender and Flamenco"
+version = "2.3.1"
+type = "add-on"
 
-maintainer = &quot;RaincloudTheDragon &lt;raincloudthedragon@gmail.com&gt;&quot;
-license = [&quot;GPL-3.0-or-later&quot;]
-blender_version_min = &quot;5.0.0&quot;
+maintainer = "RaincloudTheDragon &lt;raincloudthedragon@gmail.com&gt;"
+license = ["GPL-3.0-or-later"]
+blender_version_min = "5.0.0"
 
-website = &quot;https://github.com/RaincloudTheDragon/BasedPlayblast&quot;
+website = "https://github.com/RaincloudTheDragon/BasedPlayblast"
 
-tags = [&quot;Animation&quot;, &quot;Render&quot;, &quot;Workflow&quot;, &quot;Video&quot;]
+tags = ["Animation", "Render", "Workflow", "Video"]
 
 [permissions]
-files = &quot;Import/export files and data&quot;
+files = "Import/export files and data"
 
 [build]
 paths_exclude_pattern = [
-    &quot;__pycache__/&quot;,
-    &quot;*.pyc&quot;,
-    &quot;.git/&quot;,
-    &quot;.github/&quot;,
-    &quot;addon_updater*&quot;,
-    &quot;basedplayblast_updater/&quot;
+    "__pycache__/",
+    "*.pyc",
+    ".git/",
+    ".github/",
+    "addon_updater*",
+    "basedplayblast_updater/"
 ]
 ```
 </details>
@@ -3273,7 +3273,7 @@ paths_exclude_pattern = [
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: Remove-Item -Recurse -Force temp_extract, temp.zip -ErrorAction SilentlyContinue</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: Remove-Item -Recurse -Force temp_extract, temp.zip -ErrorAction SilentlyContinue</summary>
 
 ```bash
 Remove-Item -Recurse -Force temp_extract, temp.zip -ErrorAction SilentlyContinue
@@ -3302,7 +3302,7 @@ The ZIP manifest has `version = "2.3.1"`. Checking the manifest at the `manifest
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: curl -s https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: curl -s https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml</summary>
 
 ```bash
 curl -s https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml
@@ -3336,7 +3336,7 @@ Checking the manifest at the `manifest_url`:
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: curl -s https://github.com/RaincloudTheDragon/BasedPlayblast/raw/main/blender_manifest.toml | Select-String -Pattern "version"</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: curl -s https://github.com/RaincloudTheDragon/BasedPlayblast/raw/main/blender_manifest.toml | Select-String -Pattern "version"</summary>
 
 ```bash
 curl -s https://github.com/RaincloudTheDragon/BasedPlayblast/raw/main/blender_manifest.toml | Select-String -Pattern "version"
@@ -3347,7 +3347,7 @@ curl -s https://github.com/RaincloudTheDragon/BasedPlayblast/raw/main/blender_ma
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: curl -s https://github.com/RaincloudTheDragon/BasedPlayblast/raw/main/blender_manifest.toml</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: curl -s https://github.com/RaincloudTheDragon/BasedPlayblast/raw/main/blender_manifest.toml</summary>
 
 ```bash
 curl -s https://github.com/RaincloudTheDragon/BasedPlayblast/raw/main/blender_manifest.toml
@@ -3368,7 +3368,7 @@ Checking what's live on GitHub Pages:
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: curl -s https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: curl -s https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json</summary>
 
 ```bash
 curl -s https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json
@@ -3443,7 +3443,7 @@ Comparing the official Blender and BlenderKit extension catalogs to identify dif
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: curl -s https://extensions.blender.org/api/v1/extensions/ | ConvertFrom-Json | Select-Object -First 1 | ConvertTo-Json -Depth 10</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: curl -s https://extensions.blender.org/api/v1/extensions/ | ConvertFrom-Json | Select-Object -First 1 | ConvertTo-Json -Depth 10</summary>
 
 ```bash
 curl -s https://extensions.blender.org/api/v1/extensions/ | ConvertFrom-Json | Select-Object -First 1 | ConvertTo-Json -Depth 10
@@ -3454,14 +3454,14 @@ curl -s https://extensions.blender.org/api/v1/extensions/ | ConvertFrom-Json | S
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: curl -s https://www.blenderkit.com/api/v1/extensions/ | ConvertFrom-Json | Select-Object -First 1 | ConvertTo-Json -Depth 10</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: curl -s https://www.blenderkit.com/api/v1/extensions/ | ConvertFrom-Json | Select-Object -First 1 | ConvertTo-Json -Depth 10</summary>
 
 ```bash
 curl -s https://www.blenderkit.com/api/v1/extensions/ | ConvertFrom-Json | Select-Object -First 1 | ConvertTo-Json -Depth 10
 ```
 
 ```
-ConvertFrom-Json: Conversion from JSON failed with error: Unexpected character encountered while parsing value: &lt;. Path &#39;&#39;, line 0, position 0.
+ConvertFrom-Json: Conversion from JSON failed with error: Unexpected character encountered while parsing value: &lt;. Path '', line 0, position 0.
 ```
 </details>
 </tool-use>
@@ -3487,7 +3487,7 @@ Trying a different approach to inspect the API responses:
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: curl -s https://extensions.blender.org/api/v1/extensions/ | python -c "import sys, json; data = json.load(sys.stdin); ext = data['data'][0] if 'data' in data else data[0]; print(json.dumps(ext, indent=2))" 2>&1 | Select-Object -First 30</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: curl -s https://extensions.blender.org/api/v1/extensions/ | python -c "import sys, json; data = json.load(sys.stdin); ext = data['data'][0] if 'data' in data else data[0]; print(json.dumps(ext, indent=2))" 2>&1 | Select-Object -First 30</summary>
 
 ```bash
 curl -s https://extensions.blender.org/api/v1/extensions/ | python -c "import sys, json; data = json.load(sys.stdin); ext = data['data'][0] if 'data' in data else data[0]; print(json.dumps(ext, indent=2))" 2>&1 | Select-Object -First 30
@@ -3496,24 +3496,24 @@ curl -s https://extensions.blender.org/api/v1/extensions/ | python -c "import sy
 ```
 irst 30                                                                                                                                                                                                                                                               
 {
-  &quot;id&quot;: &quot;io_xnalara&quot;,
-  &quot;schema_version&quot;: &quot;1.0.0&quot;,
-  &quot;name&quot;: &quot;XPS Import/Export&quot;,
-  &quot;version&quot;: &quot;2.2.1&quot;,
-  &quot;tagline&quot;: &quot;Import-Export for XNALara/XPS files&quot;,
-  &quot;archive_hash&quot;: &quot;sha256:85bb7760955a80d5b10d4db30cddea57e39d1798c28ce8be4a3b4989a236ab15&quot;,
-  &quot;archive_size&quot;: 179719,
-  &quot;archive_url&quot;: &quot;https://extensions.blender.org/download/sha256:85bb7760955a80d5b10d4db30cddea57e39d1798c28ce8be4a3b4989a236ab15/add-on-io-xnalara-v2.2.1.zip&quot;,
-  &quot;type&quot;: &quot;add-on&quot;,
-  &quot;blender_version_min&quot;: &quot;5.0.0&quot;,
-  &quot;website&quot;: &quot;https://extensions.blender.org/add-ons/io-xnalara/&quot;,
-  &quot;maintainer&quot;: &quot;maylog&quot;,
-  &quot;license&quot;: [
-    &quot;SPDX:GPL-3.0-or-later&quot;
+  "id": "io_xnalara",
+  "schema_version": "1.0.0",
+  "name": "XPS Import/Export",
+  "version": "2.2.1",
+  "tagline": "Import-Export for XNALara/XPS files",
+  "archive_hash": "sha256:85bb7760955a80d5b10d4db30cddea57e39d1798c28ce8be4a3b4989a236ab15",
+  "archive_size": 179719,
+  "archive_url": "https://extensions.blender.org/download/sha256:85bb7760955a80d5b10d4db30cddea57e39d1798c28ce8be4a3b4989a236ab15/add-on-io-xnalara-v2.2.1.zip",
+  "type": "add-on",
+  "blender_version_min": "5.0.0",
+  "website": "https://extensions.blender.org/add-ons/io-xnalara/",
+  "maintainer": "maylog",
+  "license": [
+    "SPDX:GPL-3.0-or-later"
   ],
-  &quot;tags&quot;: [
-    &quot;Import-Export&quot;,
-    &quot;Pipeline&quot;
+  "tags": [
+    "Import-Export",
+    "Pipeline"
   ]
 }
 ```
@@ -3523,7 +3523,7 @@ irst 30
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: curl -s https://www.blenderkit.com/api/v1/extensions/ 2>&1 | Select-Object -First 50</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: curl -s https://www.blenderkit.com/api/v1/extensions/ 2>&1 | Select-Object -First 50</summary>
 
 ```bash
 curl -s https://www.blenderkit.com/api/v1/extensions/ 2>&1 | Select-Object -First 50
@@ -3541,22 +3541,22 @@ PS E:\rainys-blender-extensions&gt; curl -s https://www.blenderkit.com/api/v1/ex
 
 
 
-        &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;/&gt;&lt;script type=&quot;text/javascript&quot;&gt;window.NREUM||(NREUM={});NREUM.info={&quot;beacon&quot;:&quot;bam.nr-data.net&quot;,&quot;errorBeacon&quot;:&quot;bam.nr-data.net&quot;,&quot;licenseKey&quot;:&quot;d95d0042d8&quot;,&quot;applicationID&quot;:&quot;200725562&quot;,&quot;transactionName&quot;:&quot;MgRUbBQHV0BVU0ILCgtOcE0IBU1aW14ZAAkAD1JdFA5MURpRRhIWSwBGUUgQUFZDQxgHHREEWEsPCVdADnVOFgALEl9XCBVvWlFHZQcRSw1fSxI=&quot;,&quot;queueTime&quot;:2,&quot;applicationTime&quot;:5764,&quot;agent&quot;:&quot;&quot;};                                                                                     
-(window.NREUM||(NREUM={})).init={ajax:{deny_list:[&quot;bam.nr-data.net&quot;]},feature_flags:[&quot;soft_nav&quot;]};(window.NREUM||(NREUM={})).loader_config={licenseKey:&quot;d95d0042d8&quot;,applicationID:&quot;200725562&quot;,browserID:&quot;200725592&quot;};;/*! For license information please see nr-loader-rum-1.303.0.min.js.LICENSE.txt */                                                                                                                                                                                                                                    
-(()=&gt;{var e,t,r={122:(e,t,r)=&gt;{&quot;use strict&quot;;r.d(t,{a:()=&gt;i});var n=r(944);function i(e,t){try{if(!e||&quot;object&quot;!=typeof e)return(0,n.R)(3);if(!t||&quot;object&quot;!=typeof t)return(0,n.R)(4);const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),a=0===Object.keys(r).length?e:r;for(let o in a)if(void 0!==e[o])try{if(null===e[o]){r[o]=null;continue}Array.isArray(e[o])&amp;&amp;Array.isArray(t[o])?r[o]=Array.from(new Set([...e[o],...t[o]])):&quot;object&quot;==typeof e[o]&amp;&amp;&quot;object&quot;==typeof t[o]?r[o]=i(e[o],t[o]):r[o]=e[o]}catch(e){r[o]||(0,n.R)(1,e)}return r}catch(e){(0,n.R)(2,e)}}},154:(e,t,r)=&gt;{&quot;use strict&quot;;r.d(t,{OF:()=&gt;c,RI:()=&gt;i,WN:()=&gt;u,bv:()=&gt;a,gm:()=&gt;o,mw:()=&gt;s,sb:()=&gt;d});var n=r(863);const i=&quot;undefined&quot;!=typeof window&amp;&amp;!!window.document,a=&quot;undefined&quot;!=typeof WorkerGlobalScope&amp;&amp;(&quot;undefined&quot;!=typeof self&amp;&amp;self instanceof WorkerGlobalScope&amp;&amp;self.navigator instanceof WorkerNavigator||&quot;undefined&quot;!=typeof globalThis&amp;&amp;globalThis instanceof WorkerGlobalScope&amp;&amp;globalThis.navigator instanceof WorkerNavigator),o=i?window:&quot;undefined&quot;!=typeof WorkerGlobalScope&amp;&amp;(&quot;undefined&quot;!=typeof self&amp;&amp;self instanceof WorkerGlobalScope&amp;&amp;self||&quot;undefined&quot;!=typeof globalThis&amp;&amp;globalThis instanceof WorkerGlobalScope&amp;&amp;globalThis),s=Boolean(&quot;hidden&quot;===o?.document?.visibilityState),c=/iPad|iPhone|iPod/.test(o.navigator?.userAgent),d=c&amp;&amp;&quot;undefined&quot;==typeof SharedWorker,u=((()=&gt;{const e=o.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);Array.isArray(e)&amp;&amp;e.length&gt;=2&amp;&amp;e[1]})(),Date.now()-(0,n.t)())},163:(e,t,r)=&gt;{&quot;use strict&quot;;r.d(t,{j:()=&gt;E});var n=r(384),i=r(741);var a=r(555);r(860).K7.genericEvents;const o=&quot;experimental.resources&quot;,s=&quot;register&quot;,c=e=&gt;{if(!e||&quot;string&quot;!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var d=r(614),u=r(944),l=r(122);const f=&quot;[data-nr-mask]&quot;,g=e=&gt;(0,l.a)(e,(()=&gt;{const e={feature_flags:[],experimental:{allow_registered_children:!1,resources:!1},mask_selector:&quot;*&quot;,block_selector:&quot;[data-nr-block]&quot;,mask_input_options:{color:!1,date:!1,&quot;datetime-local&quot;:!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{ajax:{deny_list:void 0,block_internal:!0,enabled:!0,autoStart:!0},api:{get allow_registered_children(){return e.feature_flags.includes(s)||e.experimental.allow_registered_children},set allow_registered_children(t){e.experimental.allow_registered_children=t},duplicate_registered_data:!1},browser_consent_mode:{enabled:!1},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},get feature_flags(){return e.feature_flags},set feature_flags(t){e.feature_flags=t},generic_events:{enabled:!0,autoStart:!0},harvest:{interval:30},jserrors:{enabled:!0,autoStart:!0},logging:{enabled:!0,autoStart:!0},metrics:{enabled:!0,autoStart:!0},obfuscate:void 0,page_action:{enabled:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,autoStart:!0},performance:{capture_marks:!1,capture_measures:!1,capture_detail:!0,resources:{get enabled(){return e.feature_flags.includes(o)||e.experimental.resources},set enabled(t){e.experimental.resources=t},asset_types:[],first_party_domains:[],ignore_newrelic:!0}},privacy:{cookies_enabled:!0},proxy:{assets:void 0,beacon:void 0},session:{expiresMs:d.wk,inactiveMs:d.BB},session_replay:{autoStart:!0,enabled:!1,preload:!1,sampling_rate:10,error_sampling_rate:100,collect_fonts:!1,inline_images:!1,fix_stylesheets:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){c(t)?e.mask_selector=&quot;&quot;.concat(t,&quot;,&quot;).concat(f):&quot;&quot;===t||null===t?e.mask_selector=f:(0,u.R)(5,t)},get block_class(){return&quot;nr-block&quot;},get ignore_class(){return&quot;nr-ignore&quot;},get mask_text_class(){return&quot;nr-mask&quot;},get block_selector(){return e.block_selector},set block_selector(t){c(t)?e.block_selector+=&quot;,&quot;.concat(t):&quot;&quot;!==t&amp;&amp;(0,u.R)(6,t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&amp;&amp;&quot;object&quot;==typeof t?e.mask_input_options={...t,password:!0}:(0,u.R)(7,t)}},session_trace:{enabled:!0,autoStart:!0},soft_navigations:{enabled:!0,autoStart:!0},spa:{enabled:!0,autoStart:!0},ssl:void 0,user_actions:{enabled:!0,elementAttributes:[&quot;id&quot;,&quot;className&quot;,&quot;tagName&quot;,&quot;type&quot;]}}})());var p=r(154),h=r(324);let m=0;const v={buildEnv:h.F3,distMethod:h.Xs,version:h.xv,originTime:p.WN},b={consented:!1},y={appMetadata:{},get consented(){return this.session?.state?.consent||b.consented},set consented(e){b.consented=e},customTransaction:void 0,denyList:void 0,disabled:!1,harvester:void 0,isolatedBacklog:!1,isRecording:!1,loaderType:void 0,maxBytes:3e4,obfuscator:void 0,onerror:void 0,ptid:void 0,releaseIds:{},session:void 0,timeKeeper:void 0,registeredEntities:[],jsAttributesMetadata:{bytes:0},get harvestCount(){return++m}},_=e=&gt;{const t=(0,l.a)(e,y),r=Object.keys(v).reduce((e,t)=&gt;(e[t]={value:v[t],writable:!1,configurable:!0,enumerable:!0},e),{});return Object.defineProperties(t,r)};var w=r(701);const x=e=&gt;{const t=e.startsWith(&quot;http&quot;);e+=&quot;/&quot;,r.p=t?e:&quot;https://&quot;+e};var S=r(836),k=r(241);const R={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},A=e=&gt;(0,l.a)(e,R),T=new Set;function E(e,t={},r,o){let{init:s,info:c,loader_config:d,runtime:u={},exposed:l=!0}=t;if(!c){const e=(0,n.pV)();s=e.init,c=e.info,d=e.loader_config}e.init=g(s||{}),e.loader_config=A(d||{}),c.jsAttributes??={},p.bv&amp;&amp;(c.jsAttributes.isWorker=!0),e.info=(0,a.D)(c);const f=e.init,h=[c.beacon,c.errorBeacon];T.has(e.agentIdentifier)||(f.proxy.assets&amp;&amp;(x(f.proxy.assets),h.push(f.proxy.assets)),f.proxy.beacon&amp;&amp;h.push(f.proxy.beacon),e.beacons=[...h],function(e){const t=(0,n.pV)();Object.getOwnPropertyNames(i.W.prototype).forEach(r=&gt;{const n=i.W.prototype[r];if(&quot;function&quot;!=typeof n||&quot;constructor&quot;===n)return;let a=t[r];e[r]&amp;&amp;!1!==e.exposed&amp;&amp;&quot;micro-agent&quot;!==e.runtime?.loaderType&amp;&amp;(t[r]=(...t)=&gt;{const n=e[r](...t);return a?a(...t):n})})}(e),(0,n.US)(&quot;activatedFeatures&quot;,w.B),e.runSoftNavOverSpa&amp;&amp;=!0===f.soft_navigations.enabled&amp;&amp;f.feature_flags.includes(&quot;soft_nav&quot;)),u.denyList=[...f.ajax.deny_list||[],...f.ajax.block_internal?h:[]],u.ptid=e.agentIdentifier,u.loaderType=r,e.runtime=_(u),T.has(e.agentIdentifier)||(e.ee=S.ee.get(e.agentIdentifier),e.exposed=l,(0,k.W)({agentIdentifier:e.agentIdentifier,drained:!!w.B?.[e.agentIdentifier],type:&quot;lifecycle&quot;,name:&quot;initialize&quot;,feature:void 0,data:e.config})),T.add(e.agentIdentifier)}},234:(e,t,r)=&gt;{&quot;use strict&quot;;r.d(t,{W:()=&gt;a});var n=r(836),i=r(687);class a{constructor(e,t){this.agentIdentifier=e,this.ee=n.ee.get(e),this.featureName=t,this.blocked=!1}deregisterDrain(){(0,i.x3)(this.agentIdentifier,this.featureName)}}},241:(e,t,r)=&gt;{&quot;use strict&quot;;r.d(t,{W:()=&gt;a});var n=r(154);const i=&quot;newrelic&quot;;function a(e={}){try{n.gm.dispatchEvent(new CustomEvent(i,{detail:e}))}catch(e){}}},261:(e,t,r)=&gt;{&quot;use strict&quot;;r.d(t,{$9:()=&gt;d,BL:()=&gt;s,CH:()=&gt;g,Dl:()=&gt;_,Fw:()=&gt;y,PA:()=&gt;m,Pl:()=&gt;n,Pv:()=&gt;k,Tb:()=&gt;l,U2:()=&gt;a,V1:()=&gt;S,Wb:()=&gt;x,bt:()=&gt;b,cD:()=&gt;v,d3:()=&gt;w,dT:()=&gt;c,eY:()=&gt;p,fF:()=&gt;f,hG:()=&gt;i,k6:()=&gt;o,nb:()=&gt;h,o5:()=&gt;u});const n=&quot;api-&quot;,i=&quot;addPageAction&quot;,a=&quot;addToTrace&quot;,o=&quot;addRelease&quot;,s=&quot;finished&quot;,c=&quot;interaction&quot;,d=&quot;log&quot;,u=&quot;noticeError&quot;,l=&quot;pauseReplay&quot;,f=&quot;recordCustomEvent&quot;,g=&quot;recordReplay&quot;,p=&quot;register&quot;,h=&quot;setApplicationVersion&quot;,m=&quot;setCurrentRouteName&quot;,v=&quot;setCustomAttribute&quot;,b=&quot;setErrorHandler&quot;,y=&quot;setPageViewName&quot;,_=&quot;setUserId&quot;,w=&quot;start&quot;,x=&quot;wrapLogger&quot;,S=&quot;measure&quot;,k=&quot;consent&quot;},289:(e,t,r)=&gt;{&quot;use strict&quot;;r.d(t,{GG:()=&gt;a,Qr:()=&gt;s,sB:()=&gt;o});var n=r(878);function i(){return&quot;undefined&quot;==typeof document||&quot;complete&quot;===document.readyState}function a(e,t){if(i())return e();(0,n.sp)(&quot;load&quot;,e,t)}function o(e){if(i())return e();(0,n.DD)(&quot;DOMContentLoaded&quot;,e)}function s(e){if(i())return e();(0,n.sp)(&quot;popstate&quot;,e)}},324:(e,t,r)=&gt;{&quot;use strict&quot;;r.d(t,{F3:()=&gt;i,Xs:()=&gt;a,xv:()=&gt;n});const n=&quot;1.303.0&quot;,i=&quot;PROD&quot;,a=&quot;CDN&quot;},374:(e,t,r)=&gt;{r.nc=(()=&gt;{try{return document?.currentScript?.nonce}catch(e){}return&quot;&quot;})()},384:(e,t,r)=&gt;{&quot;use strict&quot;;r.d(t,{NT:()=&gt;o,US:()=&gt;u,Zm:()=&gt;s,bQ:()=&gt;d,dV:()=&gt;c,pV:()=&gt;l});var n=r(154),i=r(863),a=r(910);const o={beacon:&quot;bam.nr-data.net&quot;,errorBeacon:&quot;bam.nr-data.net&quot;};function s(){return n.gm.NREUM||(n.gm.NREUM={}),void 0===n.gm.newrelic&amp;&amp;(n.gm.newrelic=n.gm.NREUM),n.gm.NREUM}function c(){let e=s();return e.o||(e.o={ST:n.gm.setTimeout,SI:n.gm.setImmediate||n.gm.setInterval,CT:n.gm.clearTimeout,XHR:n.gm.XMLHttpRequest,REQ:n.gm.Request,EV:n.gm.Event,PR:n.gm.Promise,MO:n.gm.MutationObserver,FETCH:n.gm.fetch,WS:n.gm.WebSocket},(0,a.i)(...Object.values(e.o))),e}function d(e,t){let r=s();r.initializedAgents??={},t.initializedAt={ms:(0,i.t)(),date:new Date},r.initializedAgents[e]=t}function u(e,t){s()[e]=t}function l(){return function(){let e=s();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=s();const t=e.init||{};e.init={...t}}(),c(),function(){let e=s();const t=e.loader_config||{};e.loader_config={...t}}(),s()}},389:(e,t,r)=&gt;{&quot;use strict&quot;;function n(e,t=500,r={}){const n=r?.leading||!1;let i;return(...r)=&gt;{n&amp;&amp;void 0===i&amp;&amp;(e.apply(this,r),i=setTimeout(()=&gt;{i=clearTimeout(i)},t)),n||(clearTimeout(i),i=setTimeout(()=&gt;{e.apply(this,r)},t))}}function i(e){let t=!1;return(...r)=&gt;{t||(t=!0,e.apply(this,r))}}r.d(t,{J:()=&gt;i,s:()=&gt;n})},555:(e,t,r)=&gt;{&quot;use strict&quot;;r.d(t,{D:()=&gt;s,f:()=&gt;o});var n=r(384),i=r(122);const a={beacon:n.NT.beacon,errorBeacon:n.NT.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0};function o(e){try{return!!e.licenseKey&amp;&amp;!!e.errorBeacon&amp;&amp;!!e.applicationID}catch(e){return!1}}const s=e=&gt;(0,i.a)(e,a)},566:(e,t,r)=&gt;{&quot;use strict&quot;;r.d(t,{LA:()=&gt;s,bz:()=&gt;o});var n=r(154);const i=&quot;xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx&quot;;function a(e,t){return e?15&amp;e[t]:16*Math.random()|0}function o(){const e=n.gm?.crypto||n.gm?.msCrypto;let t,r=0;return e&amp;&amp;e.getRandomValues&amp;&amp;(t=e.getRandomValues(new Uint8Array(30))),i.split(&quot;&quot;).map(e=&gt;&quot;x&quot;===e?a(t,r++).toString(16):&quot;y&quot;===e?(3&amp;a()|8).toString(16):e).join(&quot;&quot;)}function s(e){const t=n.gm?.crypto||n.gm?.msCrypto;let r,i=0;t&amp;&amp;t.getRandomValues&amp;&amp;(r=t.getRandomValues(new Uint8Array(e)));const o=[];for(var s=0;s&lt;e;s++)o.push(a(r,i++).toString(16));return o.join(&quot;&quot;)}},606:(e,t,r)=&gt;{&quot;use strict&quot;;r.d(t,{i:()=&gt;a});var n=r(908);a.on=o;var i=a.handlers={};function a(e,t,r,a){o(a||n.d,i,e,t,r)}function o(e,t,r,i,a){a||(a=&quot;feature&quot;),e||(e=n.d);var o=t[a]=t[a]||{};(o[r]=o[r]||[]).push([e,i])}},607:(e,t,r)=&gt;{&quot;use strict&quot;;r.d(t,{W:()=&gt;n});const n=(0,r(566).bz)()},614:(e,t,r)=&gt;{&quot;use strict&quot;;r.d(t,{BB:()=&gt;o,H3:()=&gt;n,g:()=&gt;d,iL:()=&gt;c,tS:()=&gt;s,uh:()=&gt;i,wk:()=&gt;a});const n=&quot;NRBA&quot;,i=&quot;SESSION&quot;,a=144e5,o=18e5,s={STARTED:&quot;session-started&quot;,PAUSE:&quot;session-pause&quot;,RESET:&quot;session-reset&quot;,RESUME:&quot;session-resume&quot;,UPDATE:&quot;session-update&quot;},c={SAME_TAB:&quot;same-tab&quot;,CROSS_TAB:&quot;cross-tab&quot;},d={OFF:0,FULL:1,ERROR:2}},630:(e,t,r)=&gt;{&quot;use strict&quot;;r.d(t,{T:()=&gt;n});const n=r(860).K7.pageViewEvent},646:(e,t,r)=&gt;{&quot;use strict&quot;;r.d(t,{y:()=&gt;n});class n{constructor(e){this.contextId=e}}},687:(e,t,r)=&gt;{&quot;use strict&quot;;r.d(t,{Ak:()=&gt;d,Ze:()=&gt;f,x3:()=&gt;u});var n=r(241),i=r(836),a=r(606),o=r(860),s=r(646);const c={};function d(e,t){const r={staged:!1,priority:o.P3[t]||0};l(e),c[e].get(t)||c[e].set(t,r)}function u(e,t){e&amp;&amp;c[e]&amp;&amp;(c[e].get(t)&amp;&amp;c[e].delete(t),p(e,t,!1),c[e].size&amp;&amp;g(e))}function l(e){if(!e)throw new Error(&quot;agentIdentifier required&quot;);c[e]||(c[e]=new Map)}function f(e=&quot;&quot;,t=&quot;feature&quot;,r=!1){if(l(e),!e||!c[e].get(t)||r)return p(e,t);c[e].get(t).staged=!0,g(e)}function g(e){const t=Array.from(c[e]);t.every(([e,t])=&gt;t.staged)&amp;&amp;(t.sort((e,t)=&gt;e[1].priority-t[1].priority),t.forEach(([t])=&gt;{c[e].delete(t),p(e,t)}))}function p(e,t,r=!0){const o=e?i.ee.get(e):i.ee,c=a.i.handlers;if(!o.aborted&amp;&amp;o.backlog&amp;&amp;c){if((0,n.W)({agentIdentifier:e,type:&quot;lifecycle&quot;,name:&quot;drain&quot;,feature:t}),r){const e=o.backlog[t],r=c[t];if(r){for(let t=0;e&amp;&amp;t&lt;e.length;++t)h(e[t],r);Object.entries(r).forEach(([e,t])=&gt;{Object.values(t||{}).forEach(t=&gt;{t[0]?.on&amp;&amp;t[0]?.context()instanceof s.y&amp;&amp;t[0].on(e,t[1])})})}}o.isolatedBacklog||delete c[t],o.backlog[t]=null,o.emit(&quot;drain-&quot;+t,[])}}function h(e,t){var r=e[1];Object.values(t[r]||{}).forEach(t=&gt;{var r=e[0];if(t[0]===r){var n=t[1],i=e[3],a=e[2];n.apply(i,a)}})}},699:(e,t,r)=&gt;{&quot;use strict&quot;;r.d(t,{It:()=&gt;a,KC:()=&gt;s,No:()=&gt;i,qh:()=&gt;o});var n=r(860);const i=16e3,a=1e6,o=&quot;SESSION_ERROR&quot;,s={[n.K7.logging]:!0,[n.K7.genericEvents]:!1,[n.K7.jserrors]:!1,[n.K7.ajax]:!1}},701:(e,t,r)=&gt;{&quot;use strict&quot;;r.d(t,{B:()=&gt;a,t:()=&gt;o});var n=r(241);const i=new Set,a={};function o(e,t){const r=t.agentIdentifier;a[r]??={},e&amp;&amp;&quot;object&quot;==typeof e&amp;&amp;(i.has(r)||(t.ee.emit(&quot;rumresp&quot;,[e]),a[r]=e,i.add(r),(0,n.W)({agentIdentifier:r,loaded:!0,drained:!0,type:&quot;lifecycle&quot;,name:&quot;load&quot;,feature:void 0,data:e})))}},741:(e,t,r)=&gt;{&quot;use strict&quot;;r.d(t,{W:()=&gt;a});var n=r(944),i=r(261);class a{#e(e,...t){if(this[e]!==a.prototype[e])return this[e](...t);(0,n.R)(35,e)}addPageAction(e,t){return this.#e(i.hG,e,t)}register(e){return this.#e(i.eY,e)}recordCustomEvent(e,t){return this.#e(i.fF,e,t)}setPageViewName(e,t){return this.#e(i.Fw,e,t)}setCustomAttribute(e,t,r){return this.#e(i.cD,e,t,r)}noticeError(e,t){return this.#e(i.o5,e,t)}setUserId(e){return this.#e(i.Dl,e)}setApplicationVersion(e){return this.#e(i.nb,e)}setErrorHandler(e){return this.#e(i.bt,e)}addRelease(e,t){return this.#e(i.k6,e,t)}log(e,t){return this.#e(i.$9,e,t)}start(){return this.#e(i.d3)}finished(e){return this.#e(i.BL,e)}recordReplay(){return this.#e(i.CH)}pauseReplay(){return this.#e(i.Tb)}addToTrace(e){return this.#e(i.U2,e)}setCurrentRouteName(e){return this.#e(i.PA,e)}interaction(e){return this.#e(i.dT,e)}wrapLogger(e,t,r){return this.#e(i.Wb,e,t,r)}measure(e,t){return this.#e(i.V1,e,t)}consent(e){return this.#e(i.Pv,e)}}},773:(e,t,r)=&gt;{&quot;use strict&quot;;r.d(t,{z_:()=&gt;a,XG:()=&gt;s,TZ:()=&gt;n,rs:()=&gt;i,xV:()=&gt;o});r(154),r(566),r(384);const n=r(860).K7.metrics,i=&quot;sm&quot;,a=&quot;cm&quot;,o=&quot;storeSupportabilityMetrics&quot;,s=&quot;storeEventMetrics&quot;},782:(e,t,r)=&gt;{&quot;use strict&quot;;r.d(t,{T:()=&gt;n});const n=r(860).K7.pageViewTiming},836:(e,t,r)=&gt;{&quot;use strict&quot;;r.d(t,{P:()=&gt;s,ee:()=&gt;c});var n=r(384),i=r(990),a=r(646),o=r(607);const s=&quot;nr@context:&quot;.concat(o.W),c=function e(t,r){var n={},o={},u={},l=!1;try{l=16===r.length&amp;&amp;d.initializedAgents?.[r]?.runtime.isolatedBacklog}catch(e){}var f={on:p,addEventListener:p,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i&lt;r.length;i++)r[i]===t&amp;&amp;r.splice(i,1)},emit:function(e,r,n,i,a){!1!==a&amp;&amp;(a=!0);if(c.aborted&amp;&amp;!i)return;t&amp;&amp;a&amp;&amp;t.emit(e,r,n);var s=g(n);h(e).forEach(e=&gt;{e.apply(s,r)});var d=v()[o[e]];d&amp;&amp;d.push([f,e,r,s]);return s},get:m,listeners:h,context:g,buffer:function(e,t){const r=v();if(t=t||&quot;feature&quot;,f.aborted)return;Object.entries(e||{}).forEach(([e,n])=&gt;{o[n]=t,t in r||(r[t]=[])})},abort:function(){f._aborted=!0,Object.keys(f.backlog).forEach(e=&gt;{delete f.backlog[e]})},isBuffering:function(e){return!!v()[o[e]]},debugId:r,backlog:l?{}:t&amp;&amp;&quot;object&quot;==typeof t.backlog?t.backlog:{},isolatedBacklog:l};return Object.defineProperty(f,&quot;aborted&quot;,{get:()=&gt;{let e=f._aborted||!1;return e||(t&amp;&amp;(e=t.aborted),e)}}),f;function g(e){return e&amp;&amp;e instanceof a.y?e:e?(0,i.I)(e,s,()=&gt;new a.y(s)):new a.y(s)}function p(e,t){n[e]=h(e).concat(t)}function h(e){return n[e]||[]}function m(t){return u[t]=u[t]||e(f,t)}function v(){return f.backlog}}(void 0,&quot;globalEE&quot;),d=(0,n.Zm)();d.ee||(d.ee=c)},843:(e,t,r)=&gt;{&quot;use strict&quot;;r.d(t,{u:()=&gt;i});var n=r(878);function i(e,t=!1,r,i){(0,n.DD)(&quot;visibilitychange&quot;,function(){if(t)return void(&quot;hidden&quot;===document.visibilityState&amp;&amp;e());e(document.visibilityState)},r,i)}},860:(e,t,r)=&gt;{&quot;use strict&quot;;r.d(t,{$J:()=&gt;u,K7:()=&gt;c,P3:()=&gt;d,XX:()=&gt;i,Yy:()=&gt;s,df:()=&gt;a,qY:()=&gt;n,v4:()=&gt;o});const n=&quot;events&quot;,i=&quot;jserrors&quot;,a=&quot;browser/blobs&quot;,o=&quot;rum&quot;,s=&quot;browser/logs&quot;,c={ajax:&quot;ajax&quot;,genericEvents:&quot;generic_events&quot;,jserrors:i,logging:&quot;logging&quot;,metrics:&quot;metrics&quot;,pageAction:&quot;page_action&quot;,pageViewEvent:&quot;page_view_event&quot;,pageViewTiming:&quot;page_view_timing&quot;,sessionReplay:&quot;session_replay&quot;,sessionTrace:&quot;session_trace&quot;,softNav:&quot;soft_navigations&quot;,spa:&quot;spa&quot;},d={[c.pageViewEvent]:1,[c.pageViewTiming]:2,[c.metrics]:3,[c.jserrors]:4,[c.spa]:5,[c.ajax]:6,[c.sessionTrace]:7,[c.softNav]:8,[c.sessionReplay]:9,[c.logging]:10,[c.genericEvents]:11},u={[c.pageViewEvent]:o,[c.pageViewTiming]:n,[c.ajax]:n,[c.spa]:n,[c.softNav]:n,[c.metrics]:i,[c.jserrors]:i,[c.sessionTrace]:a,[c.sessionReplay]:a,[c.logging]:s,[c.genericEvents]:&quot;ins&quot;}},863:(e,t,r)=&gt;{&quot;use strict&quot;;function n(){return Math.floor(performance.now())}r.d(t,{t:()=&gt;n})},878:(e,t,r)=&gt;{&quot;use strict&quot;;function n(e,t){return{capture:e,passive:!1,signal:t}}function i(e,t,r=!1,i){window.addEventListener(e,t,n(r,i))}function a(e,t,r=!1,i){document.addEventListener(e,t,n(r,i))}r.d(t,{DD:()=&gt;a,jT:()=&gt;n,sp:()=&gt;i})},908:(e,t,r)=&gt;{&quot;use strict&quot;;r.d(t,{d:()=&gt;n,p:()=&gt;i});var n=r(836).ee.get(&quot;handle&quot;);function i(e,t,r,i,a){a?(a.buffer([e],i),a.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}},910:(e,t,r)=&gt;{&quot;use strict&quot;;r.d(t,{i:()=&gt;a});var n=r(944);const i=new Map;function a(...e){return e.every(e=&gt;{if(i.has(e))return i.get(e);const t=&quot;function&quot;==typeof e&amp;&amp;e.toString().includes(&quot;[native code]&quot;);return t||(0,n.R)(64,e?.name||e?.toString()),i.set(e,t),t})}},944:(e,t,r)=&gt;{&quot;use strict&quot;;r.d(t,{R:()=&gt;i});var n=r(241);function i(e,t){&quot;function&quot;==typeof console.debug&amp;&amp;(console.debug(&quot;New Relic Warning: https://github.com/newrelic/newrelic-browser-agent/blob/main/docs/warning-codes.md#&quot;.concat(e),t),(0,n.W)({agentIdentifier:null,drained:null,type:&quot;data&quot;,name:&quot;warn&quot;,feature:&quot;warn&quot;,data:{code:e,secondary:t}}))}},990:(e,t,r)=&gt;{&quot;use strict&quot;;r.d(t,{I:()=&gt;i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&amp;&amp;Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}}},n={};function i(e){var t=n[e];if(void 0!==t)return t.exports;var a=n[e]={exports:{}};return r[e](a,a.exports,i),a.exports}i.m=r,i.d=(e,t)=&gt;{for(var r in t)i.o(t,r)&amp;&amp;!i.o(e,r)&amp;&amp;Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},i.f={},i.e=e=&gt;Promise.all(Object.keys(i.f).reduce((t,r)=&gt;(i.f[r](e,t),t),[])),i.u=e=&gt;&quot;nr-rum-1.303.0.min.js&quot;,i.o=(e,t)=&gt;Object.prototype.hasOwnProperty.call(e,t),e={},t=&quot;NRBA-1.303.0.PROD:&quot;,i.l=(r,n,a,o)=&gt;{if(e[r])e[r].push(n);else{var s,c;if(void 0!==a)for(var d=document.getElementsByTagName(&quot;script&quot;),u=0;u&lt;d.length;u++){var l=d[u];if(l.getAttribute(&quot;src&quot;)==r||l.getAttribute(&quot;data-webpack&quot;)==t+a){s=l;break}}if(!s){c=!0;var f={296:&quot;sha512-DjFbtykbDCyUDGsp+l/dYhH0LhW/Jv9sDnc+aleTRmpV1ZRfyOeip4Sv4USz3Fk0DZCWshsM7d24cTr9Xf3L/A==&quot;};(s=document.createElement(&quot;script&quot;)).charset=&quot;utf-8&quot;,i.nc&amp;&amp;s.setAttribute(&quot;nonce&quot;,i.nc),s.setAttribute(&quot;data-webpack&quot;,t+a),s.src=r,0!==s.src.indexOf(window.location.origin+&quot;/&quot;)&amp;&amp;(s.crossOrigin=&quot;anonymous&quot;),f[o]&amp;&amp;(s.integrity=f[o])}e[r]=[n];var g=(t,n)=&gt;{s.onerror=s.onload=null,clearTimeout(p);var i=e[r];if(delete e[r],s.parentNode&amp;&amp;s.parentNode.removeChild(s),i&amp;&amp;i.forEach(e=&gt;e(n)),t)return t(n)},p=setTimeout(g.bind(null,void 0,{type:&quot;timeout&quot;,target:s}),12e4);s.onerror=g.bind(null,s.onerror),s.onload=g.bind(null,s.onload),c&amp;&amp;document.head.appendChild(s)}},i.r=e=&gt;{&quot;undefined&quot;!=typeof Symbol&amp;&amp;Symbol.toStringTag&amp;&amp;Object.defineProperty(e,Symbol.toStringTag,{value:&quot;Module&quot;}),Object.defineProperty(e,&quot;__esModule&quot;,{value:!0})},i.p=&quot;https://js-agent.newrelic.com/&quot;,(()=&gt;{var e={374:0,840:0};i.f.j=(t,r)=&gt;{var n=i.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var a=new Promise((r,i)=&gt;n=e[t]=[r,i]);r.push(n[2]=a);var o=i.p+i.u(t),s=new Error;i.l(o,r=&gt;{if(i.o(e,t)&amp;&amp;(0!==(n=e[t])&amp;&amp;(e[t]=void 0),n)){var a=r&amp;&amp;(&quot;load&quot;===r.type?&quot;missing&quot;:r.type),o=r&amp;&amp;r.target&amp;&amp;r.target.src;s.message=&quot;Loading chunk &quot;+t+&quot; failed.\n(&quot;+a+&quot;: &quot;+o+&quot;)&quot;,s.name=&quot;ChunkLoadError&quot;,s.type=a,s.request=o,n[1](s)}},&quot;chunk-&quot;+t,t)}};var t=(t,r)=&gt;{var n,a,[o,s,c]=r,d=0;if(o.some(t=&gt;0!==e[t])){for(n in s)i.o(s,n)&amp;&amp;(i.m[n]=s[n]);if(c)c(i)}for(t&amp;&amp;t(r);d&lt;o.length;d++)a=o[d],i.o(e,a)&amp;&amp;e[a]&amp;&amp;e[a][0](),e[a]=0},r=self[&quot;webpackChunk:NRBA-1.303.0.PROD&quot;]=self[&quot;webpackChunk:NRBA-1.303.0.PROD&quot;]||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})(),(()=&gt;{&quot;use strict&quot;;i(374);var e=i(566),t=i(741);class r extends t.W{agentIdentifier=(0,e.LA)(16)}var n=i(860);const a=Object.values(n.K7);var o=i(163);var s=i(908),c=i(863),d=i(261),u=i(241),l=i(944),f=i(701),g=i(773);function p(e,t,i,a){const o=a||i;!o||o[e]&amp;&amp;o[e]!==r.prototype[e]||(o[e]=function(){(0,s.p)(g.xV,[&quot;API/&quot;+e+&quot;/called&quot;],void 0,n.K7.metrics,i.ee),(0,u.W)({agentIdentifier:i.agentIdentifier,drained:!!f.B?.[i.agentIdentifier],type:&quot;data&quot;,name:&quot;api&quot;,feature:d.Pl+e,data:{}});try{return t.apply(this,arguments)}catch(e){(0,l.R)(23,e)}})}function h(e,t,r,n,i){const a=e.info;null===r?delete a.jsAttributes[t]:a.jsAttributes[t]=r,(i||null===r)&amp;&amp;(0,s.p)(d.Pl+n,[(0,c.t)(),t,r],void 0,&quot;session&quot;,e.ee)}var m=i(687),v=i(234),b=i(289),y=i(154),_=i(384);const w=e=&gt;y.RI&amp;&amp;!0===e?.privacy.cookies_enabled;function x(e){return!!(0,_.dV)().o.MO&amp;&amp;w(e)&amp;&amp;!0===e?.session_trace.enabled}var S=i(389),k=i(699);class R extends v.W{constructor(e,t){super(e.agentIdentifier,t),this.agentRef=e,this.abortHandler=void 0,this.featAggregate=void 0,this.loadedSuccessfully=void 0,this.onAggregateImported=new Promise(e=&gt;{this.loadedSuccessfully=e}),this.deferred=Promise.resolve(),!1===e.init[this.featureName].autoStart?this.deferred=new Promise((t,r)=&gt;{this.ee.on(&quot;manual-start-all&quot;,(0,S.J)(()=&gt;{(0,m.Ak)(e.agentIdentifier,this.featureName),t()}))}):(0,m.Ak)(e.agentIdentifier,t)}importAggregator(e,t,r={}){if(this.featAggregate)return;const n=async()=&gt;{let n;await this.deferred;try{if(w(e.init)){const{setupAgentSession:t}=await i.e(296).then(i.bind(i,305));n=t(e)}}catch(e){(0,l.R)(20,e),this.ee.emit(&quot;internal-error&quot;,[e]),(0,s.p)(k.qh,[e],void 0,this.featureName,this.ee)}try{if(!this.#t(this.featureName,n,e.init))return(0,m.Ze)(this.agentIdentifier,this.featureName),void this.loadedSuccessfully(!1);const{Aggregate:i}=await t();this.featAggregate=new i(e,r),e.runtime.harvester.initializedAggregates.push(this.featAggregate),this.loadedSuccessfully(!0)}catch(e){(0,l.R)(34,e),this.abortHandler?.(),(0,m.Ze)(this.agentIdentifier,this.featureName,!0),this.loadedSuccessfully(!1),this.ee&amp;&amp;this.ee.abort()}};y.RI?(0,b.GG)(()=&gt;n(),!0):n()}#t(e,t,r){if(this.blocked)return!1;switch(e){case n.K7.sessionReplay:return x(r)&amp;&amp;!!t;case n.K7.sessionTrace:return!!t;default:return!0}}}var A=i(630),T=i(614);class E extends R{static featureName=A.T;constructor(e){var t;super(e,A.T),this.setupInspectionEvents(e.agentIdentifier),t=e,p(d.Fw,function(e,r){&quot;string&quot;==typeof e&amp;&amp;(&quot;/&quot;!==e.charAt(0)&amp;&amp;(e=&quot;/&quot;+e),t.runtime.customTransaction=(r||&quot;http://custom.transaction&quot;)+e,(0,s.p)(d.Pl+d.Fw,[(0,c.t)()],void 0,void 0,t.ee))},t),this.importAggregator(e,()=&gt;i.e(296).then(i.bind(i,108)))}setupInspectionEvents(e){const t=(t,r)=&gt;{t&amp;&amp;(0,u.W)({agentIdentifier:e,timeStamp:t.timeStamp,loaded:&quot;complete&quot;===t.target.readyState,type:&quot;window&quot;,name:r,data:t.target.location+&quot;&quot;})};(0,b.sB)(e=&gt;{t(e,&quot;DOMContentLoaded&quot;)}),(0,b.GG)(e=&gt;{t(e,&quot;load&quot;)}),(0,b.Qr)(e=&gt;{t(e,&quot;navigate&quot;)}),this.ee.on(T.tS.UPDATE,(t,r)=&gt;{(0,u.W)({agentIdentifier:e,type:&quot;lifecycle&quot;,name:&quot;session&quot;,data:r})})}}var N=i(843),j=i(878),I=i(782);class P extends R{static featureName=I.T;constructor(e){super(e,I.T),y.RI&amp;&amp;((0,N.u)(()=&gt;(0,s.p)(&quot;docHidden&quot;,[(0,c.t)()],void 0,I.T,this.ee),!0),(0,j.sp)(&quot;pagehide&quot;,()=&gt;(0,s.p)(&quot;winPagehide&quot;,[(0,c.t)()],void 0,I.T,this.ee)),this.importAggregator(e,()=&gt;i.e(296).then(i.bind(i,350))))}}class O extends R{static featureName=g.TZ;constructor(e){super(e,g.TZ),y.RI&amp;&amp;document.addEventListener(&quot;securitypolicyviolation&quot;,e=&gt;{(0,s.p)(g.xV,[&quot;Generic/CSPViolation/Detected&quot;],void 0,this.featureName,this.ee)}),this.importAggregator(e,()=&gt;i.e(296).then(i.bind(i,623)))}}new class extends r{constructor(e){var t;(super(),y.gm)?(this.features={},(0,_.bQ)(this.agentIdentifier,this),this.desiredFeatures=new Set(e.features||[]),this.desiredFeatures.add(E),this.runSoftNavOverSpa=[...this.desiredFeatures].some(e=&gt;e.featureName===n.K7.softNav),(0,o.j)(this,e,e.loaderType||&quot;agent&quot;),t=this,p(d.cD,function(e,r,n=!1){if(&quot;string&quot;==typeof e){if([&quot;string&quot;,&quot;number&quot;,&quot;boolean&quot;].includes(typeof r)||null===r)return h(t,e,r,d.cD,n);(0,l.R)(40,typeof r)}else(0,l.R)(39,typeof e)},t),function(e){p(d.Dl,function(t){if(&quot;string&quot;==typeof t||null===t)return h(e,&quot;enduser.id&quot;,t,d.Dl,!0);(0,l.R)(41,typeof t)},e)}(this),function(e){p(d.nb,function(t){if(&quot;string&quot;==typeof t||null===t)return h(e,&quot;application.version&quot;,t,d.nb,!1);(0,l.R)(42,typeof t)},e)}(this),function(e){p(d.d3,function(){e.ee.emit(&quot;manual-start-all&quot;)},e)}(this),function(e){p(d.Pv,function(t=!0){if(&quot;boolean&quot;==typeof t){if((0,s.p)(d.Pl+d.Pv,[t],void 0,&quot;session&quot;,e.ee),e.runtime.consented=t,t){const t=e.features.page_view_event;t.onAggregateImported.then(e=&gt;{const r=t.featAggregate;e&amp;&amp;!r.sentRum&amp;&amp;r.sendRum()})}}else(0,l.R)(65,typeof t)},e)}(this),this.run()):(0,l.R)(21)}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}get api(){return this}run(){try{const e=function(e){const t={};return a.forEach(r=&gt;{t[r]=!!e[r]?.enabled}),t}(this.init),t=[...this.desiredFeatures];t.sort((e,t)=&gt;n.P3[e.featureName]-n.P3[t.featureName]),t.forEach(t=&gt;{if(!e[t.featureName]&amp;&amp;t.featureName!==n.K7.pageViewEvent)return;if(this.runSoftNavOverSpa&amp;&amp;t.featureName===n.K7.spa)return;if(!this.runSoftNavOverSpa&amp;&amp;t.featureName===n.K7.softNav)return;const r=function(e){switch(e){case n.K7.ajax:return[n.K7.jserrors];case n.K7.sessionTrace:return[n.K7.ajax,n.K7.pageViewEvent];case n.K7.sessionReplay:return[n.K7.sessionTrace];case n.K7.pageViewTiming:return[n.K7.pageViewEvent];default:return[]}}(t.featureName).filter(e=&gt;!(e in this.features));r.length&gt;0&amp;&amp;(0,l.R)(36,{targetFeature:t.featureName,missingDependencies:r}),this.features[t.featureName]=new t(this)})}catch(e){(0,l.R)(22,e);for(const e in this.features)this.features[e].abortHandler?.();const t=(0,_.Zm)();delete t.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator;return t.ee.get(this.agentIdentifier).abort(),!1}}}({features:[E,P,O],loaderType:&quot;lite&quot;})})()})();&lt;/script&gt;                                                                                                                                                                                 
-        &lt;meta name=&quot;robots&quot; content=&quot;NONE,NOARCHIVE&quot; /&gt;
+        &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"/&gt;&lt;script type="text/javascript"&gt;window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"d95d0042d8","applicationID":"200725562","transactionName":"MgRUbBQHV0BVU0ILCgtOcE0IBU1aW14ZAAkAD1JdFA5MURpRRhIWSwBGUUgQUFZDQxgHHREEWEsPCVdADnVOFgALEl9XCBVvWlFHZQcRSw1fSxI=","queueTime":2,"applicationTime":5764,"agent":""};                                                                                     
+(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]},feature_flags:["soft_nav"]};(window.NREUM||(NREUM={})).loader_config={licenseKey:"d95d0042d8",applicationID:"200725562",browserID:"200725592"};;/*! For license information please see nr-loader-rum-1.303.0.min.js.LICENSE.txt */                                                                                                                                                                                                                                    
+(()=&gt;{var e,t,r={122:(e,t,r)=&gt;{"use strict";r.d(t,{a:()=&gt;i});var n=r(944);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.R)(3);if(!t||"object"!=typeof t)return(0,n.R)(4);const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),a=0===Object.keys(r).length?e:r;for(let o in a)if(void 0!==e[o])try{if(null===e[o]){r[o]=null;continue}Array.isArray(e[o])&amp;&amp;Array.isArray(t[o])?r[o]=Array.from(new Set([...e[o],...t[o]])):"object"==typeof e[o]&amp;&amp;"object"==typeof t[o]?r[o]=i(e[o],t[o]):r[o]=e[o]}catch(e){r[o]||(0,n.R)(1,e)}return r}catch(e){(0,n.R)(2,e)}}},154:(e,t,r)=&gt;{"use strict";r.d(t,{OF:()=&gt;c,RI:()=&gt;i,WN:()=&gt;u,bv:()=&gt;a,gm:()=&gt;o,mw:()=&gt;s,sb:()=&gt;d});var n=r(863);const i="undefined"!=typeof window&amp;&amp;!!window.document,a="undefined"!=typeof WorkerGlobalScope&amp;&amp;("undefined"!=typeof self&amp;&amp;self instanceof WorkerGlobalScope&amp;&amp;self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&amp;&amp;globalThis instanceof WorkerGlobalScope&amp;&amp;globalThis.navigator instanceof WorkerNavigator),o=i?window:"undefined"!=typeof WorkerGlobalScope&amp;&amp;("undefined"!=typeof self&amp;&amp;self instanceof WorkerGlobalScope&amp;&amp;self||"undefined"!=typeof globalThis&amp;&amp;globalThis instanceof WorkerGlobalScope&amp;&amp;globalThis),s=Boolean("hidden"===o?.document?.visibilityState),c=/iPad|iPhone|iPod/.test(o.navigator?.userAgent),d=c&amp;&amp;"undefined"==typeof SharedWorker,u=((()=&gt;{const e=o.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);Array.isArray(e)&amp;&amp;e.length&gt;=2&amp;&amp;e[1]})(),Date.now()-(0,n.t)())},163:(e,t,r)=&gt;{"use strict";r.d(t,{j:()=&gt;E});var n=r(384),i=r(741);var a=r(555);r(860).K7.genericEvents;const o="experimental.resources",s="register",c=e=&gt;{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var d=r(614),u=r(944),l=r(122);const f="[data-nr-mask]",g=e=&gt;(0,l.a)(e,(()=&gt;{const e={feature_flags:[],experimental:{allow_registered_children:!1,resources:!1},mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{ajax:{deny_list:void 0,block_internal:!0,enabled:!0,autoStart:!0},api:{get allow_registered_children(){return e.feature_flags.includes(s)||e.experimental.allow_registered_children},set allow_registered_children(t){e.experimental.allow_registered_children=t},duplicate_registered_data:!1},browser_consent_mode:{enabled:!1},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},get feature_flags(){return e.feature_flags},set feature_flags(t){e.feature_flags=t},generic_events:{enabled:!0,autoStart:!0},harvest:{interval:30},jserrors:{enabled:!0,autoStart:!0},logging:{enabled:!0,autoStart:!0},metrics:{enabled:!0,autoStart:!0},obfuscate:void 0,page_action:{enabled:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,autoStart:!0},performance:{capture_marks:!1,capture_measures:!1,capture_detail:!0,resources:{get enabled(){return e.feature_flags.includes(o)||e.experimental.resources},set enabled(t){e.experimental.resources=t},asset_types:[],first_party_domains:[],ignore_newrelic:!0}},privacy:{cookies_enabled:!0},proxy:{assets:void 0,beacon:void 0},session:{expiresMs:d.wk,inactiveMs:d.BB},session_replay:{autoStart:!0,enabled:!1,preload:!1,sampling_rate:10,error_sampling_rate:100,collect_fonts:!1,inline_images:!1,fix_stylesheets:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){c(t)?e.mask_selector="".concat(t,",").concat(f):""===t||null===t?e.mask_selector=f:(0,u.R)(5,t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){c(t)?e.block_selector+=",".concat(t):""!==t&amp;&amp;(0,u.R)(6,t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&amp;&amp;"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,u.R)(7,t)}},session_trace:{enabled:!0,autoStart:!0},soft_navigations:{enabled:!0,autoStart:!0},spa:{enabled:!0,autoStart:!0},ssl:void 0,user_actions:{enabled:!0,elementAttributes:["id","className","tagName","type"]}}})());var p=r(154),h=r(324);let m=0;const v={buildEnv:h.F3,distMethod:h.Xs,version:h.xv,originTime:p.WN},b={consented:!1},y={appMetadata:{},get consented(){return this.session?.state?.consent||b.consented},set consented(e){b.consented=e},customTransaction:void 0,denyList:void 0,disabled:!1,harvester:void 0,isolatedBacklog:!1,isRecording:!1,loaderType:void 0,maxBytes:3e4,obfuscator:void 0,onerror:void 0,ptid:void 0,releaseIds:{},session:void 0,timeKeeper:void 0,registeredEntities:[],jsAttributesMetadata:{bytes:0},get harvestCount(){return++m}},_=e=&gt;{const t=(0,l.a)(e,y),r=Object.keys(v).reduce((e,t)=&gt;(e[t]={value:v[t],writable:!1,configurable:!0,enumerable:!0},e),{});return Object.defineProperties(t,r)};var w=r(701);const x=e=&gt;{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e};var S=r(836),k=r(241);const R={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},A=e=&gt;(0,l.a)(e,R),T=new Set;function E(e,t={},r,o){let{init:s,info:c,loader_config:d,runtime:u={},exposed:l=!0}=t;if(!c){const e=(0,n.pV)();s=e.init,c=e.info,d=e.loader_config}e.init=g(s||{}),e.loader_config=A(d||{}),c.jsAttributes??={},p.bv&amp;&amp;(c.jsAttributes.isWorker=!0),e.info=(0,a.D)(c);const f=e.init,h=[c.beacon,c.errorBeacon];T.has(e.agentIdentifier)||(f.proxy.assets&amp;&amp;(x(f.proxy.assets),h.push(f.proxy.assets)),f.proxy.beacon&amp;&amp;h.push(f.proxy.beacon),e.beacons=[...h],function(e){const t=(0,n.pV)();Object.getOwnPropertyNames(i.W.prototype).forEach(r=&gt;{const n=i.W.prototype[r];if("function"!=typeof n||"constructor"===n)return;let a=t[r];e[r]&amp;&amp;!1!==e.exposed&amp;&amp;"micro-agent"!==e.runtime?.loaderType&amp;&amp;(t[r]=(...t)=&gt;{const n=e[r](...t);return a?a(...t):n})})}(e),(0,n.US)("activatedFeatures",w.B),e.runSoftNavOverSpa&amp;&amp;=!0===f.soft_navigations.enabled&amp;&amp;f.feature_flags.includes("soft_nav")),u.denyList=[...f.ajax.deny_list||[],...f.ajax.block_internal?h:[]],u.ptid=e.agentIdentifier,u.loaderType=r,e.runtime=_(u),T.has(e.agentIdentifier)||(e.ee=S.ee.get(e.agentIdentifier),e.exposed=l,(0,k.W)({agentIdentifier:e.agentIdentifier,drained:!!w.B?.[e.agentIdentifier],type:"lifecycle",name:"initialize",feature:void 0,data:e.config})),T.add(e.agentIdentifier)}},234:(e,t,r)=&gt;{"use strict";r.d(t,{W:()=&gt;a});var n=r(836),i=r(687);class a{constructor(e,t){this.agentIdentifier=e,this.ee=n.ee.get(e),this.featureName=t,this.blocked=!1}deregisterDrain(){(0,i.x3)(this.agentIdentifier,this.featureName)}}},241:(e,t,r)=&gt;{"use strict";r.d(t,{W:()=&gt;a});var n=r(154);const i="newrelic";function a(e={}){try{n.gm.dispatchEvent(new CustomEvent(i,{detail:e}))}catch(e){}}},261:(e,t,r)=&gt;{"use strict";r.d(t,{$9:()=&gt;d,BL:()=&gt;s,CH:()=&gt;g,Dl:()=&gt;_,Fw:()=&gt;y,PA:()=&gt;m,Pl:()=&gt;n,Pv:()=&gt;k,Tb:()=&gt;l,U2:()=&gt;a,V1:()=&gt;S,Wb:()=&gt;x,bt:()=&gt;b,cD:()=&gt;v,d3:()=&gt;w,dT:()=&gt;c,eY:()=&gt;p,fF:()=&gt;f,hG:()=&gt;i,k6:()=&gt;o,nb:()=&gt;h,o5:()=&gt;u});const n="api-",i="addPageAction",a="addToTrace",o="addRelease",s="finished",c="interaction",d="log",u="noticeError",l="pauseReplay",f="recordCustomEvent",g="recordReplay",p="register",h="setApplicationVersion",m="setCurrentRouteName",v="setCustomAttribute",b="setErrorHandler",y="setPageViewName",_="setUserId",w="start",x="wrapLogger",S="measure",k="consent"},289:(e,t,r)=&gt;{"use strict";r.d(t,{GG:()=&gt;a,Qr:()=&gt;s,sB:()=&gt;o});var n=r(878);function i(){return"undefined"==typeof document||"complete"===document.readyState}function a(e,t){if(i())return e();(0,n.sp)("load",e,t)}function o(e){if(i())return e();(0,n.DD)("DOMContentLoaded",e)}function s(e){if(i())return e();(0,n.sp)("popstate",e)}},324:(e,t,r)=&gt;{"use strict";r.d(t,{F3:()=&gt;i,Xs:()=&gt;a,xv:()=&gt;n});const n="1.303.0",i="PROD",a="CDN"},374:(e,t,r)=&gt;{r.nc=(()=&gt;{try{return document?.currentScript?.nonce}catch(e){}return""})()},384:(e,t,r)=&gt;{"use strict";r.d(t,{NT:()=&gt;o,US:()=&gt;u,Zm:()=&gt;s,bQ:()=&gt;d,dV:()=&gt;c,pV:()=&gt;l});var n=r(154),i=r(863),a=r(910);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function s(){return n.gm.NREUM||(n.gm.NREUM={}),void 0===n.gm.newrelic&amp;&amp;(n.gm.newrelic=n.gm.NREUM),n.gm.NREUM}function c(){let e=s();return e.o||(e.o={ST:n.gm.setTimeout,SI:n.gm.setImmediate||n.gm.setInterval,CT:n.gm.clearTimeout,XHR:n.gm.XMLHttpRequest,REQ:n.gm.Request,EV:n.gm.Event,PR:n.gm.Promise,MO:n.gm.MutationObserver,FETCH:n.gm.fetch,WS:n.gm.WebSocket},(0,a.i)(...Object.values(e.o))),e}function d(e,t){let r=s();r.initializedAgents??={},t.initializedAt={ms:(0,i.t)(),date:new Date},r.initializedAgents[e]=t}function u(e,t){s()[e]=t}function l(){return function(){let e=s();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=s();const t=e.init||{};e.init={...t}}(),c(),function(){let e=s();const t=e.loader_config||{};e.loader_config={...t}}(),s()}},389:(e,t,r)=&gt;{"use strict";function n(e,t=500,r={}){const n=r?.leading||!1;let i;return(...r)=&gt;{n&amp;&amp;void 0===i&amp;&amp;(e.apply(this,r),i=setTimeout(()=&gt;{i=clearTimeout(i)},t)),n||(clearTimeout(i),i=setTimeout(()=&gt;{e.apply(this,r)},t))}}function i(e){let t=!1;return(...r)=&gt;{t||(t=!0,e.apply(this,r))}}r.d(t,{J:()=&gt;i,s:()=&gt;n})},555:(e,t,r)=&gt;{"use strict";r.d(t,{D:()=&gt;s,f:()=&gt;o});var n=r(384),i=r(122);const a={beacon:n.NT.beacon,errorBeacon:n.NT.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0};function o(e){try{return!!e.licenseKey&amp;&amp;!!e.errorBeacon&amp;&amp;!!e.applicationID}catch(e){return!1}}const s=e=&gt;(0,i.a)(e,a)},566:(e,t,r)=&gt;{"use strict";r.d(t,{LA:()=&gt;s,bz:()=&gt;o});var n=r(154);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function a(e,t){return e?15&amp;e[t]:16*Math.random()|0}function o(){const e=n.gm?.crypto||n.gm?.msCrypto;let t,r=0;return e&amp;&amp;e.getRandomValues&amp;&amp;(t=e.getRandomValues(new Uint8Array(30))),i.split("").map(e=&gt;"x"===e?a(t,r++).toString(16):"y"===e?(3&amp;a()|8).toString(16):e).join("")}function s(e){const t=n.gm?.crypto||n.gm?.msCrypto;let r,i=0;t&amp;&amp;t.getRandomValues&amp;&amp;(r=t.getRandomValues(new Uint8Array(e)));const o=[];for(var s=0;s&lt;e;s++)o.push(a(r,i++).toString(16));return o.join("")}},606:(e,t,r)=&gt;{"use strict";r.d(t,{i:()=&gt;a});var n=r(908);a.on=o;var i=a.handlers={};function a(e,t,r,a){o(a||n.d,i,e,t,r)}function o(e,t,r,i,a){a||(a="feature"),e||(e=n.d);var o=t[a]=t[a]||{};(o[r]=o[r]||[]).push([e,i])}},607:(e,t,r)=&gt;{"use strict";r.d(t,{W:()=&gt;n});const n=(0,r(566).bz)()},614:(e,t,r)=&gt;{"use strict";r.d(t,{BB:()=&gt;o,H3:()=&gt;n,g:()=&gt;d,iL:()=&gt;c,tS:()=&gt;s,uh:()=&gt;i,wk:()=&gt;a});const n="NRBA",i="SESSION",a=144e5,o=18e5,s={STARTED:"session-started",PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},c={SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},d={OFF:0,FULL:1,ERROR:2}},630:(e,t,r)=&gt;{"use strict";r.d(t,{T:()=&gt;n});const n=r(860).K7.pageViewEvent},646:(e,t,r)=&gt;{"use strict";r.d(t,{y:()=&gt;n});class n{constructor(e){this.contextId=e}}},687:(e,t,r)=&gt;{"use strict";r.d(t,{Ak:()=&gt;d,Ze:()=&gt;f,x3:()=&gt;u});var n=r(241),i=r(836),a=r(606),o=r(860),s=r(646);const c={};function d(e,t){const r={staged:!1,priority:o.P3[t]||0};l(e),c[e].get(t)||c[e].set(t,r)}function u(e,t){e&amp;&amp;c[e]&amp;&amp;(c[e].get(t)&amp;&amp;c[e].delete(t),p(e,t,!1),c[e].size&amp;&amp;g(e))}function l(e){if(!e)throw new Error("agentIdentifier required");c[e]||(c[e]=new Map)}function f(e="",t="feature",r=!1){if(l(e),!e||!c[e].get(t)||r)return p(e,t);c[e].get(t).staged=!0,g(e)}function g(e){const t=Array.from(c[e]);t.every(([e,t])=&gt;t.staged)&amp;&amp;(t.sort((e,t)=&gt;e[1].priority-t[1].priority),t.forEach(([t])=&gt;{c[e].delete(t),p(e,t)}))}function p(e,t,r=!0){const o=e?i.ee.get(e):i.ee,c=a.i.handlers;if(!o.aborted&amp;&amp;o.backlog&amp;&amp;c){if((0,n.W)({agentIdentifier:e,type:"lifecycle",name:"drain",feature:t}),r){const e=o.backlog[t],r=c[t];if(r){for(let t=0;e&amp;&amp;t&lt;e.length;++t)h(e[t],r);Object.entries(r).forEach(([e,t])=&gt;{Object.values(t||{}).forEach(t=&gt;{t[0]?.on&amp;&amp;t[0]?.context()instanceof s.y&amp;&amp;t[0].on(e,t[1])})})}}o.isolatedBacklog||delete c[t],o.backlog[t]=null,o.emit("drain-"+t,[])}}function h(e,t){var r=e[1];Object.values(t[r]||{}).forEach(t=&gt;{var r=e[0];if(t[0]===r){var n=t[1],i=e[3],a=e[2];n.apply(i,a)}})}},699:(e,t,r)=&gt;{"use strict";r.d(t,{It:()=&gt;a,KC:()=&gt;s,No:()=&gt;i,qh:()=&gt;o});var n=r(860);const i=16e3,a=1e6,o="SESSION_ERROR",s={[n.K7.logging]:!0,[n.K7.genericEvents]:!1,[n.K7.jserrors]:!1,[n.K7.ajax]:!1}},701:(e,t,r)=&gt;{"use strict";r.d(t,{B:()=&gt;a,t:()=&gt;o});var n=r(241);const i=new Set,a={};function o(e,t){const r=t.agentIdentifier;a[r]??={},e&amp;&amp;"object"==typeof e&amp;&amp;(i.has(r)||(t.ee.emit("rumresp",[e]),a[r]=e,i.add(r),(0,n.W)({agentIdentifier:r,loaded:!0,drained:!0,type:"lifecycle",name:"load",feature:void 0,data:e})))}},741:(e,t,r)=&gt;{"use strict";r.d(t,{W:()=&gt;a});var n=r(944),i=r(261);class a{#e(e,...t){if(this[e]!==a.prototype[e])return this[e](...t);(0,n.R)(35,e)}addPageAction(e,t){return this.#e(i.hG,e,t)}register(e){return this.#e(i.eY,e)}recordCustomEvent(e,t){return this.#e(i.fF,e,t)}setPageViewName(e,t){return this.#e(i.Fw,e,t)}setCustomAttribute(e,t,r){return this.#e(i.cD,e,t,r)}noticeError(e,t){return this.#e(i.o5,e,t)}setUserId(e){return this.#e(i.Dl,e)}setApplicationVersion(e){return this.#e(i.nb,e)}setErrorHandler(e){return this.#e(i.bt,e)}addRelease(e,t){return this.#e(i.k6,e,t)}log(e,t){return this.#e(i.$9,e,t)}start(){return this.#e(i.d3)}finished(e){return this.#e(i.BL,e)}recordReplay(){return this.#e(i.CH)}pauseReplay(){return this.#e(i.Tb)}addToTrace(e){return this.#e(i.U2,e)}setCurrentRouteName(e){return this.#e(i.PA,e)}interaction(e){return this.#e(i.dT,e)}wrapLogger(e,t,r){return this.#e(i.Wb,e,t,r)}measure(e,t){return this.#e(i.V1,e,t)}consent(e){return this.#e(i.Pv,e)}}},773:(e,t,r)=&gt;{"use strict";r.d(t,{z_:()=&gt;a,XG:()=&gt;s,TZ:()=&gt;n,rs:()=&gt;i,xV:()=&gt;o});r(154),r(566),r(384);const n=r(860).K7.metrics,i="sm",a="cm",o="storeSupportabilityMetrics",s="storeEventMetrics"},782:(e,t,r)=&gt;{"use strict";r.d(t,{T:()=&gt;n});const n=r(860).K7.pageViewTiming},836:(e,t,r)=&gt;{"use strict";r.d(t,{P:()=&gt;s,ee:()=&gt;c});var n=r(384),i=r(990),a=r(646),o=r(607);const s="nr@context:".concat(o.W),c=function e(t,r){var n={},o={},u={},l=!1;try{l=16===r.length&amp;&amp;d.initializedAgents?.[r]?.runtime.isolatedBacklog}catch(e){}var f={on:p,addEventListener:p,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i&lt;r.length;i++)r[i]===t&amp;&amp;r.splice(i,1)},emit:function(e,r,n,i,a){!1!==a&amp;&amp;(a=!0);if(c.aborted&amp;&amp;!i)return;t&amp;&amp;a&amp;&amp;t.emit(e,r,n);var s=g(n);h(e).forEach(e=&gt;{e.apply(s,r)});var d=v()[o[e]];d&amp;&amp;d.push([f,e,r,s]);return s},get:m,listeners:h,context:g,buffer:function(e,t){const r=v();if(t=t||"feature",f.aborted)return;Object.entries(e||{}).forEach(([e,n])=&gt;{o[n]=t,t in r||(r[t]=[])})},abort:function(){f._aborted=!0,Object.keys(f.backlog).forEach(e=&gt;{delete f.backlog[e]})},isBuffering:function(e){return!!v()[o[e]]},debugId:r,backlog:l?{}:t&amp;&amp;"object"==typeof t.backlog?t.backlog:{},isolatedBacklog:l};return Object.defineProperty(f,"aborted",{get:()=&gt;{let e=f._aborted||!1;return e||(t&amp;&amp;(e=t.aborted),e)}}),f;function g(e){return e&amp;&amp;e instanceof a.y?e:e?(0,i.I)(e,s,()=&gt;new a.y(s)):new a.y(s)}function p(e,t){n[e]=h(e).concat(t)}function h(e){return n[e]||[]}function m(t){return u[t]=u[t]||e(f,t)}function v(){return f.backlog}}(void 0,"globalEE"),d=(0,n.Zm)();d.ee||(d.ee=c)},843:(e,t,r)=&gt;{"use strict";r.d(t,{u:()=&gt;i});var n=r(878);function i(e,t=!1,r,i){(0,n.DD)("visibilitychange",function(){if(t)return void("hidden"===document.visibilityState&amp;&amp;e());e(document.visibilityState)},r,i)}},860:(e,t,r)=&gt;{"use strict";r.d(t,{$J:()=&gt;u,K7:()=&gt;c,P3:()=&gt;d,XX:()=&gt;i,Yy:()=&gt;s,df:()=&gt;a,qY:()=&gt;n,v4:()=&gt;o});const n="events",i="jserrors",a="browser/blobs",o="rum",s="browser/logs",c={ajax:"ajax",genericEvents:"generic_events",jserrors:i,logging:"logging",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",softNav:"soft_navigations",spa:"spa"},d={[c.pageViewEvent]:1,[c.pageViewTiming]:2,[c.metrics]:3,[c.jserrors]:4,[c.spa]:5,[c.ajax]:6,[c.sessionTrace]:7,[c.softNav]:8,[c.sessionReplay]:9,[c.logging]:10,[c.genericEvents]:11},u={[c.pageViewEvent]:o,[c.pageViewTiming]:n,[c.ajax]:n,[c.spa]:n,[c.softNav]:n,[c.metrics]:i,[c.jserrors]:i,[c.sessionTrace]:a,[c.sessionReplay]:a,[c.logging]:s,[c.genericEvents]:"ins"}},863:(e,t,r)=&gt;{"use strict";function n(){return Math.floor(performance.now())}r.d(t,{t:()=&gt;n})},878:(e,t,r)=&gt;{"use strict";function n(e,t){return{capture:e,passive:!1,signal:t}}function i(e,t,r=!1,i){window.addEventListener(e,t,n(r,i))}function a(e,t,r=!1,i){document.addEventListener(e,t,n(r,i))}r.d(t,{DD:()=&gt;a,jT:()=&gt;n,sp:()=&gt;i})},908:(e,t,r)=&gt;{"use strict";r.d(t,{d:()=&gt;n,p:()=&gt;i});var n=r(836).ee.get("handle");function i(e,t,r,i,a){a?(a.buffer([e],i),a.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}},910:(e,t,r)=&gt;{"use strict";r.d(t,{i:()=&gt;a});var n=r(944);const i=new Map;function a(...e){return e.every(e=&gt;{if(i.has(e))return i.get(e);const t="function"==typeof e&amp;&amp;e.toString().includes("[native code]");return t||(0,n.R)(64,e?.name||e?.toString()),i.set(e,t),t})}},944:(e,t,r)=&gt;{"use strict";r.d(t,{R:()=&gt;i});var n=r(241);function i(e,t){"function"==typeof console.debug&amp;&amp;(console.debug("New Relic Warning: https://github.com/newrelic/newrelic-browser-agent/blob/main/docs/warning-codes.md#".concat(e),t),(0,n.W)({agentIdentifier:null,drained:null,type:"data",name:"warn",feature:"warn",data:{code:e,secondary:t}}))}},990:(e,t,r)=&gt;{"use strict";r.d(t,{I:()=&gt;i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&amp;&amp;Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}}},n={};function i(e){var t=n[e];if(void 0!==t)return t.exports;var a=n[e]={exports:{}};return r[e](a,a.exports,i),a.exports}i.m=r,i.d=(e,t)=&gt;{for(var r in t)i.o(t,r)&amp;&amp;!i.o(e,r)&amp;&amp;Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},i.f={},i.e=e=&gt;Promise.all(Object.keys(i.f).reduce((t,r)=&gt;(i.f[r](e,t),t),[])),i.u=e=&gt;"nr-rum-1.303.0.min.js",i.o=(e,t)=&gt;Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA-1.303.0.PROD:",i.l=(r,n,a,o)=&gt;{if(e[r])e[r].push(n);else{var s,c;if(void 0!==a)for(var d=document.getElementsByTagName("script"),u=0;u&lt;d.length;u++){var l=d[u];if(l.getAttribute("src")==r||l.getAttribute("data-webpack")==t+a){s=l;break}}if(!s){c=!0;var f={296:"sha512-DjFbtykbDCyUDGsp+l/dYhH0LhW/Jv9sDnc+aleTRmpV1ZRfyOeip4Sv4USz3Fk0DZCWshsM7d24cTr9Xf3L/A=="};(s=document.createElement("script")).charset="utf-8",i.nc&amp;&amp;s.setAttribute("nonce",i.nc),s.setAttribute("data-webpack",t+a),s.src=r,0!==s.src.indexOf(window.location.origin+"/")&amp;&amp;(s.crossOrigin="anonymous"),f[o]&amp;&amp;(s.integrity=f[o])}e[r]=[n];var g=(t,n)=&gt;{s.onerror=s.onload=null,clearTimeout(p);var i=e[r];if(delete e[r],s.parentNode&amp;&amp;s.parentNode.removeChild(s),i&amp;&amp;i.forEach(e=&gt;e(n)),t)return t(n)},p=setTimeout(g.bind(null,void 0,{type:"timeout",target:s}),12e4);s.onerror=g.bind(null,s.onerror),s.onload=g.bind(null,s.onload),c&amp;&amp;document.head.appendChild(s)}},i.r=e=&gt;{"undefined"!=typeof Symbol&amp;&amp;Symbol.toStringTag&amp;&amp;Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=&gt;{var e={374:0,840:0};i.f.j=(t,r)=&gt;{var n=i.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var a=new Promise((r,i)=&gt;n=e[t]=[r,i]);r.push(n[2]=a);var o=i.p+i.u(t),s=new Error;i.l(o,r=&gt;{if(i.o(e,t)&amp;&amp;(0!==(n=e[t])&amp;&amp;(e[t]=void 0),n)){var a=r&amp;&amp;("load"===r.type?"missing":r.type),o=r&amp;&amp;r.target&amp;&amp;r.target.src;s.message="Loading chunk "+t+" failed.\n("+a+": "+o+")",s.name="ChunkLoadError",s.type=a,s.request=o,n[1](s)}},"chunk-"+t,t)}};var t=(t,r)=&gt;{var n,a,[o,s,c]=r,d=0;if(o.some(t=&gt;0!==e[t])){for(n in s)i.o(s,n)&amp;&amp;(i.m[n]=s[n]);if(c)c(i)}for(t&amp;&amp;t(r);d&lt;o.length;d++)a=o[d],i.o(e,a)&amp;&amp;e[a]&amp;&amp;e[a][0](),e[a]=0},r=self["webpackChunk:NRBA-1.303.0.PROD"]=self["webpackChunk:NRBA-1.303.0.PROD"]||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})(),(()=&gt;{"use strict";i(374);var e=i(566),t=i(741);class r extends t.W{agentIdentifier=(0,e.LA)(16)}var n=i(860);const a=Object.values(n.K7);var o=i(163);var s=i(908),c=i(863),d=i(261),u=i(241),l=i(944),f=i(701),g=i(773);function p(e,t,i,a){const o=a||i;!o||o[e]&amp;&amp;o[e]!==r.prototype[e]||(o[e]=function(){(0,s.p)(g.xV,["API/"+e+"/called"],void 0,n.K7.metrics,i.ee),(0,u.W)({agentIdentifier:i.agentIdentifier,drained:!!f.B?.[i.agentIdentifier],type:"data",name:"api",feature:d.Pl+e,data:{}});try{return t.apply(this,arguments)}catch(e){(0,l.R)(23,e)}})}function h(e,t,r,n,i){const a=e.info;null===r?delete a.jsAttributes[t]:a.jsAttributes[t]=r,(i||null===r)&amp;&amp;(0,s.p)(d.Pl+n,[(0,c.t)(),t,r],void 0,"session",e.ee)}var m=i(687),v=i(234),b=i(289),y=i(154),_=i(384);const w=e=&gt;y.RI&amp;&amp;!0===e?.privacy.cookies_enabled;function x(e){return!!(0,_.dV)().o.MO&amp;&amp;w(e)&amp;&amp;!0===e?.session_trace.enabled}var S=i(389),k=i(699);class R extends v.W{constructor(e,t){super(e.agentIdentifier,t),this.agentRef=e,this.abortHandler=void 0,this.featAggregate=void 0,this.loadedSuccessfully=void 0,this.onAggregateImported=new Promise(e=&gt;{this.loadedSuccessfully=e}),this.deferred=Promise.resolve(),!1===e.init[this.featureName].autoStart?this.deferred=new Promise((t,r)=&gt;{this.ee.on("manual-start-all",(0,S.J)(()=&gt;{(0,m.Ak)(e.agentIdentifier,this.featureName),t()}))}):(0,m.Ak)(e.agentIdentifier,t)}importAggregator(e,t,r={}){if(this.featAggregate)return;const n=async()=&gt;{let n;await this.deferred;try{if(w(e.init)){const{setupAgentSession:t}=await i.e(296).then(i.bind(i,305));n=t(e)}}catch(e){(0,l.R)(20,e),this.ee.emit("internal-error",[e]),(0,s.p)(k.qh,[e],void 0,this.featureName,this.ee)}try{if(!this.#t(this.featureName,n,e.init))return(0,m.Ze)(this.agentIdentifier,this.featureName),void this.loadedSuccessfully(!1);const{Aggregate:i}=await t();this.featAggregate=new i(e,r),e.runtime.harvester.initializedAggregates.push(this.featAggregate),this.loadedSuccessfully(!0)}catch(e){(0,l.R)(34,e),this.abortHandler?.(),(0,m.Ze)(this.agentIdentifier,this.featureName,!0),this.loadedSuccessfully(!1),this.ee&amp;&amp;this.ee.abort()}};y.RI?(0,b.GG)(()=&gt;n(),!0):n()}#t(e,t,r){if(this.blocked)return!1;switch(e){case n.K7.sessionReplay:return x(r)&amp;&amp;!!t;case n.K7.sessionTrace:return!!t;default:return!0}}}var A=i(630),T=i(614);class E extends R{static featureName=A.T;constructor(e){var t;super(e,A.T),this.setupInspectionEvents(e.agentIdentifier),t=e,p(d.Fw,function(e,r){"string"==typeof e&amp;&amp;("/"!==e.charAt(0)&amp;&amp;(e="/"+e),t.runtime.customTransaction=(r||"http://custom.transaction")+e,(0,s.p)(d.Pl+d.Fw,[(0,c.t)()],void 0,void 0,t.ee))},t),this.importAggregator(e,()=&gt;i.e(296).then(i.bind(i,108)))}setupInspectionEvents(e){const t=(t,r)=&gt;{t&amp;&amp;(0,u.W)({agentIdentifier:e,timeStamp:t.timeStamp,loaded:"complete"===t.target.readyState,type:"window",name:r,data:t.target.location+""})};(0,b.sB)(e=&gt;{t(e,"DOMContentLoaded")}),(0,b.GG)(e=&gt;{t(e,"load")}),(0,b.Qr)(e=&gt;{t(e,"navigate")}),this.ee.on(T.tS.UPDATE,(t,r)=&gt;{(0,u.W)({agentIdentifier:e,type:"lifecycle",name:"session",data:r})})}}var N=i(843),j=i(878),I=i(782);class P extends R{static featureName=I.T;constructor(e){super(e,I.T),y.RI&amp;&amp;((0,N.u)(()=&gt;(0,s.p)("docHidden",[(0,c.t)()],void 0,I.T,this.ee),!0),(0,j.sp)("pagehide",()=&gt;(0,s.p)("winPagehide",[(0,c.t)()],void 0,I.T,this.ee)),this.importAggregator(e,()=&gt;i.e(296).then(i.bind(i,350))))}}class O extends R{static featureName=g.TZ;constructor(e){super(e,g.TZ),y.RI&amp;&amp;document.addEventListener("securitypolicyviolation",e=&gt;{(0,s.p)(g.xV,["Generic/CSPViolation/Detected"],void 0,this.featureName,this.ee)}),this.importAggregator(e,()=&gt;i.e(296).then(i.bind(i,623)))}}new class extends r{constructor(e){var t;(super(),y.gm)?(this.features={},(0,_.bQ)(this.agentIdentifier,this),this.desiredFeatures=new Set(e.features||[]),this.desiredFeatures.add(E),this.runSoftNavOverSpa=[...this.desiredFeatures].some(e=&gt;e.featureName===n.K7.softNav),(0,o.j)(this,e,e.loaderType||"agent"),t=this,p(d.cD,function(e,r,n=!1){if("string"==typeof e){if(["string","number","boolean"].includes(typeof r)||null===r)return h(t,e,r,d.cD,n);(0,l.R)(40,typeof r)}else(0,l.R)(39,typeof e)},t),function(e){p(d.Dl,function(t){if("string"==typeof t||null===t)return h(e,"enduser.id",t,d.Dl,!0);(0,l.R)(41,typeof t)},e)}(this),function(e){p(d.nb,function(t){if("string"==typeof t||null===t)return h(e,"application.version",t,d.nb,!1);(0,l.R)(42,typeof t)},e)}(this),function(e){p(d.d3,function(){e.ee.emit("manual-start-all")},e)}(this),function(e){p(d.Pv,function(t=!0){if("boolean"==typeof t){if((0,s.p)(d.Pl+d.Pv,[t],void 0,"session",e.ee),e.runtime.consented=t,t){const t=e.features.page_view_event;t.onAggregateImported.then(e=&gt;{const r=t.featAggregate;e&amp;&amp;!r.sentRum&amp;&amp;r.sendRum()})}}else(0,l.R)(65,typeof t)},e)}(this),this.run()):(0,l.R)(21)}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}get api(){return this}run(){try{const e=function(e){const t={};return a.forEach(r=&gt;{t[r]=!!e[r]?.enabled}),t}(this.init),t=[...this.desiredFeatures];t.sort((e,t)=&gt;n.P3[e.featureName]-n.P3[t.featureName]),t.forEach(t=&gt;{if(!e[t.featureName]&amp;&amp;t.featureName!==n.K7.pageViewEvent)return;if(this.runSoftNavOverSpa&amp;&amp;t.featureName===n.K7.spa)return;if(!this.runSoftNavOverSpa&amp;&amp;t.featureName===n.K7.softNav)return;const r=function(e){switch(e){case n.K7.ajax:return[n.K7.jserrors];case n.K7.sessionTrace:return[n.K7.ajax,n.K7.pageViewEvent];case n.K7.sessionReplay:return[n.K7.sessionTrace];case n.K7.pageViewTiming:return[n.K7.pageViewEvent];default:return[]}}(t.featureName).filter(e=&gt;!(e in this.features));r.length&gt;0&amp;&amp;(0,l.R)(36,{targetFeature:t.featureName,missingDependencies:r}),this.features[t.featureName]=new t(this)})}catch(e){(0,l.R)(22,e);for(const e in this.features)this.features[e].abortHandler?.();const t=(0,_.Zm)();delete t.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator;return t.ee.get(this.agentIdentifier).abort(),!1}}}({features:[E,P,O],loaderType:"lite"})})()})();&lt;/script&gt;                                                                                                                                                                                 
+        &lt;meta name="robots" content="NONE,NOARCHIVE" /&gt;
 
 
       &lt;title&gt;Extensions List ΓÇô Django REST framework&lt;/title&gt;
 
 
 
-          &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/static/rest_framework/css/bootstrap.min.f17d4516b026.css&quot;/&gt;
-          &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/static/rest_framework/css/bootstrap-tweaks.ee4ee6acf9eb.css&quot;/&gt;
+          &lt;link rel="stylesheet" type="text/css" href="/static/rest_framework/css/bootstrap.min.f17d4516b026.css"/&gt;
+          &lt;link rel="stylesheet" type="text/css" href="/static/rest_framework/css/bootstrap-tweaks.ee4ee6acf9eb.css"/&gt;
 
 
-        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/static/rest_framework/css/prettify.a987f72342ee.css&quot;/&gt;
-        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/static/rest_framework/css/default.789dfb5732d7.css&quot;/&gt;
+        &lt;link rel="stylesheet" type="text/css" href="/static/rest_framework/css/prettify.a987f72342ee.css"/&gt;
+        &lt;link rel="stylesheet" type="text/css" href="/static/rest_framework/css/default.789dfb5732d7.css"/&gt;
 
 
 
@@ -3564,21 +3564,21 @@ PS E:\rainys-blender-extensions&gt; curl -s https://www.blenderkit.com/api/v1/ex
   &lt;/head&gt;
 
 
-  &lt;body class=&quot;&quot;&gt;
+  &lt;body class=""&gt;
 
-    &lt;div class=&quot;wrapper&quot;&gt;
+    &lt;div class="wrapper"&gt;
 
-        &lt;div class=&quot;navbar navbar-static-top navbar-inverse&quot;
-             role=&quot;navigation&quot; aria-label=&quot;navbar&quot;&gt;
-          &lt;div class=&quot;container&quot;&gt;
+        &lt;div class="navbar navbar-static-top navbar-inverse"
+             role="navigation" aria-label="navbar"&gt;
+          &lt;div class="container"&gt;
             &lt;span&gt;
 
-                &lt;a class=&#39;navbar-brand&#39; rel=&quot;nofollow&quot; href=&#39;https://www.django-rest-framework.org/&#39;&gt;
+                &lt;a class='navbar-brand' rel="nofollow" href='https://www.django-rest-framework.org/'&gt;
                     Django REST framework
                 &lt;/a&gt;
 
             &lt;/span&gt;
-            &lt;ul class=&quot;nav navbar-nav pull-right&quot;&gt;
+            &lt;ul class="nav navbar-nav pull-right"&gt;
 ```
 </details>
 </tool-use>
@@ -3596,7 +3596,7 @@ Comparing formats: the official Blender API includes more fields, but our simple
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: curl -s "https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml" | Select-String -Pattern "^version\s*="</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: curl -s "https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml" | Select-String -Pattern "^version\s*="</summary>
 
 ```bash
 curl -s "https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml" | Select-String -Pattern "^version\s*="
@@ -3626,18 +3626,18 @@ The official Blender extensions API doesn't include `manifest_url`—only `archi
 
 <tool-use data-tool-type="write" data-tool-name="search_replace">
 
-<details><summary>Tool use: **code_edit** • Edit file: catalog.json</summary>
+<details><summary>Tool use: **search_replace** • Edit file: catalog.json</summary>
 
 **Chunk 1**
 Lines added: 1, lines removed: 2
 
 ```diff
 @@ -5,6 +5,5 @@
-        &quot;id&quot;: &quot;basedplayblast&quot;,
-        &quot;version&quot;: &quot;2.3.1&quot;,
--       &quot;archive_url&quot;: &quot;https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.1/BasedPlayblast.v2.3.1.zip&quot;,
--       &quot;manifest_url&quot;: &quot;https://github.com/RaincloudTheDragon/BasedPlayblast/raw/main/blender_manifest.toml&quot;
-+       &quot;archive_url&quot;: &quot;https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.1/BasedPlayblast.v2.3.1.zip&quot;
+        "id": "basedplayblast",
+        "version": "2.3.1",
+-       "archive_url": "https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.1/BasedPlayblast.v2.3.1.zip",
+-       "manifest_url": "https://github.com/RaincloudTheDragon/BasedPlayblast/raw/main/blender_manifest.toml"
++       "archive_url": "https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.1/BasedPlayblast.v2.3.1.zip"
       }
     ]
 ```
@@ -3658,16 +3658,16 @@ Lines added: 1, lines removed: 2
 
 <tool-use data-tool-type="write" data-tool-name="search_replace">
 
-<details><summary>Tool use: **code_edit** • Edit file: update_catalog.py</summary>
+<details><summary>Tool use: **search_replace** • Edit file: update_catalog.py</summary>
 
 **Chunk 1**
 Lines added: undefined, lines removed: 1
 
 ```diff
 @@ -110,5 +110,4 @@
-              &quot;version&quot;: version,
-              &quot;archive_url&quot;: archive_url,
--             &quot;manifest_url&quot;: manifest_url,
+              "version": version,
+              "archive_url": archive_url,
+-             "manifest_url": manifest_url,
           }
           
 ```
@@ -3717,7 +3717,7 @@ Checking if the catalog is accessible and valid:
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: curl -s https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: curl -s https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json</summary>
 
 ```bash
 curl -s https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json
@@ -3736,7 +3736,7 @@ curl -s https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.j
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: python -m json.tool catalog.json</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: python -m json.tool catalog.json</summary>
 
 ```bash
 python -m json.tool catalog.json
@@ -3744,12 +3744,12 @@ python -m json.tool catalog.json
 
 ```
 {
-    &quot;schema_version&quot;: &quot;1.0.0&quot;,
-    &quot;extensions&quot;: [
+    "schema_version": "1.0.0",
+    "extensions": [
         {
-            &quot;id&quot;: &quot;basedplayblast&quot;,
-            &quot;version&quot;: &quot;2.3.1&quot;,
-            &quot;archive_url&quot;: &quot;https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.1/BasedPlayblast.v2.3.1.zip&quot;
+            "id": "basedplayblast",
+            "version": "2.3.1",
+            "archive_url": "https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.1/BasedPlayblast.v2.3.1.zip"
         }
     ]
 }
@@ -3783,7 +3783,7 @@ Checking if GitHub Pages is serving the catalog and verifying the URL:
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: curl -I https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json 2>&1 | Select-String -Pattern "HTTP|Content-Type|Location"</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: curl -I https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json 2>&1 | Select-String -Pattern "HTTP|Content-Type|Location"</summary>
 
 ```bash
 curl -I https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json 2>&1 | Select-String -Pattern "HTTP|Content-Type|Location"
@@ -3794,19 +3794,19 @@ curl -I https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.j
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: curl -s https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json | python -c "import sys, json; data = json.load(sys.stdin); print('Valid JSON'); print(f'Schema: {data.get(\"schema_version\")}'); print(f'Extensions: {len(data.get(\"extensions\", []))}')"</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: curl -s https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json | python -c "import sys, json; data = json.load(sys.stdin); print('Valid JSON'); print(f'Schema: {data.get(\"schema_version\")}'); print(f'Extensions: {len(data.get(\"extensions\", []))}')"</summary>
 
 ```bash
 curl -s https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json | python -c "import sys, json; data = json.load(sys.stdin); print('Valid JSON'); print(f'Schema: {data.get(\"schema_version\")}'); print(f'Extensions: {len(data.get(\"extensions\", []))}')"
 ```
 
 ```
-ions: {len(data.get(\&quot;extensions\&quot;, []))}&#39;)&quot;                                                                                                                                                                                                                          
-  File &quot;&lt;string&gt;&quot;, line 1
-    import sys, json; data = json.load(sys.stdin); print(&#39;Valid JSON&#39;); print(f&#39;Schema: {data.get(\
+ions: {len(data.get(\"extensions\", []))}')"                                                                                                                                                                                                                          
+  File "&lt;string&gt;", line 1
+    import sys, json; data = json.load(sys.stdin); print('Valid JSON'); print(f'Schema: {data.get(\
                                                                               ^
 SyntaxError: unterminated string literal (detected at line 1)
-ResourceUnavailable: Program &#39;curl.exe&#39; failed to run: The pipe is being closed.At line:1 char:1
+ResourceUnavailable: Program 'curl.exe' failed to run: The pipe is being closed.At line:1 char:1
 + curl -s https://raincloudthedragon.github.io/rainys-blender-extension …
 + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.
 ```
@@ -3834,7 +3834,7 @@ Trying a simpler test:
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: Invoke-WebRequest -Uri "https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json" -UseBasicParsing | Select-Object StatusCode, @{Name='ContentLength';Expression={$_.Content.Length}}</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: Invoke-WebRequest -Uri "https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json" -UseBasicParsing | Select-Object StatusCode, @{Name='ContentLength';Expression={$_.Content.Length}}</summary>
 
 ```bash
 Invoke-WebRequest -Uri "https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json" -UseBasicParsing | Select-Object StatusCode, @{Name='ContentLength';Expression={$_.Content.Length}}
@@ -3915,7 +3915,7 @@ Noting that Blender and BlenderKit use Django REST APIs, while we're serving a s
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: curl -s "https://extensions.blender.org/api/v1/extensions/" | python -c "import sys, json; d=json.load(sys.stdin); print('Has data key:', 'data' in d); print('Has extensions key:', 'extensions' in d); print('Top level keys:', list(d.keys())[:5])"</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: curl -s "https://extensions.blender.org/api/v1/extensions/" | python -c "import sys, json; d=json.load(sys.stdin); print('Has data key:', 'data' in d); print('Has extensions key:', 'extensions' in d); print('Top level keys:', list(d.keys())[:5])"</summary>
 
 ```bash
 curl -s "https://extensions.blender.org/api/v1/extensions/" | python -c "import sys, json; d=json.load(sys.stdin); print('Has data key:', 'data' in d); print('Has extensions key:', 'extensions' in d); print('Top level keys:', list(d.keys())[:5])"
@@ -3944,7 +3944,7 @@ Noting that Blender and BlenderKit use Django REST APIs. Their responses include
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: curl -s "https://extensions.blender.org/api/v1/extensions/" | python -c "import sys, json; d=json.load(sys.stdin); print(json.dumps({'schema_version': d.get('version', '1.0.0'), 'extensions': d.get('data', [])[:1]}, indent=2))" 2>&1 | Select-Object -First 20</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: curl -s "https://extensions.blender.org/api/v1/extensions/" | python -c "import sys, json; d=json.load(sys.stdin); print(json.dumps({'schema_version': d.get('version', '1.0.0'), 'extensions': d.get('data', [])[:1]}, indent=2))" 2>&1 | Select-Object -First 20</summary>
 
 ```bash
 curl -s "https://extensions.blender.org/api/v1/extensions/" | python -c "import sys, json; d=json.load(sys.stdin); print(json.dumps({'schema_version': d.get('version', '1.0.0'), 'extensions': d.get('data', [])[:1]}, indent=2))" 2>&1 | Select-Object -First 20
@@ -3965,7 +3965,7 @@ Noting that Blender and BlenderKit use Django REST APIs, while we're serving a s
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: curl -s -o $null -w "%{http_code}" https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: curl -s -o $null -w "%{http_code}" https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json</summary>
 
 ```bash
 curl -s -o $null -w "%{http_code}" https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json
@@ -3998,7 +3998,7 @@ Checking if the catalog is accessible and verifying the format:
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: $response = Invoke-WebRequest -Uri "https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json" -UseBasicParsing -ErrorAction SilentlyContinue; if ($response) { Write-Output "Status: $($response.StatusCode)"; Write-Output "Content-Type: $($response.Headers['Content-Type'])"; $response.Content } else { Write-Output "Failed to fetch" }</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: $response = Invoke-WebRequest -Uri "https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json" -UseBasicParsing -ErrorAction SilentlyContinue; if ($response) { Write-Output "Status: $($response.StatusCode)"; Write-Output "Content-Type: $($response.Headers['Content-Type'])"; $response.Content } else { Write-Output "Failed to fetch" }</summary>
 
 ```bash
 $response = Invoke-WebRequest -Uri "https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json" -UseBasicParsing -ErrorAction SilentlyContinue; if ($response) { Write-Output "Status: $($response.StatusCode)"; Write-Output "Content-Type: $($response.Headers['Content-Type'])"; $response.Content } else { Write-Output "Failed to fetch" }
@@ -4040,7 +4040,7 @@ The catalog format looks correct. "Remote data unavailable" suggests Blender can
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: try { $r = Invoke-WebRequest -Uri "https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json" -UseBasicParsing; Write-Output "✓ Accessible - Status: $($r.StatusCode)"; Write-Output "Content-Type: $($r.Headers['Content-Type'])"; Write-Output "Content length: $($r.Content.Length) bytes" } catch { Write-Output "✗ Not accessible: $_" }</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: try { $r = Invoke-WebRequest -Uri "https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json" -UseBasicParsing; Write-Output "✓ Accessible - Status: $($r.StatusCode)"; Write-Output "Content-Type: $($r.Headers['Content-Type'])"; Write-Output "Content length: $($r.Content.Length) bytes" } catch { Write-Output "✗ Not accessible: $_" }</summary>
 
 ```bash
 try { $r = Invoke-WebRequest -Uri "https://raincloudthedragon.github.io/rainys-blender-extensions/catalog.json" -UseBasicParsing; Write-Output "✓ Accessible - Status: $($r.StatusCode)"; Write-Output "Content-Type: $($r.Headers['Content-Type'])"; Write-Output "Content length: $($r.Content.Length) bytes" } catch { Write-Output "✗ Not accessible: $_" }
@@ -4177,7 +4177,7 @@ BlenderKit uses a `data` array, not `extensions`. Updating the catalog to match:
 
 <tool-use data-tool-type="write" data-tool-name="search_replace">
 
-<details><summary>Tool use: **code_edit** • Edit file: catalog.json</summary>
+<details><summary>Tool use: **search_replace** • Edit file: catalog.json</summary>
 
 **Chunk 1**
 Lines added: 3, lines removed: 3
@@ -4185,15 +4185,15 @@ Lines added: 3, lines removed: 3
 ```diff
 @@ -1,9 +1,9 @@
   {
--   &quot;schema_version&quot;: &quot;1.0.0&quot;,
--   &quot;extensions&quot;: [
-+   &quot;data&quot;: [
+-   "schema_version": "1.0.0",
+-   "extensions": [
++   "data": [
       {
-        &quot;id&quot;: &quot;basedplayblast&quot;,
-        &quot;version&quot;: &quot;2.3.1&quot;,
--       &quot;archive_url&quot;: &quot;https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.1/BasedPlayblast.v2.3.1.zip&quot;
-+       &quot;archive_url&quot;: &quot;https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.1/BasedPlayblast.v2.3.1.zip&quot;,
-+       &quot;schema_version&quot;: &quot;1.0.0&quot;
+        "id": "basedplayblast",
+        "version": "2.3.1",
+-       "archive_url": "https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.1/BasedPlayblast.v2.3.1.zip"
++       "archive_url": "https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.1/BasedPlayblast.v2.3.1.zip",
++       "schema_version": "1.0.0"
       }
     ]
 ```
@@ -4214,7 +4214,7 @@ Lines added: 3, lines removed: 3
 
 <tool-use data-tool-type="write" data-tool-name="search_replace">
 
-<details><summary>Tool use: **code_edit** • Edit file: update_catalog.py</summary>
+<details><summary>Tool use: **search_replace** • Edit file: update_catalog.py</summary>
 
 **Chunk 1**
 Lines added: 1, lines removed: 2
@@ -4223,9 +4223,9 @@ Lines added: 1, lines removed: 2
 @@ -116,6 +116,5 @@
       
       return {
--         &quot;schema_version&quot;: &quot;1.0.0&quot;,
--         &quot;extensions&quot;: extensions,
-+         &quot;data&quot;: extensions,
+-         "schema_version": "1.0.0",
+-         "extensions": extensions,
++         "data": extensions,
       }
   
 ```
@@ -4238,16 +4238,16 @@ Lines added: 1, lines removed: 2
 
 <tool-use data-tool-type="write" data-tool-name="search_replace">
 
-<details><summary>Tool use: **code_edit** • Edit file: update_catalog.py</summary>
+<details><summary>Tool use: **search_replace** • Edit file: update_catalog.py</summary>
 
 **Chunk 1**
 Lines added: 1, lines removed: undefined
 
 ```diff
 @@ -110,4 +110,5 @@
-              &quot;version&quot;: version,
-              &quot;archive_url&quot;: archive_url,
-+             &quot;schema_version&quot;: &quot;1.0.0&quot;,
+              "version": version,
+              "archive_url": archive_url,
++             "schema_version": "1.0.0",
           }
           
 ```
@@ -4259,7 +4259,7 @@ Lines added: 1, lines removed: undefined
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: python -m json.tool catalog.json</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: python -m json.tool catalog.json</summary>
 
 ```bash
 python -m json.tool catalog.json
@@ -4327,7 +4327,7 @@ No. The catalog.json file should be pure JSON only. HTTP headers are sent by the
 
 <tool-use data-tool-type="write" data-tool-name="search_replace">
 
-<details><summary>Tool use: **code_edit** • Edit file: catalog.json</summary>
+<details><summary>Tool use: **search_replace** • Edit file: catalog.json</summary>
 
 **Chunk 1**
 Lines added: undefined, lines removed: 5
@@ -4340,7 +4340,7 @@ Lines added: undefined, lines removed: 5
 - Vary: Accept
 - 
   {
-    &quot;data&quot;: [
+    "data": [
 ```
 
 </details>
@@ -4358,7 +4358,7 @@ Lines added: undefined, lines removed: 5
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: python -m json.tool catalog.json</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: python -m json.tool catalog.json</summary>
 
 ```bash
 python -m json.tool catalog.json
@@ -4534,7 +4534,7 @@ _**Agent (model gpt-5.1-codex, mode Agent)**_
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: curl -I https://github.com/RaincloudTheDragon/BasedPlayblast/raw/main/blender_manifest.toml</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: curl -I https://github.com/RaincloudTheDragon/BasedPlayblast/raw/main/blender_manifest.toml</summary>
 
 ```bash
 curl -I https://github.com/RaincloudTheDragon/BasedPlayblast/raw/main/blender_manifest.toml
@@ -4549,7 +4549,7 @@ curl -I https://github.com/RaincloudTheDragon/BasedPlayblast/raw/main/blender_ma
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: curl https://github.com/RaincloudTheDragon/BasedPlayblast/raw/main/blender_manifest.toml</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: curl https://github.com/RaincloudTheDragon/BasedPlayblast/raw/main/blender_manifest.toml</summary>
 
 ```bash
 curl https://github.com/RaincloudTheDragon/BasedPlayblast/raw/main/blender_manifest.toml
@@ -4565,7 +4565,7 @@ curl https://github.com/RaincloudTheDragon/BasedPlayblast/raw/main/blender_manif
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: curl -I https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: curl -I https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml</summary>
 
 ```bash
 curl -I https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml
@@ -4581,7 +4581,7 @@ curl -I https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: curl https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: curl https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml</summary>
 
 ```bash
 curl https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml
@@ -4618,37 +4618,37 @@ Parameters:
 
 ```json
 {
-  &quot;relativeWorkspacePath&quot;: &quot;catalog.json&quot;
+  "relativeWorkspacePath": "catalog.json"
 }
 ```
 Additional data:
 
 ```json
 {
-  &quot;codeblockId&quot;: &quot;f1c183be-f338-4a09-be44-7a93069775f8&quot;
+  "codeblockId": "f1c183be-f338-4a09-be44-7a93069775f8"
 }
 ```
 Result:
 
 ```json
 {
-  &quot;diff&quot;: {
-    &quot;chunks&quot;: [
+  "diff": {
+    "chunks": [
       {
-        &quot;diffString&quot;: &quot;        \&quot;type\&quot;: \&quot;add-on\&quot;,\r\n        \&quot;archive_url\&quot;: \&quot;https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.1/BasedPlayblast.v2.3.1.zip\&quot;,\r\n-       \&quot;manifest_url\&quot;: \&quot;https://github.com/RaincloudTheDragon/BasedPlayblast/raw/main/blender_manifest.toml\&quot;,\r\n+       \&quot;manifest_url\&quot;: \&quot;https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml\&quot;,\r\n        \&quot;schema_version\&quot;: \&quot;1.0.0\&quot;\r\n      }\r&quot;,
-        &quot;oldStart&quot;: 8,
-        &quot;newStart&quot;: 8,
-        &quot;oldLines&quot;: 5,
-        &quot;newLines&quot;: 5,
-        &quot;linesRemoved&quot;: 1,
-        &quot;linesAdded&quot;: 1
+        "diffString": "        \"type\": \"add-on\",\r\n        \"archive_url\": \"https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.1/BasedPlayblast.v2.3.1.zip\",\r\n-       \"manifest_url\": \"https://github.com/RaincloudTheDragon/BasedPlayblast/raw/main/blender_manifest.toml\",\r\n+       \"manifest_url\": \"https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml\",\r\n        \"schema_version\": \"1.0.0\"\r\n      }\r",
+        "oldStart": 8,
+        "newStart": 8,
+        "oldLines": 5,
+        "newLines": 5,
+        "linesRemoved": 1,
+        "linesAdded": 1
       }
     ],
-    &quot;editor&quot;: &quot;EDITOR_AI&quot;
+    "editor": "EDITOR_AI"
   },
-  &quot;shouldAutoFixLints&quot;: true,
-  &quot;resultForModel&quot;: &quot;Success. Updated the following files:\nM catalog.json&quot;,
-  &quot;contentsAfterEdit&quot;: &quot;{\r\n  \&quot;data\&quot;: [\r\n    {\r\n      \&quot;id\&quot;: \&quot;basedplayblast\&quot;,\r\n      \&quot;name\&quot;: \&quot;BasedPlayblast\&quot;,\r\n      \&quot;tagline\&quot;: \&quot;Easily create playblasts from Blender\&quot;,\r\n      \&quot;version\&quot;: \&quot;2.3.1\&quot;,\r\n      \&quot;type\&quot;: \&quot;add-on\&quot;,\r\n      \&quot;archive_url\&quot;: \&quot;https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.1/BasedPlayblast.v2.3.1.zip\&quot;,\r\n      \&quot;manifest_url\&quot;: \&quot;https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml\&quot;,\r\n      \&quot;schema_version\&quot;: \&quot;1.0.0\&quot;\r\n    }\r\n  ]\r\n}&quot;
+  "shouldAutoFixLints": true,
+  "resultForModel": "Success. Updated the following files:\nM catalog.json",
+  "contentsAfterEdit": "{\r\n  \"data\": [\r\n    {\r\n      \"id\": \"basedplayblast\",\r\n      \"name\": \"BasedPlayblast\",\r\n      \"tagline\": \"Easily create playblasts from Blender\",\r\n      \"version\": \"2.3.1\",\r\n      \"type\": \"add-on\",\r\n      \"archive_url\": \"https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.3.1/BasedPlayblast.v2.3.1.zip\",\r\n      \"manifest_url\": \"https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml\",\r\n      \"schema_version\": \"1.0.0\"\r\n    }\r\n  ]\r\n}"
 }
 ```
 User decision: **accepted**
@@ -4688,45 +4688,45 @@ Parameters:
 
 ```json
 {
-  &quot;relativeWorkspacePath&quot;: &quot;update_catalog.py&quot;
+  "relativeWorkspacePath": "update_catalog.py"
 }
 ```
 Additional data:
 
 ```json
 {
-  &quot;codeblockId&quot;: &quot;8c1d9459-92cd-4bb7-b008-48681bb19979&quot;
+  "codeblockId": "8c1d9459-92cd-4bb7-b008-48681bb19979"
 }
 ```
 Result:
 
 ```json
 {
-  &quot;diff&quot;: {
-    &quot;chunks&quot;: [
+  "diff": {
+    "chunks": [
       {
-        &quot;diffString&quot;: &quot;  def get_manifest_url(repo: str, branch: str, manifest_path: str = \&quot;blender_manifest.toml\&quot;) -&gt; str:\n      \&quot;\&quot;\&quot;Generate the raw manifest URL.\&quot;\&quot;\&quot;\n-     return f\&quot;https://github.com/{repo}/raw/{branch}/{manifest_path}\&quot;\n+     return f\&quot;https://raw.githubusercontent.com/{repo}/{branch}/{manifest_path}\&quot;\n  \n  &quot;,
-        &quot;oldStart&quot;: 46,
-        &quot;newStart&quot;: 46,
-        &quot;oldLines&quot;: 5,
-        &quot;newLines&quot;: 5,
-        &quot;linesRemoved&quot;: 1,
-        &quot;linesAdded&quot;: 1
+        "diffString": "  def get_manifest_url(repo: str, branch: str, manifest_path: str = \"blender_manifest.toml\") -&gt; str:\n      \"\"\"Generate the raw manifest URL.\"\"\"\n-     return f\"https://github.com/{repo}/raw/{branch}/{manifest_path}\"\n+     return f\"https://raw.githubusercontent.com/{repo}/{branch}/{manifest_path}\"\n  \n  ",
+        "oldStart": 46,
+        "newStart": 46,
+        "oldLines": 5,
+        "newLines": 5,
+        "linesRemoved": 1,
+        "linesAdded": 1
       },
       {
-        &quot;diffString&quot;: &quot;              \&quot;version\&quot;: version,\n              \&quot;archive_url\&quot;: archive_url,\n+             \&quot;manifest_url\&quot;: manifest_url,\n              \&quot;schema_version\&quot;: \&quot;1.0.0\&quot;,\n          }&quot;,
-        &quot;oldStart&quot;: 110,
-        &quot;newStart&quot;: 110,
-        &quot;oldLines&quot;: 4,
-        &quot;newLines&quot;: 5,
-        &quot;linesAdded&quot;: 1
+        "diffString": "              \"version\": version,\n              \"archive_url\": archive_url,\n+             \"manifest_url\": manifest_url,\n              \"schema_version\": \"1.0.0\",\n          }",
+        "oldStart": 110,
+        "newStart": 110,
+        "oldLines": 4,
+        "newLines": 5,
+        "linesAdded": 1
       }
     ],
-    &quot;editor&quot;: &quot;EDITOR_AI&quot;
+    "editor": "EDITOR_AI"
   },
-  &quot;shouldAutoFixLints&quot;: true,
-  &quot;resultForModel&quot;: &quot;Success. Updated the following files:\nM update_catalog.py&quot;,
-  &quot;contentsAfterEdit&quot;: &quot;#!/usr/bin/env python3\n\&quot;\&quot;\&quot;\nScript to automatically update the Blender extension catalog from GitHub releases.\n\nThis script fetches release information from GitHub repositories and generates\na catalog.json file for Blender&#39;s extension system.\n\nUsage:\n    python update_catalog.py\n\nRequirements:\n    pip install requests\n\nConfiguration:\n    Edit the ADDONS list below with your addon information.\n\&quot;\&quot;\&quot;\n\nimport json\nimport requests\nfrom typing import List, Dict, Optional\n\n# Configuration: Add your addons here\nADDONS = [\n    {\n        \&quot;id\&quot;: \&quot;basedplayblast\&quot;,  # Must match blender_manifest.toml\n        \&quot;repo\&quot;: \&quot;RaincloudTheDragon/BasedPlayblast\&quot;,\n        \&quot;manifest_branch\&quot;: \&quot;main\&quot;,\n    },\n    # Note: Rainys-Bulk-Scene-Tools doesn&#39;t have blender_manifest.toml yet\n    # It only has bl_info.json (old format). Add it here once you create the manifest.\n]\n\n\ndef get_latest_release(repo: str) -&gt; Optional[Dict]:\n    \&quot;\&quot;\&quot;Get the latest release from a GitHub repository.\&quot;\&quot;\&quot;\n    url = f\&quot;https://api.github.com/repos/{repo}/releases/latest\&quot;\n    try:\n        response = requests.get(url, timeout=10)\n        response.raise_for_status()\n        return response.json()\n    except requests.RequestException as e:\n        print(f\&quot;Error fetching release for {repo}: {e}\&quot;)\n        return None\n\n\ndef get_manifest_url(repo: str, branch: str, manifest_path: str = \&quot;blender_manifest.toml\&quot;) -&gt; str:\n    \&quot;\&quot;\&quot;Generate the raw manifest URL.\&quot;\&quot;\&quot;\n    return f\&quot;https://raw.githubusercontent.com/{repo}/{branch}/{manifest_path}\&quot;\n\n\ndef get_archive_url(release: Dict, repo: str, tag: str) -&gt; Optional[str]:\n    \&quot;\&quot;\&quot;Get the ZIP archive URL from a release, ensuring it matches the tag.\&quot;\&quot;\&quot;\n    if not release or \&quot;assets\&quot; not in release:\n        return None\n    \n    # Look for a ZIP file in the release assets\n    for asset in release.get(\&quot;assets\&quot;, []):\n        if asset.get(\&quot;content_type\&quot;) == \&quot;application/zip\&quot; or asset.get(\&quot;name\&quot;, \&quot;\&quot;).endswith(\&quot;.zip\&quot;):\n            url = asset.get(\&quot;browser_download_url\&quot;)\n            # Verify the URL contains the tag version\n            if url and tag in url:\n                return url\n            elif url:\n                # URL exists but might not match tag - log warning but still use it\n                print(f\&quot;    Note: Archive URL may not match tag {tag}\&quot;)\n                return url\n    \n    # Fallback: use the source code ZIP (not recommended for extensions)\n    if tag:\n        print(f\&quot;    ⚠ Warning: No ZIP asset found, using source archive (may not work)\&quot;)\n        return f\&quot;https://github.com/{repo}/archive/refs/tags/{tag}.zip\&quot;\n    \n    return None\n\n\ndef parse_version_from_tag(tag: str) -&gt; str:\n    \&quot;\&quot;\&quot;Extract version from git tag (removes &#39;v&#39; prefix if present).\&quot;\&quot;\&quot;\n    return tag.lstrip(\&quot;v\&quot;)\n\n\ndef generate_catalog(addons: List[Dict]) -&gt; Dict:\n    \&quot;\&quot;\&quot;Generate the catalog JSON from addon configurations.\&quot;\&quot;\&quot;\n    extensions = []\n    \n    for addon in addons:\n        repo = addon[\&quot;repo\&quot;]\n        addon_id = addon[\&quot;id\&quot;]\n        branch = addon.get(\&quot;manifest_branch\&quot;, \&quot;main\&quot;)\n        \n        print(f\&quot;Processing {addon_id} from {repo}...\&quot;)\n        \n        release = get_latest_release(repo)\n        if not release:\n            print(f\&quot;  ⚠ Warning: No release found for {repo}\&quot;)\n            print(f\&quot;     Skipping {addon_id} - create a GitHub release first\&quot;)\n            continue\n        \n        tag = release.get(\&quot;tag_name\&quot;, \&quot;\&quot;)\n        version = parse_version_from_tag(tag)\n        archive_url = get_archive_url(release, repo, tag)\n        manifest_url = get_manifest_url(repo, branch)\n        \n        if not archive_url:\n            print(f\&quot;  ⚠ Warning: No ZIP archive found for {repo}\&quot;)\n            print(f\&quot;     Skipping {addon_id} - ensure release has a ZIP asset\&quot;)\n            continue\n        \n        extension = {\n            \&quot;id\&quot;: addon_id,\n            \&quot;version\&quot;: version,\n            \&quot;archive_url\&quot;: archive_url,\n            \&quot;manifest_url\&quot;: manifest_url,\n            \&quot;schema_version\&quot;: \&quot;1.0.0\&quot;,\n        }\n        \n        extensions.append(extension)\n        print(f\&quot;  ✓ Added {addon_id} v{version}\&quot;)\n    \n    return {\n        \&quot;data\&quot;: extensions,\n    }\n\n\ndef main():\n    \&quot;\&quot;\&quot;Main function to generate and save the catalog.\&quot;\&quot;\&quot;\n    print(\&quot;Generating Blender extension catalog...\&quot;)\n    print(\&quot;-\&quot; * 50)\n    \n    catalog = generate_catalog(ADDONS)\n    \n    output_file = \&quot;catalog.json\&quot;\n    with open(output_file, \&quot;w\&quot;, encoding=\&quot;utf-8\&quot;) as f:\n        json.dump(catalog, f, indent=2, ensure_ascii=False)\n    \n    print(\&quot;-\&quot; * 50)\n    print(f\&quot;✓ Catalog generated: {output_file}\&quot;)\n    print(f\&quot;  Found {len(catalog[&#39;extensions&#39;])} extensions\&quot;)\n\n\nif __name__ == \&quot;__main__\&quot;:\n    main()\n&quot;
+  "shouldAutoFixLints": true,
+  "resultForModel": "Success. Updated the following files:\nM update_catalog.py",
+  "contentsAfterEdit": "#!/usr/bin/env python3\n\"\"\"\nScript to automatically update the Blender extension catalog from GitHub releases.\n\nThis script fetches release information from GitHub repositories and generates\na catalog.json file for Blender's extension system.\n\nUsage:\n    python update_catalog.py\n\nRequirements:\n    pip install requests\n\nConfiguration:\n    Edit the ADDONS list below with your addon information.\n\"\"\"\n\nimport json\nimport requests\nfrom typing import List, Dict, Optional\n\n# Configuration: Add your addons here\nADDONS = [\n    {\n        \"id\": \"basedplayblast\",  # Must match blender_manifest.toml\n        \"repo\": \"RaincloudTheDragon/BasedPlayblast\",\n        \"manifest_branch\": \"main\",\n    },\n    # Note: Rainys-Bulk-Scene-Tools doesn't have blender_manifest.toml yet\n    # It only has bl_info.json (old format). Add it here once you create the manifest.\n]\n\n\ndef get_latest_release(repo: str) -&gt; Optional[Dict]:\n    \"\"\"Get the latest release from a GitHub repository.\"\"\"\n    url = f\"https://api.github.com/repos/{repo}/releases/latest\"\n    try:\n        response = requests.get(url, timeout=10)\n        response.raise_for_status()\n        return response.json()\n    except requests.RequestException as e:\n        print(f\"Error fetching release for {repo}: {e}\")\n        return None\n\n\ndef get_manifest_url(repo: str, branch: str, manifest_path: str = \"blender_manifest.toml\") -&gt; str:\n    \"\"\"Generate the raw manifest URL.\"\"\"\n    return f\"https://raw.githubusercontent.com/{repo}/{branch}/{manifest_path}\"\n\n\ndef get_archive_url(release: Dict, repo: str, tag: str) -&gt; Optional[str]:\n    \"\"\"Get the ZIP archive URL from a release, ensuring it matches the tag.\"\"\"\n    if not release or \"assets\" not in release:\n        return None\n    \n    # Look for a ZIP file in the release assets\n    for asset in release.get(\"assets\", []):\n        if asset.get(\"content_type\") == \"application/zip\" or asset.get(\"name\", \"\").endswith(\".zip\"):\n            url = asset.get(\"browser_download_url\")\n            # Verify the URL contains the tag version\n            if url and tag in url:\n                return url\n            elif url:\n                # URL exists but might not match tag - log warning but still use it\n                print(f\"    Note: Archive URL may not match tag {tag}\")\n                return url\n    \n    # Fallback: use the source code ZIP (not recommended for extensions)\n    if tag:\n        print(f\"    ⚠ Warning: No ZIP asset found, using source archive (may not work)\")\n        return f\"https://github.com/{repo}/archive/refs/tags/{tag}.zip\"\n    \n    return None\n\n\ndef parse_version_from_tag(tag: str) -&gt; str:\n    \"\"\"Extract version from git tag (removes 'v' prefix if present).\"\"\"\n    return tag.lstrip(\"v\")\n\n\ndef generate_catalog(addons: List[Dict]) -&gt; Dict:\n    \"\"\"Generate the catalog JSON from addon configurations.\"\"\"\n    extensions = []\n    \n    for addon in addons:\n        repo = addon[\"repo\"]\n        addon_id = addon[\"id\"]\n        branch = addon.get(\"manifest_branch\", \"main\")\n        \n        print(f\"Processing {addon_id} from {repo}...\")\n        \n        release = get_latest_release(repo)\n        if not release:\n            print(f\"  ⚠ Warning: No release found for {repo}\")\n            print(f\"     Skipping {addon_id} - create a GitHub release first\")\n            continue\n        \n        tag = release.get(\"tag_name\", \"\")\n        version = parse_version_from_tag(tag)\n        archive_url = get_archive_url(release, repo, tag)\n        manifest_url = get_manifest_url(repo, branch)\n        \n        if not archive_url:\n            print(f\"  ⚠ Warning: No ZIP archive found for {repo}\")\n            print(f\"     Skipping {addon_id} - ensure release has a ZIP asset\")\n            continue\n        \n        extension = {\n            \"id\": addon_id,\n            \"version\": version,\n            \"archive_url\": archive_url,\n            \"manifest_url\": manifest_url,\n            \"schema_version\": \"1.0.0\",\n        }\n        \n        extensions.append(extension)\n        print(f\"  ✓ Added {addon_id} v{version}\")\n    \n    return {\n        \"data\": extensions,\n    }\n\n\ndef main():\n    \"\"\"Main function to generate and save the catalog.\"\"\"\n    print(\"Generating Blender extension catalog...\")\n    print(\"-\" * 50)\n    \n    catalog = generate_catalog(ADDONS)\n    \n    output_file = \"catalog.json\"\n    with open(output_file, \"w\", encoding=\"utf-8\") as f:\n        json.dump(catalog, f, indent=2, ensure_ascii=False)\n    \n    print(\"-\" * 50)\n    print(f\"✓ Catalog generated: {output_file}\")\n    print(f\"  Found {len(catalog['extensions'])} extensions\")\n\n\nif __name__ == \"__main__\":\n    main()\n"
 }
 ```
 User decision: **accepted**
@@ -4753,37 +4753,37 @@ Parameters:
 
 ```json
 {
-  &quot;relativeWorkspacePath&quot;: &quot;update_catalog.py&quot;
+  "relativeWorkspacePath": "update_catalog.py"
 }
 ```
 Additional data:
 
 ```json
 {
-  &quot;codeblockId&quot;: &quot;c9451d07-8618-4e5f-95df-ab1f097d2550&quot;
+  "codeblockId": "c9451d07-8618-4e5f-95df-ab1f097d2550"
 }
 ```
 Result:
 
 ```json
 {
-  &quot;diff&quot;: {
-    &quot;chunks&quot;: [
+  "diff": {
+    "chunks": [
       {
-        &quot;diffString&quot;: &quot;      print(\&quot;-\&quot; * 50)\n      print(f\&quot;✓ Catalog generated: {output_file}\&quot;)\n-     print(f\&quot;  Found {len(catalog[&#39;extensions&#39;])} extensions\&quot;)\n+     print(f\&quot;  Found {len(catalog[&#39;data&#39;])} extensions\&quot;)\n  \n  &quot;,
-        &quot;oldStart&quot;: 135,
-        &quot;newStart&quot;: 135,
-        &quot;oldLines&quot;: 5,
-        &quot;newLines&quot;: 5,
-        &quot;linesRemoved&quot;: 1,
-        &quot;linesAdded&quot;: 1
+        "diffString": "      print(\"-\" * 50)\n      print(f\"✓ Catalog generated: {output_file}\")\n-     print(f\"  Found {len(catalog['extensions'])} extensions\")\n+     print(f\"  Found {len(catalog['data'])} extensions\")\n  \n  ",
+        "oldStart": 135,
+        "newStart": 135,
+        "oldLines": 5,
+        "newLines": 5,
+        "linesRemoved": 1,
+        "linesAdded": 1
       }
     ],
-    &quot;editor&quot;: &quot;EDITOR_AI&quot;
+    "editor": "EDITOR_AI"
   },
-  &quot;shouldAutoFixLints&quot;: true,
-  &quot;resultForModel&quot;: &quot;Success. Updated the following files:\nM update_catalog.py&quot;,
-  &quot;contentsAfterEdit&quot;: &quot;#!/usr/bin/env python3\n\&quot;\&quot;\&quot;\nScript to automatically update the Blender extension catalog from GitHub releases.\n\nThis script fetches release information from GitHub repositories and generates\na catalog.json file for Blender&#39;s extension system.\n\nUsage:\n    python update_catalog.py\n\nRequirements:\n    pip install requests\n\nConfiguration:\n    Edit the ADDONS list below with your addon information.\n\&quot;\&quot;\&quot;\n\nimport json\nimport requests\nfrom typing import List, Dict, Optional\n\n# Configuration: Add your addons here\nADDONS = [\n    {\n        \&quot;id\&quot;: \&quot;basedplayblast\&quot;,  # Must match blender_manifest.toml\n        \&quot;repo\&quot;: \&quot;RaincloudTheDragon/BasedPlayblast\&quot;,\n        \&quot;manifest_branch\&quot;: \&quot;main\&quot;,\n    },\n    # Note: Rainys-Bulk-Scene-Tools doesn&#39;t have blender_manifest.toml yet\n    # It only has bl_info.json (old format). Add it here once you create the manifest.\n]\n\n\ndef get_latest_release(repo: str) -&gt; Optional[Dict]:\n    \&quot;\&quot;\&quot;Get the latest release from a GitHub repository.\&quot;\&quot;\&quot;\n    url = f\&quot;https://api.github.com/repos/{repo}/releases/latest\&quot;\n    try:\n        response = requests.get(url, timeout=10)\n        response.raise_for_status()\n        return response.json()\n    except requests.RequestException as e:\n        print(f\&quot;Error fetching release for {repo}: {e}\&quot;)\n        return None\n\n\ndef get_manifest_url(repo: str, branch: str, manifest_path: str = \&quot;blender_manifest.toml\&quot;) -&gt; str:\n    \&quot;\&quot;\&quot;Generate the raw manifest URL.\&quot;\&quot;\&quot;\n    return f\&quot;https://raw.githubusercontent.com/{repo}/{branch}/{manifest_path}\&quot;\n\n\ndef get_archive_url(release: Dict, repo: str, tag: str) -&gt; Optional[str]:\n    \&quot;\&quot;\&quot;Get the ZIP archive URL from a release, ensuring it matches the tag.\&quot;\&quot;\&quot;\n    if not release or \&quot;assets\&quot; not in release:\n        return None\n    \n    # Look for a ZIP file in the release assets\n    for asset in release.get(\&quot;assets\&quot;, []):\n        if asset.get(\&quot;content_type\&quot;) == \&quot;application/zip\&quot; or asset.get(\&quot;name\&quot;, \&quot;\&quot;).endswith(\&quot;.zip\&quot;):\n            url = asset.get(\&quot;browser_download_url\&quot;)\n            # Verify the URL contains the tag version\n            if url and tag in url:\n                return url\n            elif url:\n                # URL exists but might not match tag - log warning but still use it\n                print(f\&quot;    Note: Archive URL may not match tag {tag}\&quot;)\n                return url\n    \n    # Fallback: use the source code ZIP (not recommended for extensions)\n    if tag:\n        print(f\&quot;    ⚠ Warning: No ZIP asset found, using source archive (may not work)\&quot;)\n        return f\&quot;https://github.com/{repo}/archive/refs/tags/{tag}.zip\&quot;\n    \n    return None\n\n\ndef parse_version_from_tag(tag: str) -&gt; str:\n    \&quot;\&quot;\&quot;Extract version from git tag (removes &#39;v&#39; prefix if present).\&quot;\&quot;\&quot;\n    return tag.lstrip(\&quot;v\&quot;)\n\n\ndef generate_catalog(addons: List[Dict]) -&gt; Dict:\n    \&quot;\&quot;\&quot;Generate the catalog JSON from addon configurations.\&quot;\&quot;\&quot;\n    extensions = []\n    \n    for addon in addons:\n        repo = addon[\&quot;repo\&quot;]\n        addon_id = addon[\&quot;id\&quot;]\n        branch = addon.get(\&quot;manifest_branch\&quot;, \&quot;main\&quot;)\n        \n        print(f\&quot;Processing {addon_id} from {repo}...\&quot;)\n        \n        release = get_latest_release(repo)\n        if not release:\n            print(f\&quot;  ⚠ Warning: No release found for {repo}\&quot;)\n            print(f\&quot;     Skipping {addon_id} - create a GitHub release first\&quot;)\n            continue\n        \n        tag = release.get(\&quot;tag_name\&quot;, \&quot;\&quot;)\n        version = parse_version_from_tag(tag)\n        archive_url = get_archive_url(release, repo, tag)\n        manifest_url = get_manifest_url(repo, branch)\n        \n        if not archive_url:\n            print(f\&quot;  ⚠ Warning: No ZIP archive found for {repo}\&quot;)\n            print(f\&quot;     Skipping {addon_id} - ensure release has a ZIP asset\&quot;)\n            continue\n        \n        extension = {\n            \&quot;id\&quot;: addon_id,\n            \&quot;version\&quot;: version,\n            \&quot;archive_url\&quot;: archive_url,\n            \&quot;manifest_url\&quot;: manifest_url,\n            \&quot;schema_version\&quot;: \&quot;1.0.0\&quot;,\n        }\n        \n        extensions.append(extension)\n        print(f\&quot;  ✓ Added {addon_id} v{version}\&quot;)\n    \n    return {\n        \&quot;data\&quot;: extensions,\n    }\n\n\ndef main():\n    \&quot;\&quot;\&quot;Main function to generate and save the catalog.\&quot;\&quot;\&quot;\n    print(\&quot;Generating Blender extension catalog...\&quot;)\n    print(\&quot;-\&quot; * 50)\n    \n    catalog = generate_catalog(ADDONS)\n    \n    output_file = \&quot;catalog.json\&quot;\n    with open(output_file, \&quot;w\&quot;, encoding=\&quot;utf-8\&quot;) as f:\n        json.dump(catalog, f, indent=2, ensure_ascii=False)\n    \n    print(\&quot;-\&quot; * 50)\n    print(f\&quot;✓ Catalog generated: {output_file}\&quot;)\n    print(f\&quot;  Found {len(catalog[&#39;data&#39;])} extensions\&quot;)\n\n\nif __name__ == \&quot;__main__\&quot;:\n    main()\n&quot;
+  "shouldAutoFixLints": true,
+  "resultForModel": "Success. Updated the following files:\nM update_catalog.py",
+  "contentsAfterEdit": "#!/usr/bin/env python3\n\"\"\"\nScript to automatically update the Blender extension catalog from GitHub releases.\n\nThis script fetches release information from GitHub repositories and generates\na catalog.json file for Blender's extension system.\n\nUsage:\n    python update_catalog.py\n\nRequirements:\n    pip install requests\n\nConfiguration:\n    Edit the ADDONS list below with your addon information.\n\"\"\"\n\nimport json\nimport requests\nfrom typing import List, Dict, Optional\n\n# Configuration: Add your addons here\nADDONS = [\n    {\n        \"id\": \"basedplayblast\",  # Must match blender_manifest.toml\n        \"repo\": \"RaincloudTheDragon/BasedPlayblast\",\n        \"manifest_branch\": \"main\",\n    },\n    # Note: Rainys-Bulk-Scene-Tools doesn't have blender_manifest.toml yet\n    # It only has bl_info.json (old format). Add it here once you create the manifest.\n]\n\n\ndef get_latest_release(repo: str) -&gt; Optional[Dict]:\n    \"\"\"Get the latest release from a GitHub repository.\"\"\"\n    url = f\"https://api.github.com/repos/{repo}/releases/latest\"\n    try:\n        response = requests.get(url, timeout=10)\n        response.raise_for_status()\n        return response.json()\n    except requests.RequestException as e:\n        print(f\"Error fetching release for {repo}: {e}\")\n        return None\n\n\ndef get_manifest_url(repo: str, branch: str, manifest_path: str = \"blender_manifest.toml\") -&gt; str:\n    \"\"\"Generate the raw manifest URL.\"\"\"\n    return f\"https://raw.githubusercontent.com/{repo}/{branch}/{manifest_path}\"\n\n\ndef get_archive_url(release: Dict, repo: str, tag: str) -&gt; Optional[str]:\n    \"\"\"Get the ZIP archive URL from a release, ensuring it matches the tag.\"\"\"\n    if not release or \"assets\" not in release:\n        return None\n    \n    # Look for a ZIP file in the release assets\n    for asset in release.get(\"assets\", []):\n        if asset.get(\"content_type\") == \"application/zip\" or asset.get(\"name\", \"\").endswith(\".zip\"):\n            url = asset.get(\"browser_download_url\")\n            # Verify the URL contains the tag version\n            if url and tag in url:\n                return url\n            elif url:\n                # URL exists but might not match tag - log warning but still use it\n                print(f\"    Note: Archive URL may not match tag {tag}\")\n                return url\n    \n    # Fallback: use the source code ZIP (not recommended for extensions)\n    if tag:\n        print(f\"    ⚠ Warning: No ZIP asset found, using source archive (may not work)\")\n        return f\"https://github.com/{repo}/archive/refs/tags/{tag}.zip\"\n    \n    return None\n\n\ndef parse_version_from_tag(tag: str) -&gt; str:\n    \"\"\"Extract version from git tag (removes 'v' prefix if present).\"\"\"\n    return tag.lstrip(\"v\")\n\n\ndef generate_catalog(addons: List[Dict]) -&gt; Dict:\n    \"\"\"Generate the catalog JSON from addon configurations.\"\"\"\n    extensions = []\n    \n    for addon in addons:\n        repo = addon[\"repo\"]\n        addon_id = addon[\"id\"]\n        branch = addon.get(\"manifest_branch\", \"main\")\n        \n        print(f\"Processing {addon_id} from {repo}...\")\n        \n        release = get_latest_release(repo)\n        if not release:\n            print(f\"  ⚠ Warning: No release found for {repo}\")\n            print(f\"     Skipping {addon_id} - create a GitHub release first\")\n            continue\n        \n        tag = release.get(\"tag_name\", \"\")\n        version = parse_version_from_tag(tag)\n        archive_url = get_archive_url(release, repo, tag)\n        manifest_url = get_manifest_url(repo, branch)\n        \n        if not archive_url:\n            print(f\"  ⚠ Warning: No ZIP archive found for {repo}\")\n            print(f\"     Skipping {addon_id} - ensure release has a ZIP asset\")\n            continue\n        \n        extension = {\n            \"id\": addon_id,\n            \"version\": version,\n            \"archive_url\": archive_url,\n            \"manifest_url\": manifest_url,\n            \"schema_version\": \"1.0.0\",\n        }\n        \n        extensions.append(extension)\n        print(f\"  ✓ Added {addon_id} v{version}\")\n    \n    return {\n        \"data\": extensions,\n    }\n\n\ndef main():\n    \"\"\"Main function to generate and save the catalog.\"\"\"\n    print(\"Generating Blender extension catalog...\")\n    print(\"-\" * 50)\n    \n    catalog = generate_catalog(ADDONS)\n    \n    output_file = \"catalog.json\"\n    with open(output_file, \"w\", encoding=\"utf-8\") as f:\n        json.dump(catalog, f, indent=2, ensure_ascii=False)\n    \n    print(\"-\" * 50)\n    print(f\"✓ Catalog generated: {output_file}\")\n    print(f\"  Found {len(catalog['data'])} extensions\")\n\n\nif __name__ == \"__main__\":\n    main()\n"
 }
 ```
 User decision: **accepted**
@@ -4802,7 +4802,7 @@ Status: **completed**
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: python update_catalog.py</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: python update_catalog.py</summary>
 
 ```bash
 python update_catalog.py
@@ -4870,7 +4870,7 @@ _**Agent (model gpt-5.1-codex, mode Agent)**_
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: curl https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: curl https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml</summary>
 
 ```bash
 curl https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml
@@ -4886,7 +4886,7 @@ curl https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/bl
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: curl -I https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: curl -I https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml</summary>
 
 ```bash
 curl -I https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml
@@ -4902,7 +4902,7 @@ curl -I https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: Invoke-WebRequest -Uri "https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml" -UseBasicParsing</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: Invoke-WebRequest -Uri "https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml" -UseBasicParsing</summary>
 
 ```bash
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml" -UseBasicParsing
@@ -4918,7 +4918,7 @@ Invoke-WebRequest -Uri "https://raw.githubusercontent.com/RaincloudTheDragon/Bas
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml" -UseBasicParsing | Format-List *)</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml" -UseBasicParsing | Format-List *)</summary>
 
 ```bash
 (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml" -UseBasicParsing | Format-List *)
@@ -4934,7 +4934,7 @@ Invoke-WebRequest -Uri "https://raw.githubusercontent.com/RaincloudTheDragon/Bas
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: curl.exe -L https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml -o manifest.tmp && type manifest.tmp</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: curl.exe -L https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml -o manifest.tmp && type manifest.tmp</summary>
 
 ```bash
 curl.exe -L https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml -o manifest.tmp && type manifest.tmp
@@ -4952,7 +4952,7 @@ I'm trying to figure out why Blender keeps complaining about the manifest despit
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: python - <<'PY'
+<details><summary>Tool use: **run_terminal_cmd** • Run command: python - <<'PY'
 import requests
 url='https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml'
 try:
@@ -4980,7 +4980,7 @@ PY
 
 ```
 PS E:\rainys-blender-extensions&gt; import requests
-import: The term &#39;import&#39; is not recognized as a name of a cmdlet, function, script file, or executable program.
+import: The term 'import' is not recognized as a name of a cmdlet, function, script file, or executable program.
 Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
 ```
 </details>
@@ -4994,7 +4994,7 @@ Check the spelling of the name, or if a path was included, verify that the path 
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: python -c "import requests;url='https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml';r=requests.get(url,timeout=10);print('status',r.status_code);print('type',r.headers.get('content-type'));print(r.text[:200])"</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: python -c "import requests;url='https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml';r=requests.get(url,timeout=10);print('status',r.status_code);print('type',r.headers.get('content-type'));print(r.text[:200])"</summary>
 
 ```bash
 python -c "import requests;url='https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml';r=requests.get(url,timeout=10);print('status',r.status_code);print('type',r.headers.get('content-type'));print(r.text[:200])"
@@ -5010,7 +5010,7 @@ python -c "import requests;url='https://raw.githubusercontent.com/RaincloudTheDr
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: $resp = Invoke-WebRequest -Uri "https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml" -UseBasicParsing -ErrorAction SilentlyContinue; if($resp){Write-Output ("status=" + $resp.StatusCode); $resp.Content | Out-File manifest.tmp; Get-Content manifest.tmp} else {Write-Output "request failed"}</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: $resp = Invoke-WebRequest -Uri "https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml" -UseBasicParsing -ErrorAction SilentlyContinue; if($resp){Write-Output ("status=" + $resp.StatusCode); $resp.Content | Out-File manifest.tmp; Get-Content manifest.tmp} else {Write-Output "request failed"}</summary>
 
 ```bash
 $resp = Invoke-WebRequest -Uri "https://raw.githubusercontent.com/RaincloudTheDragon/BasedPlayblast/main/blender_manifest.toml" -UseBasicParsing -ErrorAction SilentlyContinue; if($resp){Write-Output ("status=" + $resp.StatusCode); $resp.Content | Out-File manifest.tmp; Get-Content manifest.tmp} else {Write-Output "request failed"}
@@ -5082,7 +5082,7 @@ I'm trying to figure out why Blender still complains about the version key in th
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: curl -L https://extensions.blender.org/download/sha256:85bb7760955a80d5b10d4db30cddea57e39d1798c28ce8be4a3b4989a236ab15/add-on-io-xnalara-v2.2.1.zip -o sample.zip</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: curl -L https://extensions.blender.org/download/sha256:85bb7760955a80d5b10d4db30cddea57e39d1798c28ce8be4a3b4989a236ab15/add-on-io-xnalara-v2.2.1.zip -o sample.zip</summary>
 
 ```bash
 curl -L https://extensions.blender.org/download/sha256:85bb7760955a80d5b10d4db30cddea57e39d1798c28ce8be4a3b4989a236ab15/add-on-io-xnalara-v2.2.1.zip -o sample.zip
@@ -5093,7 +5093,7 @@ curl -L https://extensions.blender.org/download/sha256:85bb7760955a80d5b10d4db30
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: tar -tf sample.zip | head</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: tar -tf sample.zip | head</summary>
 
 ```bash
 tar -tf sample.zip | head
@@ -5109,7 +5109,7 @@ tar -tf sample.zip | head
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: python - <<'PY'
+<details><summary>Tool use: **run_terminal_cmd** • Run command: python - <<'PY'
 import zipfile
 with zipfile.ZipFile('sample.zip') as z:
     for name in z.namelist()[:20]:
@@ -5126,7 +5126,7 @@ PY
 ```
 
 ```
-import: The term &#39;import&#39; is not recognized as a name of a cmdlet, function, script file, or executable program.
+import: The term 'import' is not recognized as a name of a cmdlet, function, script file, or executable program.
 Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
 ```
 </details>
@@ -5140,7 +5140,7 @@ Check the spelling of the name, or if a path was included, verify that the path 
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: python -c "import zipfile; z=zipfile.ZipFile('sample.zip'); [print(name) for name in z.namelist()[:20]]"</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: python -c "import zipfile; z=zipfile.ZipFile('sample.zip'); [print(name) for name in z.namelist()[:20]]"</summary>
 
 ```bash
 python -c "import zipfile; z=zipfile.ZipFile('sample.zip'); [print(name) for name in z.namelist()[:20]]"
@@ -5156,7 +5156,7 @@ python -c "import zipfile; z=zipfile.ZipFile('sample.zip'); [print(name) for nam
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: Expand-Archive -Path sample.zip -DestinationPath sample_unzip -Force</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: Expand-Archive -Path sample.zip -DestinationPath sample_unzip -Force</summary>
 
 ```bash
 Expand-Archive -Path sample.zip -DestinationPath sample_unzip -Force
@@ -5167,7 +5167,7 @@ Expand-Archive -Path sample.zip -DestinationPath sample_unzip -Force
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: Get-ChildItem sample_unzip -Recurse | Select-Object -First 20</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: Get-ChildItem sample_unzip -Recurse | Select-Object -First 20</summary>
 
 ```bash
 Get-ChildItem sample_unzip -Recurse | Select-Object -First 20
@@ -5183,7 +5183,7 @@ Get-ChildItem sample_unzip -Recurse | Select-Object -First 20
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: ls</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: ls</summary>
 
 ```bash
 ls
@@ -5219,7 +5219,7 @@ I'm noticing that `run_terminal_cmd` returns blank for all commands, which block
 ---
 
 <tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
-<details><summary>Tool use: **command** • Run command: git status -sb</summary>
+<details><summary>Tool use: **run_terminal_cmd** • Run command: git status -sb</summary>
 
 ```bash
 git status -sb
@@ -5236,7 +5236,7 @@ git status -sb
 
 <tool-use data-tool-type="generic" data-tool-name="list_dir">
 <details>
-            <summary>Tool use: **list_directory** • Listed directory undefined • **0** results</summary>
+            <summary>Tool use: **list_dir** • Listed directory undefined • **0** results</summary>
         
 No results found
 </details>
@@ -5807,20 +5807,20 @@ Parameters:
 
 ```json
 {
-  &quot;plan&quot;: &quot;1. Update configuration in [update_catalog.py](update_catalog.py)\n   - Add constants for temporary download directory and Blender repo output directory (e.g. &#96;build/zips&#96; and &#96;build/repo&#96;).\n   - Store Blender executable path (defaults to &#96;blender&#96; from PATH) and optional GitHub auth token env var for higher rate limits.\n\n2. Fetch releases and download archives\n   - For each repo in &#96;ADDONS&#96;, call GitHub &#96;releases/latest&#96; API.\n   - Pick the ZIP asset, record its &#96;browser_download_url&#96;, and download it into &#96;build/zips/&#96; with the original filename.\n   - Keep a mapping &#96;{archive_name: github_url}&#96; for later URL restoration.\n\n3. Run Blender’s &#96;extension.server-generate&#96;\n   - Ensure output directories exist and clean previous contents.\n   - Invoke &#96;subprocess.run([BLENDER_PATH, \&quot;--command\&quot;, \&quot;extension.server-generate\&quot;, f\&quot;--repo-dir={repo_dir}\&quot;, f\&quot;--archives-dir={zip_dir}\&quot;])&#96;.\n   - Confirm Blender produces &#96;index.json&#96; (and any other metadata files) in the repo output directory.\n\n4. Rewrite archive URLs to GitHub\n   - Load the generated &#96;[repo_dir]/index.json&#96; (and any other catalog files Blender created).\n   - For each package entry, replace &#96;archive_url&#96; (or similar field) with the recorded GitHub URL using the filename key.\n   - Save the updated JSON back to the repository root (e.g. write to &#96;index.json&#96; at project root).\n\n5. Cleanup and logging\n   - Optionally delete the temporary download directory after generation.\n   - Print summary output (number of packages processed, path to generated &#96;index.json&#96;).&quot;,
-  &quot;name&quot;: &quot;generate&quot;,
-  &quot;overview&quot;: &quot;Integrate Blender&#39;s extension server generator into update_catalog.py so it downloads release ZIPs, runs Blender to build repository metadata, and rewrites archive URLs to GitHub releases.&quot;
+  "plan": "1. Update configuration in [update_catalog.py](update_catalog.py)\n   - Add constants for temporary download directory and Blender repo output directory (e.g. &#96;build/zips&#96; and &#96;build/repo&#96;).\n   - Store Blender executable path (defaults to &#96;blender&#96; from PATH) and optional GitHub auth token env var for higher rate limits.\n\n2. Fetch releases and download archives\n   - For each repo in &#96;ADDONS&#96;, call GitHub &#96;releases/latest&#96; API.\n   - Pick the ZIP asset, record its &#96;browser_download_url&#96;, and download it into &#96;build/zips/&#96; with the original filename.\n   - Keep a mapping &#96;{archive_name: github_url}&#96; for later URL restoration.\n\n3. Run Blender’s &#96;extension.server-generate&#96;\n   - Ensure output directories exist and clean previous contents.\n   - Invoke &#96;subprocess.run([BLENDER_PATH, \"--command\", \"extension.server-generate\", f\"--repo-dir={repo_dir}\", f\"--archives-dir={zip_dir}\"])&#96;.\n   - Confirm Blender produces &#96;index.json&#96; (and any other metadata files) in the repo output directory.\n\n4. Rewrite archive URLs to GitHub\n   - Load the generated &#96;[repo_dir]/index.json&#96; (and any other catalog files Blender created).\n   - For each package entry, replace &#96;archive_url&#96; (or similar field) with the recorded GitHub URL using the filename key.\n   - Save the updated JSON back to the repository root (e.g. write to &#96;index.json&#96; at project root).\n\n5. Cleanup and logging\n   - Optionally delete the temporary download directory after generation.\n   - Print summary output (number of packages processed, path to generated &#96;index.json&#96;).",
+  "name": "generate",
+  "overview": "Integrate Blender's extension server generator into update_catalog.py so it downloads release ZIPs, runs Blender to build repository metadata, and rewrites archive URLs to GitHub releases."
 }
 ```
 Additional data:
 
 ```json
 {
-  &quot;status&quot;: &quot;accepted&quot;,
-  &quot;reviewData&quot;: {
-    &quot;status&quot;: &quot;Requested&quot;,
-    &quot;selectedOption&quot;: &quot;none&quot;,
-    &quot;isShowingInput&quot;: false
+  "status": "accepted",
+  "reviewData": {
+    "status": "Requested",
+    "selectedOption": "none",
+    "isShowingInput": false
   }
 }
 ```
@@ -5828,7 +5828,7 @@ Result:
 
 ```json
 {
-  &quot;accepted&quot;: {}
+  "accepted": {}
 }
 ```
 Status: **completed**
@@ -5893,37 +5893,37 @@ Parameters:
 
 ```json
 {
-  &quot;relativeWorkspacePath&quot;: &quot;update_catalog.py&quot;
+  "relativeWorkspacePath": "update_catalog.py"
 }
 ```
 Additional data:
 
 ```json
 {
-  &quot;codeblockId&quot;: &quot;94bf871b-d7fc-4e51-925e-c551f03434b1&quot;
+  "codeblockId": "94bf871b-d7fc-4e51-925e-c551f03434b1"
 }
 ```
 Result:
 
 ```json
 {
-  &quot;diff&quot;: {
-    &quot;chunks&quot;: [
+  "diff": {
+    "chunks": [
       {
-        &quot;diffString&quot;: &quot;  #!/usr/bin/env python3\n  \&quot;\&quot;\&quot;\n- Script to automatically update the Blender extension catalog from GitHub releases.\n+ Generate Blender extension repository metadata using Blender&#39;s server tool.\n  \n- This script fetches release information from GitHub repositories and generates\n- a catalog.json file for Blender&#39;s extension system.\n- \n- Usage:\n-     python update_catalog.py\n- \n- Requirements:\n-     pip install requests\n- \n- Configuration:\n-     Edit the ADDONS list below with your addon information.\n- \&quot;\&quot;\&quot;\n+ This script downloads the latest release archives from GitHub, lets Blender\n+ validate/build the repository metadata, and rewrites the resulting JSON to\n+ point back to the public GitHub release URLs.\n+ \&quot;\&quot;\&quot;\n+ \n+ from __future__ import annotations\n  \n  import json\n+ import os\n+ import shutil\n+ import subprocess\n+ from pathlib import Path\n+ from typing import Dict, List, Optional\n+ \n  import requests\n- from typing import List, Dict, Optional\n+ \n+ # --- Configuration ---------------------------------------------------------\n  \n- # Configuration: Add your addons here\n+ # List of addons to include in the repository.\n  ADDONS = [\n      {\n-         \&quot;id\&quot;: \&quot;basedplayblast\&quot;,  # Must match blender_manifest.toml\n+         \&quot;id\&quot;: \&quot;basedplayblast\&quot;,\n          \&quot;repo\&quot;: \&quot;RaincloudTheDragon/BasedPlayblast\&quot;,\n-         \&quot;manifest_branch\&quot;: \&quot;main\&quot;,\n-     },\n-     # Note: Rainys-Bulk-Scene-Tools doesn&#39;t have blender_manifest.toml yet\n-     # It only has bl_info.json (old format). Add it here once you create the manifest.\n- ]\n- \n- \n- def get_latest_release(repo: str) -&gt; Optional[Dict]:\n-     \&quot;\&quot;\&quot;Get the latest release from a GitHub repository.\&quot;\&quot;\&quot;\n-     url = f\&quot;https://api.github.com/repos/{repo}/releases/latest\&quot;\n+     },\n+ ]\n+ \n+ BLENDER_EXECUTABLE = os.environ.get(\&quot;BLENDER_PATH\&quot;, \&quot;blender\&quot;)\n+ GITHUB_TOKEN = os.environ.get(\&quot;GITHUB_TOKEN\&quot;)\n+ \n+ BUILD_DIR = Path(\&quot;build\&quot;)\n+ REPO_DIR = BUILD_DIR / \&quot;repo\&quot;\n+ OUTPUT_INDEX = Path(\&quot;index.json\&quot;)\n+ \n+ # ---------------------------------------------------------------------------\n+ \n+ session = requests.Session()\n+ session.headers.update({\&quot;Accept\&quot;: \&quot;application/vnd.github+json\&quot;})\n+ if GITHUB_TOKEN:\n+     session.headers.update({\&quot;Authorization\&quot;: f\&quot;Bearer {GITHUB_TOKEN}\&quot;})\n+ \n+ \n+ def github_api(url: str) -&gt; Optional[Dict]:\n      try:\n-         response = requests.get(url, timeout=10)\n+         response = session.get(url, timeout=30)\n          response.raise_for_status()\n          return response.json()\n-     except requests.RequestException as e:\n-         print(f\&quot;Error fetching release for {repo}: {e}\&quot;)\n+     except requests.RequestException as exc:\n+         print(f\&quot;  ⚠ GitHub request failed: {exc}\&quot;)\n          return None\n  \n  \n- def get_manifest_url(repo: str, branch: str, manifest_path: str = \&quot;blender_manifest.toml\&quot;) -&gt; str:\n-     \&quot;\&quot;\&quot;Generate the raw manifest URL.\&quot;\&quot;\&quot;\n-     return f\&quot;https://raw.githubusercontent.com/{repo}/{branch}/{manifest_path}\&quot;\n- \n- \n- def get_archive_url(release: Dict, repo: str, tag: str) -&gt; Optional[str]:\n-     \&quot;\&quot;\&quot;Get the ZIP archive URL from a release, ensuring it matches the tag.\&quot;\&quot;\&quot;\n-     if not release or \&quot;assets\&quot; not in release:\n-         return None\n-     \n-     # Look for a ZIP file in the release assets\n-     for asset in release.get(\&quot;assets\&quot;, []):\n-         if asset.get(\&quot;content_type\&quot;) == \&quot;application/zip\&quot; or asset.get(\&quot;name\&quot;, \&quot;\&quot;).endswith(\&quot;.zip\&quot;):\n-             url = asset.get(\&quot;browser_download_url\&quot;)\n-             # Verify the URL contains the tag version\n-             if url and tag in url:\n-                 return url\n-             elif url:\n-                 # URL exists but might not match tag - log warning but still use it\n-                 print(f\&quot;    Note: Archive URL may not match tag {tag}\&quot;)\n-                 return url\n-     \n-     # Fallback: use the source code ZIP (not recommended for extensions)\n-     if tag:\n-         print(f\&quot;    ⚠ Warning: No ZIP asset found, using source archive (may not work)\&quot;)\n-         return f\&quot;https://github.com/{repo}/archive/refs/tags/{tag}.zip\&quot;\n-     \n+ def pick_zip_asset(assets: List[Dict]) -&gt; Optional[Dict]:\n+     for asset in assets:\n+         name = asset.get(\&quot;name\&quot;, \&quot;\&quot;)\n+         content_type = asset.get(\&quot;content_type\&quot;, \&quot;\&quot;)\n+         if name.endswith(\&quot;.zip\&quot;) or content_type == \&quot;application/zip\&quot;:\n+             return asset\n      return None\n  \n  \n- def parse_version_from_tag(tag: str) -&gt; str:\n-     \&quot;\&quot;\&quot;Extract version from git tag (removes &#39;v&#39; prefix if present).\&quot;\&quot;\&quot;\n-     return tag.lstrip(\&quot;v\&quot;)\n- \n- \n- def generate_catalog(addons: List[Dict]) -&gt; Dict:\n-     \&quot;\&quot;\&quot;Generate the catalog JSON from addon configurations.\&quot;\&quot;\&quot;\n-     extensions = []\n-     \n-     for addon in addons:\n-         repo = addon[\&quot;repo\&quot;]\n-         addon_id = addon[\&quot;id\&quot;]\n-         branch = addon.get(\&quot;manifest_branch\&quot;, \&quot;main\&quot;)\n-         \n-         print(f\&quot;Processing {addon_id} from {repo}...\&quot;)\n-         \n-         release = get_latest_release(repo)\n-         if not release:\n-             print(f\&quot;  ⚠ Warning: No release found for {repo}\&quot;)\n-             print(f\&quot;     Skipping {addon_id} - create a GitHub release first\&quot;)\n-             continue\n-         \n-         tag = release.get(\&quot;tag_name\&quot;, \&quot;\&quot;)\n-         version = parse_version_from_tag(tag)\n-         archive_url = get_archive_url(release, repo, tag)\n-         manifest_url = get_manifest_url(repo, branch)\n-         \n-         if not archive_url:\n-             print(f\&quot;  ⚠ Warning: No ZIP archive found for {repo}\&quot;)\n-             print(f\&quot;     Skipping {addon_id} - ensure release has a ZIP asset\&quot;)\n-             continue\n-         \n-         extension = {\n-             \&quot;id\&quot;: addon_id,\n-             \&quot;version\&quot;: version,\n-             \&quot;archive_url\&quot;: archive_url,\n-             \&quot;manifest_url\&quot;: manifest_url,\n-             \&quot;schema_version\&quot;: \&quot;1.0.0\&quot;,\n-         }\n-         \n-         extensions.append(extension)\n-         print(f\&quot;  ✓ Added {addon_id} v{version}\&quot;)\n-     \n-     return {\n-         \&quot;data\&quot;: extensions,\n-     }\n- \n- \n- def main():\n-     \&quot;\&quot;\&quot;Main function to generate and save the catalog.\&quot;\&quot;\&quot;\n-     print(\&quot;Generating Blender extension catalog...\&quot;)\n-     print(\&quot;-\&quot; * 50)\n-     \n-     catalog = generate_catalog(ADDONS)\n-     \n-     output_file = \&quot;catalog.json\&quot;\n-     with open(output_file, \&quot;w\&quot;, encoding=\&quot;utf-8\&quot;) as f:\n-         json.dump(catalog, f, indent=2, ensure_ascii=False)\n-     \n+ def download_asset(url: str, destination: Path) -&gt; bool:\n+     try:\n+         with session.get(url, stream=True, timeout=60) as response:\n+             response.raise_for_status()\n+             destination.parent.mkdir(parents=True, exist_ok=True)\n+             with open(destination, \&quot;wb\&quot;) as file_obj:\n+                 for chunk in response.iter_content(chunk_size=1024 * 1024):\n+                     if chunk:\n+                         file_obj.write(chunk)\n+         return True\n+     except requests.RequestException as exc:\n+         print(f\&quot;  ⚠ Download failed ({url}): {exc}\&quot;)\n+         return False\n+ \n+ \n+ def clean_directory(path: Path) -&gt; None:\n+     if path.exists():\n+         shutil.rmtree(path)\n+     path.mkdir(parents=True, exist_ok=True)\n+ \n+ \n+ def run_blender_repo_generator(repo_dir: Path) -&gt; None:\n+     cmd = [\n+         BLENDER_EXECUTABLE,\n+         \&quot;--background\&quot;,\n+         \&quot;--command\&quot;,\n+         \&quot;extension.server-generate\&quot;,\n+         f\&quot;--repo-dir={repo_dir.resolve()}\&quot;,\n+     ]\n+     print(f\&quot;Running Blender repo generator:\\n  {&#39; &#39;.join(str(part) for part in cmd)}\&quot;)\n+     subprocess.run(cmd, check=True)\n+ \n+ \n+ def rewrite_archive_urls(index_path: Path, url_map: Dict[str, str]) -&gt; Dict:\n+     with open(index_path, \&quot;r\&quot;, encoding=\&quot;utf-8\&quot;) as handle:\n+         data = json.load(handle)\n+ \n+     for package in data.get(\&quot;data\&quot;, []):\n+         archive_value = package.get(\&quot;archive_url\&quot;) or package.get(\&quot;archive_path\&quot;, \&quot;\&quot;)\n+         filename = Path(archive_value).name\n+         if filename in url_map:\n+             package[\&quot;archive_url\&quot;] = url_map[filename]\n+ \n+     return data\n+ \n+ \n+ def process_addon(addon: Dict, download_dir: Path) -&gt; Optional[str]:\n+     repo = addon[\&quot;repo\&quot;]\n+     release = github_api(f\&quot;https://api.github.com/repos/{repo}/releases/latest\&quot;)\n+     if not release:\n+         return None\n+ \n+     asset = pick_zip_asset(release.get(\&quot;assets\&quot;, []))\n+     if not asset:\n+         print(f\&quot;  ⚠ No ZIP asset found for {repo}\&quot;)\n+         return None\n+ \n+     download_url = asset[\&quot;browser_download_url\&quot;]\n+     filename = asset[\&quot;name\&quot;]\n+     dest = download_dir / filename\n+     print(f\&quot;  ↳ downloading {filename}\&quot;)\n+     if not download_asset(download_url, dest):\n+         return None\n+ \n+     return filename\n+ \n+ \n+ def main() -&gt; None:\n+     print(\&quot;Generating Blender extension repository metadata...\&quot;)\n+     clean_directory(REPO_DIR)\n+ \n+     filename_to_url: Dict[str, str] = {}\n+     for addon in ADDONS:\n+         print(f\&quot;Fetching release for {addon[&#39;repo&#39;]}...\&quot;)\n+         filename = process_addon(addon, REPO_DIR)\n+         if filename:\n+             # Map filename to the GitHub release URL\n+             latest_release = github_api(f\&quot;https://api.github.com/repos/{addon[&#39;repo&#39;]}/releases/latest\&quot;)\n+             if latest_release:\n+                 asset = pick_zip_asset(latest_release.get(\&quot;assets\&quot;, []))\n+                 if asset:\n+                     filename_to_url[filename] = asset[\&quot;browser_download_url\&quot;]\n+ \n+     if not filename_to_url:\n+         print(\&quot;No archives downloaded. Aborting.\&quot;)\n+         return\n+ \n+     try:\n+         run_blender_repo_generator(REPO_DIR)\n+     except subprocess.CalledProcessError as exc:\n+         print(f\&quot;Blender command failed: {exc}\&quot;)\n+         return\n+ \n+     generated_index = REPO_DIR / \&quot;index.json\&quot;\n+     if not generated_index.exists():\n+         print(f\&quot;Generated index not found at {generated_index}\&quot;)\n+         return\n+ \n+     updated_index = rewrite_archive_urls(generated_index, filename_to_url)\n+     with open(OUTPUT_INDEX, \&quot;w\&quot;, encoding=\&quot;utf-8\&quot;) as handle:\n+         json.dump(updated_index, handle, indent=2)\n+ \n      print(\&quot;-\&quot; * 50)\n-     print(f\&quot;✓ Catalog generated: {output_file}\&quot;)\n-     print(f\&quot;  Found {len(catalog[&#39;data&#39;])} extensions\&quot;)\n+     print(f\&quot;✓ Repository index written to {OUTPUT_INDEX}\&quot;)\n+     print(f\&quot;  Packages: {len(updated_index.get(&#39;data&#39;, []))}\&quot;)\n  \n  &quot;,
-        &quot;oldStart&quot;: 1,
-        &quot;newStart&quot;: 1,
-        &quot;oldLines&quot;: 139,
-        &quot;newLines&quot;: 171,
-        &quot;linesRemoved&quot;: 117,
-        &quot;linesAdded&quot;: 149
+        "diffString": "  #!/usr/bin/env python3\n  \"\"\"\n- Script to automatically update the Blender extension catalog from GitHub releases.\n+ Generate Blender extension repository metadata using Blender's server tool.\n  \n- This script fetches release information from GitHub repositories and generates\n- a catalog.json file for Blender's extension system.\n- \n- Usage:\n-     python update_catalog.py\n- \n- Requirements:\n-     pip install requests\n- \n- Configuration:\n-     Edit the ADDONS list below with your addon information.\n- \"\"\"\n+ This script downloads the latest release archives from GitHub, lets Blender\n+ validate/build the repository metadata, and rewrites the resulting JSON to\n+ point back to the public GitHub release URLs.\n+ \"\"\"\n+ \n+ from __future__ import annotations\n  \n  import json\n+ import os\n+ import shutil\n+ import subprocess\n+ from pathlib import Path\n+ from typing import Dict, List, Optional\n+ \n  import requests\n- from typing import List, Dict, Optional\n+ \n+ # --- Configuration ---------------------------------------------------------\n  \n- # Configuration: Add your addons here\n+ # List of addons to include in the repository.\n  ADDONS = [\n      {\n-         \"id\": \"basedplayblast\",  # Must match blender_manifest.toml\n+         \"id\": \"basedplayblast\",\n          \"repo\": \"RaincloudTheDragon/BasedPlayblast\",\n-         \"manifest_branch\": \"main\",\n-     },\n-     # Note: Rainys-Bulk-Scene-Tools doesn't have blender_manifest.toml yet\n-     # It only has bl_info.json (old format). Add it here once you create the manifest.\n- ]\n- \n- \n- def get_latest_release(repo: str) -&gt; Optional[Dict]:\n-     \"\"\"Get the latest release from a GitHub repository.\"\"\"\n-     url = f\"https://api.github.com/repos/{repo}/releases/latest\"\n+     },\n+ ]\n+ \n+ BLENDER_EXECUTABLE = os.environ.get(\"BLENDER_PATH\", \"blender\")\n+ GITHUB_TOKEN = os.environ.get(\"GITHUB_TOKEN\")\n+ \n+ BUILD_DIR = Path(\"build\")\n+ REPO_DIR = BUILD_DIR / \"repo\"\n+ OUTPUT_INDEX = Path(\"index.json\")\n+ \n+ # ---------------------------------------------------------------------------\n+ \n+ session = requests.Session()\n+ session.headers.update({\"Accept\": \"application/vnd.github+json\"})\n+ if GITHUB_TOKEN:\n+     session.headers.update({\"Authorization\": f\"Bearer {GITHUB_TOKEN}\"})\n+ \n+ \n+ def github_api(url: str) -&gt; Optional[Dict]:\n      try:\n-         response = requests.get(url, timeout=10)\n+         response = session.get(url, timeout=30)\n          response.raise_for_status()\n          return response.json()\n-     except requests.RequestException as e:\n-         print(f\"Error fetching release for {repo}: {e}\")\n+     except requests.RequestException as exc:\n+         print(f\"  ⚠ GitHub request failed: {exc}\")\n          return None\n  \n  \n- def get_manifest_url(repo: str, branch: str, manifest_path: str = \"blender_manifest.toml\") -&gt; str:\n-     \"\"\"Generate the raw manifest URL.\"\"\"\n-     return f\"https://raw.githubusercontent.com/{repo}/{branch}/{manifest_path}\"\n- \n- \n- def get_archive_url(release: Dict, repo: str, tag: str) -&gt; Optional[str]:\n-     \"\"\"Get the ZIP archive URL from a release, ensuring it matches the tag.\"\"\"\n-     if not release or \"assets\" not in release:\n-         return None\n-     \n-     # Look for a ZIP file in the release assets\n-     for asset in release.get(\"assets\", []):\n-         if asset.get(\"content_type\") == \"application/zip\" or asset.get(\"name\", \"\").endswith(\".zip\"):\n-             url = asset.get(\"browser_download_url\")\n-             # Verify the URL contains the tag version\n-             if url and tag in url:\n-                 return url\n-             elif url:\n-                 # URL exists but might not match tag - log warning but still use it\n-                 print(f\"    Note: Archive URL may not match tag {tag}\")\n-                 return url\n-     \n-     # Fallback: use the source code ZIP (not recommended for extensions)\n-     if tag:\n-         print(f\"    ⚠ Warning: No ZIP asset found, using source archive (may not work)\")\n-         return f\"https://github.com/{repo}/archive/refs/tags/{tag}.zip\"\n-     \n+ def pick_zip_asset(assets: List[Dict]) -&gt; Optional[Dict]:\n+     for asset in assets:\n+         name = asset.get(\"name\", \"\")\n+         content_type = asset.get(\"content_type\", \"\")\n+         if name.endswith(\".zip\") or content_type == \"application/zip\":\n+             return asset\n      return None\n  \n  \n- def parse_version_from_tag(tag: str) -&gt; str:\n-     \"\"\"Extract version from git tag (removes 'v' prefix if present).\"\"\"\n-     return tag.lstrip(\"v\")\n- \n- \n- def generate_catalog(addons: List[Dict]) -&gt; Dict:\n-     \"\"\"Generate the catalog JSON from addon configurations.\"\"\"\n-     extensions = []\n-     \n-     for addon in addons:\n-         repo = addon[\"repo\"]\n-         addon_id = addon[\"id\"]\n-         branch = addon.get(\"manifest_branch\", \"main\")\n-         \n-         print(f\"Processing {addon_id} from {repo}...\")\n-         \n-         release = get_latest_release(repo)\n-         if not release:\n-             print(f\"  ⚠ Warning: No release found for {repo}\")\n-             print(f\"     Skipping {addon_id} - create a GitHub release first\")\n-             continue\n-         \n-         tag = release.get(\"tag_name\", \"\")\n-         version = parse_version_from_tag(tag)\n-         archive_url = get_archive_url(release, repo, tag)\n-         manifest_url = get_manifest_url(repo, branch)\n-         \n-         if not archive_url:\n-             print(f\"  ⚠ Warning: No ZIP archive found for {repo}\")\n-             print(f\"     Skipping {addon_id} - ensure release has a ZIP asset\")\n-             continue\n-         \n-         extension = {\n-             \"id\": addon_id,\n-             \"version\": version,\n-             \"archive_url\": archive_url,\n-             \"manifest_url\": manifest_url,\n-             \"schema_version\": \"1.0.0\",\n-         }\n-         \n-         extensions.append(extension)\n-         print(f\"  ✓ Added {addon_id} v{version}\")\n-     \n-     return {\n-         \"data\": extensions,\n-     }\n- \n- \n- def main():\n-     \"\"\"Main function to generate and save the catalog.\"\"\"\n-     print(\"Generating Blender extension catalog...\")\n-     print(\"-\" * 50)\n-     \n-     catalog = generate_catalog(ADDONS)\n-     \n-     output_file = \"catalog.json\"\n-     with open(output_file, \"w\", encoding=\"utf-8\") as f:\n-         json.dump(catalog, f, indent=2, ensure_ascii=False)\n-     \n+ def download_asset(url: str, destination: Path) -&gt; bool:\n+     try:\n+         with session.get(url, stream=True, timeout=60) as response:\n+             response.raise_for_status()\n+             destination.parent.mkdir(parents=True, exist_ok=True)\n+             with open(destination, \"wb\") as file_obj:\n+                 for chunk in response.iter_content(chunk_size=1024 * 1024):\n+                     if chunk:\n+                         file_obj.write(chunk)\n+         return True\n+     except requests.RequestException as exc:\n+         print(f\"  ⚠ Download failed ({url}): {exc}\")\n+         return False\n+ \n+ \n+ def clean_directory(path: Path) -&gt; None:\n+     if path.exists():\n+         shutil.rmtree(path)\n+     path.mkdir(parents=True, exist_ok=True)\n+ \n+ \n+ def run_blender_repo_generator(repo_dir: Path) -&gt; None:\n+     cmd = [\n+         BLENDER_EXECUTABLE,\n+         \"--background\",\n+         \"--command\",\n+         \"extension.server-generate\",\n+         f\"--repo-dir={repo_dir.resolve()}\",\n+     ]\n+     print(f\"Running Blender repo generator:\\n  {' '.join(str(part) for part in cmd)}\")\n+     subprocess.run(cmd, check=True)\n+ \n+ \n+ def rewrite_archive_urls(index_path: Path, url_map: Dict[str, str]) -&gt; Dict:\n+     with open(index_path, \"r\", encoding=\"utf-8\") as handle:\n+         data = json.load(handle)\n+ \n+     for package in data.get(\"data\", []):\n+         archive_value = package.get(\"archive_url\") or package.get(\"archive_path\", \"\")\n+         filename = Path(archive_value).name\n+         if filename in url_map:\n+             package[\"archive_url\"] = url_map[filename]\n+ \n+     return data\n+ \n+ \n+ def process_addon(addon: Dict, download_dir: Path) -&gt; Optional[str]:\n+     repo = addon[\"repo\"]\n+     release = github_api(f\"https://api.github.com/repos/{repo}/releases/latest\")\n+     if not release:\n+         return None\n+ \n+     asset = pick_zip_asset(release.get(\"assets\", []))\n+     if not asset:\n+         print(f\"  ⚠ No ZIP asset found for {repo}\")\n+         return None\n+ \n+     download_url = asset[\"browser_download_url\"]\n+     filename = asset[\"name\"]\n+     dest = download_dir / filename\n+     print(f\"  ↳ downloading {filename}\")\n+     if not download_asset(download_url, dest):\n+         return None\n+ \n+     return filename\n+ \n+ \n+ def main() -&gt; None:\n+     print(\"Generating Blender extension repository metadata...\")\n+     clean_directory(REPO_DIR)\n+ \n+     filename_to_url: Dict[str, str] = {}\n+     for addon in ADDONS:\n+         print(f\"Fetching release for {addon['repo']}...\")\n+         filename = process_addon(addon, REPO_DIR)\n+         if filename:\n+             # Map filename to the GitHub release URL\n+             latest_release = github_api(f\"https://api.github.com/repos/{addon['repo']}/releases/latest\")\n+             if latest_release:\n+                 asset = pick_zip_asset(latest_release.get(\"assets\", []))\n+                 if asset:\n+                     filename_to_url[filename] = asset[\"browser_download_url\"]\n+ \n+     if not filename_to_url:\n+         print(\"No archives downloaded. Aborting.\")\n+         return\n+ \n+     try:\n+         run_blender_repo_generator(REPO_DIR)\n+     except subprocess.CalledProcessError as exc:\n+         print(f\"Blender command failed: {exc}\")\n+         return\n+ \n+     generated_index = REPO_DIR / \"index.json\"\n+     if not generated_index.exists():\n+         print(f\"Generated index not found at {generated_index}\")\n+         return\n+ \n+     updated_index = rewrite_archive_urls(generated_index, filename_to_url)\n+     with open(OUTPUT_INDEX, \"w\", encoding=\"utf-8\") as handle:\n+         json.dump(updated_index, handle, indent=2)\n+ \n      print(\"-\" * 50)\n-     print(f\"✓ Catalog generated: {output_file}\")\n-     print(f\"  Found {len(catalog['data'])} extensions\")\n+     print(f\"✓ Repository index written to {OUTPUT_INDEX}\")\n+     print(f\"  Packages: {len(updated_index.get('data', []))}\")\n  \n  ",
+        "oldStart": 1,
+        "newStart": 1,
+        "oldLines": 139,
+        "newLines": 171,
+        "linesRemoved": 117,
+        "linesAdded": 149
       }
     ],
-    &quot;editor&quot;: &quot;EDITOR_AI&quot;
+    "editor": "EDITOR_AI"
   },
-  &quot;shouldAutoFixLints&quot;: true,
-  &quot;resultForModel&quot;: &quot;Success. Updated the following files:\nM update_catalog.py&quot;,
-  &quot;contentsAfterEdit&quot;: &quot;#!/usr/bin/env python3\n\&quot;\&quot;\&quot;\nGenerate Blender extension repository metadata using Blender&#39;s server tool.\n\nThis script downloads the latest release archives from GitHub, lets Blender\nvalidate/build the repository metadata, and rewrites the resulting JSON to\npoint back to the public GitHub release URLs.\n\&quot;\&quot;\&quot;\n\nfrom __future__ import annotations\n\nimport json\nimport os\nimport shutil\nimport subprocess\nfrom pathlib import Path\nfrom typing import Dict, List, Optional\n\nimport requests\n\n# --- Configuration ---------------------------------------------------------\n\n# List of addons to include in the repository.\nADDONS = [\n    {\n        \&quot;id\&quot;: \&quot;basedplayblast\&quot;,\n        \&quot;repo\&quot;: \&quot;RaincloudTheDragon/BasedPlayblast\&quot;,\n    },\n]\n\nBLENDER_EXECUTABLE = os.environ.get(\&quot;BLENDER_PATH\&quot;, \&quot;blender\&quot;)\nGITHUB_TOKEN = os.environ.get(\&quot;GITHUB_TOKEN\&quot;)\n\nBUILD_DIR = Path(\&quot;build\&quot;)\nREPO_DIR = BUILD_DIR / \&quot;repo\&quot;\nOUTPUT_INDEX = Path(\&quot;index.json\&quot;)\n\n# ---------------------------------------------------------------------------\n\nsession = requests.Session()\nsession.headers.update({\&quot;Accept\&quot;: \&quot;application/vnd.github+json\&quot;})\nif GITHUB_TOKEN:\n    session.headers.update({\&quot;Authorization\&quot;: f\&quot;Bearer {GITHUB_TOKEN}\&quot;})\n\n\ndef github_api(url: str) -&gt; Optional[Dict]:\n    try:\n        response = session.get(url, timeout=30)\n        response.raise_for_status()\n        return response.json()\n    except requests.RequestException as exc:\n        print(f\&quot;  ⚠ GitHub request failed: {exc}\&quot;)\n        return None\n\n\ndef pick_zip_asset(assets: List[Dict]) -&gt; Optional[Dict]:\n    for asset in assets:\n        name = asset.get(\&quot;name\&quot;, \&quot;\&quot;)\n        content_type = asset.get(\&quot;content_type\&quot;, \&quot;\&quot;)\n        if name.endswith(\&quot;.zip\&quot;) or content_type == \&quot;application/zip\&quot;:\n            return asset\n    return None\n\n\ndef download_asset(url: str, destination: Path) -&gt; bool:\n    try:\n        with session.get(url, stream=True, timeout=60) as response:\n            response.raise_for_status()\n            destination.parent.mkdir(parents=True, exist_ok=True)\n            with open(destination, \&quot;wb\&quot;) as file_obj:\n                for chunk in response.iter_content(chunk_size=1024 * 1024):\n                    if chunk:\n                        file_obj.write(chunk)\n        return True\n    except requests.RequestException as exc:\n        print(f\&quot;  ⚠ Download failed ({url}): {exc}\&quot;)\n        return False\n\n\ndef clean_directory(path: Path) -&gt; None:\n    if path.exists():\n        shutil.rmtree(path)\n    path.mkdir(parents=True, exist_ok=True)\n\n\ndef run_blender_repo_generator(repo_dir: Path) -&gt; None:\n    cmd = [\n        BLENDER_EXECUTABLE,\n        \&quot;--background\&quot;,\n        \&quot;--command\&quot;,\n        \&quot;extension.server-generate\&quot;,\n        f\&quot;--repo-dir={repo_dir.resolve()}\&quot;,\n    ]\n    print(f\&quot;Running Blender repo generator:\\n  {&#39; &#39;.join(str(part) for part in cmd)}\&quot;)\n    subprocess.run(cmd, check=True)\n\n\ndef rewrite_archive_urls(index_path: Path, url_map: Dict[str, str]) -&gt; Dict:\n    with open(index_path, \&quot;r\&quot;, encoding=\&quot;utf-8\&quot;) as handle:\n        data = json.load(handle)\n\n    for package in data.get(\&quot;data\&quot;, []):\n        archive_value = package.get(\&quot;archive_url\&quot;) or package.get(\&quot;archive_path\&quot;, \&quot;\&quot;)\n        filename = Path(archive_value).name\n        if filename in url_map:\n            package[\&quot;archive_url\&quot;] = url_map[filename]\n\n    return data\n\n\ndef process_addon(addon: Dict, download_dir: Path) -&gt; Optional[str]:\n    repo = addon[\&quot;repo\&quot;]\n    release = github_api(f\&quot;https://api.github.com/repos/{repo}/releases/latest\&quot;)\n    if not release:\n        return None\n\n    asset = pick_zip_asset(release.get(\&quot;assets\&quot;, []))\n    if not asset:\n        print(f\&quot;  ⚠ No ZIP asset found for {repo}\&quot;)\n        return None\n\n    download_url = asset[\&quot;browser_download_url\&quot;]\n    filename = asset[\&quot;name\&quot;]\n    dest = download_dir / filename\n    print(f\&quot;  ↳ downloading {filename}\&quot;)\n    if not download_asset(download_url, dest):\n        return None\n\n    return filename\n\n\ndef main() -&gt; None:\n    print(\&quot;Generating Blender extension repository metadata...\&quot;)\n    clean_directory(REPO_DIR)\n\n    filename_to_url: Dict[str, str] = {}\n    for addon in ADDONS:\n        print(f\&quot;Fetching release for {addon[&#39;repo&#39;]}...\&quot;)\n        filename = process_addon(addon, REPO_DIR)\n        if filename:\n            # Map filename to the GitHub release URL\n            latest_release = github_api(f\&quot;https://api.github.com/repos/{addon[&#39;repo&#39;]}/releases/latest\&quot;)\n            if latest_release:\n                asset = pick_zip_asset(latest_release.get(\&quot;assets\&quot;, []))\n                if asset:\n                    filename_to_url[filename] = asset[\&quot;browser_download_url\&quot;]\n\n    if not filename_to_url:\n        print(\&quot;No archives downloaded. Aborting.\&quot;)\n        return\n\n    try:\n        run_blender_repo_generator(REPO_DIR)\n    except subprocess.CalledProcessError as exc:\n        print(f\&quot;Blender command failed: {exc}\&quot;)\n        return\n\n    generated_index = REPO_DIR / \&quot;index.json\&quot;\n    if not generated_index.exists():\n        print(f\&quot;Generated index not found at {generated_index}\&quot;)\n        return\n\n    updated_index = rewrite_archive_urls(generated_index, filename_to_url)\n    with open(OUTPUT_INDEX, \&quot;w\&quot;, encoding=\&quot;utf-8\&quot;) as handle:\n        json.dump(updated_index, handle, indent=2)\n\n    print(\&quot;-\&quot; * 50)\n    print(f\&quot;✓ Repository index written to {OUTPUT_INDEX}\&quot;)\n    print(f\&quot;  Packages: {len(updated_index.get(&#39;data&#39;, []))}\&quot;)\n\n\nif __name__ == \&quot;__main__\&quot;:\n    main()\n&quot;
+  "shouldAutoFixLints": true,
+  "resultForModel": "Success. Updated the following files:\nM update_catalog.py",
+  "contentsAfterEdit": "#!/usr/bin/env python3\n\"\"\"\nGenerate Blender extension repository metadata using Blender's server tool.\n\nThis script downloads the latest release archives from GitHub, lets Blender\nvalidate/build the repository metadata, and rewrites the resulting JSON to\npoint back to the public GitHub release URLs.\n\"\"\"\n\nfrom __future__ import annotations\n\nimport json\nimport os\nimport shutil\nimport subprocess\nfrom pathlib import Path\nfrom typing import Dict, List, Optional\n\nimport requests\n\n# --- Configuration ---------------------------------------------------------\n\n# List of addons to include in the repository.\nADDONS = [\n    {\n        \"id\": \"basedplayblast\",\n        \"repo\": \"RaincloudTheDragon/BasedPlayblast\",\n    },\n]\n\nBLENDER_EXECUTABLE = os.environ.get(\"BLENDER_PATH\", \"blender\")\nGITHUB_TOKEN = os.environ.get(\"GITHUB_TOKEN\")\n\nBUILD_DIR = Path(\"build\")\nREPO_DIR = BUILD_DIR / \"repo\"\nOUTPUT_INDEX = Path(\"index.json\")\n\n# ---------------------------------------------------------------------------\n\nsession = requests.Session()\nsession.headers.update({\"Accept\": \"application/vnd.github+json\"})\nif GITHUB_TOKEN:\n    session.headers.update({\"Authorization\": f\"Bearer {GITHUB_TOKEN}\"})\n\n\ndef github_api(url: str) -&gt; Optional[Dict]:\n    try:\n        response = session.get(url, timeout=30)\n        response.raise_for_status()\n        return response.json()\n    except requests.RequestException as exc:\n        print(f\"  ⚠ GitHub request failed: {exc}\")\n        return None\n\n\ndef pick_zip_asset(assets: List[Dict]) -&gt; Optional[Dict]:\n    for asset in assets:\n        name = asset.get(\"name\", \"\")\n        content_type = asset.get(\"content_type\", \"\")\n        if name.endswith(\".zip\") or content_type == \"application/zip\":\n            return asset\n    return None\n\n\ndef download_asset(url: str, destination: Path) -&gt; bool:\n    try:\n        with session.get(url, stream=True, timeout=60) as response:\n            response.raise_for_status()\n            destination.parent.mkdir(parents=True, exist_ok=True)\n            with open(destination, \"wb\") as file_obj:\n                for chunk in response.iter_content(chunk_size=1024 * 1024):\n                    if chunk:\n                        file_obj.write(chunk)\n        return True\n    except requests.RequestException as exc:\n        print(f\"  ⚠ Download failed ({url}): {exc}\")\n        return False\n\n\ndef clean_directory(path: Path) -&gt; None:\n    if path.exists():\n        shutil.rmtree(path)\n    path.mkdir(parents=True, exist_ok=True)\n\n\ndef run_blender_repo_generator(repo_dir: Path) -&gt; None:\n    cmd = [\n        BLENDER_EXECUTABLE,\n        \"--background\",\n        \"--command\",\n        \"extension.server-generate\",\n        f\"--repo-dir={repo_dir.resolve()}\",\n    ]\n    print(f\"Running Blender repo generator:\\n  {' '.join(str(part) for part in cmd)}\")\n    subprocess.run(cmd, check=True)\n\n\ndef rewrite_archive_urls(index_path: Path, url_map: Dict[str, str]) -&gt; Dict:\n    with open(index_path, \"r\", encoding=\"utf-8\") as handle:\n        data = json.load(handle)\n\n    for package in data.get(\"data\", []):\n        archive_value = package.get(\"archive_url\") or package.get(\"archive_path\", \"\")\n        filename = Path(archive_value).name\n        if filename in url_map:\n            package[\"archive_url\"] = url_map[filename]\n\n    return data\n\n\ndef process_addon(addon: Dict, download_dir: Path) -&gt; Optional[str]:\n    repo = addon[\"repo\"]\n    release = github_api(f\"https://api.github.com/repos/{repo}/releases/latest\")\n    if not release:\n        return None\n\n    asset = pick_zip_asset(release.get(\"assets\", []))\n    if not asset:\n        print(f\"  ⚠ No ZIP asset found for {repo}\")\n        return None\n\n    download_url = asset[\"browser_download_url\"]\n    filename = asset[\"name\"]\n    dest = download_dir / filename\n    print(f\"  ↳ downloading {filename}\")\n    if not download_asset(download_url, dest):\n        return None\n\n    return filename\n\n\ndef main() -&gt; None:\n    print(\"Generating Blender extension repository metadata...\")\n    clean_directory(REPO_DIR)\n\n    filename_to_url: Dict[str, str] = {}\n    for addon in ADDONS:\n        print(f\"Fetching release for {addon['repo']}...\")\n        filename = process_addon(addon, REPO_DIR)\n        if filename:\n            # Map filename to the GitHub release URL\n            latest_release = github_api(f\"https://api.github.com/repos/{addon['repo']}/releases/latest\")\n            if latest_release:\n                asset = pick_zip_asset(latest_release.get(\"assets\", []))\n                if asset:\n                    filename_to_url[filename] = asset[\"browser_download_url\"]\n\n    if not filename_to_url:\n        print(\"No archives downloaded. Aborting.\")\n        return\n\n    try:\n        run_blender_repo_generator(REPO_DIR)\n    except subprocess.CalledProcessError as exc:\n        print(f\"Blender command failed: {exc}\")\n        return\n\n    generated_index = REPO_DIR / \"index.json\"\n    if not generated_index.exists():\n        print(f\"Generated index not found at {generated_index}\")\n        return\n\n    updated_index = rewrite_archive_urls(generated_index, filename_to_url)\n    with open(OUTPUT_INDEX, \"w\", encoding=\"utf-8\") as handle:\n        json.dump(updated_index, handle, indent=2)\n\n    print(\"-\" * 50)\n    print(f\"✓ Repository index written to {OUTPUT_INDEX}\")\n    print(f\"  Packages: {len(updated_index.get('data', []))}\")\n\n\nif __name__ == \"__main__\":\n    main()\n"
 }
 ```
 User decision: **accepted**
@@ -5952,55 +5952,55 @@ Parameters:
 
 ```json
 {
-  &quot;relativeWorkspacePath&quot;: &quot;update_catalog.py&quot;
+  "relativeWorkspacePath": "update_catalog.py"
 }
 ```
 Additional data:
 
 ```json
 {
-  &quot;codeblockId&quot;: &quot;2e10aadf-f828-4da6-b119-d98508fb0d1c&quot;
+  "codeblockId": "2e10aadf-f828-4da6-b119-d98508fb0d1c"
 }
 ```
 Result:
 
 ```json
 {
-  &quot;diff&quot;: {
-    &quot;chunks&quot;: [
+  "diff": {
+    "chunks": [
       {
-        &quot;diffString&quot;: &quot;  \n  \n- def process_addon(addon: Dict, download_dir: Path) -&gt; Optional[str]:\n+ def process_addon(addon: Dict, download_dir: Path) -&gt; Optional[Dict[str, str]]:\n      repo = addon[\&quot;repo\&quot;]\n      release = github_api(f\&quot;https://api.github.com/repos/{repo}/releases/latest\&quot;)&quot;,
-        &quot;oldStart&quot;: 109,
-        &quot;newStart&quot;: 109,
-        &quot;oldLines&quot;: 5,
-        &quot;newLines&quot;: 5,
-        &quot;linesRemoved&quot;: 1,
-        &quot;linesAdded&quot;: 1
+        "diffString": "  \n  \n- def process_addon(addon: Dict, download_dir: Path) -&gt; Optional[str]:\n+ def process_addon(addon: Dict, download_dir: Path) -&gt; Optional[Dict[str, str]]:\n      repo = addon[\"repo\"]\n      release = github_api(f\"https://api.github.com/repos/{repo}/releases/latest\")",
+        "oldStart": 109,
+        "newStart": 109,
+        "oldLines": 5,
+        "newLines": 5,
+        "linesRemoved": 1,
+        "linesAdded": 1
       },
       {
-        &quot;diffString&quot;: &quot;          return None\n  \n+     filename = asset[\&quot;name\&quot;]\n      download_url = asset[\&quot;browser_download_url\&quot;]\n-     filename = asset[\&quot;name\&quot;]\n      dest = download_dir / filename\n      print(f\&quot;  ↳ downloading {filename}\&quot;)\n      if not download_asset(download_url, dest):\n          return None\n  \n-     return filename\n+     return {\n+         \&quot;filename\&quot;: filename,\n+         \&quot;archive_url\&quot;: download_url,\n+     }\n  \n  &quot;,
-        &quot;oldStart&quot;: 120,
-        &quot;newStart&quot;: 120,
-        &quot;oldLines&quot;: 12,
-        &quot;newLines&quot;: 15,
-        &quot;linesRemoved&quot;: 2,
-        &quot;linesAdded&quot;: 5
+        "diffString": "          return None\n  \n+     filename = asset[\"name\"]\n      download_url = asset[\"browser_download_url\"]\n-     filename = asset[\"name\"]\n      dest = download_dir / filename\n      print(f\"  ↳ downloading {filename}\")\n      if not download_asset(download_url, dest):\n          return None\n  \n-     return filename\n+     return {\n+         \"filename\": filename,\n+         \"archive_url\": download_url,\n+     }\n  \n  ",
+        "oldStart": 120,
+        "newStart": 120,
+        "oldLines": 12,
+        "newLines": 15,
+        "linesRemoved": 2,
+        "linesAdded": 5
       },
       {
-        &quot;diffString&quot;: &quot;      for addon in ADDONS:\n          print(f\&quot;Fetching release for {addon[&#39;repo&#39;]}...\&quot;)\n-         filename = process_addon(addon, REPO_DIR)\n-         if filename:\n-             # Map filename to the GitHub release URL\n-             latest_release = github_api(f\&quot;https://api.github.com/repos/{addon[&#39;repo&#39;]}/releases/latest\&quot;)\n-             if latest_release:\n-                 asset = pick_zip_asset(latest_release.get(\&quot;assets\&quot;, []))\n-                 if asset:\n-                     filename_to_url[filename] = asset[\&quot;browser_download_url\&quot;]\n+         result = process_addon(addon, REPO_DIR)\n+         if result:\n+             filename_to_url[result[\&quot;filename\&quot;]] = result[\&quot;archive_url\&quot;]\n  \n      if not filename_to_url:&quot;,
-        &quot;oldStart&quot;: 137,
-        &quot;newStart&quot;: 140,
-        &quot;oldLines&quot;: 12,
-        &quot;newLines&quot;: 7,
-        &quot;linesRemoved&quot;: 8,
-        &quot;linesAdded&quot;: 3
+        "diffString": "      for addon in ADDONS:\n          print(f\"Fetching release for {addon['repo']}...\")\n-         filename = process_addon(addon, REPO_DIR)\n-         if filename:\n-             # Map filename to the GitHub release URL\n-             latest_release = github_api(f\"https://api.github.com/repos/{addon['repo']}/releases/latest\")\n-             if latest_release:\n-                 asset = pick_zip_asset(latest_release.get(\"assets\", []))\n-                 if asset:\n-                     filename_to_url[filename] = asset[\"browser_download_url\"]\n+         result = process_addon(addon, REPO_DIR)\n+         if result:\n+             filename_to_url[result[\"filename\"]] = result[\"archive_url\"]\n  \n      if not filename_to_url:",
+        "oldStart": 137,
+        "newStart": 140,
+        "oldLines": 12,
+        "newLines": 7,
+        "linesRemoved": 8,
+        "linesAdded": 3
       }
     ],
-    &quot;editor&quot;: &quot;EDITOR_AI&quot;
+    "editor": "EDITOR_AI"
   },
-  &quot;shouldAutoFixLints&quot;: true,
-  &quot;resultForModel&quot;: &quot;Success. Updated the following files:\nM update_catalog.py&quot;,
-  &quot;contentsAfterEdit&quot;: &quot;#!/usr/bin/env python3\n\&quot;\&quot;\&quot;\nGenerate Blender extension repository metadata using Blender&#39;s server tool.\n\nThis script downloads the latest release archives from GitHub, lets Blender\nvalidate/build the repository metadata, and rewrites the resulting JSON to\npoint back to the public GitHub release URLs.\n\&quot;\&quot;\&quot;\n\nfrom __future__ import annotations\n\nimport json\nimport os\nimport shutil\nimport subprocess\nfrom pathlib import Path\nfrom typing import Dict, List, Optional\n\nimport requests\n\n# --- Configuration ---------------------------------------------------------\n\n# List of addons to include in the repository.\nADDONS = [\n    {\n        \&quot;id\&quot;: \&quot;basedplayblast\&quot;,\n        \&quot;repo\&quot;: \&quot;RaincloudTheDragon/BasedPlayblast\&quot;,\n    },\n]\n\nBLENDER_EXECUTABLE = os.environ.get(\&quot;BLENDER_PATH\&quot;, \&quot;blender\&quot;)\nGITHUB_TOKEN = os.environ.get(\&quot;GITHUB_TOKEN\&quot;)\n\nBUILD_DIR = Path(\&quot;build\&quot;)\nREPO_DIR = BUILD_DIR / \&quot;repo\&quot;\nOUTPUT_INDEX = Path(\&quot;index.json\&quot;)\n\n# ---------------------------------------------------------------------------\n\nsession = requests.Session()\nsession.headers.update({\&quot;Accept\&quot;: \&quot;application/vnd.github+json\&quot;})\nif GITHUB_TOKEN:\n    session.headers.update({\&quot;Authorization\&quot;: f\&quot;Bearer {GITHUB_TOKEN}\&quot;})\n\n\ndef github_api(url: str) -&gt; Optional[Dict]:\n    try:\n        response = session.get(url, timeout=30)\n        response.raise_for_status()\n        return response.json()\n    except requests.RequestException as exc:\n        print(f\&quot;  ⚠ GitHub request failed: {exc}\&quot;)\n        return None\n\n\ndef pick_zip_asset(assets: List[Dict]) -&gt; Optional[Dict]:\n    for asset in assets:\n        name = asset.get(\&quot;name\&quot;, \&quot;\&quot;)\n        content_type = asset.get(\&quot;content_type\&quot;, \&quot;\&quot;)\n        if name.endswith(\&quot;.zip\&quot;) or content_type == \&quot;application/zip\&quot;:\n            return asset\n    return None\n\n\ndef download_asset(url: str, destination: Path) -&gt; bool:\n    try:\n        with session.get(url, stream=True, timeout=60) as response:\n            response.raise_for_status()\n            destination.parent.mkdir(parents=True, exist_ok=True)\n            with open(destination, \&quot;wb\&quot;) as file_obj:\n                for chunk in response.iter_content(chunk_size=1024 * 1024):\n                    if chunk:\n                        file_obj.write(chunk)\n        return True\n    except requests.RequestException as exc:\n        print(f\&quot;  ⚠ Download failed ({url}): {exc}\&quot;)\n        return False\n\n\ndef clean_directory(path: Path) -&gt; None:\n    if path.exists():\n        shutil.rmtree(path)\n    path.mkdir(parents=True, exist_ok=True)\n\n\ndef run_blender_repo_generator(repo_dir: Path) -&gt; None:\n    cmd = [\n        BLENDER_EXECUTABLE,\n        \&quot;--background\&quot;,\n        \&quot;--command\&quot;,\n        \&quot;extension.server-generate\&quot;,\n        f\&quot;--repo-dir={repo_dir.resolve()}\&quot;,\n    ]\n    print(f\&quot;Running Blender repo generator:\\n  {&#39; &#39;.join(str(part) for part in cmd)}\&quot;)\n    subprocess.run(cmd, check=True)\n\n\ndef rewrite_archive_urls(index_path: Path, url_map: Dict[str, str]) -&gt; Dict:\n    with open(index_path, \&quot;r\&quot;, encoding=\&quot;utf-8\&quot;) as handle:\n        data = json.load(handle)\n\n    for package in data.get(\&quot;data\&quot;, []):\n        archive_value = package.get(\&quot;archive_url\&quot;) or package.get(\&quot;archive_path\&quot;, \&quot;\&quot;)\n        filename = Path(archive_value).name\n        if filename in url_map:\n            package[\&quot;archive_url\&quot;] = url_map[filename]\n\n    return data\n\n\ndef process_addon(addon: Dict, download_dir: Path) -&gt; Optional[Dict[str, str]]:\n    repo = addon[\&quot;repo\&quot;]\n    release = github_api(f\&quot;https://api.github.com/repos/{repo}/releases/latest\&quot;)\n    if not release:\n        return None\n\n    asset = pick_zip_asset(release.get(\&quot;assets\&quot;, []))\n    if not asset:\n        print(f\&quot;  ⚠ No ZIP asset found for {repo}\&quot;)\n        return None\n\n    filename = asset[\&quot;name\&quot;]\n    download_url = asset[\&quot;browser_download_url\&quot;]\n    dest = download_dir / filename\n    print(f\&quot;  ↳ downloading {filename}\&quot;)\n    if not download_asset(download_url, dest):\n        return None\n\n    return {\n        \&quot;filename\&quot;: filename,\n        \&quot;archive_url\&quot;: download_url,\n    }\n\n\ndef main() -&gt; None:\n    print(\&quot;Generating Blender extension repository metadata...\&quot;)\n    clean_directory(REPO_DIR)\n\n    filename_to_url: Dict[str, str] = {}\n    for addon in ADDONS:\n        print(f\&quot;Fetching release for {addon[&#39;repo&#39;]}...\&quot;)\n        result = process_addon(addon, REPO_DIR)\n        if result:\n            filename_to_url[result[\&quot;filename\&quot;]] = result[\&quot;archive_url\&quot;]\n\n    if not filename_to_url:\n        print(\&quot;No archives downloaded. Aborting.\&quot;)\n        return\n\n    try:\n        run_blender_repo_generator(REPO_DIR)\n    except subprocess.CalledProcessError as exc:\n        print(f\&quot;Blender command failed: {exc}\&quot;)\n        return\n\n    generated_index = REPO_DIR / \&quot;index.json\&quot;\n    if not generated_index.exists():\n        print(f\&quot;Generated index not found at {generated_index}\&quot;)\n        return\n\n    updated_index = rewrite_archive_urls(generated_index, filename_to_url)\n    with open(OUTPUT_INDEX, \&quot;w\&quot;, encoding=\&quot;utf-8\&quot;) as handle:\n        json.dump(updated_index, handle, indent=2)\n\n    print(\&quot;-\&quot; * 50)\n    print(f\&quot;✓ Repository index written to {OUTPUT_INDEX}\&quot;)\n    print(f\&quot;  Packages: {len(updated_index.get(&#39;data&#39;, []))}\&quot;)\n\n\nif __name__ == \&quot;__main__\&quot;:\n    main()\n&quot;
+  "shouldAutoFixLints": true,
+  "resultForModel": "Success. Updated the following files:\nM update_catalog.py",
+  "contentsAfterEdit": "#!/usr/bin/env python3\n\"\"\"\nGenerate Blender extension repository metadata using Blender's server tool.\n\nThis script downloads the latest release archives from GitHub, lets Blender\nvalidate/build the repository metadata, and rewrites the resulting JSON to\npoint back to the public GitHub release URLs.\n\"\"\"\n\nfrom __future__ import annotations\n\nimport json\nimport os\nimport shutil\nimport subprocess\nfrom pathlib import Path\nfrom typing import Dict, List, Optional\n\nimport requests\n\n# --- Configuration ---------------------------------------------------------\n\n# List of addons to include in the repository.\nADDONS = [\n    {\n        \"id\": \"basedplayblast\",\n        \"repo\": \"RaincloudTheDragon/BasedPlayblast\",\n    },\n]\n\nBLENDER_EXECUTABLE = os.environ.get(\"BLENDER_PATH\", \"blender\")\nGITHUB_TOKEN = os.environ.get(\"GITHUB_TOKEN\")\n\nBUILD_DIR = Path(\"build\")\nREPO_DIR = BUILD_DIR / \"repo\"\nOUTPUT_INDEX = Path(\"index.json\")\n\n# ---------------------------------------------------------------------------\n\nsession = requests.Session()\nsession.headers.update({\"Accept\": \"application/vnd.github+json\"})\nif GITHUB_TOKEN:\n    session.headers.update({\"Authorization\": f\"Bearer {GITHUB_TOKEN}\"})\n\n\ndef github_api(url: str) -&gt; Optional[Dict]:\n    try:\n        response = session.get(url, timeout=30)\n        response.raise_for_status()\n        return response.json()\n    except requests.RequestException as exc:\n        print(f\"  ⚠ GitHub request failed: {exc}\")\n        return None\n\n\ndef pick_zip_asset(assets: List[Dict]) -&gt; Optional[Dict]:\n    for asset in assets:\n        name = asset.get(\"name\", \"\")\n        content_type = asset.get(\"content_type\", \"\")\n        if name.endswith(\".zip\") or content_type == \"application/zip\":\n            return asset\n    return None\n\n\ndef download_asset(url: str, destination: Path) -&gt; bool:\n    try:\n        with session.get(url, stream=True, timeout=60) as response:\n            response.raise_for_status()\n            destination.parent.mkdir(parents=True, exist_ok=True)\n            with open(destination, \"wb\") as file_obj:\n                for chunk in response.iter_content(chunk_size=1024 * 1024):\n                    if chunk:\n                        file_obj.write(chunk)\n        return True\n    except requests.RequestException as exc:\n        print(f\"  ⚠ Download failed ({url}): {exc}\")\n        return False\n\n\ndef clean_directory(path: Path) -&gt; None:\n    if path.exists():\n        shutil.rmtree(path)\n    path.mkdir(parents=True, exist_ok=True)\n\n\ndef run_blender_repo_generator(repo_dir: Path) -&gt; None:\n    cmd = [\n        BLENDER_EXECUTABLE,\n        \"--background\",\n        \"--command\",\n        \"extension.server-generate\",\n        f\"--repo-dir={repo_dir.resolve()}\",\n    ]\n    print(f\"Running Blender repo generator:\\n  {' '.join(str(part) for part in cmd)}\")\n    subprocess.run(cmd, check=True)\n\n\ndef rewrite_archive_urls(index_path: Path, url_map: Dict[str, str]) -&gt; Dict:\n    with open(index_path, \"r\", encoding=\"utf-8\") as handle:\n        data = json.load(handle)\n\n    for package in data.get(\"data\", []):\n        archive_value = package.get(\"archive_url\") or package.get(\"archive_path\", \"\")\n        filename = Path(archive_value).name\n        if filename in url_map:\n            package[\"archive_url\"] = url_map[filename]\n\n    return data\n\n\ndef process_addon(addon: Dict, download_dir: Path) -&gt; Optional[Dict[str, str]]:\n    repo = addon[\"repo\"]\n    release = github_api(f\"https://api.github.com/repos/{repo}/releases/latest\")\n    if not release:\n        return None\n\n    asset = pick_zip_asset(release.get(\"assets\", []))\n    if not asset:\n        print(f\"  ⚠ No ZIP asset found for {repo}\")\n        return None\n\n    filename = asset[\"name\"]\n    download_url = asset[\"browser_download_url\"]\n    dest = download_dir / filename\n    print(f\"  ↳ downloading {filename}\")\n    if not download_asset(download_url, dest):\n        return None\n\n    return {\n        \"filename\": filename,\n        \"archive_url\": download_url,\n    }\n\n\ndef main() -&gt; None:\n    print(\"Generating Blender extension repository metadata...\")\n    clean_directory(REPO_DIR)\n\n    filename_to_url: Dict[str, str] = {}\n    for addon in ADDONS:\n        print(f\"Fetching release for {addon['repo']}...\")\n        result = process_addon(addon, REPO_DIR)\n        if result:\n            filename_to_url[result[\"filename\"]] = result[\"archive_url\"]\n\n    if not filename_to_url:\n        print(\"No archives downloaded. Aborting.\")\n        return\n\n    try:\n        run_blender_repo_generator(REPO_DIR)\n    except subprocess.CalledProcessError as exc:\n        print(f\"Blender command failed: {exc}\")\n        return\n\n    generated_index = REPO_DIR / \"index.json\"\n    if not generated_index.exists():\n        print(f\"Generated index not found at {generated_index}\")\n        return\n\n    updated_index = rewrite_archive_urls(generated_index, filename_to_url)\n    with open(OUTPUT_INDEX, \"w\", encoding=\"utf-8\") as handle:\n        json.dump(updated_index, handle, indent=2)\n\n    print(\"-\" * 50)\n    print(f\"✓ Repository index written to {OUTPUT_INDEX}\")\n    print(f\"  Packages: {len(updated_index.get('data', []))}\")\n\n\nif __name__ == \"__main__\":\n    main()\n"
 }
 ```
 User decision: **accepted**
@@ -6026,6 +6026,1112 @@ Implemented the Blender-driven repo generation workflow in `update_catalog.py`:
 - Rewrite Blender’s generated `index.json` so `archive_url` entries point back to the original GitHub release URLs, and write the result to the project root.
 
 This replaces the manual catalog builder with Blender’s official repo generator, ensuring metadata matches the platform’s expectations.
+
+---
+
+_**User (2025-12-02 00:33Z)**_
+
+@pwsh (0-81) let's do factory startup just to be safe.
+
+---
+
+_**Agent (model gpt-5.1-codex, mode Agent)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **run_terminal_cmd** • Run command: python update_catalog.py</summary>
+
+```bash
+python update_catalog.py
+```
+
+```
+Generating Blender extension repository metadata...
+Fetching release for RaincloudTheDragon/BasedPlayblast...
+  ↳ downloading BasedPlayblast.v2.3.1.zip
+Running Blender repo generator:
+  blender --background --command extension.server-generate --repo-dir=E:\rainys-blender-extensions\build\repo                                                   
+Blender 5.0.0 (hash a37564c4df7a built 2025-11-18 11:06:54)
+
+Warning! 'C:\\Program Files\\Blender Foundation\\Blender 5.0\\5.0\\scripts\\startup\\fa_hotkeys.py' has no register function, this is now a requirement for registerable scripts                                                                
+register_class(...):
+Warning: 'Submenu' does not contain '_MT_' with prefix and suffix
+register_class(...):
+Warning: 'Submenu2' does not contain '_MT_' with prefix and suffix
+register_class(...):
+Warning: 'Submenu3' does not contain '_MT_' with prefix and suffix
+register_class(...):
+Warning: 'view3D.Pie_menu' does not contain '_MT_' with prefix and suffix
+register_class(...):
+Warning: 'CustomPanel' does not contain '_PT_' with prefix and suffix
+register_class(...):
+Warning: 'view3D.Quad_menu' does not contain '_MT_' with prefix and suffix
+register_class(...):
+Warning: 'Special_Tools_Menu' does not contain '_MT_' with prefix and suffix
+module changed on disk: 'C:\\Program Files\\Blender Foundation\\Blender 5.0\\5.0\\scripts\\startup\\delete_withoutConfirm.py' reloading...                      
+Cannot read ARP prefs
+Update armature presets...
+Warning: add-on missing 'bl_info', this can cause poor performance!: 'C:\\Program Files\\Blender Foundation\\Blender 5.0\\portable\\scripts\\addons\\brushstroke_tools\\__init__.py'                                                            
+LOADED UPDATER!
+
+### Loading Rokoko Studio Live for Blender...
+### Loaded Rokoko Studio Live for Blender successfully!
+
+animation_layers_updater addon: Verbose is enabled
+animation_layers_updater addon: Read in JSON settings from file
+🔄 blenderkit: Verbose is enabled
+🔄 blenderkit: Read in JSON settings from file
+ℹ️  blenderkit: Ports reordered so first port is now 62485 (previous index was 00) [17:34:25.238, client_lib.py:125]                                             
+register_class(...):
+Warning: 'List_View' does not contain '_UL_' with prefix and suffix
+Addon preferences registered successfully: &lt;bpy_struct, Addon("rainys_bulk_scene_tools") at 0x000001E4314428E0&gt;                                                 
+Bulk Path Management registered successfully
+[Remove Static FCurves] registered
+Reloading external rigs...
+Reloading external metarigs...
+BlenderMCP addon registered
+cc_blender_tools_updater updater verbose is enabled
+cc_blender_tools_updater Updater: Read in JSON settings from file
+register_class(...):
+Warning: 'CCIC_ImportMixBones_UL_List' does not have upper case alphanumeric prefix                                                                             
+register_class(...):
+Warning: 'CCIC_RigMixBones_UL_List' does not have upper case alphanumeric prefix
+Created history step fe49bd1d-e1c4-4191-b25b-0da0eaf7a232
+ℹ️  blenderkit: Created new search history step [17:34:28.705, search.py:1853]  
+ℹ️  blenderkit: No temporarily enabled addons to clean up [17:34:28.706, downloaad.py:391]                                                                       
+Render Preset --- Startup handler
+Render Preset --- Reloading presets
+Render Preset --- Loaded : N:\2. ASSETS\Addons\render_preset\EEVEE_AMZN.json
+Render Preset --- Loaded : N:\2. ASSETS\Addons\render_preset\Cycles_High.json   
+Render Preset --- Loaded : N:\2. ASSETS\Addons\render_preset\ASSET_THUMB.json
+Render Preset --- Loaded : N:\2. ASSETS\Addons\render_preset\Cycles_Low.json
+Render Preset --- Loaded : N:\2. ASSETS\Addons\render_preset\EEVEE_AMZN_VERTICAL.json                                                                           
+Render Preset --- Loaded : N:\2. ASSETS\Addons\render_preset\EEVEE_AMZN_VERT_STILL.json                                                                         
+Render Preset --- Loaded : N:\2. ASSETS\Addons\render_preset\Cycles_4kSuperRes.json                                                                             
+Render Preset --- Loaded : N:\2. ASSETS\Addons\render_preset\EEVEE_AMZN_STILL.json                                                                              
+Render Preset --- Loaded : N:\2. ASSETS\Addons\render_preset\Cycles_Med.json    
+Render Preset --- Presets reloaded
+Unrecognized command: "extension.server-generate"
+### Unloading Rokoko Studio Live for Blender...
+### Unloaded Rokoko Studio Live for Blender successfully!
+
+ℹ️  blenderkit: Unregistering BlenderKit add-on [17:34:28.803, __init__.py:2659]
+ℹ️  blenderkit: No temporarily enabled addons to clean up [17:34:28.803, downloaad.py:391]                                                                       
+[Remove Static FCurves] unregistered
+BlenderMCP addon unregistered
+Traceback (most recent call last):
+  File "C:\Program Files\Blender Foundation\Blender 5.0\5.0\scripts\modules\bpy\utils\__init__.py", line 225, in _unregister_module_call                        
+    unregister()
+  File "C:\Program Files\Blender Foundation\Blender 5.0\5.0\scripts\modules\bpy\utils\__init__.py", line 971, in unregister                                     
+    unregister_class(cls)
+RuntimeError: unregister_class(...):, missing bl_rna attribute from '_RNAMeta' instance (may not be registered)                                                 
+Blender command failed: Command '['blender', '--background', '--command', 'extension.server-generate', '--repo-dir=E:\\rainys-blender-extensions\\build\\repo']' returned non-zero exit status 1.                                               
+```
+</details>
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+**Diagnosing Blender extension command issues**
+
+I’m sorting out why Blender reports "Unrecognized command extension.server-generate" and realizing the correct CLI uses two tokens: `extension server-generate`. I’ll update the script to run Blender with `--factory-startup` and pass arguments as separate tokens to match the user’s successful manual command. I also need to organize zipped addon packages into appropriate directories like `archives` inside the repo so the generator can find them, reflecting the structure expected by Blender’s extension.</details></think>
+
+---
+
+<tool-use data-tool-type="generic" data-tool-name="list_dir">
+<details>
+            <summary>Tool use: **list_dir** • Listed directory undefined • **0** results</summary>
+        
+No results found
+</details>
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+**Planning zip directory restructuring**
+
+I'm figuring out how to reorganize the zipped files and adjust the script to pass proper directory arguments to the blender command, ensuring zipped files go to a dedicated archives folder and that the command uses correct flags to recognize them. This involves setting constants for output paths, modifying download locations, cleaning directories, and verifying output files.</details></think>
+
+---
+
+The model made no changes to the file.
+
+---
+
+<think><details><summary>Thought Process</summary>
+**Reopening file to fix context**</details></think>
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: update_catalog.py</summary>
+
+</details>
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+**Preparing sequential patch updates**</details></think>
+
+---
+
+<tool-use data-tool-type="unknown" data-tool-name="apply_patch">
+<details>
+<summary>Tool use: **apply_patch**</summary>
+
+
+Parameters:
+
+```json
+{
+  "relativeWorkspacePath": "update_catalog.py"
+}
+```
+Additional data:
+
+```json
+{
+  "codeblockId": "00075f60-da7b-4df1-9b6a-80c0c402b5e7"
+}
+```
+Result:
+
+```json
+{
+  "diff": {
+    "chunks": [
+      {
+        "diffString": "  BUILD_DIR = Path(\"build\")\n  REPO_DIR = BUILD_DIR / \"repo\"\n+ ARCHIVES_DIR = BUILD_DIR / \"archives\"\n  OUTPUT_INDEX = Path(\"index.json\")\n  ",
+        "oldStart": 34,
+        "newStart": 34,
+        "oldLines": 4,
+        "newLines": 5,
+        "linesAdded": 1
+      }
+    ],
+    "editor": "EDITOR_AI"
+  },
+  "shouldAutoFixLints": true,
+  "resultForModel": "Success. Updated the following files:\nM update_catalog.py",
+  "contentsAfterEdit": "#!/usr/bin/env python3\n\"\"\"\nGenerate Blender extension repository metadata using Blender's server tool.\n\nThis script downloads the latest release archives from GitHub, lets Blender\nvalidate/build the repository metadata, and rewrites the resulting JSON to\npoint back to the public GitHub release URLs.\n\"\"\"\n\nfrom __future__ import annotations\n\nimport json\nimport os\nimport shutil\nimport subprocess\nfrom pathlib import Path\nfrom typing import Dict, List, Optional\n\nimport requests\n\n# --- Configuration ---------------------------------------------------------\n\n# List of addons to include in the repository.\nADDONS = [\n    {\n        \"id\": \"basedplayblast\",\n        \"repo\": \"RaincloudTheDragon/BasedPlayblast\",\n    },\n]\n\nBLENDER_EXECUTABLE = os.environ.get(\"BLENDER_PATH\", \"blender\")\nGITHUB_TOKEN = os.environ.get(\"GITHUB_TOKEN\")\n\nBUILD_DIR = Path(\"build\")\nREPO_DIR = BUILD_DIR / \"repo\"\nARCHIVES_DIR = BUILD_DIR / \"archives\"\nOUTPUT_INDEX = Path(\"index.json\")\n\n# ---------------------------------------------------------------------------\n\nsession = requests.Session()\nsession.headers.update({\"Accept\": \"application/vnd.github+json\"})\nif GITHUB_TOKEN:\n    session.headers.update({\"Authorization\": f\"Bearer {GITHUB_TOKEN}\"})\n\n\ndef github_api(url: str) -&gt; Optional[Dict]:\n    try:\n        response = session.get(url, timeout=30)\n        response.raise_for_status()\n        return response.json()\n    except requests.RequestException as exc:\n        print(f\"  ⚠ GitHub request failed: {exc}\")\n        return None\n\n\ndef pick_zip_asset(assets: List[Dict]) -&gt; Optional[Dict]:\n    for asset in assets:\n        name = asset.get(\"name\", \"\")\n        content_type = asset.get(\"content_type\", \"\")\n        if name.endswith(\".zip\") or content_type == \"application/zip\":\n            return asset\n    return None\n\n\ndef download_asset(url: str, destination: Path) -&gt; bool:\n    try:\n        with session.get(url, stream=True, timeout=60) as response:\n            response.raise_for_status()\n            destination.parent.mkdir(parents=True, exist_ok=True)\n            with open(destination, \"wb\") as file_obj:\n                for chunk in response.iter_content(chunk_size=1024 * 1024):\n                    if chunk:\n                        file_obj.write(chunk)\n        return True\n    except requests.RequestException as exc:\n        print(f\"  ⚠ Download failed ({url}): {exc}\")\n        return False\n\n\ndef clean_directory(path: Path) -&gt; None:\n    if path.exists():\n        shutil.rmtree(path)\n    path.mkdir(parents=True, exist_ok=True)\n\n\ndef run_blender_repo_generator(repo_dir: Path) -&gt; None:\n    cmd = [\n        BLENDER_EXECUTABLE,\n        \"--background\",\n        \"--command\",\n        \"extension.server-generate\",\n        f\"--repo-dir={repo_dir.resolve()}\",\n    ]\n    print(f\"Running Blender repo generator:\\n  {' '.join(str(part) for part in cmd)}\")\n    subprocess.run(cmd, check=True)\n\n\ndef rewrite_archive_urls(index_path: Path, url_map: Dict[str, str]) -&gt; Dict:\n    with open(index_path, \"r\", encoding=\"utf-8\") as handle:\n        data = json.load(handle)\n\n    for package in data.get(\"data\", []):\n        archive_value = package.get(\"archive_url\") or package.get(\"archive_path\", \"\")\n        filename = Path(archive_value).name\n        if filename in url_map:\n            package[\"archive_url\"] = url_map[filename]\n\n    return data\n\n\ndef process_addon(addon: Dict, download_dir: Path) -&gt; Optional[Dict[str, str]]:\n    repo = addon[\"repo\"]\n    release = github_api(f\"https://api.github.com/repos/{repo}/releases/latest\")\n    if not release:\n        return None\n\n    asset = pick_zip_asset(release.get(\"assets\", []))\n    if not asset:\n        print(f\"  ⚠ No ZIP asset found for {repo}\")\n        return None\n\n    filename = asset[\"name\"]\n    download_url = asset[\"browser_download_url\"]\n    dest = download_dir / filename\n    print(f\"  ↳ downloading {filename}\")\n    if not download_asset(download_url, dest):\n        return None\n\n    return {\n        \"filename\": filename,\n        \"archive_url\": download_url,\n    }\n\n\ndef main() -&gt; None:\n    print(\"Generating Blender extension repository metadata...\")\n    clean_directory(REPO_DIR)\n\n    filename_to_url: Dict[str, str] = {}\n    for addon in ADDONS:\n        print(f\"Fetching release for {addon['repo']}...\")\n        result = process_addon(addon, REPO_DIR)\n        if result:\n            filename_to_url[result[\"filename\"]] = result[\"archive_url\"]\n\n    if not filename_to_url:\n        print(\"No archives downloaded. Aborting.\")\n        return\n\n    try:\n        run_blender_repo_generator(REPO_DIR)\n    except subprocess.CalledProcessError as exc:\n        print(f\"Blender command failed: {exc}\")\n        return\n\n    generated_index = REPO_DIR / \"index.json\"\n    if not generated_index.exists():\n        print(f\"Generated index not found at {generated_index}\")\n        return\n\n    updated_index = rewrite_archive_urls(generated_index, filename_to_url)\n    with open(OUTPUT_INDEX, \"w\", encoding=\"utf-8\") as handle:\n        json.dump(updated_index, handle, indent=2)\n\n    print(\"-\" * 50)\n    print(f\"✓ Repository index written to {OUTPUT_INDEX}\")\n    print(f\"  Packages: {len(updated_index.get('data', []))}\")\n\n\nif __name__ == \"__main__\":\n    main()\n"
+}
+```
+User decision: **accepted**
+
+Status: **completed**
+
+
+</details>
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+**Modifying generator function**</details></think>
+
+---
+
+<tool-use data-tool-type="unknown" data-tool-name="apply_patch">
+<details>
+<summary>Tool use: **apply_patch**</summary>
+
+
+Parameters:
+
+```json
+{
+  "relativeWorkspacePath": "update_catalog.py"
+}
+```
+Additional data:
+
+```json
+{
+  "codeblockId": "c3be0a71-f442-40a1-9177-d4ab03d72a9c"
+}
+```
+Result:
+
+```json
+{
+  "diff": {
+    "chunks": [
+      {
+        "diffString": "  \n  \n- def run_blender_repo_generator(repo_dir: Path) -&gt; None:\n+ def run_blender_repo_generator(repo_dir: Path, archives_dir: Path) -&gt; None:\n      cmd = [\n          BLENDER_EXECUTABLE,\n          \"--background\",\n+         \"--factory-startup\",\n          \"--command\",\n-         \"extension.server-generate\",\n+         \"extension\",\n+         \"server-generate\",\n          f\"--repo-dir={repo_dir.resolve()}\",\n+         f\"--archives-dir={archives_dir.resolve()}\",\n      ]\n      print(f\"Running Blender repo generator:\\n  {' '.join(str(part) for part in cmd)}\")",
+        "oldStart": 85,
+        "newStart": 85,
+        "oldLines": 11,
+        "newLines": 14,
+        "linesRemoved": 2,
+        "linesAdded": 5
+      }
+    ],
+    "editor": "EDITOR_AI"
+  },
+  "shouldAutoFixLints": true,
+  "resultForModel": "Success. Updated the following files:\nM update_catalog.py",
+  "contentsAfterEdit": "#!/usr/bin/env python3\n\"\"\"\nGenerate Blender extension repository metadata using Blender's server tool.\n\nThis script downloads the latest release archives from GitHub, lets Blender\nvalidate/build the repository metadata, and rewrites the resulting JSON to\npoint back to the public GitHub release URLs.\n\"\"\"\n\nfrom __future__ import annotations\n\nimport json\nimport os\nimport shutil\nimport subprocess\nfrom pathlib import Path\nfrom typing import Dict, List, Optional\n\nimport requests\n\n# --- Configuration ---------------------------------------------------------\n\n# List of addons to include in the repository.\nADDONS = [\n    {\n        \"id\": \"basedplayblast\",\n        \"repo\": \"RaincloudTheDragon/BasedPlayblast\",\n    },\n]\n\nBLENDER_EXECUTABLE = os.environ.get(\"BLENDER_PATH\", \"blender\")\nGITHUB_TOKEN = os.environ.get(\"GITHUB_TOKEN\")\n\nBUILD_DIR = Path(\"build\")\nREPO_DIR = BUILD_DIR / \"repo\"\nARCHIVES_DIR = BUILD_DIR / \"archives\"\nOUTPUT_INDEX = Path(\"index.json\")\n\n# ---------------------------------------------------------------------------\n\nsession = requests.Session()\nsession.headers.update({\"Accept\": \"application/vnd.github+json\"})\nif GITHUB_TOKEN:\n    session.headers.update({\"Authorization\": f\"Bearer {GITHUB_TOKEN}\"})\n\n\ndef github_api(url: str) -&gt; Optional[Dict]:\n    try:\n        response = session.get(url, timeout=30)\n        response.raise_for_status()\n        return response.json()\n    except requests.RequestException as exc:\n        print(f\"  ⚠ GitHub request failed: {exc}\")\n        return None\n\n\ndef pick_zip_asset(assets: List[Dict]) -&gt; Optional[Dict]:\n    for asset in assets:\n        name = asset.get(\"name\", \"\")\n        content_type = asset.get(\"content_type\", \"\")\n        if name.endswith(\".zip\") or content_type == \"application/zip\":\n            return asset\n    return None\n\n\ndef download_asset(url: str, destination: Path) -&gt; bool:\n    try:\n        with session.get(url, stream=True, timeout=60) as response:\n            response.raise_for_status()\n            destination.parent.mkdir(parents=True, exist_ok=True)\n            with open(destination, \"wb\") as file_obj:\n                for chunk in response.iter_content(chunk_size=1024 * 1024):\n                    if chunk:\n                        file_obj.write(chunk)\n        return True\n    except requests.RequestException as exc:\n        print(f\"  ⚠ Download failed ({url}): {exc}\")\n        return False\n\n\ndef clean_directory(path: Path) -&gt; None:\n    if path.exists():\n        shutil.rmtree(path)\n    path.mkdir(parents=True, exist_ok=True)\n\n\ndef run_blender_repo_generator(repo_dir: Path, archives_dir: Path) -&gt; None:\n    cmd = [\n        BLENDER_EXECUTABLE,\n        \"--background\",\n        \"--factory-startup\",\n        \"--command\",\n        \"extension\",\n        \"server-generate\",\n        f\"--repo-dir={repo_dir.resolve()}\",\n        f\"--archives-dir={archives_dir.resolve()}\",\n    ]\n    print(f\"Running Blender repo generator:\\n  {' '.join(str(part) for part in cmd)}\")\n    subprocess.run(cmd, check=True)\n\n\ndef rewrite_archive_urls(index_path: Path, url_map: Dict[str, str]) -&gt; Dict:\n    with open(index_path, \"r\", encoding=\"utf-8\") as handle:\n        data = json.load(handle)\n\n    for package in data.get(\"data\", []):\n        archive_value = package.get(\"archive_url\") or package.get(\"archive_path\", \"\")\n        filename = Path(archive_value).name\n        if filename in url_map:\n            package[\"archive_url\"] = url_map[filename]\n\n    return data\n\n\ndef process_addon(addon: Dict, download_dir: Path) -&gt; Optional[Dict[str, str]]:\n    repo = addon[\"repo\"]\n    release = github_api(f\"https://api.github.com/repos/{repo}/releases/latest\")\n    if not release:\n        return None\n\n    asset = pick_zip_asset(release.get(\"assets\", []))\n    if not asset:\n        print(f\"  ⚠ No ZIP asset found for {repo}\")\n        return None\n\n    filename = asset[\"name\"]\n    download_url = asset[\"browser_download_url\"]\n    dest = download_dir / filename\n    print(f\"  ↳ downloading {filename}\")\n    if not download_asset(download_url, dest):\n        return None\n\n    return {\n        \"filename\": filename,\n        \"archive_url\": download_url,\n    }\n\n\ndef main() -&gt; None:\n    print(\"Generating Blender extension repository metadata...\")\n    clean_directory(REPO_DIR)\n\n    filename_to_url: Dict[str, str] = {}\n    for addon in ADDONS:\n        print(f\"Fetching release for {addon['repo']}...\")\n        result = process_addon(addon, REPO_DIR)\n        if result:\n            filename_to_url[result[\"filename\"]] = result[\"archive_url\"]\n\n    if not filename_to_url:\n        print(\"No archives downloaded. Aborting.\")\n        return\n\n    try:\n        run_blender_repo_generator(REPO_DIR)\n    except subprocess.CalledProcessError as exc:\n        print(f\"Blender command failed: {exc}\")\n        return\n\n    generated_index = REPO_DIR / \"index.json\"\n    if not generated_index.exists():\n        print(f\"Generated index not found at {generated_index}\")\n        return\n\n    updated_index = rewrite_archive_urls(generated_index, filename_to_url)\n    with open(OUTPUT_INDEX, \"w\", encoding=\"utf-8\") as handle:\n        json.dump(updated_index, handle, indent=2)\n\n    print(\"-\" * 50)\n    print(f\"✓ Repository index written to {OUTPUT_INDEX}\")\n    print(f\"  Packages: {len(updated_index.get('data', []))}\")\n\n\nif __name__ == \"__main__\":\n    main()\n"
+}
+```
+User decision: **accepted**
+
+Status: **completed**
+
+
+</details>
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+**Adjusting cleanup to include ARCHIVES directory**</details></think>
+
+---
+
+_**User (2025-12-02 00:33Z)**_
+
+we can add BST again because I just ported it to blender extension type https://github.com/RaincloudTheDragon/Rainys-Bulk-Scene-Tools 
+
+---
+
+_**Agent (model gpt-5.1-codex, mode Agent)**_
+
+Cancelled
+
+---
+
+
+
+---
+
+<tool-use data-tool-type="unknown" data-tool-name="apply_patch">
+<details>
+<summary>Tool use: **apply_patch**</summary>
+
+
+Parameters:
+
+```json
+{
+  "relativeWorkspacePath": "update_catalog.py"
+}
+```
+Additional data:
+
+```json
+{
+  "codeblockId": "ffc76787-a3a5-4724-93e5-d18d1966ffd4"
+}
+```
+Result:
+
+```json
+{
+  "diff": {
+    "chunks": [
+      {
+        "diffString": "          \"repo\": \"RaincloudTheDragon/BasedPlayblast\",\n      },\n+     {\n+         \"id\": \"rainys_bulk_scene_tools\",\n+         \"repo\": \"RaincloudTheDragon/Rainys-Bulk-Scene-Tools\",\n+     },\n  ]\n  ",
+        "oldStart": 27,
+        "newStart": 27,
+        "oldLines": 4,
+        "newLines": 8,
+        "linesAdded": 4
+      }
+    ],
+    "editor": "EDITOR_AI"
+  },
+  "shouldAutoFixLints": true,
+  "resultForModel": "Success. Updated the following files:\nM update_catalog.py",
+  "contentsAfterEdit": "#!/usr/bin/env python3\n\"\"\"\nGenerate Blender extension repository metadata using Blender's server tool.\n\nThis script downloads the latest release archives from GitHub, lets Blender\nvalidate/build the repository metadata, and rewrites the resulting JSON to\npoint back to the public GitHub release URLs.\n\"\"\"\n\nfrom __future__ import annotations\n\nimport json\nimport os\nimport shutil\nimport subprocess\nfrom pathlib import Path\nfrom typing import Dict, List, Optional\n\nimport requests\n\n# --- Configuration ---------------------------------------------------------\n\n# List of addons to include in the repository.\nADDONS = [\n    {\n        \"id\": \"basedplayblast\",\n        \"repo\": \"RaincloudTheDragon/BasedPlayblast\",\n    },\n    {\n        \"id\": \"rainys_bulk_scene_tools\",\n        \"repo\": \"RaincloudTheDragon/Rainys-Bulk-Scene-Tools\",\n    },\n]\n\nBLENDER_EXECUTABLE = os.environ.get(\"BLENDER_PATH\", \"blender\")\nGITHUB_TOKEN = os.environ.get(\"GITHUB_TOKEN\")\n\nBUILD_DIR = Path(\"build\")\nREPO_DIR = BUILD_DIR / \"repo\"\nARCHIVES_DIR = BUILD_DIR / \"archives\"\nOUTPUT_INDEX = Path(\"index.json\")\n\n# ---------------------------------------------------------------------------\n\nsession = requests.Session()\nsession.headers.update({\"Accept\": \"application/vnd.github+json\"})\nif GITHUB_TOKEN:\n    session.headers.update({\"Authorization\": f\"Bearer {GITHUB_TOKEN}\"})\n\n\ndef github_api(url: str) -&gt; Optional[Dict]:\n    try:\n        response = session.get(url, timeout=30)\n        response.raise_for_status()\n        return response.json()\n    except requests.RequestException as exc:\n        print(f\"  ⚠ GitHub request failed: {exc}\")\n        return None\n\n\ndef pick_zip_asset(assets: List[Dict]) -&gt; Optional[Dict]:\n    for asset in assets:\n        name = asset.get(\"name\", \"\")\n        content_type = asset.get(\"content_type\", \"\")\n        if name.endswith(\".zip\") or content_type == \"application/zip\":\n            return asset\n    return None\n\n\ndef download_asset(url: str, destination: Path) -&gt; bool:\n    try:\n        with session.get(url, stream=True, timeout=60) as response:\n            response.raise_for_status()\n            destination.parent.mkdir(parents=True, exist_ok=True)\n            with open(destination, \"wb\") as file_obj:\n                for chunk in response.iter_content(chunk_size=1024 * 1024):\n                    if chunk:\n                        file_obj.write(chunk)\n        return True\n    except requests.RequestException as exc:\n        print(f\"  ⚠ Download failed ({url}): {exc}\")\n        return False\n\n\ndef clean_directory(path: Path) -&gt; None:\n    if path.exists():\n        shutil.rmtree(path)\n    path.mkdir(parents=True, exist_ok=True)\n\n\ndef run_blender_repo_generator(repo_dir: Path, archives_dir: Path) -&gt; None:\n    cmd = [\n        BLENDER_EXECUTABLE,\n        \"--background\",\n        \"--factory-startup\",\n        \"--command\",\n        \"extension\",\n        \"server-generate\",\n        f\"--repo-dir={repo_dir.resolve()}\",\n        f\"--archives-dir={archives_dir.resolve()}\",\n    ]\n    print(f\"Running Blender repo generator:\\n  {' '.join(str(part) for part in cmd)}\")\n    subprocess.run(cmd, check=True)\n\n\ndef rewrite_archive_urls(index_path: Path, url_map: Dict[str, str]) -&gt; Dict:\n    with open(index_path, \"r\", encoding=\"utf-8\") as handle:\n        data = json.load(handle)\n\n    for package in data.get(\"data\", []):\n        archive_value = package.get(\"archive_url\") or package.get(\"archive_path\", \"\")\n        filename = Path(archive_value).name\n        if filename in url_map:\n            package[\"archive_url\"] = url_map[filename]\n\n    return data\n\n\ndef process_addon(addon: Dict, download_dir: Path) -&gt; Optional[Dict[str, str]]:\n    repo = addon[\"repo\"]\n    release = github_api(f\"https://api.github.com/repos/{repo}/releases/latest\")\n    if not release:\n        return None\n\n    asset = pick_zip_asset(release.get(\"assets\", []))\n    if not asset:\n        print(f\"  ⚠ No ZIP asset found for {repo}\")\n        return None\n\n    filename = asset[\"name\"]\n    download_url = asset[\"browser_download_url\"]\n    dest = download_dir / filename\n    print(f\"  ↳ downloading {filename}\")\n    if not download_asset(download_url, dest):\n        return None\n\n    return {\n        \"filename\": filename,\n        \"archive_url\": download_url,\n    }\n\n\ndef main() -&gt; None:\n    print(\"Generating Blender extension repository metadata...\")\n    clean_directory(REPO_DIR)\n\n    filename_to_url: Dict[str, str] = {}\n    for addon in ADDONS:\n        print(f\"Fetching release for {addon['repo']}...\")\n        result = process_addon(addon, REPO_DIR)\n        if result:\n            filename_to_url[result[\"filename\"]] = result[\"archive_url\"]\n\n    if not filename_to_url:\n        print(\"No archives downloaded. Aborting.\")\n        return\n\n    try:\n        run_blender_repo_generator(REPO_DIR)\n    except subprocess.CalledProcessError as exc:\n        print(f\"Blender command failed: {exc}\")\n        return\n\n    generated_index = REPO_DIR / \"index.json\"\n    if not generated_index.exists():\n        print(f\"Generated index not found at {generated_index}\")\n        return\n\n    updated_index = rewrite_archive_urls(generated_index, filename_to_url)\n    with open(OUTPUT_INDEX, \"w\", encoding=\"utf-8\") as handle:\n        json.dump(updated_index, handle, indent=2)\n\n    print(\"-\" * 50)\n    print(f\"✓ Repository index written to {OUTPUT_INDEX}\")\n    print(f\"  Packages: {len(updated_index.get('data', []))}\")\n\n\nif __name__ == \"__main__\":\n    main()\n"
+}
+```
+User decision: **accepted**
+
+Status: **completed**
+
+
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **run_terminal_cmd** • Run command: python update_catalog.py</summary>
+
+```bash
+python update_catalog.py
+```
+
+```
+PS E:\rainys-blender-extensions&gt; python update_catalog.py
+Generating Blender extension repository metadata...
+Fetching release for RaincloudTheDragon/BasedPlayblast...
+  ↳ downloading BasedPlayblast.v2.3.1.zip
+Fetching release for RaincloudTheDragon/Rainys-Bulk-Scene-Tools...
+  ↳ downloading Rainys_Bulk_Scene_Tools.v0.11.0.zip
+Traceback (most recent call last):
+  File "E:\rainys-blender-extensions\update_catalog.py", line 179, in &lt;module&gt;
+    main()
+  File "E:\rainys-blender-extensions\update_catalog.py", line 159, in main      
+    run_blender_repo_generator(REPO_DIR)
+TypeError: run_blender_repo_generator() missing 1 required positional argument: 'archives_dir'                                                                  
+```
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="unknown" data-tool-name="apply_patch">
+<details>
+<summary>Tool use: **apply_patch**</summary>
+
+
+Parameters:
+
+```json
+{
+  "relativeWorkspacePath": "update_catalog.py"
+}
+```
+Additional data:
+
+```json
+{
+  "codeblockId": "89fe5145-1c93-48d0-bd0e-390e0ead54b1"
+}
+```
+Result:
+
+```json
+{
+  "diff": {
+    "chunks": [
+      {
+        "diffString": "  \n      try:\n-         run_blender_repo_generator(REPO_DIR)\n+         run_blender_repo_generator(REPO_DIR, ARCHIVES_DIR)\n      except subprocess.CalledProcessError as exc:\n          print(f\"Blender command failed: {exc}\")",
+        "oldStart": 157,
+        "newStart": 157,
+        "oldLines": 5,
+        "newLines": 5,
+        "linesRemoved": 1,
+        "linesAdded": 1
+      }
+    ],
+    "editor": "EDITOR_AI"
+  },
+  "shouldAutoFixLints": true,
+  "resultForModel": "Success. Updated the following files:\nM update_catalog.py",
+  "contentsAfterEdit": "#!/usr/bin/env python3\n\"\"\"\nGenerate Blender extension repository metadata using Blender's server tool.\n\nThis script downloads the latest release archives from GitHub, lets Blender\nvalidate/build the repository metadata, and rewrites the resulting JSON to\npoint back to the public GitHub release URLs.\n\"\"\"\n\nfrom __future__ import annotations\n\nimport json\nimport os\nimport shutil\nimport subprocess\nfrom pathlib import Path\nfrom typing import Dict, List, Optional\n\nimport requests\n\n# --- Configuration ---------------------------------------------------------\n\n# List of addons to include in the repository.\nADDONS = [\n    {\n        \"id\": \"basedplayblast\",\n        \"repo\": \"RaincloudTheDragon/BasedPlayblast\",\n    },\n    {\n        \"id\": \"rainys_bulk_scene_tools\",\n        \"repo\": \"RaincloudTheDragon/Rainys-Bulk-Scene-Tools\",\n    },\n]\n\nBLENDER_EXECUTABLE = os.environ.get(\"BLENDER_PATH\", \"blender\")\nGITHUB_TOKEN = os.environ.get(\"GITHUB_TOKEN\")\n\nBUILD_DIR = Path(\"build\")\nREPO_DIR = BUILD_DIR / \"repo\"\nARCHIVES_DIR = BUILD_DIR / \"archives\"\nOUTPUT_INDEX = Path(\"index.json\")\n\n# ---------------------------------------------------------------------------\n\nsession = requests.Session()\nsession.headers.update({\"Accept\": \"application/vnd.github+json\"})\nif GITHUB_TOKEN:\n    session.headers.update({\"Authorization\": f\"Bearer {GITHUB_TOKEN}\"})\n\n\ndef github_api(url: str) -&gt; Optional[Dict]:\n    try:\n        response = session.get(url, timeout=30)\n        response.raise_for_status()\n        return response.json()\n    except requests.RequestException as exc:\n        print(f\"  ⚠ GitHub request failed: {exc}\")\n        return None\n\n\ndef pick_zip_asset(assets: List[Dict]) -&gt; Optional[Dict]:\n    for asset in assets:\n        name = asset.get(\"name\", \"\")\n        content_type = asset.get(\"content_type\", \"\")\n        if name.endswith(\".zip\") or content_type == \"application/zip\":\n            return asset\n    return None\n\n\ndef download_asset(url: str, destination: Path) -&gt; bool:\n    try:\n        with session.get(url, stream=True, timeout=60) as response:\n            response.raise_for_status()\n            destination.parent.mkdir(parents=True, exist_ok=True)\n            with open(destination, \"wb\") as file_obj:\n                for chunk in response.iter_content(chunk_size=1024 * 1024):\n                    if chunk:\n                        file_obj.write(chunk)\n        return True\n    except requests.RequestException as exc:\n        print(f\"  ⚠ Download failed ({url}): {exc}\")\n        return False\n\n\ndef clean_directory(path: Path) -&gt; None:\n    if path.exists():\n        shutil.rmtree(path)\n    path.mkdir(parents=True, exist_ok=True)\n\n\ndef run_blender_repo_generator(repo_dir: Path, archives_dir: Path) -&gt; None:\n    cmd = [\n        BLENDER_EXECUTABLE,\n        \"--background\",\n        \"--factory-startup\",\n        \"--command\",\n        \"extension\",\n        \"server-generate\",\n        f\"--repo-dir={repo_dir.resolve()}\",\n        f\"--archives-dir={archives_dir.resolve()}\",\n    ]\n    print(f\"Running Blender repo generator:\\n  {' '.join(str(part) for part in cmd)}\")\n    subprocess.run(cmd, check=True)\n\n\ndef rewrite_archive_urls(index_path: Path, url_map: Dict[str, str]) -&gt; Dict:\n    with open(index_path, \"r\", encoding=\"utf-8\") as handle:\n        data = json.load(handle)\n\n    for package in data.get(\"data\", []):\n        archive_value = package.get(\"archive_url\") or package.get(\"archive_path\", \"\")\n        filename = Path(archive_value).name\n        if filename in url_map:\n            package[\"archive_url\"] = url_map[filename]\n\n    return data\n\n\ndef process_addon(addon: Dict, download_dir: Path) -&gt; Optional[Dict[str, str]]:\n    repo = addon[\"repo\"]\n    release = github_api(f\"https://api.github.com/repos/{repo}/releases/latest\")\n    if not release:\n        return None\n\n    asset = pick_zip_asset(release.get(\"assets\", []))\n    if not asset:\n        print(f\"  ⚠ No ZIP asset found for {repo}\")\n        return None\n\n    filename = asset[\"name\"]\n    download_url = asset[\"browser_download_url\"]\n    dest = download_dir / filename\n    print(f\"  ↳ downloading {filename}\")\n    if not download_asset(download_url, dest):\n        return None\n\n    return {\n        \"filename\": filename,\n        \"archive_url\": download_url,\n    }\n\n\ndef main() -&gt; None:\n    print(\"Generating Blender extension repository metadata...\")\n    clean_directory(REPO_DIR)\n\n    filename_to_url: Dict[str, str] = {}\n    for addon in ADDONS:\n        print(f\"Fetching release for {addon['repo']}...\")\n        result = process_addon(addon, REPO_DIR)\n        if result:\n            filename_to_url[result[\"filename\"]] = result[\"archive_url\"]\n\n    if not filename_to_url:\n        print(\"No archives downloaded. Aborting.\")\n        return\n\n    try:\n        run_blender_repo_generator(REPO_DIR, ARCHIVES_DIR)\n    except subprocess.CalledProcessError as exc:\n        print(f\"Blender command failed: {exc}\")\n        return\n\n    generated_index = REPO_DIR / \"index.json\"\n    if not generated_index.exists():\n        print(f\"Generated index not found at {generated_index}\")\n        return\n\n    updated_index = rewrite_archive_urls(generated_index, filename_to_url)\n    with open(OUTPUT_INDEX, \"w\", encoding=\"utf-8\") as handle:\n        json.dump(updated_index, handle, indent=2)\n\n    print(\"-\" * 50)\n    print(f\"✓ Repository index written to {OUTPUT_INDEX}\")\n    print(f\"  Packages: {len(updated_index.get('data', []))}\")\n\n\nif __name__ == \"__main__\":\n    main()\n"
+}
+```
+User decision: **accepted**
+
+Status: **completed**
+
+
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **run_terminal_cmd** • Run command: python update_catalog.py</summary>
+
+```bash
+python update_catalog.py
+```
+
+```
+PS E:\rainys-blender-extensions&gt; python update_catalog.py
+Generating Blender extension repository metadata...
+Fetching release for RaincloudTheDragon/BasedPlayblast...
+  ↳ downloading BasedPlayblast.v2.3.1.zip
+Fetching release for RaincloudTheDragon/Rainys-Bulk-Scene-Tools...
+  ↳ downloading Rainys_Bulk_Scene_Tools.v0.11.0.zip
+Running Blender repo generator:
+  blender --background --factory-startup --command extension server-generate --repo-dir=E:\rainys-blender-extensions\build\repo --archives-dir=E:\rainys-blender-extensions\build\archives                                                      
+Blender 5.0.0 (hash a37564c4df7a built 2025-11-18 11:06:54)
+
+Warning! 'C:\\Program Files\\Blender Foundation\\Blender 5.0\\5.0\\scripts\\startup\\fa_hotkeys.py' has no register function, this is now a requirement for registerable scripts                                                                
+register_class(...):
+Warning: 'Submenu' does not contain '_MT_' with prefix and suffix
+register_class(...):
+Warning: 'Submenu2' does not contain '_MT_' with prefix and suffix
+register_class(...):
+Warning: 'Submenu3' does not contain '_MT_' with prefix and suffix
+register_class(...):
+Warning: 'view3D.Pie_menu' does not contain '_MT_' with prefix and suffix       
+register_class(...):
+Warning: 'CustomPanel' does not contain '_PT_' with prefix and suffix
+register_class(...):
+Warning: 'view3D.Quad_menu' does not contain '_MT_' with prefix and suffix      
+register_class(...):
+Warning: 'Special_Tools_Menu' does not contain '_MT_' with prefix and suffix    
+usage: blender --command extension [-h]
+                                   {server-generate,build,validate,list,sync,update,install,install-file,remove,repo-list,repo-add,repo-remove}                 
+                                   ...
+blender --command extension: error: unrecognized arguments: --archives-dir=E:\rainys-blender-extensions\build\archives                                          
+Blender command failed: Command '['blender', '--background', '--factory-startup', '--command', 'extension', 'server-generate', '--repo-dir=E:\\rainys-blender-extensions\\build\\repo', '--archives-dir=E:\\rainys-blender-extensions\\build\\archives']' returned non-zero exit status 2.                                      
+```
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="unknown" data-tool-name="apply_patch">
+<details>
+<summary>Tool use: **apply_patch**</summary>
+
+
+Parameters:
+
+```json
+{
+  "relativeWorkspacePath": "update_catalog.py"
+}
+```
+Additional data:
+
+```json
+{
+  "codeblockId": "5b7da6c8-5fe7-4adb-8261-2c8ab5287eb4"
+}
+```
+Result:
+
+```json
+{
+  "diff": {
+    "chunks": [
+      {
+        "diffString": "          \"extension\",\n          \"server-generate\",\n-         f\"--repo-dir={repo_dir.resolve()}\",\n-         f\"--archives-dir={archives_dir.resolve()}\",\n+         \"--archives-dir\",\n+         str(archives_dir.resolve()),\n+         \"--repo-dir\",\n+         str(repo_dir.resolve()),\n      ]\n      print(f\"Running Blender repo generator:\\n  {' '.join(str(part) for part in cmd)}\")",
+        "oldStart": 97,
+        "newStart": 97,
+        "oldLines": 6,
+        "newLines": 8,
+        "linesRemoved": 2,
+        "linesAdded": 4
+      }
+    ],
+    "editor": "EDITOR_AI"
+  },
+  "shouldAutoFixLints": true,
+  "resultForModel": "Success. Updated the following files:\nM update_catalog.py",
+  "contentsAfterEdit": "#!/usr/bin/env python3\n\"\"\"\nGenerate Blender extension repository metadata using Blender's server tool.\n\nThis script downloads the latest release archives from GitHub, lets Blender\nvalidate/build the repository metadata, and rewrites the resulting JSON to\npoint back to the public GitHub release URLs.\n\"\"\"\n\nfrom __future__ import annotations\n\nimport json\nimport os\nimport shutil\nimport subprocess\nfrom pathlib import Path\nfrom typing import Dict, List, Optional\n\nimport requests\n\n# --- Configuration ---------------------------------------------------------\n\n# List of addons to include in the repository.\nADDONS = [\n    {\n        \"id\": \"basedplayblast\",\n        \"repo\": \"RaincloudTheDragon/BasedPlayblast\",\n    },\n    {\n        \"id\": \"rainys_bulk_scene_tools\",\n        \"repo\": \"RaincloudTheDragon/Rainys-Bulk-Scene-Tools\",\n    },\n]\n\nBLENDER_EXECUTABLE = os.environ.get(\"BLENDER_PATH\", \"blender\")\nGITHUB_TOKEN = os.environ.get(\"GITHUB_TOKEN\")\n\nBUILD_DIR = Path(\"build\")\nREPO_DIR = BUILD_DIR / \"repo\"\nARCHIVES_DIR = BUILD_DIR / \"archives\"\nOUTPUT_INDEX = Path(\"index.json\")\n\n# ---------------------------------------------------------------------------\n\nsession = requests.Session()\nsession.headers.update({\"Accept\": \"application/vnd.github+json\"})\nif GITHUB_TOKEN:\n    session.headers.update({\"Authorization\": f\"Bearer {GITHUB_TOKEN}\"})\n\n\ndef github_api(url: str) -&gt; Optional[Dict]:\n    try:\n        response = session.get(url, timeout=30)\n        response.raise_for_status()\n        return response.json()\n    except requests.RequestException as exc:\n        print(f\"  ⚠ GitHub request failed: {exc}\")\n        return None\n\n\ndef pick_zip_asset(assets: List[Dict]) -&gt; Optional[Dict]:\n    for asset in assets:\n        name = asset.get(\"name\", \"\")\n        content_type = asset.get(\"content_type\", \"\")\n        if name.endswith(\".zip\") or content_type == \"application/zip\":\n            return asset\n    return None\n\n\ndef download_asset(url: str, destination: Path) -&gt; bool:\n    try:\n        with session.get(url, stream=True, timeout=60) as response:\n            response.raise_for_status()\n            destination.parent.mkdir(parents=True, exist_ok=True)\n            with open(destination, \"wb\") as file_obj:\n                for chunk in response.iter_content(chunk_size=1024 * 1024):\n                    if chunk:\n                        file_obj.write(chunk)\n        return True\n    except requests.RequestException as exc:\n        print(f\"  ⚠ Download failed ({url}): {exc}\")\n        return False\n\n\ndef clean_directory(path: Path) -&gt; None:\n    if path.exists():\n        shutil.rmtree(path)\n    path.mkdir(parents=True, exist_ok=True)\n\n\ndef run_blender_repo_generator(repo_dir: Path, archives_dir: Path) -&gt; None:\n    cmd = [\n        BLENDER_EXECUTABLE,\n        \"--background\",\n        \"--factory-startup\",\n        \"--command\",\n        \"extension\",\n        \"server-generate\",\n        \"--archives-dir\",\n        str(archives_dir.resolve()),\n        \"--repo-dir\",\n        str(repo_dir.resolve()),\n    ]\n    print(f\"Running Blender repo generator:\\n  {' '.join(str(part) for part in cmd)}\")\n    subprocess.run(cmd, check=True)\n\n\ndef rewrite_archive_urls(index_path: Path, url_map: Dict[str, str]) -&gt; Dict:\n    with open(index_path, \"r\", encoding=\"utf-8\") as handle:\n        data = json.load(handle)\n\n    for package in data.get(\"data\", []):\n        archive_value = package.get(\"archive_url\") or package.get(\"archive_path\", \"\")\n        filename = Path(archive_value).name\n        if filename in url_map:\n            package[\"archive_url\"] = url_map[filename]\n\n    return data\n\n\ndef process_addon(addon: Dict, download_dir: Path) -&gt; Optional[Dict[str, str]]:\n    repo = addon[\"repo\"]\n    release = github_api(f\"https://api.github.com/repos/{repo}/releases/latest\")\n    if not release:\n        return None\n\n    asset = pick_zip_asset(release.get(\"assets\", []))\n    if not asset:\n        print(f\"  ⚠ No ZIP asset found for {repo}\")\n        return None\n\n    filename = asset[\"name\"]\n    download_url = asset[\"browser_download_url\"]\n    dest = download_dir / filename\n    print(f\"  ↳ downloading {filename}\")\n    if not download_asset(download_url, dest):\n        return None\n\n    return {\n        \"filename\": filename,\n        \"archive_url\": download_url,\n    }\n\n\ndef main() -&gt; None:\n    print(\"Generating Blender extension repository metadata...\")\n    clean_directory(REPO_DIR)\n\n    filename_to_url: Dict[str, str] = {}\n    for addon in ADDONS:\n        print(f\"Fetching release for {addon['repo']}...\")\n        result = process_addon(addon, REPO_DIR)\n        if result:\n            filename_to_url[result[\"filename\"]] = result[\"archive_url\"]\n\n    if not filename_to_url:\n        print(\"No archives downloaded. Aborting.\")\n        return\n\n    try:\n        run_blender_repo_generator(REPO_DIR, ARCHIVES_DIR)\n    except subprocess.CalledProcessError as exc:\n        print(f\"Blender command failed: {exc}\")\n        return\n\n    generated_index = REPO_DIR / \"index.json\"\n    if not generated_index.exists():\n        print(f\"Generated index not found at {generated_index}\")\n        return\n\n    updated_index = rewrite_archive_urls(generated_index, filename_to_url)\n    with open(OUTPUT_INDEX, \"w\", encoding=\"utf-8\") as handle:\n        json.dump(updated_index, handle, indent=2)\n\n    print(\"-\" * 50)\n    print(f\"✓ Repository index written to {OUTPUT_INDEX}\")\n    print(f\"  Packages: {len(updated_index.get('data', []))}\")\n\n\nif __name__ == \"__main__\":\n    main()\n"
+}
+```
+User decision: **accepted**
+
+Status: **completed**
+
+
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **run_terminal_cmd** • Run command: python update_catalog.py</summary>
+
+```bash
+python update_catalog.py
+```
+
+```
+PS E:\rainys-blender-extensions&gt; python update_catalog.py
+Generating Blender extension repository metadata...
+Fetching release for RaincloudTheDragon/BasedPlayblast...
+  ↳ downloading BasedPlayblast.v2.3.1.zip
+Fetching release for RaincloudTheDragon/Rainys-Bulk-Scene-Tools...
+  ↳ downloading Rainys_Bulk_Scene_Tools.v0.11.0.zip
+Running Blender repo generator:
+  blender --background --factory-startup --command extension server-generate --archives-dir E:\rainys-blender-extensions\build\archives --repo-dir E:\rainys-blender-extensions\build\repo                                                      
+Blender 5.0.0 (hash a37564c4df7a built 2025-11-18 11:06:54)
+
+Warning! 'C:\\Program Files\\Blender Foundation\\Blender 5.0\\5.0\\scripts\\startup\\fa_hotkeys.py' has no register function, this is now a requirement for registerable scripts                                                                
+register_class(...):
+Warning: 'Submenu' does not contain '_MT_' with prefix and suffix
+register_class(...):
+Warning: 'Submenu2' does not contain '_MT_' with prefix and suffix
+register_class(...):
+Warning: 'Submenu3' does not contain '_MT_' with prefix and suffix
+register_class(...):
+Warning: 'view3D.Pie_menu' does not contain '_MT_' with prefix and suffix       
+register_class(...):
+Warning: 'CustomPanel' does not contain '_PT_' with prefix and suffix
+register_class(...):
+Warning: 'view3D.Quad_menu' does not contain '_MT_' with prefix and suffix      
+register_class(...):
+Warning: 'Special_Tools_Menu' does not contain '_MT_' with prefix and suffix    
+usage: blender --command extension [-h]
+                                   {server-generate,build,validate,list,sync,update,install,install-file,remove,repo-list,repo-add,repo-remove}                 
+                                   ...
+blender --command extension: error: unrecognized arguments: --archives-dir E:\rainys-blender-extensions\build\archives                                          
+Blender command failed: Command '['blender', '--background', '--factory-startup', '--command', 'extension', 'server-generate', '--archives-dir', 'E:\\rainys-blender-extensions\\build\\archives', '--repo-dir', 'E:\\rainys-blender-extensions\\build\\repo']' returned non-zero exit status 2.                                
+```
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="unknown" data-tool-name="apply_patch">
+<details>
+<summary>Tool use: **apply_patch**</summary>
+
+
+Parameters:
+
+```json
+{
+  "relativeWorkspacePath": "update_catalog.py"
+}
+```
+Additional data:
+
+```json
+{
+  "codeblockId": "fd445bd4-3e54-4764-801f-e95d3e87390f"
+}
+```
+Result:
+
+```json
+{
+  "diff": {
+    "editor": "EDITOR_AI"
+  },
+  "shouldAutoFixLints": true,
+  "resultForModel": "Success. Updated the following files:\nM update_catalog.py",
+  "contentsAfterEdit": "#!/usr/bin/env python3\n\"\"\"\nGenerate Blender extension repository metadata using Blender's server tool.\n\nThis script downloads the latest release archives from GitHub, lets Blender\nvalidate/build the repository metadata, and rewrites the resulting JSON to\npoint back to the public GitHub release URLs.\n\"\"\"\n\nfrom __future__ import annotations\n\nimport json\nimport os\nimport shutil\nimport subprocess\nfrom pathlib import Path\nfrom typing import Dict, List, Optional\n\nimport requests\n\n# --- Configuration ---------------------------------------------------------\n\n# List of addons to include in the repository.\nADDONS = [\n    {\n        \"id\": \"basedplayblast\",\n        \"repo\": \"RaincloudTheDragon/BasedPlayblast\",\n    },\n    {\n        \"id\": \"rainys_bulk_scene_tools\",\n        \"repo\": \"RaincloudTheDragon/Rainys-Bulk-Scene-Tools\",\n    },\n]\n\nBLENDER_EXECUTABLE = os.environ.get(\"BLENDER_PATH\", \"blender\")\nGITHUB_TOKEN = os.environ.get(\"GITHUB_TOKEN\")\n\nBUILD_DIR = Path(\"build\")\nREPO_DIR = BUILD_DIR / \"repo\"\nARCHIVES_DIR = BUILD_DIR / \"archives\"\nOUTPUT_INDEX = Path(\"index.json\")\n\n# ---------------------------------------------------------------------------\n\nsession = requests.Session()\nsession.headers.update({\"Accept\": \"application/vnd.github+json\"})\nif GITHUB_TOKEN:\n    session.headers.update({\"Authorization\": f\"Bearer {GITHUB_TOKEN}\"})\n\n\ndef github_api(url: str) -&gt; Optional[Dict]:\n    try:\n        response = session.get(url, timeout=30)\n        response.raise_for_status()\n        return response.json()\n    except requests.RequestException as exc:\n        print(f\"  ⚠ GitHub request failed: {exc}\")\n        return None\n\n\ndef pick_zip_asset(assets: List[Dict]) -&gt; Optional[Dict]:\n    for asset in assets:\n        name = asset.get(\"name\", \"\")\n        content_type = asset.get(\"content_type\", \"\")\n        if name.endswith(\".zip\") or content_type == \"application/zip\":\n            return asset\n    return None\n\n\ndef download_asset(url: str, destination: Path) -&gt; bool:\n    try:\n        with session.get(url, stream=True, timeout=60) as response:\n            response.raise_for_status()\n            destination.parent.mkdir(parents=True, exist_ok=True)\n            with open(destination, \"wb\") as file_obj:\n                for chunk in response.iter_content(chunk_size=1024 * 1024):\n                    if chunk:\n                        file_obj.write(chunk)\n        return True\n    except requests.RequestException as exc:\n        print(f\"  ⚠ Download failed ({url}): {exc}\")\n        return False\n\n\ndef clean_directory(path: Path) -&gt; None:\n    if path.exists():\n        shutil.rmtree(path)\n    path.mkdir(parents=True, exist_ok=True)\n\n\ndef run_blender_repo_generator(repo_dir: Path, archives_dir: Path) -&gt; None:\n    cmd = [\n        BLENDER_EXECUTABLE,\n        \"--background\",\n        \"--factory-startup\",\n        \"--command\",\n        \"extension\",\n        \"server-generate\",\n        \"--archives-dir\",\n        str(archives_dir.resolve()),\n        \"--repo-dir\",\n        str(repo_dir.resolve()),\n    ]\n    print(f\"Running Blender repo generator:\\n  {' '.join(str(part) for part in cmd)}\")\n    subprocess.run(cmd, check=True)\n\n\ndef rewrite_archive_urls(index_path: Path, url_map: Dict[str, str]) -&gt; Dict:\n    with open(index_path, \"r\", encoding=\"utf-8\") as handle:\n        data = json.load(handle)\n\n    for package in data.get(\"data\", []):\n        archive_value = package.get(\"archive_url\") or package.get(\"archive_path\", \"\")\n        filename = Path(archive_value).name\n        if filename in url_map:\n            package[\"archive_url\"] = url_map[filename]\n\n    return data\n\n\ndef process_addon(addon: Dict, download_dir: Path) -&gt; Optional[Dict[str, str]]:\n    repo = addon[\"repo\"]\n    release = github_api(f\"https://api.github.com/repos/{repo}/releases/latest\")\n    if not release:\n        return None\n\n    asset = pick_zip_asset(release.get(\"assets\", []))\n    if not asset:\n        print(f\"  ⚠ No ZIP asset found for {repo}\")\n        return None\n\n    filename = asset[\"name\"]\n    download_url = asset[\"browser_download_url\"]\n    dest = download_dir / filename\n    print(f\"  ↳ downloading {filename}\")\n    if not download_asset(download_url, dest):\n        return None\n\n    return {\n        \"filename\": filename,\n        \"archive_url\": download_url,\n    }\n\n\ndef main() -&gt; None:\n    print(\"Generating Blender extension repository metadata...\")\n    clean_directory(REPO_DIR)\n\n    filename_to_url: Dict[str, str] = {}\n    for addon in ADDONS:\n        print(f\"Fetching release for {addon['repo']}...\")\n        result = process_addon(addon, REPO_DIR)\n        if result:\n            filename_to_url[result[\"filename\"]] = result[\"archive_url\"]\n\n    if not filename_to_url:\n        print(\"No archives downloaded. Aborting.\")\n        return\n\n    try:\n        run_blender_repo_generator(REPO_DIR, ARCHIVES_DIR)\n    except subprocess.CalledProcessError as exc:\n        print(f\"Blender command failed: {exc}\")\n        return\n\n    generated_index = REPO_DIR / \"index.json\"\n    if not generated_index.exists():\n        print(f\"Generated index not found at {generated_index}\")\n        return\n\n    updated_index = rewrite_archive_urls(generated_index, filename_to_url)\n    with open(OUTPUT_INDEX, \"w\", encoding=\"utf-8\") as handle:\n        json.dump(updated_index, handle, indent=2)\n\n    print(\"-\" * 50)\n    print(f\"✓ Repository index written to {OUTPUT_INDEX}\")\n    print(f\"  Packages: {len(updated_index.get('data', []))}\")\n\n\nif __name__ == \"__main__\":\n    main()\n"
+}
+```
+User decision: **accepted**
+
+Status: **completed**
+
+
+</details>
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+**Analyzing blender extension command usage**</details></think>
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **run_terminal_cmd** • Run command: blender --command extension --help</summary>
+
+```bash
+blender --command extension --help
+```
+
+```
+PS E:\rainys-blender-extensions&gt; blender --command extension --help             
+
+Warning! 'C:\\Program Files\\Blender Foundation\\Blender 5.0\\5.0\\scripts\\startup\\fa_hotkeys.py' has no register function, this is now a requirement for registerable scripts                                                                
+register_class(...):
+Warning: 'Submenu' does not contain '_MT_' with prefix and suffix
+register_class(...):
+Warning: 'Submenu2' does not contain '_MT_' with prefix and suffix
+register_class(...):
+Warning: 'Submenu3' does not contain '_MT_' with prefix and suffix
+register_class(...):
+Warning: 'view3D.Pie_menu' does not contain '_MT_' with prefix and suffix       
+register_class(...):
+Warning: 'CustomPanel' does not contain '_PT_' with prefix and suffix
+register_class(...):
+Warning: 'view3D.Quad_menu' does not contain '_MT_' with prefix and suffix      
+register_class(...):
+Warning: 'Special_Tools_Menu' does not contain '_MT_' with prefix and suffix    
+module changed on disk: 'C:\\Program Files\\Blender Foundation\\Blender 5.0\\5.0\\scripts\\startup\\delete_withoutConfirm.py' reloading...                      
+Cannot read ARP prefs
+Update armature presets...
+Warning: add-on missing 'bl_info', this can cause poor performance!: 'C:\\Program Files\\Blender Foundation\\Blender 5.0\\portable\\scripts\\addons\\brushstroke_tools\\__init__.py'                                                            
+LOADED UPDATER!
+
+### Loading Rokoko Studio Live for Blender...
+### Loaded Rokoko Studio Live for Blender successfully!
+
+animation_layers_updater addon: Verbose is enabled
+animation_layers_updater addon: Read in JSON settings from file
+🔄 blenderkit: Verbose is enabled
+🔄 blenderkit: Read in JSON settings from file
+ℹ️  blenderkit: Ports reordered so first port is now 62485 (previous index was 00) [17:36:48.986, client_lib.py:125]                                             
+register_class(...):
+Warning: 'List_View' does not contain '_UL_' with prefix and suffix
+Addon preferences registered successfully: &lt;bpy_struct, Addon("rainys_bulk_scene_tools") at 0x0000027BFFC528E0&gt;                                                 
+Bulk Path Management registered successfully
+[Remove Static FCurves] registered
+Reloading external rigs...
+Reloading external metarigs...
+BlenderMCP addon registered
+cc_blender_tools_updater updater verbose is enabled
+cc_blender_tools_updater Updater: Read in JSON settings from file
+register_class(...):
+Warning: 'CCIC_ImportMixBones_UL_List' does not have upper case alphanumeric prefix                                                                             
+register_class(...):
+Warning: 'CCIC_RigMixBones_UL_List' does not have upper case alphanumeric prefix
+Created history step 3a3371b8-b829-450c-a50f-1108d7d8570e
+ℹ️  blenderkit: Created new search history step [17:36:50.586, search.py:1853]  
+ℹ️  blenderkit: No temporarily enabled addons to clean up [17:36:50.586, downloaad.py:391]                                                                       
+Render Preset --- Startup handler
+Render Preset --- Reloading presets
+Render Preset --- Loaded : N:\2. ASSETS\Addons\render_preset\EEVEE_AMZN.json
+Render Preset --- Loaded : N:\2. ASSETS\Addons\render_preset\Cycles_High.json   
+Render Preset --- Loaded : N:\2. ASSETS\Addons\render_preset\ASSET_THUMB.json
+Render Preset --- Loaded : N:\2. ASSETS\Addons\render_preset\Cycles_Low.json    
+Render Preset --- Loaded : N:\2. ASSETS\Addons\render_preset\EEVEE_AMZN_VERTICAL.json                                                                           
+Render Preset --- Loaded : N:\2. ASSETS\Addons\render_preset\EEVEE_AMZN_VERT_STILL.json                                                                         
+Render Preset --- Loaded : N:\2. ASSETS\Addons\render_preset\Cycles_4kSuperRes.json                                                                             
+Render Preset --- Loaded : N:\2. ASSETS\Addons\render_preset\EEVEE_AMZN_STILL.json                                                                              
+Render Preset --- Loaded : N:\2. ASSETS\Addons\render_preset\Cycles_Med.json
+Render Preset --- Presets reloaded
+usage: blender --command extension [-h]
+                                   {server-generate,build,validate,list,sync,update,install,install-file,remove,repo-list,repo-add,repo-remove}                 
+                                   ...
+
+Command for managing Blender extensions.
+
+options:
+  -h, --help            show this help message and exit
+
+subcommands:
+
+  {server-generate,build,validate,list,sync,update,install,install-file,remove,repo-list,repo-add,repo-remove}                                                  
+    server-generate     Create a listing from all packages.
+    build               Build a package.
+    validate            Validate a package.
+    list                List all packages.
+    sync                Synchronize with remote repositories.
+    update              Upgrade any outdated packages.
+    install             Install packages.
+    install-file        Install package from file.
+    remove              Remove packages.
+    repo-list           List repositories.
+    repo-add            Add repository.
+    repo-remove         Remove repository.
+### Unloading Rokoko Studio Live for Blender...
+### Unloaded Rokoko Studio Live for Blender successfully!
+
+ℹ️  blenderkit: Unregistering BlenderKit add-on [17:36:50.724, __init__.py:2659]
+ℹ️  blenderkit: No temporarily enabled addons to clean up [17:36:50.724, downloaad.py:391]                                                                       
+[Remove Static FCurves] unregistered
+BlenderMCP addon unregistered
+Traceback (most recent call last):
+  File "C:\Program Files\Blender Foundation\Blender 5.0\5.0\scripts\modules\bpy\utils\__init__.py", line 225, in _unregister_module_call                        
+    unregister()
+  File "C:\Program Files\Blender Foundation\Blender 5.0\5.0\scripts\modules\bpy\utils\__init__.py", line 971, in unregister                                     
+    unregister_class(cls)
+RuntimeError: unregister_class(...):, missing bl_rna attribute from '_RNAMeta' instance (may not be registered)                                                 
+```
+</details>
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+**Checking Blender server-generate command usage**</details></think>
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **run_terminal_cmd** • Run command: blender --command extension server-generate -h</summary>
+
+```bash
+blender --command extension server-generate -h
+```
+
+```
+Warning! 'C:\\Program Files\\Blender Foundation\\Blender 5.0\\5.0\\scripts\\startup\\fa_hotkeys.py' has no register function, this is now a requirement for registerable scripts                                                                
+register_class(...):
+Warning: 'Submenu' does not contain '_MT_' with prefix and suffix
+register_class(...):
+Warning: 'Submenu2' does not contain '_MT_' with prefix and suffix
+register_class(...):
+Warning: 'Submenu3' does not contain '_MT_' with prefix and suffix
+register_class(...):
+Warning: 'view3D.Pie_menu' does not contain '_MT_' with prefix and suffix       
+register_class(...):
+Warning: 'CustomPanel' does not contain '_PT_' with prefix and suffix
+register_class(...):
+Warning: 'view3D.Quad_menu' does not contain '_MT_' with prefix and suffix      
+register_class(...):
+Warning: 'Special_Tools_Menu' does not contain '_MT_' with prefix and suffix    
+module changed on disk: 'C:\\Program Files\\Blender Foundation\\Blender 5.0\\5.0\\scripts\\startup\\delete_withoutConfirm.py' reloading...                      
+Cannot read ARP prefs
+Update armature presets...
+Warning: add-on missing 'bl_info', this can cause poor performance!: 'C:\\Program Files\\Blender Foundation\\Blender 5.0\\portable\\scripts\\addons\\brushstroke_tools\\__init__.py'                                                            
+LOADED UPDATER!
+
+### Loading Rokoko Studio Live for Blender...
+### Loaded Rokoko Studio Live for Blender successfully!
+
+animation_layers_updater addon: Verbose is enabled
+animation_layers_updater addon: Read in JSON settings from file
+🔄 blenderkit: Verbose is enabled
+🔄 blenderkit: Read in JSON settings from file
+ℹ️  blenderkit: Ports reordered so first port is now 62485 (previous index was 00) [17:36:59.227, client_lib.py:125]                                             
+register_class(...):
+Warning: 'List_View' does not contain '_UL_' with prefix and suffix
+Addon preferences registered successfully: &lt;bpy_struct, Addon("rainys_bulk_scene_tools") at 0x000001B1C87928E0&gt;                                                 
+Bulk Path Management registered successfully
+[Remove Static FCurves] registered
+Reloading external rigs...
+Reloading external metarigs...
+BlenderMCP addon registered
+cc_blender_tools_updater updater verbose is enabled
+cc_blender_tools_updater Updater: Read in JSON settings from file
+register_class(...):
+Warning: 'CCIC_ImportMixBones_UL_List' does not have upper case alphanumeric prefix                                                                             
+register_class(...):
+Warning: 'CCIC_RigMixBones_UL_List' does not have upper case alphanumeric prefix
+Created history step 9f6de0be-92c8-41ce-83d6-ec3d311f9baf
+ℹ️  blenderkit: Created new search history step [17:37:00.886, search.py:1853]  
+ℹ️  blenderkit: No temporarily enabled addons to clean up [17:37:00.886, downloaad.py:391]                                                                       
+Render Preset --- Startup handler
+Render Preset --- Reloading presets
+Render Preset --- Loaded : N:\2. ASSETS\Addons\render_preset\EEVEE_AMZN.json
+Render Preset --- Loaded : N:\2. ASSETS\Addons\render_preset\Cycles_High.json   
+Render Preset --- Loaded : N:\2. ASSETS\Addons\render_preset\ASSET_THUMB.json   
+Render Preset --- Loaded : N:\2. ASSETS\Addons\render_preset\Cycles_Low.json    
+Render Preset --- Loaded : N:\2. ASSETS\Addons\render_preset\EEVEE_AMZN_VERTICAL.json                                                                           
+Render Preset --- Loaded : N:\2. ASSETS\Addons\render_preset\EEVEE_AMZN_VERT_STILL.json                                                                         
+Render Preset --- Loaded : N:\2. ASSETS\Addons\render_preset\Cycles_4kSuperRes.json                                                                             
+Render Preset --- Loaded : N:\2. ASSETS\Addons\render_preset\EEVEE_AMZN_STILL.json                                                                              
+Render Preset --- Loaded : N:\2. ASSETS\Addons\render_preset\Cycles_Med.json    
+Render Preset --- Presets reloaded
+usage: blender --command extension server-generate [-h] --repo-dir REPO_DIR
+                                                   [--repo-config REPO_CONFIG]  
+                                                   [--html]
+                                                   [--html-template HTML_TEMPLATE_FILE]                                                                         
+
+Generate a listing of all packages stored in a directory.
+This can be used to host packages which only requires static-file hosting.      
+
+options:
+  -h, --help            show this help message and exit
+  --repo-dir REPO_DIR   The remote repository directory.
+  --repo-config REPO_CONFIG
+                        An optional server configuration to include information which can't be detected.                                                        
+                        Defaults to &#96;&#96;blender_repo.toml&#96;&#96; (in the repository directory).                                                                        
+
+                        This can be used to defined blocked extensions, for example ::                                                                          
+
+                           schema_version = "1.0.0"
+
+                           [[blocklist]]
+                           id = "my_example_package"
+                           reason = "Explanation for why this extension was blocked"                                                                            
+                           [[blocklist]]
+                           id = "other_extenison"
+                           reason = "Another reason for why this is blocked"    
+
+  --html                Create a HTML file (&#96;&#96;index.html&#96;&#96;) as well as the repository JSON                                                                      
+                        to support browsing extensions online with static-hosting.                                                                              
+  --html-template HTML_TEMPLATE_FILE
+                        An optional HTML file path to override the default HTML template with your own.                                                         
+
+                        The following keys will be replaced with generated contents:                                                                            
+
+                        - &#96;&#96;${body}&#96;&#96; is replaced the extensions contents.      
+                        - &#96;&#96;${date}&#96;&#96; is replaced the creation date.
+### Unloading Rokoko Studio Live for Blender...
+### Unloaded Rokoko Studio Live for Blender successfully!
+
+ℹ️  blenderkit: Unregistering BlenderKit add-on [17:37:00.945, __init__.py:2659]
+ℹ️  blenderkit: No temporarily enabled addons to clean up [17:37:00.946, downloaad.py:391]                                                                       
+[Remove Static FCurves] unregistered
+BlenderMCP addon unregistered
+Traceback (most recent call last):
+  File "C:\Program Files\Blender Foundation\Blender 5.0\5.0\scripts\modules\bpy\utils\__init__.py", line 225, in _unregister_module_call                        
+    unregister()
+  File "C:\Program Files\Blender Foundation\Blender 5.0\5.0\scripts\modules\bpy\utils\__init__.py", line 971, in unregister                                     
+    unregister_class(cls)
+RuntimeError: unregister_class(...):, missing bl_rna attribute from '_RNAMeta' instance (may not be registered)                                                 
+```
+</details>
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+**Adjusting download and command behavior**
+
+I’m deciding to revert to downloading the zipped files directly into the repo directory, removing the ARCHIVES_DIR variable for simplicity. The generator command will run with just the repo directory argument, including the `--factory-startup` flag to reduce warnings, even though some add-ons might still cause persistent warnings despite this flag. I'll patch the code to reflect these changes and clean up the previous modifications accordingly.</details></think>
+
+---
+
+The model made no changes to the file.
+
+---
+
+<think><details><summary>Thought Process</summary>
+**Reviewing file context**</details></think>
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: update_catalog.py</summary>
+
+</details>
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+**Preparing patch for constants and run function**</details></think>
+
+---
+
+<tool-use data-tool-type="unknown" data-tool-name="apply_patch">
+<details>
+<summary>Tool use: **apply_patch**</summary>
+
+
+Parameters:
+
+```json
+{
+  "relativeWorkspacePath": "update_catalog.py"
+}
+```
+Additional data:
+
+```json
+{
+  "codeblockId": "27978da2-adc0-4f4f-8eaf-aa573b774f7f"
+}
+```
+Result:
+
+```json
+{
+  "diff": {
+    "chunks": [
+      {
+        "diffString": "  BUILD_DIR = Path(\"build\")\n  REPO_DIR = BUILD_DIR / \"repo\"\n- ARCHIVES_DIR = BUILD_DIR / \"archives\"\n  OUTPUT_INDEX = Path(\"index.json\")\n  ",
+        "oldStart": 38,
+        "newStart": 38,
+        "oldLines": 5,
+        "newLines": 4,
+        "linesRemoved": 1
+      }
+    ],
+    "editor": "EDITOR_AI"
+  },
+  "shouldAutoFixLints": true,
+  "resultForModel": "Success. Updated the following files:\nM update_catalog.py",
+  "contentsAfterEdit": "#!/usr/bin/env python3\n\"\"\"\nGenerate Blender extension repository metadata using Blender's server tool.\n\nThis script downloads the latest release archives from GitHub, lets Blender\nvalidate/build the repository metadata, and rewrites the resulting JSON to\npoint back to the public GitHub release URLs.\n\"\"\"\n\nfrom __future__ import annotations\n\nimport json\nimport os\nimport shutil\nimport subprocess\nfrom pathlib import Path\nfrom typing import Dict, List, Optional\n\nimport requests\n\n# --- Configuration ---------------------------------------------------------\n\n# List of addons to include in the repository.\nADDONS = [\n    {\n        \"id\": \"basedplayblast\",\n        \"repo\": \"RaincloudTheDragon/BasedPlayblast\",\n    },\n    {\n        \"id\": \"rainys_bulk_scene_tools\",\n        \"repo\": \"RaincloudTheDragon/Rainys-Bulk-Scene-Tools\",\n    },\n]\n\nBLENDER_EXECUTABLE = os.environ.get(\"BLENDER_PATH\", \"blender\")\nGITHUB_TOKEN = os.environ.get(\"GITHUB_TOKEN\")\n\nBUILD_DIR = Path(\"build\")\nREPO_DIR = BUILD_DIR / \"repo\"\nOUTPUT_INDEX = Path(\"index.json\")\n\n# ---------------------------------------------------------------------------\n\nsession = requests.Session()\nsession.headers.update({\"Accept\": \"application/vnd.github+json\"})\nif GITHUB_TOKEN:\n    session.headers.update({\"Authorization\": f\"Bearer {GITHUB_TOKEN}\"})\n\n\ndef github_api(url: str) -&gt; Optional[Dict]:\n    try:\n        response = session.get(url, timeout=30)\n        response.raise_for_status()\n        return response.json()\n    except requests.RequestException as exc:\n        print(f\"  ⚠ GitHub request failed: {exc}\")\n        return None\n\n\ndef pick_zip_asset(assets: List[Dict]) -&gt; Optional[Dict]:\n    for asset in assets:\n        name = asset.get(\"name\", \"\")\n        content_type = asset.get(\"content_type\", \"\")\n        if name.endswith(\".zip\") or content_type == \"application/zip\":\n            return asset\n    return None\n\n\ndef download_asset(url: str, destination: Path) -&gt; bool:\n    try:\n        with session.get(url, stream=True, timeout=60) as response:\n            response.raise_for_status()\n            destination.parent.mkdir(parents=True, exist_ok=True)\n            with open(destination, \"wb\") as file_obj:\n                for chunk in response.iter_content(chunk_size=1024 * 1024):\n                    if chunk:\n                        file_obj.write(chunk)\n        return True\n    except requests.RequestException as exc:\n        print(f\"  ⚠ Download failed ({url}): {exc}\")\n        return False\n\n\ndef clean_directory(path: Path) -&gt; None:\n    if path.exists():\n        shutil.rmtree(path)\n    path.mkdir(parents=True, exist_ok=True)\n\n\ndef run_blender_repo_generator(repo_dir: Path, archives_dir: Path) -&gt; None:\n    cmd = [\n        BLENDER_EXECUTABLE,\n        \"--background\",\n        \"--factory-startup\",\n        \"--command\",\n        \"extension\",\n        \"server-generate\",\n        \"--archives-dir\",\n        str(archives_dir.resolve()),\n        \"--repo-dir\",\n        str(repo_dir.resolve()),\n    ]\n    print(f\"Running Blender repo generator:\\n  {' '.join(str(part) for part in cmd)}\")\n    subprocess.run(cmd, check=True)\n\n\ndef rewrite_archive_urls(index_path: Path, url_map: Dict[str, str]) -&gt; Dict:\n    with open(index_path, \"r\", encoding=\"utf-8\") as handle:\n        data = json.load(handle)\n\n    for package in data.get(\"data\", []):\n        archive_value = package.get(\"archive_url\") or package.get(\"archive_path\", \"\")\n        filename = Path(archive_value).name\n        if filename in url_map:\n            package[\"archive_url\"] = url_map[filename]\n\n    return data\n\n\ndef process_addon(addon: Dict, download_dir: Path) -&gt; Optional[Dict[str, str]]:\n    repo = addon[\"repo\"]\n    release = github_api(f\"https://api.github.com/repos/{repo}/releases/latest\")\n    if not release:\n        return None\n\n    asset = pick_zip_asset(release.get(\"assets\", []))\n    if not asset:\n        print(f\"  ⚠ No ZIP asset found for {repo}\")\n        return None\n\n    filename = asset[\"name\"]\n    download_url = asset[\"browser_download_url\"]\n    dest = download_dir / filename\n    print(f\"  ↳ downloading {filename}\")\n    if not download_asset(download_url, dest):\n        return None\n\n    return {\n        \"filename\": filename,\n        \"archive_url\": download_url,\n    }\n\n\ndef main() -&gt; None:\n    print(\"Generating Blender extension repository metadata...\")\n    clean_directory(REPO_DIR)\n\n    filename_to_url: Dict[str, str] = {}\n    for addon in ADDONS:\n        print(f\"Fetching release for {addon['repo']}...\")\n        result = process_addon(addon, REPO_DIR)\n        if result:\n            filename_to_url[result[\"filename\"]] = result[\"archive_url\"]\n\n    if not filename_to_url:\n        print(\"No archives downloaded. Aborting.\")\n        return\n\n    try:\n        run_blender_repo_generator(REPO_DIR, ARCHIVES_DIR)\n    except subprocess.CalledProcessError as exc:\n        print(f\"Blender command failed: {exc}\")\n        return\n\n    generated_index = REPO_DIR / \"index.json\"\n    if not generated_index.exists():\n        print(f\"Generated index not found at {generated_index}\")\n        return\n\n    updated_index = rewrite_archive_urls(generated_index, filename_to_url)\n    with open(OUTPUT_INDEX, \"w\", encoding=\"utf-8\") as handle:\n        json.dump(updated_index, handle, indent=2)\n\n    print(\"-\" * 50)\n    print(f\"✓ Repository index written to {OUTPUT_INDEX}\")\n    print(f\"  Packages: {len(updated_index.get('data', []))}\")\n\n\nif __name__ == \"__main__\":\n    main()\n"
+}
+```
+User decision: **accepted**
+
+Status: **completed**
+
+
+</details>
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+**Updating run function**</details></think>
+
+---
+
+<tool-use data-tool-type="unknown" data-tool-name="apply_patch">
+<details>
+<summary>Tool use: **apply_patch**</summary>
+
+
+Parameters:
+
+```json
+{
+  "relativeWorkspacePath": "update_catalog.py"
+}
+```
+Additional data:
+
+```json
+{
+  "codeblockId": "b5a90bc0-a5c5-4357-9d9a-0896d6fc44ab"
+}
+```
+Result:
+
+```json
+{
+  "diff": {
+    "chunks": [
+      {
+        "diffString": "  \n  \n- def run_blender_repo_generator(repo_dir: Path, archives_dir: Path) -&gt; None:\n+ def run_blender_repo_generator(repo_dir: Path) -&gt; None:\n      cmd = [\n          BLENDER_EXECUTABLE,",
+        "oldStart": 88,
+        "newStart": 88,
+        "oldLines": 5,
+        "newLines": 5,
+        "linesRemoved": 1,
+        "linesAdded": 1
+      },
+      {
+        "diffString": "          \"extension\",\n          \"server-generate\",\n-         \"--archives-dir\",\n-         str(archives_dir.resolve()),\n          \"--repo-dir\",\n          str(repo_dir.resolve()),",
+        "oldStart": 96,
+        "newStart": 96,
+        "oldLines": 6,
+        "newLines": 4,
+        "linesRemoved": 2
+      }
+    ],
+    "editor": "EDITOR_AI"
+  },
+  "shouldAutoFixLints": true,
+  "resultForModel": "Success. Updated the following files:\nM update_catalog.py",
+  "contentsAfterEdit": "#!/usr/bin/env python3\n\"\"\"\nGenerate Blender extension repository metadata using Blender's server tool.\n\nThis script downloads the latest release archives from GitHub, lets Blender\nvalidate/build the repository metadata, and rewrites the resulting JSON to\npoint back to the public GitHub release URLs.\n\"\"\"\n\nfrom __future__ import annotations\n\nimport json\nimport os\nimport shutil\nimport subprocess\nfrom pathlib import Path\nfrom typing import Dict, List, Optional\n\nimport requests\n\n# --- Configuration ---------------------------------------------------------\n\n# List of addons to include in the repository.\nADDONS = [\n    {\n        \"id\": \"basedplayblast\",\n        \"repo\": \"RaincloudTheDragon/BasedPlayblast\",\n    },\n    {\n        \"id\": \"rainys_bulk_scene_tools\",\n        \"repo\": \"RaincloudTheDragon/Rainys-Bulk-Scene-Tools\",\n    },\n]\n\nBLENDER_EXECUTABLE = os.environ.get(\"BLENDER_PATH\", \"blender\")\nGITHUB_TOKEN = os.environ.get(\"GITHUB_TOKEN\")\n\nBUILD_DIR = Path(\"build\")\nREPO_DIR = BUILD_DIR / \"repo\"\nOUTPUT_INDEX = Path(\"index.json\")\n\n# ---------------------------------------------------------------------------\n\nsession = requests.Session()\nsession.headers.update({\"Accept\": \"application/vnd.github+json\"})\nif GITHUB_TOKEN:\n    session.headers.update({\"Authorization\": f\"Bearer {GITHUB_TOKEN}\"})\n\n\ndef github_api(url: str) -&gt; Optional[Dict]:\n    try:\n        response = session.get(url, timeout=30)\n        response.raise_for_status()\n        return response.json()\n    except requests.RequestException as exc:\n        print(f\"  ⚠ GitHub request failed: {exc}\")\n        return None\n\n\ndef pick_zip_asset(assets: List[Dict]) -&gt; Optional[Dict]:\n    for asset in assets:\n        name = asset.get(\"name\", \"\")\n        content_type = asset.get(\"content_type\", \"\")\n        if name.endswith(\".zip\") or content_type == \"application/zip\":\n            return asset\n    return None\n\n\ndef download_asset(url: str, destination: Path) -&gt; bool:\n    try:\n        with session.get(url, stream=True, timeout=60) as response:\n            response.raise_for_status()\n            destination.parent.mkdir(parents=True, exist_ok=True)\n            with open(destination, \"wb\") as file_obj:\n                for chunk in response.iter_content(chunk_size=1024 * 1024):\n                    if chunk:\n                        file_obj.write(chunk)\n        return True\n    except requests.RequestException as exc:\n        print(f\"  ⚠ Download failed ({url}): {exc}\")\n        return False\n\n\ndef clean_directory(path: Path) -&gt; None:\n    if path.exists():\n        shutil.rmtree(path)\n    path.mkdir(parents=True, exist_ok=True)\n\n\ndef run_blender_repo_generator(repo_dir: Path) -&gt; None:\n    cmd = [\n        BLENDER_EXECUTABLE,\n        \"--background\",\n        \"--factory-startup\",\n        \"--command\",\n        \"extension\",\n        \"server-generate\",\n        \"--repo-dir\",\n        str(repo_dir.resolve()),\n    ]\n    print(f\"Running Blender repo generator:\\n  {' '.join(str(part) for part in cmd)}\")\n    subprocess.run(cmd, check=True)\n\n\ndef rewrite_archive_urls(index_path: Path, url_map: Dict[str, str]) -&gt; Dict:\n    with open(index_path, \"r\", encoding=\"utf-8\") as handle:\n        data = json.load(handle)\n\n    for package in data.get(\"data\", []):\n        archive_value = package.get(\"archive_url\") or package.get(\"archive_path\", \"\")\n        filename = Path(archive_value).name\n        if filename in url_map:\n            package[\"archive_url\"] = url_map[filename]\n\n    return data\n\n\ndef process_addon(addon: Dict, download_dir: Path) -&gt; Optional[Dict[str, str]]:\n    repo = addon[\"repo\"]\n    release = github_api(f\"https://api.github.com/repos/{repo}/releases/latest\")\n    if not release:\n        return None\n\n    asset = pick_zip_asset(release.get(\"assets\", []))\n    if not asset:\n        print(f\"  ⚠ No ZIP asset found for {repo}\")\n        return None\n\n    filename = asset[\"name\"]\n    download_url = asset[\"browser_download_url\"]\n    dest = download_dir / filename\n    print(f\"  ↳ downloading {filename}\")\n    if not download_asset(download_url, dest):\n        return None\n\n    return {\n        \"filename\": filename,\n        \"archive_url\": download_url,\n    }\n\n\ndef main() -&gt; None:\n    print(\"Generating Blender extension repository metadata...\")\n    clean_directory(REPO_DIR)\n\n    filename_to_url: Dict[str, str] = {}\n    for addon in ADDONS:\n        print(f\"Fetching release for {addon['repo']}...\")\n        result = process_addon(addon, REPO_DIR)\n        if result:\n            filename_to_url[result[\"filename\"]] = result[\"archive_url\"]\n\n    if not filename_to_url:\n        print(\"No archives downloaded. Aborting.\")\n        return\n\n    try:\n        run_blender_repo_generator(REPO_DIR, ARCHIVES_DIR)\n    except subprocess.CalledProcessError as exc:\n        print(f\"Blender command failed: {exc}\")\n        return\n\n    generated_index = REPO_DIR / \"index.json\"\n    if not generated_index.exists():\n        print(f\"Generated index not found at {generated_index}\")\n        return\n\n    updated_index = rewrite_archive_urls(generated_index, filename_to_url)\n    with open(OUTPUT_INDEX, \"w\", encoding=\"utf-8\") as handle:\n        json.dump(updated_index, handle, indent=2)\n\n    print(\"-\" * 50)\n    print(f\"✓ Repository index written to {OUTPUT_INDEX}\")\n    print(f\"  Packages: {len(updated_index.get('data', []))}\")\n\n\nif __name__ == \"__main__\":\n    main()\n"
+}
+```
+User decision: **accepted**
+
+Status: **completed**
+
+
+</details>
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+**Updating the call**</details></think>
+
+---
+
+<tool-use data-tool-type="unknown" data-tool-name="apply_patch">
+<details>
+<summary>Tool use: **apply_patch**</summary>
+
+
+Parameters:
+
+```json
+{
+  "relativeWorkspacePath": "update_catalog.py"
+}
+```
+Additional data:
+
+```json
+{
+  "codeblockId": "901c7bb6-8830-4e23-af36-0b09effabcdd"
+}
+```
+Result:
+
+```json
+{
+  "diff": {
+    "chunks": [
+      {
+        "diffString": "  \n      try:\n-         run_blender_repo_generator(REPO_DIR, ARCHIVES_DIR)\n+         run_blender_repo_generator(REPO_DIR)\n      except subprocess.CalledProcessError as exc:\n          print(f\"Blender command failed: {exc}\")",
+        "oldStart": 156,
+        "newStart": 156,
+        "oldLines": 5,
+        "newLines": 5,
+        "linesRemoved": 1,
+        "linesAdded": 1
+      }
+    ],
+    "editor": "EDITOR_AI"
+  },
+  "shouldAutoFixLints": true,
+  "resultForModel": "Success. Updated the following files:\nM update_catalog.py",
+  "contentsAfterEdit": "#!/usr/bin/env python3\n\"\"\"\nGenerate Blender extension repository metadata using Blender's server tool.\n\nThis script downloads the latest release archives from GitHub, lets Blender\nvalidate/build the repository metadata, and rewrites the resulting JSON to\npoint back to the public GitHub release URLs.\n\"\"\"\n\nfrom __future__ import annotations\n\nimport json\nimport os\nimport shutil\nimport subprocess\nfrom pathlib import Path\nfrom typing import Dict, List, Optional\n\nimport requests\n\n# --- Configuration ---------------------------------------------------------\n\n# List of addons to include in the repository.\nADDONS = [\n    {\n        \"id\": \"basedplayblast\",\n        \"repo\": \"RaincloudTheDragon/BasedPlayblast\",\n    },\n    {\n        \"id\": \"rainys_bulk_scene_tools\",\n        \"repo\": \"RaincloudTheDragon/Rainys-Bulk-Scene-Tools\",\n    },\n]\n\nBLENDER_EXECUTABLE = os.environ.get(\"BLENDER_PATH\", \"blender\")\nGITHUB_TOKEN = os.environ.get(\"GITHUB_TOKEN\")\n\nBUILD_DIR = Path(\"build\")\nREPO_DIR = BUILD_DIR / \"repo\"\nOUTPUT_INDEX = Path(\"index.json\")\n\n# ---------------------------------------------------------------------------\n\nsession = requests.Session()\nsession.headers.update({\"Accept\": \"application/vnd.github+json\"})\nif GITHUB_TOKEN:\n    session.headers.update({\"Authorization\": f\"Bearer {GITHUB_TOKEN}\"})\n\n\ndef github_api(url: str) -&gt; Optional[Dict]:\n    try:\n        response = session.get(url, timeout=30)\n        response.raise_for_status()\n        return response.json()\n    except requests.RequestException as exc:\n        print(f\"  ⚠ GitHub request failed: {exc}\")\n        return None\n\n\ndef pick_zip_asset(assets: List[Dict]) -&gt; Optional[Dict]:\n    for asset in assets:\n        name = asset.get(\"name\", \"\")\n        content_type = asset.get(\"content_type\", \"\")\n        if name.endswith(\".zip\") or content_type == \"application/zip\":\n            return asset\n    return None\n\n\ndef download_asset(url: str, destination: Path) -&gt; bool:\n    try:\n        with session.get(url, stream=True, timeout=60) as response:\n            response.raise_for_status()\n            destination.parent.mkdir(parents=True, exist_ok=True)\n            with open(destination, \"wb\") as file_obj:\n                for chunk in response.iter_content(chunk_size=1024 * 1024):\n                    if chunk:\n                        file_obj.write(chunk)\n        return True\n    except requests.RequestException as exc:\n        print(f\"  ⚠ Download failed ({url}): {exc}\")\n        return False\n\n\ndef clean_directory(path: Path) -&gt; None:\n    if path.exists():\n        shutil.rmtree(path)\n    path.mkdir(parents=True, exist_ok=True)\n\n\ndef run_blender_repo_generator(repo_dir: Path) -&gt; None:\n    cmd = [\n        BLENDER_EXECUTABLE,\n        \"--background\",\n        \"--factory-startup\",\n        \"--command\",\n        \"extension\",\n        \"server-generate\",\n        \"--repo-dir\",\n        str(repo_dir.resolve()),\n    ]\n    print(f\"Running Blender repo generator:\\n  {' '.join(str(part) for part in cmd)}\")\n    subprocess.run(cmd, check=True)\n\n\ndef rewrite_archive_urls(index_path: Path, url_map: Dict[str, str]) -&gt; Dict:\n    with open(index_path, \"r\", encoding=\"utf-8\") as handle:\n        data = json.load(handle)\n\n    for package in data.get(\"data\", []):\n        archive_value = package.get(\"archive_url\") or package.get(\"archive_path\", \"\")\n        filename = Path(archive_value).name\n        if filename in url_map:\n            package[\"archive_url\"] = url_map[filename]\n\n    return data\n\n\ndef process_addon(addon: Dict, download_dir: Path) -&gt; Optional[Dict[str, str]]:\n    repo = addon[\"repo\"]\n    release = github_api(f\"https://api.github.com/repos/{repo}/releases/latest\")\n    if not release:\n        return None\n\n    asset = pick_zip_asset(release.get(\"assets\", []))\n    if not asset:\n        print(f\"  ⚠ No ZIP asset found for {repo}\")\n        return None\n\n    filename = asset[\"name\"]\n    download_url = asset[\"browser_download_url\"]\n    dest = download_dir / filename\n    print(f\"  ↳ downloading {filename}\")\n    if not download_asset(download_url, dest):\n        return None\n\n    return {\n        \"filename\": filename,\n        \"archive_url\": download_url,\n    }\n\n\ndef main() -&gt; None:\n    print(\"Generating Blender extension repository metadata...\")\n    clean_directory(REPO_DIR)\n\n    filename_to_url: Dict[str, str] = {}\n    for addon in ADDONS:\n        print(f\"Fetching release for {addon['repo']}...\")\n        result = process_addon(addon, REPO_DIR)\n        if result:\n            filename_to_url[result[\"filename\"]] = result[\"archive_url\"]\n\n    if not filename_to_url:\n        print(\"No archives downloaded. Aborting.\")\n        return\n\n    try:\n        run_blender_repo_generator(REPO_DIR)\n    except subprocess.CalledProcessError as exc:\n        print(f\"Blender command failed: {exc}\")\n        return\n\n    generated_index = REPO_DIR / \"index.json\"\n    if not generated_index.exists():\n        print(f\"Generated index not found at {generated_index}\")\n        return\n\n    updated_index = rewrite_archive_urls(generated_index, filename_to_url)\n    with open(OUTPUT_INDEX, \"w\", encoding=\"utf-8\") as handle:\n        json.dump(updated_index, handle, indent=2)\n\n    print(\"-\" * 50)\n    print(f\"✓ Repository index written to {OUTPUT_INDEX}\")\n    print(f\"  Packages: {len(updated_index.get('data', []))}\")\n\n\nif __name__ == \"__main__\":\n    main()\n"
+}
+```
+User decision: **accepted**
+
+Status: **completed**
+
+
+</details>
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+**Verifying download directory**</details></think>
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **run_terminal_cmd** • Run command: python update_catalog.py</summary>
+
+```bash
+python update_catalog.py
+```
+
+```
+PS E:\rainys-blender-extensions&gt; python update_catalog.py
+Generating Blender extension repository metadata...
+Fetching release for RaincloudTheDragon/BasedPlayblast...
+  ↳ downloading BasedPlayblast.v2.3.1.zip
+Fetching release for RaincloudTheDragon/Rainys-Bulk-Scene-Tools...
+  ↳ downloading Rainys_Bulk_Scene_Tools.v0.11.0.zip
+Running Blender repo generator:
+  blender --background --factory-startup --command extension server-generate --repo-dir E:\rainys-blender-extensions\build\repo                                 
+Blender 5.0.0 (hash a37564c4df7a built 2025-11-18 11:06:54)
+
+Warning! 'C:\\Program Files\\Blender Foundation\\Blender 5.0\\5.0\\scripts\\startup\\fa_hotkeys.py' has no register function, this is now a requirement for registerable scripts                                                                
+register_class(...):
+Warning: 'Submenu' does not contain '_MT_' with prefix and suffix
+register_class(...):
+Warning: 'Submenu2' does not contain '_MT_' with prefix and suffix
+register_class(...):
+Warning: 'Submenu3' does not contain '_MT_' with prefix and suffix
+register_class(...):
+Warning: 'view3D.Pie_menu' does not contain '_MT_' with prefix and suffix       
+register_class(...):
+Warning: 'CustomPanel' does not contain '_PT_' with prefix and suffix
+register_class(...):
+Warning: 'view3D.Quad_menu' does not contain '_MT_' with prefix and suffix      
+register_class(...):
+Warning: 'Special_Tools_Menu' does not contain '_MT_' with prefix and suffix    
+found 2 packages.
+--------------------------------------------------
+✓ Repository index written to index.json
+  Packages: 2
+```
+</details>
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+**Opening generated index**</details></think>
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: index.json</summary>
+
+</details>
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+**Verifying script rewrite behavior**</details></think>
+
+---
+
+- Integrated Blender’s `extension server-generate` workflow into `update_catalog.py`.
+- Script now downloads the latest release archives for each add-on, runs Blender to validate/build repo metadata, and writes the official `index.json`.
+- Archive URLs in `index.json` are rewritten to the original GitHub release URLs, so clients still pull from GitHub.
+- Added `RaincloudTheDragon/Rainys-Bulk-Scene-Tools` to the add-ons list.
+- Command works: `python update_catalog.py` now outputs `index.json` with both BasedPlayblast and Rainy’s Bulk Scene Tools, including hashes/sizes generated by Blender.
+
+Let me know if you’d like to publish `index.json` or automate this in CI.
 
 ---
 
