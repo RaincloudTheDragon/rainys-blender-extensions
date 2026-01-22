@@ -73,6 +73,28 @@
       "archive_url": "https://github.com/RaincloudTheDragon/atomic-data-manager/releases/download/v2.4.1/Atomic_Data_Manager.v2.4.1.zip",
       "archive_size": 108842,
       "archive_hash": "sha256:4086ada3e9e8c852fd02d455f11f2f20fd19ca68acd10b101ab3aa0fae2be210"
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "sheepit_project_submitter",
+      "name": "SheepIt Project Submitter",
+      "tagline": "Submit projects to SheepIt render farm",
+      "version": "0.0.1",
+      "type": "add-on",
+      "maintainer": "RaincloudTheDragon",
+      "license": [
+        "GPL-3.0-or-later"
+      ],
+      "blender_version_min": "3.0.0",
+      "tags": [
+        "render",
+        "farm",
+        "submission",
+        "utility"
+      ],
+      "archive_url": "https://github.com/RaincloudTheDragon/sheepit_project_submitter/releases/download/v0.0.1/SheepIt_Project_Submitter.v0.0.1.zip",
+      "archive_size": 63452,
+      "archive_hash": "sha256:96a01b9a72f02bd704b3a4f0b51ceeb9f930fa702991650bbf11d417a4a17c91"
     }
   ]
 }
