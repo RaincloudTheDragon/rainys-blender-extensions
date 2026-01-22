@@ -34,6 +34,10 @@ ADDONS = [
         "id": "atomic_data_manager",
         "repo": "RaincloudTheDragon/atomic-data-manager",
     },
+    {
+        "id": "sheepit_project_submitter",
+        "repo": "RaincloudTheDragon/sheepit_project_submitter",
+    },
 ]
 
 BLENDER_EXECUTABLE = os.environ.get("BLENDER_PATH", "blender")
