@@ -33,7 +33,7 @@
       "id": "rainclouds_bulk_scene_tools",
       "name": "Raincloud's Bulk Scene Tools",
       "tagline": "Bulk utilities for optimizing scene data",
-      "version": "0.15.1",
+      "version": "0.16.0",
       "type": "add-on",
       "maintainer": "RaincloudTheDragon <raincloudthedragon@gmail.com>",
       "license": [
@@ -49,9 +49,9 @@
         "Workflow",
         "Materials"
       ],
-      "archive_url": "https://github.com/RaincloudTheDragon/Rainys-Bulk-Scene-Tools/releases/download/v0.15.1/Rainys_Bulk_Scene_Tools.v0.15.1.zip",
-      "archive_size": 81044,
-      "archive_hash": "sha256:a72f7dbf7c35fda94a7b67df79ef131391e0fe2ac4f416703b07ef59afd7235b"
+      "archive_url": "https://github.com/RaincloudTheDragon/Rainys-Bulk-Scene-Tools/releases/download/v0.16.0/Rainys_Bulk_Scene_Tools.v0.16.0.zip",
+      "archive_size": 80251,
+      "archive_hash": "sha256:3e6fafe11caa39e48b94288c12b2a88e521c928955a854ffdd1bd0936e6bc70a"
     },
     {
       "schema_version": "1.0.0",
@@ -73,28 +73,6 @@
       "archive_url": "https://github.com/RaincloudTheDragon/atomic-data-manager/releases/download/v2.4.1/Atomic_Data_Manager.v2.4.1.zip",
       "archive_size": 108842,
       "archive_hash": "sha256:4086ada3e9e8c852fd02d455f11f2f20fd19ca68acd10b101ab3aa0fae2be210"
-    },
-    {
-      "schema_version": "1.0.0",
-      "id": "sheepit_project_submitter",
-      "name": "SheepIt Project Submitter",
-      "tagline": "Submit projects to SheepIt render farm",
-      "version": "0.0.2",
-      "type": "add-on",
-      "maintainer": "RaincloudTheDragon",
-      "license": [
-        "GPL-3.0-or-later"
-      ],
-      "blender_version_min": "3.0.0",
-      "tags": [
-        "render",
-        "farm",
-        "submission",
-        "utility"
-      ],
-      "archive_url": "https://github.com/RaincloudTheDragon/sheepit_project_submitter/releases/download/v0.0.2/SheepIt_Project_Submitter.v0.0.2.zip",
-      "archive_size": 64260,
-      "archive_hash": "sha256:0149a702a4caef68a5c4f7cb102ea51331d97446d8f1a57252f9ff3b44467ad0"
     }
   ]
 }
