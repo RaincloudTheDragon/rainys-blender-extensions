@@ -79,7 +79,7 @@
       "id": "sheepit_project_submitter",
       "name": "SheepIt Project Submitter",
       "tagline": "Submit projects to SheepIt render farm",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "type": "add-on",
       "maintainer": "RaincloudTheDragon",
       "license": [
@@ -92,9 +92,9 @@
         "submission",
         "utility"
       ],
-      "archive_url": "https://github.com/RaincloudTheDragon/sheepit_project_submitter/releases/download/v0.0.7/SheepIt_Project_Submitter.v0.0.7.zip",
-      "archive_size": 47250,
-      "archive_hash": "sha256:cb8dee48c45cc51dd8237981f4ab96d97d476b547c8c640606e9bbfd0390a055"
+      "archive_url": "https://github.com/RaincloudTheDragon/sheepit_project_submitter/releases/download/v0.0.8/SheepIt_Project_Submitter.v0.0.8.zip",
+      "archive_size": 47667,
+      "archive_hash": "sha256:93cd8f18456079130c48c66cfd40235f7fe6414f929f59f90670e7a864821110"
     }
   ]
 }
