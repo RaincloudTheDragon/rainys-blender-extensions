@@ -4,10 +4,31 @@
   "data": [
     {
       "schema_version": "1.0.0",
+      "id": "atomic_data_manager",
+      "name": "Atomic Data Manager",
+      "tagline": "Smart cleanup and inspection of Blender data-blocks",
+      "version": "2.6.3",
+      "type": "add-on",
+      "maintainer": "RaincloudTheDragon",
+      "license": [
+        "GPL-3.0-or-later"
+      ],
+      "blender_version_min": "4.2.0",
+      "tags": [
+        "utility",
+        "management",
+        "cleanup"
+      ],
+      "archive_url": "https://github.com/RaincloudTheDragon/atomic-data-manager/releases/download/v2.6.3/Atomic_Data_Manager.v2.6.3.zip",
+      "archive_size": 122700,
+      "archive_hash": "sha256:b444463a0443864077abcfe97332406e606a697d3567ac32f85843760da11372"
+    },
+    {
+      "schema_version": "1.0.0",
       "id": "basedplayblast",
       "name": "BasedPlayblast",
       "tagline": "Easily create playblasts from Blender and Flamenco",
-      "version": "2.6.3",
+      "version": "2.7.0",
       "type": "add-on",
       "maintainer": "RaincloudTheDragon <raincloudthedragon@gmail.com>",
       "license": [
@@ -24,9 +45,9 @@
         "Workflow",
         "Video"
       ],
-      "archive_url": "https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/v2.6.3/BasedPlayblast.v2.6.3.zip",
-      "archive_size": 49732,
-      "archive_hash": "sha256:078b406105ce6f4802e75233569841e2f73d082e09cd1d954696681ebf72b627"
+      "archive_url": "https://github.com/RaincloudTheDragon/BasedPlayblast/releases/download/2.7.0/BasedPlayblast.2.7.0.zip",
+      "archive_size": 53608,
+      "archive_hash": "sha256:e78f9f5db2d7cb32a9beb8b7d411b67dddc1d05f4c202a83aa6544e6d85cb60f"
     },
     {
       "schema_version": "1.0.0",
@@ -52,27 +73,6 @@
       "archive_url": "https://github.com/RaincloudTheDragon/Rainys-Bulk-Scene-Tools/releases/download/v0.17.0/Rainys_Bulk_Scene_Tools.v0.17.0.zip",
       "archive_size": 80981,
       "archive_hash": "sha256:419433069465b45ea903bd7bb46d89aa28b9c96c541d587d5f3be651a762811f"
-    },
-    {
-      "schema_version": "1.0.0",
-      "id": "atomic_data_manager",
-      "name": "Atomic Data Manager",
-      "tagline": "Smart cleanup and inspection of Blender data-blocks",
-      "version": "2.6.3",
-      "type": "add-on",
-      "maintainer": "RaincloudTheDragon",
-      "license": [
-        "GPL-3.0-or-later"
-      ],
-      "blender_version_min": "4.2.0",
-      "tags": [
-        "utility",
-        "management",
-        "cleanup"
-      ],
-      "archive_url": "https://github.com/RaincloudTheDragon/atomic-data-manager/releases/download/v2.6.3/Atomic_Data_Manager.v2.6.3.zip",
-      "archive_size": 122700,
-      "archive_hash": "sha256:b444463a0443864077abcfe97332406e606a697d3567ac32f85843760da11372"
     },
     {
       "schema_version": "1.0.0",
