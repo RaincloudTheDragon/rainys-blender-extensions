@@ -35,8 +35,8 @@ ADDONS = [
         "repo": "RaincloudTheDragon/atomic-data-manager",
     },
     {
-        "id": "sheepit_project_submitter",
-        "repo": "RaincloudTheDragon/sheepit_project_submitter",
+        "id": "based_blendfile_packer",
+        "repo": "RaincloudTheDragon/based-blendfile-packer",
     },
 ]
 
