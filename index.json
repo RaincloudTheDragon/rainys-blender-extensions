@@ -25,6 +25,31 @@
     },
     {
       "schema_version": "1.0.0",
+      "id": "based_blendfile_packer",
+      "name": "BasedBlendfilePacker",
+      "tagline": "Farm-agnostic blendfile packing for any render pipeline",
+      "version": "0.1.0",
+      "type": "add-on",
+      "maintainer": "RaincloudTheDragon",
+      "license": [
+        "GPL-3.0-or-later"
+      ],
+      "blender_version_min": "4.5.0",
+      "tags": [
+        "render",
+        "pack",
+        "utility",
+        "assets"
+      ],
+      "python_versions": [
+        "3"
+      ],
+      "archive_url": "https://github.com/RaincloudTheDragon/based-blendfile-packer/releases/download/0.1.0/BasedBlendfilePacker.v0.1.0.zip",
+      "archive_size": 211604,
+      "archive_hash": "sha256:6e21c32c8bd58f206d1596e5c8547153d805b6c3e25b41ffcd621f4aad54e7f6"
+    },
+    {
+      "schema_version": "1.0.0",
       "id": "basedplayblast",
       "name": "BasedPlayblast",
       "tagline": "Easily create playblasts from Blender and Flamenco",
@@ -73,28 +98,6 @@
       "archive_url": "https://github.com/RaincloudTheDragon/Rainys-Bulk-Scene-Tools/releases/download/0.18.0/Rainys_Bulk_Scene_Tools.v0.18.0.zip",
       "archive_size": 75599,
       "archive_hash": "sha256:6653a01b9ac5822e51113609b5a2970102715ec5f7816a9dccd80ecb4c755ea5"
-    },
-    {
-      "schema_version": "1.0.0",
-      "id": "sheepit_project_submitter",
-      "name": "SheepIt Project Submitter",
-      "tagline": "Submit projects to SheepIt render farm",
-      "version": "0.0.8",
-      "type": "add-on",
-      "maintainer": "RaincloudTheDragon",
-      "license": [
-        "GPL-3.0-or-later"
-      ],
-      "blender_version_min": "3.0.0",
-      "tags": [
-        "render",
-        "farm",
-        "submission",
-        "utility"
-      ],
-      "archive_url": "https://github.com/RaincloudTheDragon/based-blendfile-packer/releases/download/v0.0.8/SheepIt_Project_Submitter.v0.0.8.zip",
-      "archive_size": 47667,
-      "archive_hash": "sha256:93cd8f18456079130c48c66cfd40235f7fe6414f929f59f90670e7a864821110"
     }
   ]
 }
