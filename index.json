@@ -28,7 +28,7 @@
       "id": "based_blendfile_packer",
       "name": "BasedBlendfilePacker",
       "tagline": "Farm-agnostic blendfile packing for any render pipeline",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "type": "add-on",
       "maintainer": "RaincloudTheDragon",
       "license": [
@@ -44,9 +44,9 @@
       "python_versions": [
         "3"
       ],
-      "archive_url": "https://github.com/RaincloudTheDragon/based-blendfile-packer/releases/download/0.1.0/BasedBlendfilePacker.v0.1.0.zip",
-      "archive_size": 211604,
-      "archive_hash": "sha256:6e21c32c8bd58f206d1596e5c8547153d805b6c3e25b41ffcd621f4aad54e7f6"
+      "archive_url": "https://github.com/RaincloudTheDragon/based-blendfile-packer/releases/download/0.1.1/BasedBlendfilePacker.v0.1.1.zip",
+      "archive_size": 213739,
+      "archive_hash": "sha256:c33612f4ca7a3540a052fe4fe03fe4ccd939c66a17a6cdf0aa4f5f4722958ffd"
     },
     {
       "schema_version": "1.0.0",
