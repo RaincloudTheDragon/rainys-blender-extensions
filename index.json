@@ -76,6 +76,26 @@
     },
     {
       "schema_version": "1.0.0",
+      "id": "dynamiclibrarymanager",
+      "name": "Dynamic Library Manager",
+      "tagline": "Character migrator and linked library tools",
+      "version": "0.5.0",
+      "type": "add-on",
+      "maintainer": "RaincloudTheDragon <raincloudthedragon@gmail.com>",
+      "license": [
+        "GPL-3.0-or-later"
+      ],
+      "blender_version_min": "4.5.0",
+      "website": "https://github.com/RaincloudTheDragon/Dynamic-Library-Manager",
+      "tags": [
+        "3D View"
+      ],
+      "archive_url": "https://github.com/RaincloudTheDragon/Dynamic-Library-Manager/releases/download/v0.5.0/Dynamic_Library_Manager.v0.5.0.zip",
+      "archive_size": 100125,
+      "archive_hash": "sha256:a839eb7323e98f046b976954c9d6a9b001e43dab53908522dc542395d22e7661"
+    },
+    {
+      "schema_version": "1.0.0",
       "id": "rainclouds_bulk_scene_tools",
       "name": "Raincloud's Bulk Scene Tools",
       "tagline": "Bulk utilities for optimizing scene data",

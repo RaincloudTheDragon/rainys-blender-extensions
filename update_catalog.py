@@ -38,6 +38,10 @@ ADDONS = [
         "id": "based_blendfile_packer",
         "repo": "RaincloudTheDragon/based-blendfile-packer",
     },
+    {
+        "id": "dynamiclibrarymanager",
+        "repo": "RaincloudTheDragon/Dynamic-Library-Manager",
+    },
 ]
 
 BLENDER_EXECUTABLE = os.environ.get("BLENDER_PATH", "blender")
