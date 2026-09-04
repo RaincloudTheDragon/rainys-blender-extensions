@@ -7,7 +7,7 @@
       "id": "atomic_data_manager",
       "name": "Atomic Data Manager",
       "tagline": "Smart cleanup and inspection of Blender data-blocks",
-      "version": "2.9.3",
+      "version": "2.10.0",
       "type": "add-on",
       "maintainer": "RaincloudTheDragon",
       "license": [
@@ -19,9 +19,9 @@
         "management",
         "cleanup"
       ],
-      "archive_url": "https://github.com/RaincloudTheDragon/atomic-data-manager/releases/download/v2.9.3/Atomic_Data_Manager.v2.9.3.zip",
-      "archive_size": 150001,
-      "archive_hash": "sha256:ec78dcea3b20eda740a1cbabf37a92730b7ff8ebf86c0f1a669f536f2e8eeb96"
+      "archive_url": "https://github.com/RaincloudTheDragon/atomic-data-manager/releases/download/v2.10.0/Atomic_Data_Manager.v2.10.0.zip",
+      "archive_size": 157210,
+      "archive_hash": "sha256:cb1dac5a3d5266421788d2149c00264ac7e7a34561fec5ba93aa26fafa696dbd"
     },
     {
       "schema_version": "1.0.0",
