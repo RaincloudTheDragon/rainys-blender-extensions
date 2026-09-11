@@ -79,7 +79,7 @@
       "id": "dynamiclibrarymanager",
       "name": "Dynamic Library Manager",
       "tagline": "Character migrator and linked library tools",
-      "version": "0.5.3",
+      "version": "0.6.0",
       "type": "add-on",
       "maintainer": "RaincloudTheDragon <raincloudthedragon@gmail.com>",
       "license": [
@@ -90,9 +90,9 @@
       "tags": [
         "3D View"
       ],
-      "archive_url": "https://github.com/RaincloudTheDragon/Dynamic-Library-Manager/releases/download/v0.5.3/Dynamic_Library_Manager.v0.5.3.zip",
-      "archive_size": 112621,
-      "archive_hash": "sha256:5a9433acdd3d48d88b1b41ab766051b4e7f050592df59d1b76a39aefc7eb9555"
+      "archive_url": "https://github.com/RaincloudTheDragon/Dynamic-Library-Manager/releases/download/v0.6.0/Dynamic_Library_Manager.v0.6.0.zip",
+      "archive_size": 127296,
+      "archive_hash": "sha256:7aaf3524fc74f1af0b0006a4369a061050e96bd94eca3359b339e9652558ba8a"
     },
     {
       "schema_version": "1.0.0",
