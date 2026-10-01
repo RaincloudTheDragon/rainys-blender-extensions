@@ -7,7 +7,7 @@
       "id": "atomic_data_manager",
       "name": "Atomic Data Manager",
       "tagline": "Smart cleanup and inspection of Blender data-blocks",
-      "version": "2.14.0",
+      "version": "2.15.0",
       "type": "add-on",
       "maintainer": "RaincloudTheDragon",
       "license": [
@@ -19,9 +19,9 @@
         "management",
         "cleanup"
       ],
-      "archive_url": "https://github.com/RaincloudTheDragon/atomic-data-manager/releases/download/v2.14.0/Atomic_Data_Manager.v2.14.0.zip",
-      "archive_size": 181532,
-      "archive_hash": "sha256:0d93a67f733724b783d3df586c1b33ea8e1382898a1eaf1a4fae40775f4ce592"
+      "archive_url": "https://github.com/RaincloudTheDragon/atomic-data-manager/releases/download/v2.15.0/Atomic_Data_Manager.v2.15.0.zip",
+      "archive_size": 184839,
+      "archive_hash": "sha256:5ffd588fcfd565fd1ea7c7f4c2d869e333c3d860fcdcce0204676219b4bad61c"
     },
     {
       "schema_version": "1.0.0",
@@ -79,7 +79,7 @@
       "id": "dynamiclibrarymanager",
       "name": "Dynamic Library Manager",
       "tagline": "Character migrator and linked library tools",
-      "version": "0.6.1",
+      "version": "0.7.0",
       "type": "add-on",
       "maintainer": "RaincloudTheDragon <raincloudthedragon@gmail.com>",
       "license": [
@@ -90,9 +90,9 @@
       "tags": [
         "3D View"
       ],
-      "archive_url": "https://github.com/RaincloudTheDragon/Dynamic-Library-Manager/releases/download/v0.6.1/Dynamic_Library_Manager.v0.6.1.zip",
-      "archive_size": 127954,
-      "archive_hash": "sha256:267dc3573909737552d4956a80941d97d4f78698577483800a66282fcd5d75d5"
+      "archive_url": "https://github.com/RaincloudTheDragon/Dynamic-Library-Manager/releases/download/v0.7.0/Dynamic_Library_Manager.v0.7.0.zip",
+      "archive_size": 133049,
+      "archive_hash": "sha256:36f4b6c1998cc6f4ca6f344a7f775595ce40bec4902a5f15a94e851a7b1c2db9"
     },
     {
       "schema_version": "1.0.0",
