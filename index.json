@@ -96,7 +96,7 @@
       "id": "rainclouds_bulk_scene_tools",
       "name": "Raincloud's Bulk Scene Tools",
       "tagline": "Bulk utilities for optimizing scene data",
-      "version": "0.21.0",
+      "version": "0.22.0",
       "type": "add-on",
       "maintainer": "RaincloudTheDragon <raincloudthedragon@gmail.com>",
       "license": [
@@ -112,9 +112,9 @@
         "Workflow",
         "Materials"
       ],
-      "archive_url": "https://github.com/RaincloudTheDragon/Rainys-Bulk-Scene-Tools/releases/download/v0.21.0/Rainys_Bulk_Scene_Tools.v0.21.0.zip",
-      "archive_size": 122594,
-      "archive_hash": "sha256:f45efa3cdf62293f807e51f1c781af21e33dc13957757f19a2e363003eb8307f"
+      "archive_url": "https://github.com/RaincloudTheDragon/Rainys-Bulk-Scene-Tools/releases/download/v0.22.0/Rainys_Bulk_Scene_Tools.v0.22.0.zip",
+      "archive_size": 123547,
+      "archive_hash": "sha256:fa38b4f6641c55d61b8fd1f7e60bae5e5acf0cf1f88647ce2583db39d0a68a00"
     }
   ]
 }
